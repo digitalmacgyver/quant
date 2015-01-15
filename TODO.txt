@@ -1,0 +1,8 @@
+1. To push to heroku:
+
+heroku login
+
+Use your mjhayward@gmail.com account.
+
+2. git push heroku master
+
