@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Lower Oracle Query Bounds</TITLE>
+<META NAME="description" CONTENT="Lower Oracle Query Bounds">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node41.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="thesis-ex.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html416"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html412"
+  HREF="thesis-ex.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html406"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html414"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html417"
+  HREF="node27.html">Preliminaries</A>
+<B> Up:</B> <A NAME="tex2html413"
+  HREF="thesis-ex.html">Lower Query Bounds in</A>
+<B> Previous:</B> <A NAME="tex2html407"
+  HREF="node25.html">Summary</A>
+ &nbsp; <B>  <A NAME="tex2html415"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00700000000000000000"></A>
+<A NAME="ch:oracle"></A>
+<BR>
+Lower Oracle Query Bounds
+</H1>
+
+<P>
+In this chapter we present the quantum oracle framework.  We first
+define the quantum oracle model and oracle query complexity, then
+present a general theorem due to Ambainis [<A
+ HREF="node57.html#ambainis00quantum">1</A>].
+In Section <A HREF="node32.html#sec:lplqb">2.2</A> we derive a key lemma used throughout the
+thesis and apply it to a simple problem.  We then show that for the
+problem of determining the oracle string, Ambainis' Theorem can not
+attain an asymptotically tight lower query bound in Sections
+<A HREF="node34.html#sec:dos">2.3</A> and <A HREF="node35.html#sec:torf1">2.4</A>.
+
+<P>
+Our primary purpose is to demonstrate the power and flexibility of
+Ambainis' Theorem in attaining lower bounds on broad classes of
+Boolean functions and simplifying previous proofs.  We investigate
+Boolean functions with partial symmetry in Section <A HREF="node36.html#sec:lqbsym">2.5</A>.
+We apply the result of that section to attain asymptotically tight
+lower oracle query bounds of <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">), <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">),
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>N</I>), and <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>N</I>) for the functions AND, OR, MAJORITY, and
+PARITY respectively in Section
+<A HREF="node37.html#sec:AOMP">2.6</A>.  Finally we prove <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle
+queries are required to compute any <I>N</I>-bit nonconstant symmetric
+Boolean function in Section <A HREF="node40.html#sec:lqbnsf">2.7</A>.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html418"
+  HREF="node27.html">Preliminaries</A>
+<UL>
+<LI><A NAME="tex2html419"
+  HREF="node28.html">Useful Definitions</A>
+<LI><A NAME="tex2html420"
+  HREF="node29.html">Quantum Oracle Models</A>
+<LI><A NAME="tex2html421"
+  HREF="node30.html">A Lower Query Bound Proving Framework due to Ambainis</A>
+<UL>
+<LI><A NAME="tex2html422"
+  HREF="node31.html">The Quantum Adversary:</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html423"
+  HREF="node32.html">A Lemma for Proving Lower Query Bounds</A>
+<UL>
+<LI><A NAME="tex2html424"
+  HREF="node33.html">Application to Generalized XOR</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html425"
+  HREF="node34.html">Determining the Oracle String</A>
+<LI><A NAME="tex2html426"
+  HREF="node35.html">Singleton Functions</A>
+<LI><A NAME="tex2html427"
+  HREF="node36.html">Partially Symmetric Functions</A>
+<LI><A NAME="tex2html428"
+  HREF="node37.html">AND, OR, MAJORITY, and PARITY</A>
+<UL>
+<LI><A NAME="tex2html429"
+  HREF="node38.html">AND and OR</A>
+<LI><A NAME="tex2html430"
+  HREF="node39.html">MAJORITY and PARITY</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html431"
+  HREF="node40.html">Nonconstant Symmetric Functions</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html416"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html412"
+  HREF="thesis-ex.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html406"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html414"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html417"
+  HREF="node27.html">Preliminaries</A>
+<B> Up:</B> <A NAME="tex2html413"
+  HREF="thesis-ex.html">Lower Query Bounds in</A>
+<B> Previous:</B> <A NAME="tex2html407"
+  HREF="node25.html">Summary</A>
+ &nbsp; <B>  <A NAME="tex2html415"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

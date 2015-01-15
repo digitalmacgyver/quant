@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Quantum Memory Register</TITLE>
+<META NAME="description" CONTENT="The Quantum Memory Register">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html280"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html276"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html270"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html278"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html281"
+  HREF="node15.html">Probability Interpretation</A>
+<B> Up:</B> <A NAME="tex2html277"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html271"
+  HREF="node13.html">The Quantum qubit</A>
+ &nbsp; <B>  <A NAME="tex2html279"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00056000000000000000">
+The Quantum Memory Register</A>
+</H2>
+
+<P>
+Up till now we have considered a two state quantum system,
+specifically our spin-1/2 particle.  However a quantum system is by no
+means constrained to be a two state system.  Much of the above
+discussion for a 2 state quantum system is applicable to a general <I>n</I>
+state quantum system.
+
+<P>
+In an <I>n</I> state system our Hilbert Space has <I>n</I> perpendicular axes,
+or eigenstates, which represent the possible states that the system
+can be measured in.  As with the two state system, when we measure our
+<I>n</I> state quantum system, we will always find it to be in exactly one
+of the <I>n</I> states, and not a superposition of the <I>n</I> states.  The
+system is still allowed to exist in any superposition of the <I>n</I>
+states while it is not being measured.
+
+<P>
+Mathematically if two state quantum system with coordinate axes
+<I>x</I><SUB>0</SUB>, <I>x</I><SUB>1</SUB> can be fully described by:
+	<P><!-- MATH
+ \begin{displaymath}
+|X \rangle = w_{0} * |x_{0} \rangle + w_{1} * |x_{1} \rangle \equiv (w_{0},w_{1})
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>X</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$"> = <I>w</I><SUB>0</SUB>*| <I>x</I><SUB>0</SUB><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$"> + <I>w</I><SUB>1</SUB>*| <I>x</I><SUB>1</SUB><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$"> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \equiv$"> (<I>w</I><SUB>0</SUB>, <I>w</I><SUB>1</SUB>)
+</DIV><P></P>
+
+<P>
+Then an <I>n</I> state quantum system with coordinate axes <!-- MATH
+ $x_{0},
+x_{1},\ldots, x_{n-1}$
+ -->
+<I>x</I><SUB>0</SUB>, <I>x</I><SUB>1</SUB>,..., <I>x</I><SUB>n-1</SUB> can be fully described by:
+	<P><!-- MATH
+ \begin{displaymath}
+|X \rangle = \sum_{k = 0}^{n-1} w_{k} * |x_{k} \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>X</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$"> = <IMG
+ WIDTH="28" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\displaystyle \sum_{{k = 0}}^{{n-1}}$"><I>w</I><SUB>k</SUB>*| <I>x</I><SUB>k</SUB><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+
+<P>
+In general a quantum system with <I>n</I> base states can be represented by
+the <I>n</I> complex numbers <I>w</I><SUB>0</SUB> to <I>w</I><SUB>n-1</SUB>. When this is done the
+state may be written as:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+|X \rangle = \left( \begin{array}{c}
+		w_{0} \\
+		w_{1} \\
+		\vdots \\
+		w_{n-1}
+\end{array} \right) 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>X</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$"> = <IMG
+ WIDTH="20" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{c}
+w_{0} \\
+w_{1} \\
+\vdots \\
+w_{n-1}
+\end{array} }\right.$"><IMG
+ WIDTH="56" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \begin{array}{c}
+w_{0} \\
+w_{1} \\
+\vdots \\
+w_{n-1}
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{c}
+w_{0} \\
+w_{1} \\
+\vdots \\
+w_{n-1}
+\end{array} }\right)$">
+</DIV><P></P>
+
+<P>
+Where it is understood that <I>w</I><SUB>k</SUB> refers to the complex weighting
+factor for the <I>k</I>'th eigenstate.
+
+<P>
+Using this information we can construct a quantum memory register out
+of the qubits described in the previous section.  We may store any
+number <I>n</I> in our quantum memory register as long as we have enough
+qubits, just as we may store any number <I>n</I> in a classical register as
+long as we have enough classical bits to represent that number.  The
+state of the quantum register with <I>n</I> states is give by the formula
+above.  Note that in general a quantum register composed of <I>n</I> qubits
+requires 2<SUP>n</SUP> complex numbers to completely describe its state.  A
+<I>n</I> qubit register can be measured to be in one of 2<SUP>n</SUP> states, and
+each state requires one complex number to represent the projection of
+that total state onto that state.  In contrast a classical register
+composed of <I>n</I> bits requires only <I>n</I> integers to fully describe its
+state.
+
+<P>
+This means that one can store an exponential amount of information in
+a quantum register relative to the size of that register.  Here we see
+some of the first hints that a quantum computer could be exponentially
+more efficient than a classical computer in some respects.  Recall
+that from our discussion of complexity that problems which can be
+solved in polynomial time are generally thought of as being tractable,
+and that problems which can be solved in exponential time are thought
+of as intractable.  If a quantum computer can be is exponentially more
+efficient than a classical computer for some algorithms, then some
+problems currently intractable may become tractable!  This is a large
+part of the motivation for the study of quantum computing.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html280"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html276"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html270"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html278"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html281"
+  HREF="node15.html">Probability Interpretation</A>
+<B> Up:</B> <A NAME="tex2html277"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html271"
+  HREF="node13.html">The Quantum qubit</A>
+ &nbsp; <B>  <A NAME="tex2html279"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

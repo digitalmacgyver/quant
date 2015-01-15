@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Graph Properties:</TITLE>
+<META NAME="description" CONTENT="Graph Properties:">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node46.html">
+<LINK REL="previous" HREF="node44.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node46.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html669"
+  HREF="node46.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html665"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html659"
+  HREF="node44.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html667"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html670"
+  HREF="node46.html">Representing Graphs as Bit</A>
+<B> Up:</B> <A NAME="tex2html666"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html660"
+  HREF="node44.html">Evasive Functions:</A>
+ &nbsp; <B>  <A NAME="tex2html668"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00810030000000000000"></A>
+<A NAME="sec:gp"></A>
+<BR>
+Graph Properties:
+</H4>
+A graph property is a set of graphs closed under graph isomorphism.
+If a graph property holds for some graph <I>G</I>, it must hold for all
+graphs <!-- MATH
+ $G^{\prime}$
+ -->
+<I>G</I><SUP><IMG
+ WIDTH="8" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$\scriptstyle \prime$"></SUP> isomorphic to <I>G</I>.  For example: ``Is there an
+edge from vertex 1 to vertex 2?'' is not a graph property, but ``Does
+the graph have one edge?'' is.  Some graph properties are symmetric,
+such as ``Is the graph complete?''  Others exhibit symmetry in a
+different sense than that of Definition <A HREF="node36.html#def:sym">2.5.1</A>, such as ``Does
+the graph contain a vertex of degree 5?''
+
+<P>
+A non-trivial graph property is one that is false for some graph, and
+true for some graph.  If adding an edge to a graph can not make a
+property fail the graph property is called <I>monotone</I>.  Examples
+of well-known monotone graph properties are whether a graph is
+connected, acyclic, non-bipartite, complete, non-planar, or
+non-<I>k</I>-colorable.  Nonmonotone graph properties include whether the
+graph is a tree and <I>k</I>-regularity.
+
+<P>
+<P>
+<DIV><A NAME="cj:ark"><B>Conjecture  3.1.1</B></A> (Aanderaa-Karp-Rosenberg)  &nbsp; 
+<I>All non-trivial monotone graph properties are evasive in the classical
+deterministic setting.</I></DIV><P></P>
+
+<P>
+Conjecture <A HREF="#cj:ark">3.1.1</A> is known to be true for graphs whose number of
+vertices is a prime power [<A
+ HREF="node57.html#lovasz94evasive">14</A>].
+
+<P>
+The conjecture makes monotone graph properties an appealing target for
+study in the quantum oracle model.  We attained asymptotically tight
+lower bounds for evasive symmetric functions in Chapter
+<A HREF="node26.html#ch:oracle">2</A>.  In non-trivial monotone graph properties we have a
+class of functions, conjectured to be evasive, that exhibit a kind of
+symmetry due to their invariance under relabeling of vertices.  We
+hope that Ambainis' Theorem can provide us with asymptotically tight
+lower bounds for non-trivial monotone graph properties as they did for
+nonconstant symmetric functions.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html669"
+  HREF="node46.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html665"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html659"
+  HREF="node44.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html667"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html670"
+  HREF="node46.html">Representing Graphs as Bit</A>
+<B> Up:</B> <A NAME="tex2html666"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html660"
+  HREF="node44.html">Evasive Functions:</A>
+ &nbsp; <B>  <A NAME="tex2html668"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

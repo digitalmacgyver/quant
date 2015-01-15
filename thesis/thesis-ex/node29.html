@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantum Oracle Models</TITLE>
+<META NAME="description" CONTENT="Quantum Oracle Models">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html470"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html466"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html460"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html468"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html471"
+  HREF="node30.html">A Lower Query Bound</A>
+<B> Up:</B> <A NAME="tex2html467"
+  HREF="node27.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html461"
+  HREF="node28.html">Useful Definitions</A>
+ &nbsp; <B>  <A NAME="tex2html469"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00710200000000000000"></A>
+<A NAME="sec:qom"></A>
+<BR>
+Quantum Oracle Models
+</H3>
+
+<P>
+In the quantum oracle model, we have an oracle that holds an <I>N</I>-bit
+input string.  Our task is to determine the value of some fixed
+Boolean function of the oracle string, using as few oracle queries as
+possible.  An oracle query is a question of the form: ``What is the
+<I>i</I>th bit of the oracle string?''  The quantum oracle model is a
+special case of Ambainis' more general quantum adversary model
+[<A
+ HREF="node57.html#ambainis00quantum">1</A>], which we describe below.
+
+<P>
+In the quantum adversary model, we run an algorithm against an oracle
+that contains a superposition of inputs.  Let <I>S</I> be a subset of the
+possible inputs <!-- MATH
+ $\{0,1\}^{N}$
+ -->
+{0, 1}<SUP>N</SUP>.  Algorithms in the quantum adversary
+model will work in the Hilbert space <!-- MATH
+ $H = H_{A} \otimes H_{I}$
+ -->
+<I>H</I> = <I>H</I><SUB>A</SUB> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> <I>H</I><SUB>I</SUB>, where
+<!-- MATH
+ $H_{A} = \Complex^{2^{m}}$
+ -->
+<I>H</I><SUB>A</SUB> = <IMG
+ WIDTH="37" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$ \Complex^{{2^{m}}}_{}$"> is the Hilbert space of our <I>m</I>-qubit
+memory register, and <!-- MATH
+ $H_{I} = \Complex^{|S|}$
+ -->
+<I>H</I><SUB>I</SUB> = <IMG
+ WIDTH="35" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ \Complex^{{\vert S\vert}}_{}$"> is the Hilbert space
+spanned by basis vectors | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> corresponding to the elements of
+<I>S</I>.  We think of <I>H</I><SUB>A</SUB> as our algorithm space, and <I>H</I><SUB>I</SUB> as our
+input space.  The tensor product of two vector spaces <I>A</I> and <I>B</I>,
+denoted <!-- MATH
+ $A \otimes B$
+ -->
+<I>A</I> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> <I>B</I>, is a new vector space spanned by all possible
+pairs (<I>i</I>, <I>j</I>) of basis vectors <I>i</I> from the first space and <I>j</I> from
+the second space. Thus <!-- MATH
+ $H = \Complex^{|S|2^{m}}$
+ -->
+<I>H</I> = <IMG
+ WIDTH="53" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$ \Complex^{{\vert S\vert 2^{m}}}_{}$">.
+
+<P>
+We can represent the basis states of our algorithm space as <!-- MATH
+ $|i, b,
+z\rangle$
+ -->
+| <I>i</I>, <I>b</I>, <I>z</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">, where <I>i</I> consists of <!-- MATH
+ $\lceil\log{N}\rceil$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ \lceil$">log<I>N</I><IMG
+ WIDTH="13" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ \rceil$"> bits, <I>b</I> is a
+single bit, <I>z</I> denotes all other bits our quantum algorithm requires.
+We define the oracle transformation <I>O</I> as the unitary operator that
+takes any eigenstate <!-- MATH
+ $|i,b,z\rangle \otimes |x\rangle$
+ -->
+| <I>i</I>, <I>b</I>, <I>z</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> to <!-- MATH
+ $|i, b
+\oplus x_{i}, z\rangle \otimes |x\rangle$
+ -->
+| <I>i</I>, <I>b</I> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ \oplus$"> <I>x</I><SUB>i</SUB>, <I>z</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">. The first 
+<!-- MATH
+ $\lceil\log{N}\rceil$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ \lceil$">log<I>N</I><IMG
+ WIDTH="13" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ \rceil$"> bits of the subspace defined by a particular
+input | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> is the index <I>i</I> to the oracle bit <I>x</I><SUB>i</SUB> that we
+are querying. <I>O</I> is a permutation matrix.
+
+<P>
+A quantum algorithm that performs <I>T</I> queries is just a sequence of
+unitary transformations
+<P><!-- MATH
+ \begin{displaymath}
+U_{0}\rightarrow O\rightarrow U_{1} \rightarrow O \ldots \rightarrow U_{T-1} \rightarrow O \rightarrow U_{T},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>U</I><SUB>0</SUB> <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>O</I> <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>U</I><SUB>1</SUB> <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>O</I>...<IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>U</I><SUB>T-1</SUB> <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>O</I> <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \rightarrow$"> <I>U</I><SUB>T</SUB>,
+</DIV><P></P>
+where <I>U</I><SUB>i</SUB> is an arbitrary unitary transformation that does not
+depend on the oracle, and <I>O</I> is the oracle transformation.  (Recall
+that unitary transformations are reversible and preserve the
+normalization of the state vector.)
+
+<P>
+The standard oracle query model is just an instance of the quantum
+adversary model where the input space is spanned by a single
+eigenstate | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">.  In this case a quantum algorithm starts with
+the state <!-- MATH
+ $|0\rangle \otimes |x\rangle$
+ -->
+| 0<IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> | <I>x</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">, applies <!-- MATH
+ $U_{0}, O, U_{1},
+\ldots, O, U_{T}$
+ -->
+<I>U</I><SUB>0</SUB>, <I>O</I>, <I>U</I><SUB>1</SUB>,..., <I>O</I>, <I>U</I><SUB>T</SUB>, and then measures the final state.  The rightmost
+bit of the measured state of the algorithm space is the output of the
+algorithm on <I>x</I>.  The algorithm computes <I>f</I> in the bounded error
+setting if for every input <!-- MATH
+ $x \in \{0,1\}^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {0, 1}<SUP>N</SUP>, the output is <I>f</I> (<I>x</I>)
+with some constant probability.
+
+<P>
+The measure of complexity in both the quantum oracle model and quantum
+adversary model is the number of oracle queries.  It should be noted
+that querying the oracle is not always the most time consuming portion
+of an algorithm.  For example, to factor an <I>N</I> bit integer that the
+oracle holds, we can determine the integer in <I>N</I> queries.  However,
+we must then do <!-- MATH
+ $2^{N^{\Omega(1)}}$
+ -->
+2<SUP>N<SUP><IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\scriptscriptstyle \Omega$">(1)</SUP></SUP> additional steps in the classical
+case, or <!-- MATH
+ $N^{2}\log^{O(1)}{N}$
+ -->
+<I>N</I><SUP>2</SUP>log<SUP>O(1)</SUP><I>N</I> additional steps in the quantum case to
+factor the number using the best known algorithms
+[<A
+ HREF="node57.html#beals98quantum">2</A>]. Nonetheless we restrict our attention to the 
+number of oracle queries required, as it is clearly a lower bound on
+the overall running time of the algorithm.  Classical bounds for query
+complexity are well studied, making comparisons between quantum and
+classical oracle query complexity possible.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html470"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html466"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html460"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html468"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html471"
+  HREF="node30.html">A Lower Query Bound</A>
+<B> Up:</B> <A NAME="tex2html467"
+  HREF="node27.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html461"
+  HREF="node28.html">Useful Definitions</A>
+ &nbsp; <B>  <A NAME="tex2html469"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

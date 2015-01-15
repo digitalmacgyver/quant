@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sensitive Functions</TITLE>
+<META NAME="description" CONTENT="Sensitive Functions">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node54.html">
+<LINK REL="up" HREF="node51.html">
+<LINK REL="next" HREF="node56.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html787"
+  HREF="node56.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html783"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html779"
+  HREF="node54.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html785"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html788"
+  HREF="node56.html">Open Questions</A>
+<B> Up:</B> <A NAME="tex2html784"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html780"
+  HREF="node54.html">Nondeterministically Evasive Functions</A>
+ &nbsp; <B>  <A NAME="tex2html786"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00940000000000000000"></A>
+<A NAME="sec:lqbcbf"></A>
+<BR>
+Sensitive Functions
+</H1>
+
+<P>
+Nearly all the functions discussed so far have been evasive (or
+conjectured to be so).  In our final result we consider functions that
+are not necessarily evasive.  We call a Boolean function <I>f</I>
+<I>sensitive</I> if for some input <I>x</I>, there are <!-- MATH
+ $\Omega(N(f))$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>N</I>(<I>f</I> )) Hamming
+neighbors <I>y</I> of <I>x</I> such that <!-- MATH
+ $f(x) \neq f(y)$
+ -->
+<I>f</I> (<I>x</I>) <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>f</I> (<I>y</I>).  It is an open
+question whether there are any nonsensitive functions.
+
+<P>
+<P>
+<DIV><A NAME="th:b4r"><B>Theorem  4.4.1</B></A> &nbsp; 
+<I><!-- MATH
+ $O(\sqrt[4]{D(f)})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sqrt[4]{{D(f)}}$">) oracle queries are required to compute any
+sensitive function <I>f</I> in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="171" ALIGN="BOTTOM" BORDER="0"
+ SRC="img108.png"
+ ALT="\begin{proof}
+% latex2html id marker 2350By Lemma \ref{lm:1xky}, $\Omega(\sqrt...
+...f)\}$. Thus, $N(f) = \Omega(\sqrt{D(f)})$,
+and the theorem follows.
+\end{proof}">
+<BR>
+
+<P>
+Beals et al. proved <!-- MATH
+ $\Omega(\sqrt[6]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$ \sqrt[6]{{D(f)}}$">) oracle
+queries are required to compute any Boolean function in the bounded
+error setting, but they suspect that this lower bound is not tight
+[<A
+ HREF="node57.html#beals98quantum">2</A>].  An open question is whether there are any 
+functions which are not sensitive.  If not, then
+<!-- MATH
+ $\Omega(\sqrt[4]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sqrt[4]{{D(f)}}$">) oracle queries are required to compute any
+Boolean function, which would be an improvement over what is currently
+known.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html787"
+  HREF="node56.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html783"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html779"
+  HREF="node54.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html785"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html788"
+  HREF="node56.html">Open Questions</A>
+<B> Up:</B> <A NAME="tex2html784"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html780"
+  HREF="node54.html">Nondeterministically Evasive Functions</A>
+ &nbsp; <B>  <A NAME="tex2html786"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

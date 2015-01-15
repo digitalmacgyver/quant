@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A Lemma for Proving Lower Query Bounds</TITLE>
+<META NAME="description" CONTENT="A Lemma for Proving Lower Query Bounds">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node34.html">
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html503"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html499"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html493"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html501"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html504"
+  HREF="node33.html">Application to Generalized XOR</A>
+<B> Up:</B> <A NAME="tex2html500"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html494"
+  HREF="node31.html">The Quantum Adversary:</A>
+ &nbsp; <B>  <A NAME="tex2html502"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00720000000000000000"></A>
+<A NAME="sec:lplqb"></A>
+<BR>
+A Lemma for Proving Lower Query Bounds
+</H1>
+
+<P>
+The sensitivity of an input <I>x</I> of a function <I>f</I> is the number of
+Hamming neighbors <I>y</I> of <I>x</I> such that <!-- MATH
+ $f(x) \neq f(y)$
+ -->
+<I>f</I> (<I>x</I>) <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>f</I> (<I>y</I>).  We will use
+the following lemma to establish lower bounds for functions based
+solely on their sensitivity for a particular input.
+
+<P>
+<P>
+<DIV><A NAME="lm:1xky"><B>Lemma  2.2.1</B></A> &nbsp; 
+<I>Let <I>f</I> be an <I>N</I>-bit Boolean function.  If some input <I>x</I> has <I>k</I>
+Hamming neighbors <I>y</I> such that <!-- MATH
+ $f(x) \neq f(y)$
+ -->
+<I>f</I> (<I>x</I>) <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>f</I> (<I>y</I>), then
+<!-- MATH
+ $\Omega(\sqrt{k})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="31" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \sqrt{{k}}$">) oracle queries are required to compute <I>f</I> in the
+bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="320" ALIGN="BOTTOM" BORDER="0"
+ SRC="img80.png"
+ ALT="\begin{proof}
+% latex2html id marker 688To prove Lemma \ref{lm:1xky} we will a...
+... = 1$.
+The result now follows immediately from Theorem \ref{th:amb}.
+\end{proof}">
+<BR>
+
+<P>
+This lemma will not in general provide us with the best lower bound
+that can be attained from Ambainis' Theorem <A HREF="node30.html#th:amb">2.1.1</A>: we are
+maximizing <I>m</I>/<I>l</I>, but we make no attempt to maximize
+<!-- MATH
+ $m^{\prime}/l^{\prime}$
+ -->
+<I>m</I><SUP><IMG
+ WIDTH="8" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$\scriptstyle \prime$"></SUP>/<I>l</I><SUP><IMG
+ WIDTH="8" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$\scriptstyle \prime$"></SUP>.  The strongest results of Ambainis' Theorem
+frequently arise from maximizing both.  We will maximize both when
+dealing with partially symmetric functions in Theorem <A HREF="node36.html#th:ptsym">2.5.1</A>
+and graph connectivity in Theorem <A HREF="node48.html#th:gc">3.2.1</A>.  The <I>singleton</I>
+class of functions described in Sections <A HREF="node34.html#sec:dos">2.3</A> and
+<A HREF="node35.html#sec:torf1">2.4</A> is a class for which Lemma <A HREF="#lm:1xky">2.2.1</A> obtains 
+optimal results.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html505"
+  HREF="node33.html">Application to Generalized XOR</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html503"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html499"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html493"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html501"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html504"
+  HREF="node33.html">Application to Generalized XOR</A>
+<B> Up:</B> <A NAME="tex2html500"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html494"
+  HREF="node31.html">The Quantum Adversary:</A>
+ &nbsp; <B>  <A NAME="tex2html502"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

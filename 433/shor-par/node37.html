@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>barrier.h</TITLE>
+<META NAME="description" CONTENT="barrier.h">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html551"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html547"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html549"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html552"
+  HREF="node38.html">barrier.C</A>
+<B> Up:</B> <A NAME="tex2html548"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node36.html">timer.C</A>
+ &nbsp; <B>  <A NAME="tex2html550"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000128000000000000000">
+barrier.h</A>
+</H2>
+<PRE>
+#include &lt;pthread.h&gt;
+
+#ifndef BARRIER_H
+#define BARRIER_H
+
+extern int num_threads;
+
+void barrier(int* barrier_counter, int total_threads, 
+	     pthread_mutex_t* barrier_mutex, pthread_cond_t* barrier_cond);
+
+void final_barrier(int* barrier_counter, int total_threads, 
+		   pthread_mutex_t* barrier_mutex, pthread_cond_t* barrier_cond);
+
+extern pthread_mutex_t global_barrier_mutex;
+extern pthread_cond_t global_barrier_cond;
+extern int global_barrier_counter;
+
+extern pthread_mutex_t global_barrier_mutex1;
+extern pthread_cond_t global_barrier_cond1;
+extern int global_barrier_counter1;
+
+extern pthread_mutex_t global_barrier_mutex2;
+extern pthread_cond_t global_barrier_cond2;
+extern int global_barrier_counter2;
+
+extern pthread_mutex_t global_barrier_mutex3;
+extern pthread_cond_t global_barrier_cond3;
+extern int global_barrier_counter3;
+
+extern pthread_mutex_t global_barrier_mutex4;
+extern pthread_cond_t global_barrier_cond4;
+extern int global_barrier_counter4;
+
+extern pthread_mutex_t global_barrier_mutex5;
+extern pthread_cond_t global_barrier_cond5;
+extern int global_barrier_counter5;
+
+extern pthread_mutex_t global_barrier_mutex6;
+extern pthread_cond_t global_barrier_cond6;
+extern int global_barrier_counter6;
+
+extern pthread_mutex_t global_barrier_mutex7;
+extern pthread_cond_t global_barrier_cond7;
+extern int global_barrier_counter7;
+
+extern pthread_mutex_t global_barrier_mutex8;
+extern pthread_cond_t global_barrier_cond8;
+extern int global_barrier_counter8;
+
+extern pthread_mutex_t final_barrier_mutex;
+extern pthread_cond_t final_barrier_cond;
+extern int final_barrier_counter;
+
+#endif
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html551"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html547"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html549"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html552"
+  HREF="node38.html">barrier.C</A>
+<B> Up:</B> <A NAME="tex2html548"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node36.html">timer.C</A>
+ &nbsp; <B>  <A NAME="tex2html550"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

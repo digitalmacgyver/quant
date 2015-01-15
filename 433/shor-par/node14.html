@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Overview of Shor's Algorithm</TITLE>
+<META NAME="description" CONTENT="Overview of Shor's Algorithm">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html266"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html262"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html256"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html264"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html267"
+  HREF="node15.html">Steps to Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html263"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html257"
+  HREF="node13.html">Introduction to Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html265"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Overview of Shor's Algorithm</A>
+</H2>
+
+<P>
+Shor's algorithm hinges on a result from number theory.  This
+result is:
+	The function <!-- MATH
+ $\mathcal{F}(a) = x^{a} \bmod n$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \mathcal {F}$">(<I>a</I>) = <I>x</I><SUP>a</SUP> mod <I>n</I> is a periodic
+function, where <I>x</I> is an integer coprime to <I>n</I>. In the context of
+Shor's algorithm <I>n</I> will be the number we wish to factor. When two
+numbers are coprime it means that their greatest common divisor is 1.
+
+<P>
+Calculating this function for an exponential number of <I>a</I>'s
+would take exponential time on a classical computer.  Shor's algorithm
+utilizes quantum parallelism to perform the exponential number of
+operations in one step.
+
+<P>
+The reason why this function is of utility in factoring large
+numbers is this:
+
+<P>
+Since <!-- MATH
+ $\mathcal{F}(a)$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \mathcal {F}$">(<I>a</I>) is a periodic function, it has some
+period <I>r</I>. We know that <!-- MATH
+ $x^{0} \bmod n = 1$
+ -->
+<I>x</I><SUP>0</SUP> mod <I>n</I> = 1, so <!-- MATH
+ $x^{r} \bmod n = 1$
+ -->
+<I>x</I><SUP>r</SUP> mod <I>n</I> = 1, and
+<!-- MATH
+ $x^{2r} \bmod n = 1$
+ -->
+<I>x</I><SUP>2r</SUP> mod <I>n</I> = 1 and so on since the function is periodic.
+
+<P>
+Given this information and through the following algebraic
+manipulation:
+	<P><!-- MATH
+ \begin{displaymath}
+x^{r} \equiv 1 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>x</I><SUP>r</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \equiv$"> 1 mod <I>n</I>
+</DIV><P></P>
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2})^{2} = x^{r} \equiv 1 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP>)<SUP>2</SUP> = <I>x</I><SUP>r</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \equiv$"> 1 mod <I>n</I>
+</DIV><P></P>
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2})^{2} - 1 \equiv 0 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP>)<SUP>2</SUP> -1 <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \equiv$"> 0 mod <I>n</I>
+</DIV><P></P>
+and if <I>r</I> is an even number
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2} - 1)(x^{r/2} + 1) \equiv 0 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP> -1)(<I>x</I><SUP>r/2</SUP> +1) <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \equiv$"> 0 mod <I>n</I>
+</DIV><P></P>
+
+<P>
+We can see that the product <!-- MATH
+ $(x^{r/2} - 1)(x^{r/2} + 1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> -1)(<I>x</I><SUP>r/2</SUP> + 1) is an integer
+multiple of <I>n</I>, the number to be factored. So long as <I>x</I><SUP>r/2</SUP> is
+not equal to + - 1, then at least one of <!-- MATH
+ $(x^{r/2} - 1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> - 1), <!-- MATH
+ $(x^{r/2} +
+1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> + 1) must have a nontrivial factor in common with <I>n</I>. So by computing
+<!-- MATH
+ $\gcd(x^{r/2} - 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> - 1, <I>n</I>), and <!-- MATH
+ $\gcd(x^{r/2} + 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> + 1, <I>n</I>), we will obtain a
+factor of <I>n</I>, where gcd is the greatest common denominator
+function.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html266"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html262"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html256"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html264"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html267"
+  HREF="node15.html">Steps to Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html263"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html257"
+  HREF="node13.html">Introduction to Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html265"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How Many Iterations are Required</TITLE>
+<META NAME="description" CONTENT="How Many Iterations are Required">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html344"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html340"
+  HREF="node22.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html334"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html342"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html345"
+  HREF="node24.html">Searching for More Than</A>
+<B> Up:</B> <A NAME="tex2html341"
+  HREF="node22.html">Open Questions</A>
+<B> Previous:</B> <A NAME="tex2html335"
+  HREF="node22.html">Open Questions</A>
+ &nbsp; <B>  <A NAME="tex2html343"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00061000000000000000">
+How Many Iterations are Required</A>
+</H2>
+
+<P>
+Our initial state <!-- MATH
+ $\Psi_{0} = (1/\sqrt{N}, 1/\sqrt{N}, \ldots,
+1/\sqrt{N})$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$ \Psi_{{0}}^{}$"> = (1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">, 1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">,..., 1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">), is attained by performing the Walsh-Hadamard
+transformation on the register in the zero state.
+
+<P>
+Let (<I>k</I>, <I>l</I> ) denote denote the state of our vector, where <I>k</I> is the
+amplitude of the marked state, and <I>l</I> is the amplitude of each of the
+remaining (<I>N</I> - 1) states.  It is the case in Grover's algorithm that
+the unmarked states always have the same amplitude, so we can use this
+shorthand.
+
+<P>
+After the first application of the Walsh-Hadamard operator to place us
+in an equal superposition of states let us say we are in state
+<!-- MATH
+ $\Psi_{0} = (k_{0}, l_{0})$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$ \Psi_{{0}}^{}$"> = (<I>k</I><SUB>0</SUB>, <I>l</I><SUB>0</SUB>).
+
+<P>
+From theorem 1 we see the j'th iteration will produce the state
+<!-- MATH
+ $\Psi_{j} = (k_{j}, l_{j})$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$ \Psi_{{j}}^{}$"> = (<I>k</I><SUB>j</SUB>, <I>l</I><SUB>j</SUB>), where <!-- MATH
+ $k_{0} = l_{0} = 1/\sqrt{N}$
+ -->
+<I>k</I><SUB>0</SUB> = <I>l</I><SUB>0</SUB> = 1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">,
+further:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k_{j+1} = \frac{N-2}{N}k_{j} + \frac{2(N-1)}{N}l_{j}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>k</I><SUB>j+1</SUB> = <IMG
+ WIDTH="50" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\displaystyle {\frac{{N-2}}{{N}}}$"><I>k</I><SUB>j</SUB> + <IMG
+ WIDTH="70" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$\displaystyle {\frac{{2(N-1)}}{{N}}}$"><I>l</I><SUB>j</SUB>
+</DIV><P></P> 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+l_{j+1} = \frac{N-2}{N}l_{j} - \frac{2}{N}k_{j}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>l</I><SUB>j+1</SUB> = <IMG
+ WIDTH="50" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\displaystyle {\frac{{N-2}}{{N}}}$"><I>l</I><SUB>j</SUB> - <IMG
+ WIDTH="22" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\displaystyle {\frac{{2}}{{N}}}$"><I>k</I><SUB>j</SUB>
+</DIV><P></P>
+
+<P>
+With a little work on the recurrence relation we an solve for closed
+form solutions of <I>k</I> and <I>j</I>.  Let the angle <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$"> be defined so
+that <!-- MATH
+ $\sin^{2}{\theta} = 1/N$
+ -->
+sin<SUP>2</SUP><IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$"> = 1/<I>N</I>.  It can be shown through mathematical
+induction that:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k_{j+1} = \sin{((2j+1)\theta)}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>k</I><SUB>j+1</SUB> = sin((2<I>j</I>+1)<IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\displaystyle \theta$">)
+</DIV><P></P> 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+l_{j+1} = \frac{1}{\sqrt{N-1}}\cos((2j+1)\theta)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>l</I><SUB>j+1</SUB> = <IMG
+ WIDTH="63" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{N-1}}}}$">cos((2<I>j</I> + 1)<IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\displaystyle \theta$">)
+</DIV><P></P>
+	[BBHT96]
+
+<P>
+We are interested in the number of iterations for <I>k</I> to have near
+unit probability.  Evidently, we will find the register to be in the
+target state with unit probability when <!-- MATH
+ $(2m + 1)\theta = \pi/2$
+ -->
+(2<I>m</I> + 1)<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$"> = <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$">/2, or
+when <!-- MATH
+ $m = (\pi-2\theta)/4\theta$
+ -->
+<I>m</I> = (<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$"> -2<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$">)/4<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$">.  We can only perform an integer
+number of iterations, but the probability of failure is less than
+1/<I>N</I> if we iterate <!-- MATH
+ $\lfloor \pi / 4 \theta \rfloor$
+ -->
+<IMG
+ WIDTH="11" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$ \lfloor$"><IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$">/4<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$"><IMG
+ WIDTH="11" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$ \rfloor$"> times, which is
+very close to <!-- MATH
+ $\frac{\pi}{4}\sqrt{N}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.png"
+ ALT="$ {\frac{{\pi}}{{4}}}$"><IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$"> when <I>N</I> is large (<!-- MATH
+ $1/\sqrt{N} =
+\sin{\theta} \approx \theta$
+ -->
+1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$"> = sin<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$"> <IMG
+ WIDTH="17" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="$ \approx$"> <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$ \theta$">).  [BBHT96] For the 50 percent
+probability called for by Grover's algorithm we need only
+<!-- MATH
+ $\frac{\pi}{8}\sqrt{N}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$ {\frac{{\pi}}{{8}}}$"><IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$"> iterations. [BBHT96]
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html344"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html340"
+  HREF="node22.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html334"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html342"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html345"
+  HREF="node24.html">Searching for More Than</A>
+<B> Up:</B> <A NAME="tex2html341"
+  HREF="node22.html">Open Questions</A>
+<B> Previous:</B> <A NAME="tex2html335"
+  HREF="node22.html">Open Questions</A>
+ &nbsp; <B>  <A NAME="tex2html343"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

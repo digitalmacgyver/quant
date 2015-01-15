@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Simulation of Shor's Algorithm</TITLE>
+<META NAME="description" CONTENT="The Simulation of Shor's Algorithm">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node17.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html327"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html323"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html317"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html325"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html328"
+  HREF="node20.html">Parallelizing Methodology</A>
+<B> Up:</B> <A NAME="tex2html324"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html318"
+  HREF="node18.html">Introduction to the Code</A>
+ &nbsp; <B>  <A NAME="tex2html326"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00052000000000000000">
+The Simulation of Shor's Algorithm</A>
+</H2>
+
+<P>
+The implementation of Shor's algorithm found in shor.C follows the
+steps outlined in the description of Shor's algorithm found above.
+There are some significant differences in the behavior of the
+simulator and the behavior of a actual quantum computer.
+
+<P>
+The simulator uses 2<SUP>n+1</SUP> double precision floating point numbers
+to represent the state of the quantum register. It uses one Complex
+object to represent the probability amplitude of each of the 2<SUP>n</SUP>
+eigenstates of a <I>n</I> bit quantum memory register, and each Complex
+object uses two double precision floating point numbers. A real
+quantum computer would use exactly <I>n</I> qubits as its memory register.
+
+<P>
+A second large difference is that during the modular exponentiation
+step of Shor's algorithm (Step 6 above) a quantum computer would
+perform one operation of <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I>, where a is the superposition
+of states in register 1. The simulation must calculate the
+superposition of values caused by calculating <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> for <I>a</I> = 0 through <I>q</I> - 1 iteratively. The simulation also stores the result
+of each modular exponentiation, and uses that information to collapse
+register 1 in step 7 in Shor's algorithm. A quantum computer would not
+be capable of performing this book keeping, as examining any
+particular result would collapse the existing superposition to be
+placed in register 2 at the end of step 6 of Shor's algorithm. A
+quantum computer would have no need whatsoever to do such book
+keeping, as when register 2 is measured in step 7, the collapse of
+register 1 is an automatic and unavoidable consequence of the
+measurement. A analogous argument follows for the use of the get
+probability function in step 8 of Shor's algorithm for calculating the
+discrete Fourier transform.
+
+<P>
+Aside from these differences, which are necessitated by the inability
+of a classical computer to accurately depict the behavior of a quantum
+mechanical system, the operations are performed by the shor.C program
+are identical to those called for in the description of Shor's
+algorithm.
+
+<P>
+As the algorithm runs the state of the quantum memory register changes
+in the manner laid out in the description of Shor's algorithm.  After
+the final measurement of register 1 in step 9 we obtain some integer
+<I>m</I>, which has a high probability of being an integer multiple
+<IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \lambda$"> of <I>q</I>/<I>r</I>. <I>r</I> is the period of <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> that we are
+trying to find, so that we may calculate <!-- MATH
+ $x^{r/2} - 1 \bmod n$
+ -->
+<I>x</I><SUP>r/2</SUP> -1 mod <I>n</I> and
+<!-- MATH
+ $x^{r/2} + 1 \bmod n$
+ -->
+<I>x</I><SUP>r/2</SUP> +1 mod <I>n</I> in an effort to find numbers which share factors
+with <I>n</I>.
+
+<P>
+In the post processing step shor.C takes the integer <I>m</I> and divides
+it by <I>q</I>, thus yielding some number <I>c</I> which is approximately equal
+to <!-- MATH
+ $\lambda / r$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \lambda$">/<I>r</I>, where <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \lambda$"> is an integer, and <I>r</I> is the
+desired period. Then using a helper function it calculates the best
+rational approximation to <I>c</I> which has a denominator that is less
+than or equal to <I>q</I> (recall that <I>q</I> is the power of two such that
+<!-- MATH
+ $n^{2} \leq q < 2n^{2}$
+ -->
+<I>n</I><SUP>2</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ \leq$"> <I>q</I> &lt; 2<I>n</I><SUP>2</SUP>, where <I>n</I> is the number to be factored by
+Shor's algorithm).  The period must be less than or equal to <I>q</I>,
+because there are only <I>q</I> values total, so for them to be periodic, the
+period must be less than <I>q</I>.
+
+<P>
+We take this denominator to be the desired period. Shor's algorithm
+can only use even periods in determining factors of <I>n</I>, and so we
+check to see if <I>r</I> is even, if not we check to see if doubling the
+period would still yield a period less than <I>q</I>, if so we double the
+guessed period.
+
+<P>
+Taking the period, which is now guaranteed to be even, we proceed to
+calculate <!-- MATH
+ $x^{r/2} - 1 \bmod n$
+ -->
+<I>x</I><SUP>r/2</SUP> -1 mod <I>n</I> and <!-- MATH
+ $x^{r/2} + 1 \bmod n$
+ -->
+<I>x</I><SUP>r/2</SUP> +1 mod <I>n</I>, calling
+these values <I>a</I> and <I>b</I>, we compute the greatest common denominator
+of <I>a</I> and <I>n</I>, and <I>b</I> and <I>n</I>, to see if we have attained a
+nontrivial factor of <I>n</I>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html327"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html323"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html317"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html325"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html328"
+  HREF="node20.html">Parallelizing Methodology</A>
+<B> Up:</B> <A NAME="tex2html324"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html318"
+  HREF="node18.html">Introduction to the Code</A>
+ &nbsp; <B>  <A NAME="tex2html326"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Proof that Operations are Unitary</TITLE>
+<META NAME="description" CONTENT="Proof that Operations are Unitary">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html244"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html240"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html234"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html242"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html245"
+  HREF="node16.html">Proof that Algorithm Increases</A>
+<B> Up:</B> <A NAME="tex2html241"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html235"
+  HREF="node14.html">Inversion About Average Operator</A>
+ &nbsp; <B>  <A NAME="tex2html243"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00056000000000000000">
+Proof that Operations are Unitary</A>
+</H2>
+
+<P>
+If the above matrices not unitary, they will not be physically
+realizable, at least for systems with time independent Hamiltonians,
+which are the only ones being considered here.  It must be shown that
+each of the above operations is unitary.  As a reminder, a unitary
+matrix is one whose inverse is the same as the transpose of its
+complex conjugate, and unitary matrices represent reversible operators
+that preserve normalization.
+
+<P>
+The Walsh-Hadamard transformation is one of the fundamental unitary
+transformations used in quantum computing.  The proof is simply a
+great deal of linear algebra, showing <I>W</I><SUP>2</SUP> = <I>I</I> (since <I>W</I> is real
+and symmetric) and is omitted for brevity.
+
+<P>
+The rotation matrix <I>R</I> with <!-- MATH
+ $R_{ij} = 0$
+ -->
+<I>R</I><SUB>ij</SUB> = 0 if <!-- MATH
+ $i \not = j$
+ -->
+<I>i</I> <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \not=$"><I>j</I>, and
+<!-- MATH
+ $R_{ii} = e^{\sqrt{-1}\phi_{i}}$
+ -->
+<I>R</I><SUB>ii</SUB> = <I>e</I><SUP><IMG
+ WIDTH="31" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\scriptstyle \sqrt{{-1}}$"><IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\scriptstyle \phi_{{i}}$"></SUP>.  Here <IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \phi_{{i}}^{}$"> is an arbitrary
+real number.
+
+<P>
+It is easy to see <I>R</I>'s complex conjugate transposed is the inverse of
+<I>R</I>.  When <I>R</I> is multiplied by it's complex conjugate, the only
+non-zero elements are on the diagonal, and when the diagonal elements
+are multiplied the powers of <I>e</I> will cancel, resulting in <I>e</I><SUP>0</SUP> = 1
+on the diagonal, the identity matrix. [Grover96]
+
+<P>
+To show the inversion about average matrix <I>A</I> is unitary, recall that
+<I>A</I> may be written as <!-- MATH
+ $A = -I + 2P$
+ -->
+<I>A</I> = - <I>I</I> + 2<I>P</I> where:
+
+<UL>
+<LI><I>I</I> is the identity matrix
+</LI>
+<LI><I>P</I> is the matrix with each element is equal to 1/<I>N</I>
+</LI>
+</UL>
+
+<P>
+Recall that <I>P</I><SUP>2</SUP> = <I>P</I>.  
+
+<P>
+<I>A</I> is real and symmetric, so <I>A</I> is its own transposed complex
+conjugate, and we must show <I>A</I><SUP>2</SUP> = <I>I</I>.  
+
+<P>
+<!-- MATH
+ $A^{2} = (-I+2P)^2 = I^{2} - 2P - 2P + 4P^{2} = I - 4P + 4P = I$
+ -->
+<I>A</I><SUP>2</SUP> = (- <I>I</I> + 2<I>P</I>)<SUP>2</SUP> = <I>I</I><SUP>2</SUP> -2<I>P</I> - 2<I>P</I> + 4<I>P</I><SUP>2</SUP> = <I>I</I> - 4<I>P</I> + 4<I>P</I> = <I>I</I>
+
+<P>
+[Grover96]
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html244"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html240"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html234"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html242"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html245"
+  HREF="node16.html">Proof that Algorithm Increases</A>
+<B> Up:</B> <A NAME="tex2html241"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html235"
+  HREF="node14.html">Inversion About Average Operator</A>
+ &nbsp; <B>  <A NAME="tex2html243"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+\contentsline {section}{\numberline {1}Preface}{4}
+\contentsline {section}{\numberline {2}Introduction}{4}
+\contentsline {section}{\numberline {3}The Classical Computer}{5}
+\contentsline {subsection}{\numberline {3.1}Turing Machines}{5}
+\contentsline {subsection}{\numberline {3.2}Church-Turing Thesis}{5}
+\contentsline {subsection}{\numberline {3.3}Running Time and Complexity Classes}{6}
+\contentsline {section}{\numberline {4}The Quantum Computer}{8}
+\contentsline {subsection}{\numberline {4.1}Quantum Physics}{8}
+\contentsline {subsection}{\numberline {4.2}The Classical Bit}{8}
+\contentsline {subsection}{\numberline {4.3}State Vectors and Dirac Notation}{9}
+\contentsline {subsection}{\numberline {4.4}Superposition and Eigenstates}{10}
+\contentsline {subsection}{\numberline {4.5}The Quantum qubit}{10}
+\contentsline {subsection}{\numberline {4.6}The Quantum Memory Register}{11}
+\contentsline {subsection}{\numberline {4.7}Probability Interpretation}{12}
+\contentsline {subsection}{\numberline {4.8}Quantum Parallelism}{13}
+\contentsline {subsection}{\numberline {4.9}The Efficiency of the Quantum Computer}{14}
+\contentsline {section}{\numberline {5}Quantum Algorithms}{15}
+\contentsline {subsection}{\numberline {5.1}Introduction to Shor's Algorithm}{15}
+\contentsline {subsection}{\numberline {5.2}Motivation for Shor's Algorithm}{15}
+\contentsline {subsection}{\numberline {5.3}Overview of Shor's Algorithm}{16}
+\contentsline {subsection}{\numberline {5.4}Steps to Shor's Algorithm}{17}
+\contentsline {subsection}{\numberline {5.5}Other Quantum Algorithms}{19}
+\contentsline {section}{\numberline {6}A Simulation of Shor's Algorithm on a Classical Computer}{19}
+\contentsline {subsection}{\numberline {6.1}Introduction to the Code for the Simulation}{20}
+\contentsline {subsection}{\numberline {6.2}The Complex Number Class}{20}
+\contentsline {subsection}{\numberline {6.3}The Quantum Memory Register Class}{20}
+\contentsline {subsection}{\numberline {6.4}The Simulation of Shor's Algorithm}{22}
+\contentsline {subsection}{\numberline {6.5}Utility Functions for the Simulation}{24}
+\contentsline {section}{\numberline {7}Conclusion}{24}
+\contentsline {section}{\numberline {8}Bibliography}{25}
+\contentsline {section}{\numberline {9}Glossary}{26}
+\contentsline {section}{\numberline {A}Mathematics Used in this Paper}{29}
+\contentsline {subsection}{\numberline {A.1}Binary Representation of Numbers}{29}
+\contentsline {subsection}{\numberline {A.2}Complex Numbers}{29}
+\contentsline {subsection}{\numberline {A.3}Vector Mathematics}{30}
+\contentsline {section}{\numberline {B}Actual Quantum Computers and Further Research}{31}
+\contentsline {section}{\numberline {C}Other Quantum Computer Simulators}{31}
+\contentsline {section}{\numberline {D}Code for my Simulation of Shor's Algorithm}{31}
+\contentsline {subsection}{\numberline {D.1}complex.h}{32}
+\contentsline {subsection}{\numberline {D.2}complex.C}{32}
+\contentsline {subsection}{\numberline {D.3}qureg.h}{34}
+\contentsline {subsection}{\numberline {D.4}qureg.C}{35}
+\contentsline {subsection}{\numberline {D.5}shor.C}{38}
+\contentsline {subsection}{\numberline {D.6}util.h}{45}
+\contentsline {subsection}{\numberline {D.7}util.C}{46}
+\contentsline {subsection}{\numberline {D.8}qubit.C}{50}
+\contentsline {section}{\numberline {E}Sample Output}{54}
+\contentsline {subsection}{\numberline {E.1}Sample Output for $n = 17$}{54}
+\contentsline {subsection}{\numberline {E.2}Sample Output for $n = 15$}{55}
+\contentsline {subsection}{\numberline {E.3}Sample Output for $n = 33$}{57}

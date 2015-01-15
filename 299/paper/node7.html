@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Running Time and Complexity Classes</TITLE>
+<META NAME="description" CONTENT="Running Time and Complexity Classes">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html187"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html183"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html179"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html185"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html188"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Up:</B> <A NAME="tex2html184"
+  HREF="node4.html">The Classical Computer</A>
+<B> Previous:</B> <A NAME="tex2html180"
+  HREF="node6.html">Church-Turing Thesis</A>
+ &nbsp; <B>  <A NAME="tex2html186"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00043000000000000000">
+Running Time and Complexity Classes</A>
+</H2>
+
+<P>
+Turing produced the Turing machine in an effort to answer the question
+``Is there a mechanical procedure by which the truth or falsity of any
+mathematical conjecture can be decided?''  Turing reasoned that if
+there was such a method, and if it were truly mechanical in nature and
+requiring no creative effort, then it could be performed by a Turing
+machine.  The proof offered by Turing that there is no such procedure
+is the same as the proof of Turing's Halting problem, which states
+that no Turing machine <I>H</I> can in general be given any arbitrary
+Turing machine <I>X</I> and its input (<I>I</I><SUB>x</SUB>) as its own (<I>H</I>'s) input, and
+determine whether <I>X</I> will run to completion on <I>I</I><SUB>x</SUB>.  The
+demonstration by Turing of a problem which can not be solved by a
+Turing machine suggests the division of functions into two groups:
+those that can be computed by a Turing machine and those that can not.  
+
+<P>
+By the Church-Turing thesis we can generally say that functions that
+are not Turing computable are simply ``not computable.'' It should be
+stressed at this point that this classification of a function that is
+not Turing computable as not computable in a general sense is due to
+the <B>definitional</B> aspect of the Church-Turing thesis.  It is a
+logical possibility that some future computing machine will indeed be
+able to compute some function that a Turing machine can not - however
+no such machine is known, and the development of such a machine would
+be a large breakthrough.  Arguments can be made that no such machine
+would be physically possible - however this is not a settled
+question.
+
+<P>
+Determining if a function is computable at all is interesting, but this
+distinction is not fine enough to determine if a function can
+realistically be solved by a physical computer in a reasonable amount
+of time.  If a computation will take billions of years to compute, it
+may as well be uncomputable from the perspective of the pragmatist.  A
+algorithm can be characterized by the number of operations and amount
+of memory it requires to compute an answer given an input of size <I>n</I>.
+These characterizations of the algorithm determine what is called the
+algorithm's <I>running time</I> or <I>time complexity</I>.
+Specifically, the time complexity of an algorithm to compute a
+function is determined by looking at how the number of operations of
+the algorithm scale with the size of the input of the function it
+computes.  We'll take the size of the input to be the number of bits
+needed to represent that number in binary.
+
+<P>
+An algorithm which computes its output for an input of size <I>n</I> using
+resources (computational steps, memory, etc.) that is bounded above by
+a polynomial function of <I>n</I> are said to be of <I>polynomial
+  time</I>. For example if an algorithm with an input size of 10 bits
+took <!-- MATH
+ $10^{4} + 7*10^{2} + 1001$
+ -->
+10<SUP>4</SUP> +7*10<SUP>2</SUP> + 1001 operations to compute its answer it would
+be considered a polynomial time algorithm.
+
+<P>
+Problems which can be solved in polynomial time or less are generally
+deemed to be <I>tractable</I>.  An algorithm which solves a problem in
+polynomial time may be referred to as <I>efficient</I>.  Problems which
+require more than polynomial time are usually considered to be
+<I>intractable</I>, for example an algorithm which would require 2<SUP>n</SUP>
+operations for an input size of <I>n</I> would be considered intractable,
+as the number of operations grows exponentially with the input size,
+not polynomially.  Generally tractable problems are considered to be
+those which may practically be solved in the real world.  (Shor)
+
+<P>
+In complexity theory, problems are often restated in terms of a
+<I>decision problem</I> - this means that the function of interest
+takes in its input and produces a yes or no answer.
+
+<P>
+Computer Scientists have grouped problems into a variety of complexity
+classes, below are some of the more well known.
+
+<P>
+<DL>
+<DT><STRONG>P</STRONG></DT>
+<DD>: The class of decision problems which can be answered in
+  polynomial time.
+
+<P>
+</DD>
+<DT><STRONG>NP</STRONG></DT>
+<DD>: Nondeterministic polynomial time, the class of decision
+  problems where a candidate for an answer can be verified as a
+  correct answer or not in polynomial time.
+
+<P>
+</DD>
+<DT><STRONG>NP-complete</STRONG></DT>
+<DD>: The ``hardest'' problems in NP, this set has the
+  interesting property that if any NP-complete problem can be solved
+  in polynomial time, then P and NP are in fact the same.  Whether P
+  equals NP is an outstanding problem in computer science and complexity theory.
+</DD>
+</DL>
+(Cormen, Leiserson, Rivest)
+
+<P>
+Given these distinctions, to determine if an function may be
+<I>efficiently</I> computed by a classical computer there are two
+questions that must be answered.  First, can a Turing machine compute
+the function, if so then the function is called computable.  Second
+the time complexity of the algorithm to be used must by considered.
+In general if an algorithm requires polynomial time or less to compute
+it is considered to be tractable, and if not it is considered to be
+intractable.
+
+<P>
+Accordingly, interest in quantum computing is twofold.  First it is of
+interest if a quantum computer can compute functions which are
+uncomputable on a classical computer, and second it is of interest
+whether an algorithm which is intractable on a Turing machine may be
+tractable on a quantum computer.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html187"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html183"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html179"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html185"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html188"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Up:</B> <A NAME="tex2html184"
+  HREF="node4.html">The Classical Computer</A>
+<B> Previous:</B> <A NAME="tex2html180"
+  HREF="node6.html">Church-Turing Thesis</A>
+ &nbsp; <B>  <A NAME="tex2html186"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

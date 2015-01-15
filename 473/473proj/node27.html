@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conclusion</TITLE>
+<META NAME="description" CONTENT="Conclusion">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="473proj.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html390"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html386"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html380"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html388"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html391"
+  HREF="node28.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html387"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html381"
+  HREF="node26.html">Implications on P =</A>
+ &nbsp; <B>  <A NAME="tex2html389"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00070000000000000000">
+Conclusion</A>
+</H1>
+
+<P>
+Quantum computation allows for exponential speed up and storage in a
+quantum register via quantum parallelism.  The more basis states
+represented within the register, and hence the more speed up due to
+parallelism in the register, the more improbable it is that a desired
+state can be measured.  Grover's algorithm handles this problem by
+relying on transformations which cause the amplitude of the marked
+state to increase at the expense of the non marked states, in a manner
+ways this is analogous to interference of waves.
+
+<P>
+Grover's algorithm is unique among quantum algorithms in that it shows
+a useful calculation that a quantum computer can calculate in fewer
+operations than any classical computer possibly can. At the heart of
+Grover's algorithm are two unitary transformations, the first is a
+selective phase inversion, which makes the sign of the amplitude of
+the target negative.  The second unitary transformation is an
+inversion about average operation.  Initially we place the amplitude
+of all states at the same positive value, each phase switch and
+inversion about average increases the amplitude of the target state.
+The exact number of times we perform these transformations is roughly
+<!-- MATH
+ $\pi/4\sqrt{N}$
+ -->
+<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$">/4<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$"> for sufficiently large <I>N</I>.  For a classical algorithm
+the best time bound is <I>O</I>(<I>n</I>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html390"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html386"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html380"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html388"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html391"
+  HREF="node28.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html387"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html381"
+  HREF="node26.html">Implications on P =</A>
+ &nbsp; <B>  <A NAME="tex2html389"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

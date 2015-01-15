@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Singleton Functions</TITLE>
+<META NAME="description" CONTENT="Singleton Functions">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node36.html">
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html534"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html528"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html536"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node36.html">Partially Symmetric Functions</A>
+<B> Up:</B> <A NAME="tex2html535"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html529"
+  HREF="node34.html">Determining the Oracle String</A>
+ &nbsp; <B>  <A NAME="tex2html537"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00740000000000000000"></A>
+<A NAME="sec:torf1"></A>
+<BR>
+Singleton Functions
+</H1>
+
+<P>
+An <I>N</I>-bit Boolean function that evaluates to 1 for exactly one input
+is a singleton function.  We will show that for any <I>N</I>-bit singleton
+function Ambainis' Theorem can always attain a lower query bound of
+<!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">), but no better.
+
+<P>
+The proof of the <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) lower query bound for determining
+the oracle string in Theorem <A HREF="node34.html#th:dosbad">2.3.1</A> can equally well be
+applied to any singleton function.
+
+<P>
+<P>
+<DIV><A NAME="th:1sqn"><B>Corollary  2.4.1</B></A> &nbsp; 
+<I><!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle queries are required to compute any <I>N</I>-bit
+singleton function in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="th:best"><B>Theorem  2.4.1</B></A> &nbsp; 
+<I><!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) is the best lower bound on the number of oracle
+queries required to compute an <I>N</I>-bit singleton function that can be
+attained from Theorem <A HREF="node30.html#th:amb">2.1.1</A>.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="556" HEIGHT="630" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="\begin{proof}
+% latex2html id marker 752We will consider every possible choice...
+...l = 1$, and by the
+pigeonhole principle $m/\max_{i}\{Y_{i}\} \le N$.
+\end{proof}">
+<BR>
+
+<P>
+This result coupled with the <I>N</I>/2 lower bound for the singleton
+function of determining the oracle string leads immediately the the
+following corollary.
+
+<P>
+<P>
+<DIV><A NAME="cor:ambbad"><B>Corollary  2.4.2</B></A> &nbsp; 
+<I>There exist functions for which Ambainis' Theorem <A HREF="node30.html#th:amb">2.1.1</A> can not
+attain asymptotically tight lower bounds.</I></DIV><P></P>
+
+<P>
+Despite this limitation, the theorem can still prove lower bounds for
+many Boolean functions.  From this point forward all our lower bounds
+are directly or indirectly attained through Ambainis' Theorem.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html534"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html528"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html536"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node36.html">Partially Symmetric Functions</A>
+<B> Up:</B> <A NAME="tex2html535"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html529"
+  HREF="node34.html">Determining the Oracle String</A>
+ &nbsp; <B>  <A NAME="tex2html537"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

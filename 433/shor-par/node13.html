@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction to Shor's Algorithm</TITLE>
+<META NAME="description" CONTENT="Introduction to Shor's Algorithm">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html254"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html250"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html244"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html252"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html255"
+  HREF="node14.html">Overview of Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html251"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html245"
+  HREF="node12.html">Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html253"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00041000000000000000">
+Introduction to Shor's Algorithm</A>
+</H2>
+
+<P>
+By 1993 it was know that a quantum computer could perform certain
+tasks asymptotically faster than any classical computer. Nonetheless
+research into quantum computing was largely driven by academic
+curiosity. In 1994 Peter Shor, a scientist working for Bell Labs,
+devised a polynomial time algorithm for finding prime factors of large
+numbers on a quantum computer. This discovery drew great attention to
+the field of quantum computing.
+
+<P>
+Shor's algorithm is viewed as important because the difficulty of
+finding prime factors of large numbers is relied upon for most
+cryptography systems. If an efficient method of factoring large
+numbers were to be discovered most of the current encryption schemes
+would be easily compromised. While it has not been proven that
+factoring large numbers can not be archived on a classical computer in
+polynomial time, the fastest published algorithm for factoring large
+number as of 2015 in <!-- MATH
+ $O(exp(\frac{64}{9}n^{1/3} (log\ n)^{2/3})$
+ -->
+<I>O</I>(<I>exp</I>(<IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$ {\frac{{64}}{{9}}}$"><I>n</I><SUP>1/3</SUP>(<I>log</I>&nbsp;<I>n</I>)<SUP>2/3</SUP>),
+operations where <I>n</I> is the number of bits used to represent the
+number: this runtime exceeds polynomial time. In contrast Shor's
+algorithm runs in <!-- MATH
+ $O((\log n)^{2} * \log \log n)$
+ -->
+<I>O</I>((log&nbsp;<I>n</I>)<SUP>2</SUP>*loglog&nbsp;<I>n</I>) on a quantum
+computer, and then must perform <I>O</I>(log&nbsp;<I>n</I>) steps of post processing
+on a classical computer. Overall this time is polynomial. This
+discovery propelled the study of quantum computing forward, as such an
+algorithm is much sought after. (Shor)
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html254"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html250"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html244"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html252"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html255"
+  HREF="node14.html">Overview of Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html251"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html245"
+  HREF="node12.html">Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html253"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

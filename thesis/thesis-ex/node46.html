@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Representing Graphs as Bit Strings:</TITLE>
+<META NAME="description" CONTENT="Representing Graphs as Bit Strings:">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node45.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html679"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html675"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html671"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html677"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html680"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+<B> Up:</B> <A NAME="tex2html676"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html672"
+  HREF="node45.html">Graph Properties:</A>
+ &nbsp; <B>  <A NAME="tex2html678"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00810040000000000000"></A>
+<A NAME="sec:gbs"></A>
+<BR>
+Representing Graphs as Bit Strings:
+</H4>
+
+<P>
+Before we begin we need a way to represent a graph as a bit string,
+and graph properties as Boolean functions on that bit string if we
+wish to apply Theorem <A HREF="node30.html#th:amb">2.1.1</A> or any of its derivatives.  When
+representing graphs as bit strings it is helpful to restrict the types
+of graphs we will consider.
+
+<P>
+A simple graph has no multiple edges or loops.  The adjacency matrix
+<I>A</I> of a simple directed graph has <!-- MATH
+ $a_{ij} = 1$
+ -->
+<I>a</I><SUB>ij</SUB> = 1 if and only if there
+is a directed edge from vertex <I>i</I> to vertex <I>j</I>.  Since <!-- MATH
+ $a_{ii} = 0$
+ -->
+<I>a</I><SUB>ii</SUB> = 0
+for all vertices <I>i</I> of a simple graph, we need only <I>V</I>(<I>V</I> - 1) bits to
+represent such graphs with <I>V</I> vertices.  For undirected graphs, the
+adjacency matrix is symmetric across the diagonal.  Thus we can
+represent any undirected simple graph with a bit string of length
+<I>V</I>(<I>V</I> - 1)/2.  A simple undirected graph is depicted in Figure
+<A HREF="#fi:graph">3.1</A>, its above-diagonal adjacency matrix representation can
+be seen in Table <A HREF="#tbl:graph">3.1</A>.  Now that we can represent a graph
+by its above diagonal adjacency matrix, graph properties are simply
+Boolean functions on matrix representations.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fi:graph"></A><A NAME="1876"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
+An Undirected Graph</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="177" ALIGN="BOTTOM" BORDER="0"
+ SRC="img94.png"
+ ALT="\includegraphics{figures/sample_graph.eps}">
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="tbl:graph"></A><A NAME="1877"></A>
+<TABLE>
+<CAPTION><STRONG>Table 3.1:</STRONG>
+Above Diagonal Adjacency Matrix Representation of the Graph in Figure <A HREF="#fi:graph">3.1</A></CAPTION>
+<TR><TD><IMG
+ WIDTH="169" HEIGHT="130" BORDER="0"
+ SRC="img95.png"
+ ALT="\begin{table}\begin{center}
+\(\begin{array}{cccccc}
+&amp; B &amp; C &amp; D &amp; E &amp; F \ A &amp; ...
+... &amp; 0 \ D &amp; &amp; &amp; &amp; 1 &amp; 1 \ E &amp; &amp; &amp; &amp;
+&amp; 0
+\end{array}\)\end{center}\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html679"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html675"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html671"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html677"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html680"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+<B> Up:</B> <A NAME="tex2html676"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html672"
+  HREF="node45.html">Graph Properties:</A>
+ &nbsp; <B>  <A NAME="tex2html678"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

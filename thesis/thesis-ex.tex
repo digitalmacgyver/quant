@@ -1,0 +1,98 @@
+%%
+%% This is file `thesis-ex.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% uiucthesis.dtx  (with options: `example')
+%% 
+\def\fileversion{v1.0n} \def\filedate{1997/09/15}
+%% Package "uiucthesis" for use with LaTeX2e.
+\documentclass[12pt,oneside]{book}
+%%\usepackage[draftthesis,fullpage]{uiucthesis}
+\usepackage[fullpage]{uiucthesis}
+\usepackage{graphics}
+\usepackage{latexsym}
+\usepackage{jeffe}
+
+\begin{document}
+
+\title{Lower Query Bounds in the Quantum Oracle Model}
+\author{Matthew Joel Hayward}
+\department{Computer Science}
+\schools{B.S., University of Illinois at Urbana-Champaign, 2000\\
+         B.S., University of Illinois at Urbana-Champaign, 2000}
+\msthesis
+\degreeyear{2002}
+\maketitle
+
+\frontmatter
+
+%% Create a dedication with no heading, centered vertically
+%% on the page.
+
+\chapter*{Acknowledgments}
+
+I am grateful for the support of Professor Jeff Erickson, without
+whose time and insight this thesis never could have been written.  To
+my parents, John and Linda Hayward, whose support and encouragement
+have allowed me to pursue education: thank you.
+
+%% The thesis format requires these lists to come in the following
+%% order:
+%%
+%% Table of Contents
+%% List of Tables
+%% List of Figures or List of Illustrations
+%% List of Symbols and/or Abbreviations
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%% Create a List of Abbreviations.
+
+\chapter*{List of Abbreviations}
+\begin{description}
+\item[$A \times B$:] The Cartesian product of the sets $A$ and $B$.
+\item[AND:] The Boolean function that returns 1 if and only if every input bit is 1.
+\item[$D(f)$:] The decision tree complexity of the function $f$.
+\item[$D(f,x)$:] The minimum number of bits of input $x$ that determine the value of $f(x)$.
+\item[$D_{0}(f)$:] The nondeterministic decision tree complexity 
+of verifying that $f(x) = 0$.
+\item[$D_{1}(f)$:] The nondeterministic decision tree complexity 
+of verifying that $f(x) = 1$.
+\item[$N(f)$:] The nondeterministic decision tree complexity of the function $f$.
+\item[OR:] The Boolean function that returns 0 if and only if every input bit is 0.
+\item[PARITY:] The Boolean function that returns 1 if and only if the number of 1 bits in the input is even.
+\item[MAJORITY:] The Boolean function that returns 1 if and only if more than half of the input bits are 1.
+
+
+\end{description}
+
+
+\mainmatter
+
+\include{1-introduction}
+\include{2-oracle}
+\include{3-graph}
+\include{4-general}
+\include{5-conclusion}
+
+%%\appendix
+
+%%\include{A-data.tex}
+
+\backmatter
+
+\bibliography{thesisbib}
+\bibliographystyle{plain}
+
+%%\chapter{Vita}
+
+%%Juan Valdez was born\ldots.
+
+\end{document}
+\endinput
+%%
+%% End of file `thesis-ex.tex'.

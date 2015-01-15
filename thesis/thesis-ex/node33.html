@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Application to Generalized XOR</TITLE>
+<META NAME="description" CONTENT="Application to Generalized XOR">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html514"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html510"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html506"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html512"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html515"
+  HREF="node34.html">Determining the Oracle String</A>
+<B> Up:</B> <A NAME="tex2html511"
+  HREF="node32.html">A Lemma for Proving</A>
+<B> Previous:</B> <A NAME="tex2html507"
+  HREF="node32.html">A Lemma for Proving</A>
+ &nbsp; <B>  <A NAME="tex2html513"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00721000000000000000"></A> 
+<A NAME="sec:gXOR"></A>
+<BR>
+Application to Generalized XOR
+</H2>
+
+<P>
+To see how simple proofs can be with Lemma <A HREF="node32.html#lm:1xky">2.2.1</A> we provide an
+example.  Generalized XOR is the <I>N</I>-bit Boolean function that is 0 if
+and only if its input bits are all the same.
+
+<P>
+<P>
+<DIV><A NAME="th:gXOR"><B>Theorem  2.2.1</B></A> &nbsp; 
+<I><!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle queries are required to compute
+the generalized XOR of <I>N</I> bits in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="94" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.png"
+ ALT="\begin{proof}
+% latex2html id marker 711The generalized XOR of $0^{N}$ is $0$...
+...}$ is 1. The theorem follows from Lemma
+\ref{lm:1xky} with $k = N$.
+\end{proof}">
+<BR>
+
+<P>
+This lower bound is asymptotically tight: Beals et al. provide
+<!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle query algorithms for computing the AND or OR of
+<I>N</I> bits in the bounded error setting [<A
+ HREF="node57.html#beals98quantum">2</A>], and the
+generalized XOR of <I>N</I> bits is just <!-- MATH
+ $\overline{AND \vee
+\overline{OR}}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="25" ALIGN="BOTTOM" BORDER="0"
+ SRC="img83.png"
+ ALT="$ \overline{{AND \vee
+\overline{OR}}}$">.  Unfortunately, Ambainis' Theorem does not always 
+perform this well, as we demonstrate in the next two sections.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html514"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html510"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html506"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html512"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html515"
+  HREF="node34.html">Determining the Oracle String</A>
+<B> Up:</B> <A NAME="tex2html511"
+  HREF="node32.html">A Lemma for Proving</A>
+<B> Previous:</B> <A NAME="tex2html507"
+  HREF="node32.html">A Lemma for Proving</A>
+ &nbsp; <B>  <A NAME="tex2html513"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

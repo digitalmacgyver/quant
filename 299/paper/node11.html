@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>State Vectors and Dirac Notation</TITLE>
+<META NAME="description" CONTENT="State Vectors and Dirac Notation">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html244"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html240"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html234"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html242"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html245"
+  HREF="node12.html">Superposition and Eigenstates</A>
+<B> Up:</B> <A NAME="tex2html241"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html235"
+  HREF="node10.html">The Classical Bit</A>
+ &nbsp; <B>  <A NAME="tex2html243"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00053000000000000000">
+State Vectors and Dirac Notation</A>
+</H2>
+
+<P>
+We wish to know exactly how the behavior of the spin-1/2 particle, our
+qubit, differs from a that of a classical bit.  Recall that a
+classical bit can store either a 1 or a 0, and when measured the value
+observed will always be the value stored.  Quantum physics states that
+when we measure the spin-1/2 particles state we will determine that it
+is in the +1/2 state, or the spin -1/2 state.  In this manner our
+qubit is not different from a classical bit, for it can be measured to
+be in the +1/2, or 1 state, or the -1/2, or 0 state.  The
+differences between the qubit and the bit come from what sort of
+information a qubit can store when it is not being measured.
+
+<P>
+According to quantum physics we may describe the state of this
+spin-1/2 particle by a state vector in a Hilbert Space.
+
+<P>
+A Hilbert Space is a linear, complex vector space.
+
+<P>
+In a linear vector space you may add and multiply vectors that lie
+within the space together and the resulting vector will still lie
+within that space.  For example you are probably familiar with the
+<I>x</I>, <I>y</I>, <I>z</I> coordinate system where the <I>x</I>, <I>y</I>, and <I>z</I> axes are
+mutually perpendicular real number lines, which coincide at the point
+<I>x</I> = 0, <I>y</I> = 0, <I>z</I> = 0 - this is an example of a linear vector
+space.
+
+<P>
+In a complex vector space the lengths of the vectors within the space
+are described with complex numbers.  Complex numbers are numbers which
+take the form <I>a</I> + <I>i</I>*<I>b</I>, where <I>a</I> and <I>b</I> are real numbers, and <I>i</I>
+is defined to be the square root of negative one.
+(Williams, Clearwater)
+
+<P>
+In the Hilbert Space for our state vector, which describes the state
+of our spin-1/2 particle, these perpendicular axes will correspond to
+each possible state that the system can be measured in.  So our
+Hilbert Space for a single qubit will have two perpendicular axes, one
+corresponding to the spin-1/2 particle being in the +1/2 state, and
+the other to the particle being in the -1/2 state.  These states
+which the vector can be measured to be are referred to as
+<I>eigenstates</I>.  The vector which exists somewhere in this space
+which represents the state of our spin-1/2 particle is called the
+<I>state vector</I>.  The projection of the state vector onto one of
+the axes shows the contribution of that axes' eigenstate to the whole
+state.  This means that in general, the state of the spin-1/2 particle
+can be any combination of the base states.  In this manner a qubit is
+totally unlike a bit, for a bit can exist in only the 0 or 1 state,
+but the qubit can exist, in principle, in any combination of the 0 and
+1 state, and is only constrained to be in the 0 or 1 state when we
+measure the state.
+
+<P>
+Now I will introduce the standard notation for state vectors in
+Quantum physics.  The state vector is written with the following way
+and called a <I>ket vector</I> <!-- MATH
+ $|\psi \rangle$
+ -->
+|<IMG
+ WIDTH="15" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \psi$"><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rangle$">.  Where <IMG
+ WIDTH="15" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \psi$"> is a
+list of numbers which contain information about the projection of the
+state vector onto its base states.  The term ket and this notation
+come from the physicist Paul Dirac who wanted a concise shorthand for
+writing formulas that occur in Quantum physics.  These formulas
+frequently took the form of the product of a row vector with a column
+vector.  Thus he referred to row vectors as <I>bra vectors</I>
+represented as <!-- MATH
+ $\langle y|$
+ -->
+<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \langle$"><I>y</I>|.  The product of a bra and a ket vector
+would be written <!-- MATH
+ $\langle y|x \rangle$
+ -->
+<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \langle$"><I>y</I>| <I>x</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rangle$">, and would be referred to as a
+<I>bracket</I>.  (Williams, Clearwater)
+
+<P>
+There is nothing special about this vector notation, you may think of
+any state vector being written as a letter with a line over it, or as
+a bold letter as vectors are normally denoted.  If you do further
+reading into this area you will almost assuredly come across the bra
+and ket notation, which is why it is presented.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html244"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html240"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html234"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html242"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html245"
+  HREF="node12.html">Superposition and Eigenstates</A>
+<B> Up:</B> <A NAME="tex2html241"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html235"
+  HREF="node10.html">The Classical Bit</A>
+ &nbsp; <B>  <A NAME="tex2html243"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

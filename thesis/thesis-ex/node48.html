@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Graph Connectivity</TITLE>
+<META NAME="description" CONTENT="Graph Connectivity">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node49.html">
+<LINK REL="previous" HREF="node47.html">
+<LINK REL="up" HREF="node47.html">
+<LINK REL="next" HREF="node49.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html705"
+  HREF="node49.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html701"
+  HREF="node47.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html695"
+  HREF="node47.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html703"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html706"
+  HREF="node49.html">Bipartiteness</A>
+<B> Up:</B> <A NAME="tex2html702"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+<B> Previous:</B> <A NAME="tex2html696"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+ &nbsp; <B>  <A NAME="tex2html704"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00821000000000000000"></A>
+<A NAME="sec:gc"></A>
+<BR>
+Graph Connectivity
+</H2>
+
+<P>
+One of the most fundamental non-trivial monotone graph properties is
+graph connectivity.  Graph connectivity is known to be evasive
+[<A
+ HREF="node57.html#felsner92complexity">7</A>], so <I>V</I>(<I>V</I> - 1)/2 oracle queries are 
+required to decide graph connectivity for a simple undirected graph in
+the classical case.
+
+<P>
+Every graph with <I>V</I> - 2 edges is unconnected, and every graph with
+<!-- MATH
+ $(V-1)(V-2)/2$
+ -->
+(<I>V</I> - 1)(<I>V</I> - 2)/2 edges is connected.  We can apply Theorem
+<A HREF="node36.html#th:ptsym">2.5.1</A> with <I>a</I> = <I>V</I> - 2, <!-- MATH
+ $b = (V-1)(V-2)/2$
+ -->
+<I>b</I> = (<I>V</I> - 1)(<I>V</I> - 2)/2, and <!-- MATH
+ $N =
+V(V-1)/2$
+ -->
+<I>N</I> = <I>V</I>(<I>V</I> - 1)/2.  This gives us only the trivial lower bound
+<P><!-- MATH
+ \begin{displaymath}
+\Omega\left(\sqrt{\frac {\left(\frac{V(V-1)}{2} -
+(V-2)\right)\left(\frac{V(V-1)}{2} - (V-2)\right) }
+{\left(\frac{V(V-1)}{2} - (V-2) - (V-2)\right)^{2}}}
+\right) = \Omega(1).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\displaystyle \Omega$"><IMG
+ WIDTH="23" HEIGHT="111" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$\displaystyle \left(\vphantom{\sqrt{\frac {\left(\frac{V(V-1)}{2} -
+(V-2)\right...
+... - (V-2)\right) }
+{\left(\frac{V(V-1)}{2} - (V-2) - (V-2)\right)^{2}}}
+}\right.$"><IMG
+ WIDTH="356" HEIGHT="111" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$\displaystyle \sqrt{{\frac {\left(\frac{V(V-1)}{2} -
+(V-2)\right)\left(\frac{V(V-1)}{2} - (V-2)\right) }
+{\left(\frac{V(V-1)}{2} - (V-2) - (V-2)\right)^{2}}}}$"><IMG
+ WIDTH="23" HEIGHT="111" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$\displaystyle \left.\vphantom{\sqrt{\frac {\left(\frac{V(V-1)}{2} -
+(V-2)\right...
+... - (V-2)\right) }
+{\left(\frac{V(V-1)}{2} - (V-2) - (V-2)\right)^{2}}}
+}\right)$"> = <IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\displaystyle \Omega$">(1).
+</DIV><P></P>
+However, through better choices of the sets <I>X</I> and <I>Y</I> and the
+relation <I>P</I> for Theorem <A HREF="node30.html#th:amb">2.1.1</A> we will prove that <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>V</I>)
+oracle queries are required to compute graph connectivity in the
+bounded error setting.
+
+<P>
+To prove a lower bound for graph connectivity we will need Lemmas
+<A HREF="#lm:1erc">3.2.1</A> and <A HREF="#lm:1ernc">3.2.2</A>, which delineate classes of connected 
+and unconnected graphs whose number of edges differ by one.
+
+<P>
+<P>
+<DIV><A NAME="lm:1erc"><B>Lemma  3.2.1</B></A> &nbsp; 
+<I>If the above diagonal adjacency matrix representation of a simple
+undirected graph has exactly one 1 in each row then the graph it
+represents is connected.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="56" ALIGN="BOTTOM" BORDER="0"
+ SRC="img99.png"
+ ALT="\begin{proof}
+There is a path from every vertex to vertex $V$, and there are $V-1$
+edges, therefore the graph is a tree. Trees are connected.
+\end{proof}">
+<BR>
+
+<P>
+<P>
+<DIV><A NAME="lm:1ernc"><B>Lemma  3.2.2</B></A> &nbsp; 
+<I>If the above diagonal adjacency matrix representation of a simple
+undirected graph has exactly one 1 in each row except one row which
+has all 0's then the graph it represents is not connected.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="554" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img100.png"
+ ALT="\begin{proof}
+No graph with $V-2$ edges is connected.
+\end{proof}">
+<BR>
+
+<P>
+<P>
+<DIV><A NAME="th:gc"><B>Theorem  3.2.1</B></A> &nbsp; 
+<I><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>V</I>) oracle queries are required to decide whether a simple
+undirected graph is connected in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="639" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="\begin{proof}
+% latex2html id marker 1822We apply Theorem \ref{th:amb}, we con...
+...ht\rfloor^{2}}{1}}\right) =
+\Omega\left(V\right)
+.\end{displaymath}\end{proof}">
+<BR>
+
+<P>
+As an illustration of the sets <I>X</I> and <I>Y</I> and the relation <I>P</I> used
+in the proof of Theorem <A HREF="#th:gc">3.2.1</A>, consider a graph with vertex set
+<!-- MATH
+ $\{Q,R,S,T\}$
+ -->
+{<I>Q</I>, <I>R</I>, <I>S</I>, <I>T</I>}, the graphs in <I>X</I> and <I>Y</I> and the relation <I>P</I> are
+depicted in Figure <A HREF="#fi:gc">3.2</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fi:gc"></A><A NAME="1883"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+Illustration of Theorem <A HREF="#th:gc">3.2.1</A></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="747" HEIGHT="367" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.png"
+ ALT="\includegraphics{figures/conn2.eps}">
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+For the classical case connectivity is known to be evasive
+[<A
+ HREF="node57.html#felsner92complexity">7</A>].  If this lower bound is known elsewhere for 
+the quantum bounded error setting the author is unaware of it.  It is
+not known if this lower bound is asymptotically tight in the bounded
+error setting.  It seems reasonable that this bound could be tight,
+given the quadratic speedups realized by AND and OR.  Then again it
+also seems reasonable that there is no asymptotic speedup as is the
+case for MAJORITY and PARITY.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html705"
+  HREF="node49.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html701"
+  HREF="node47.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html695"
+  HREF="node47.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html703"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html706"
+  HREF="node49.html">Bipartiteness</A>
+<B> Up:</B> <A NAME="tex2html702"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+<B> Previous:</B> <A NAME="tex2html696"
+  HREF="node47.html">Non-trivial Monotone Graph Properties</A>
+ &nbsp; <B>  <A NAME="tex2html704"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

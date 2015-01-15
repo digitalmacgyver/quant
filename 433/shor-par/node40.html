@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>range.C</TITLE>
+<META NAME="description" CONTENT="range.C">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node41.html">
+<LINK REL="previous" HREF="node39.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node41.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html587"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html583"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html577"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html585"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html588"
+  HREF="node41.html">shor.C</A>
+<B> Up:</B> <A NAME="tex2html584"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html578"
+  HREF="node39.html">range.h</A>
+ &nbsp; <B>  <A NAME="tex2html586"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION0001211000000000000000">
+range.C</A>
+</H2>
+<PRE>
+#include "range.h"
+
+int * q_range_lower;
+int * q_range_upper;
+
+//Just like q_range for n, the number to be factored.
+int * n_range_lower;
+int * n_range_upper;
+
+void init_ranges(int num_threads, int num_factor, int q) {
+  for (int i = 0 ; i &lt; num_threads ; i++) {
+    q_range_lower[i] = i*(q/num_threads);
+    q_range_upper[i] = (i+1)*(q/num_threads) - 1;
+    if (i == num_threads - 1) {
+      q_range_upper[i] += q%num_threads;
+    }
+  }
+
+  for (int i = 0 ; i &lt; num_threads ; i++) {
+    n_range_lower[i] = i*(num_factor/num_threads);
+    n_range_upper[i] = (i+1)*(num_factor/num_threads) - 1;
+    if (i == num_threads - 1) {
+      n_range_upper[i] += num_factor%num_threads;
+    }
+  }
+}
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html587"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html583"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html577"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html585"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html588"
+  HREF="node41.html">shor.C</A>
+<B> Up:</B> <A NAME="tex2html584"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html578"
+  HREF="node39.html">range.h</A>
+ &nbsp; <B>  <A NAME="tex2html586"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

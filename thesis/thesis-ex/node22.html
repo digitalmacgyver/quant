@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantum Algorithms</TITLE>
+<META NAME="description" CONTENT="Quantum Algorithms">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html372"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html368"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html364"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html370"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html373"
+  HREF="node23.html">Error Models</A>
+<B> Up:</B> <A NAME="tex2html369"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html365"
+  HREF="node21.html">Unitary Operators</A>
+ &nbsp; <B>  <A NAME="tex2html371"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00630500000000000000">
+Quantum Algorithms</A>
+</H3>
+An operator taking a register in a superposition of states as an input
+performs a ``computation'' on each of the components of the
+superposition simultaneously.  Since the number of possible superposed
+states is 2<SUP>N</SUP> for an <I>N</I>-qubit register, in some sense a quantum
+computer can perform in one operation what would take an exponential
+number of operations on a classical computer.  Unfortunately, the more
+superposed states, the smaller the probability that we will measure
+the value of our function for any particular one.  Some clever
+algorithms, most notably by Peter Shor and L. K. Grover, succeed by
+considering a function for which some property of all the inputs is
+useful.
+
+<P>
+A quantum memory register is just a state machine whose state
+transitions are defined by the operators we apply.  A reversible
+deterministic state machine with 2<SUP>N</SUP> states can be modeled by an
+<I>N</I>-bit register and operators which are <!-- MATH
+ $2^{N} \times 2^{N}$
+ -->
+2<SUP>N</SUP> <TT>x</TT> 2<SUP>N</SUP>
+permutation matrices.  A classical probabilistic state machine can be
+modeled in a similar manner, as an <I>N</I>-bit register with a normalized
+state vector in <!-- MATH
+ $\Real^{2^{N}}$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ \Real^{{2^{N}}}_{}$"> and operators that are doubly
+stochastic matrices.  The difference between the quantum computer and
+the probabilistic computer is that the projection of the quantum state
+vector onto any eigenstate is a complex number: it has both a
+magnitude and a phase.  The classical probabilistic state vector's
+projection onto its eigenstates has only a positive real magnitude.
+The amplitude of the quantum state vector allows for operators which
+cause wave-like interference of the eigenstates, enforcing correct
+solutions and diminishing incorrect ones
+[<A
+ HREF="node57.html#grover00search">11</A>].  
+
+<P>
+A quantum algorithm is described by an initial normalized state and a
+sequence of unitary matrices representing linear transformations of
+the state vector.  These unitary matrices should increase the
+probability that the state vector collapses into a correct solution
+state when measured.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html372"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html368"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html364"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html370"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html373"
+  HREF="node23.html">Error Models</A>
+<B> Up:</B> <A NAME="tex2html369"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html365"
+  HREF="node21.html">Unitary Operators</A>
+ &nbsp; <B>  <A NAME="tex2html371"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

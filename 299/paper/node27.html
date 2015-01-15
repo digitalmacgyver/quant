@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Quantum Memory Register Class</TITLE>
+<META NAME="description" CONTENT="The Quantum Memory Register Class">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html442"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html438"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html432"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html440"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html443"
+  HREF="node28.html">The Simulation of Shor's</A>
+<B> Up:</B> <A NAME="tex2html439"
+  HREF="node24.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html433"
+  HREF="node26.html">The Complex Number Class</A>
+ &nbsp; <B>  <A NAME="tex2html441"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00073000000000000000">
+The Quantum Memory Register Class</A>
+</H2>
+
+<P>
+The qureg class, my quantum memory register, is defined in qureg.C.
+When a quantum memory register is constructed it takes as input the
+number of qubits which it will contain.  In my implementation quantum
+memory register of <I>n</I> bits requires 2<SUP>n</SUP> complex numbers to
+represent.  This is because a register of <I>n</I> bits can exist in any
+one of 2<SUP>n</SUP> base states, and a quantum register may exist in any
+superposition of those base states.  I use one complex number per base
+state to describe the probability of that state being measured.
+
+<P>
+For example, if a quantum register has 3 bits it can exist in any one
+of the following states:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+|0,0,0 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 0, 0, 0<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|0,0,1 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 0, 0, 1<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|0,1,0 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 0, 1, 0<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|0,1,1 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 0, 1, 1<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|1,0,0 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 1, 0, 0<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|1,0,1 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 1, 0, 1<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|1,1,0 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 1, 1, 0<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+|1,1,1 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 1, 1, 1<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+
+<P>
+If I take these values to be binary numbers where the most significant
+bit is the left most bit then these states correspond to the numbers
+0,1,2,3,4,5,6,7.  There are 2<SUP>3</SUP> = 8possible base states.
+
+<P>
+I follow the convention that the probability of measuring the <I>j</I>'th
+state whose complex amplitude is <I>w</I><SUB>j</SUB> is
+<!-- MATH
+ $|w_{j}|^{2}/\sum_{j}|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP>/<IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \sum_{{j}}^{}$">| <I>w</I><SUB>j</SUB>|<SUP>2</SUP>. I also ensure throughout that
+algorithm that the <!-- MATH
+ $\sum_{j}|w_{j}|^{2}$
+ -->
+<IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \sum_{{j}}^{}$">| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> are equal to 1, so the
+probability of measuring the <I>j</I>'th state is <!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP>.  Since my
+qureg class is only being used in Shor's algorithm, any given base
+state that is measured will correspond to an integer value, for
+example, in steps 7 and 9 we will measure only integer values.  These
+the base states of our <I>n</I> bit quantum register can be thought of as
+being the integers 0 through 2<SUP>n-1</SUP>.  In my code a quantum
+register of size <I>n</I> will be represented by an array of complex
+numbers of size 2<SUP>n</SUP>.  The value stored at the <I>j</I>'th array
+position is the complex probability amplitude associated with
+measuring the number <I>j</I>.  For example, in a quantum memory register
+of size 2 that contains an equal superposition of the numbers 0-3
+would be represented by:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+State[0] = 1/2 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[0] = 1/2 + <I>i</I>*0
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+State[1] = 1/2 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[1] = 1/2 + <I>i</I>*0
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+State[2] = 1/2 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[2] = 1/2 + <I>i</I>*0
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+State[3] = 1/2 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[3] = 1/2 + <I>i</I>*0
+</DIV><P></P>
+
+<P>
+Observe that the probability of measuring any given state is
+<!-- MATH
+ $|w_{j}|^{2} = \frac{1}{2}^{2} + 0^{2} = 1/4$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> = <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$ {\frac{{1}}{{2}}}$"><SUP>2</SUP> +0<SUP>2</SUP> = 1/4.
+
+<P>
+If we attempt to measure this register, we will with equal probability
+get the number 0,1,2,3.  Let us assume we measure the state and get
+the value 2, this has the effect of collapsing all probabilities not
+measured to 0, so the new state of our quantum register is:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+State[0] = 0 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[0] = 0 + <I>i</I>*0
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+State[1] = 0 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[1] = 0 + <I>i</I>*0
+</DIV><P></P> 
+<P><!-- MATH
+ \begin{displaymath}
+State[2] = 1 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[2] = 1 + <I>i</I>*0
+</DIV><P></P> 
+<P><!-- MATH
+ \begin{displaymath}
+State[3] = 0 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[3] = 0 + <I>i</I>*0
+</DIV><P></P> 
+
+<P>
+If we were to measure this register again we would measure the value 2
+without fail.
+
+<P>
+Sometimes during the course of operation we cause a state to exist in
+the quantum memory register where the sum over the squares of the
+probability amplitudes is not 1, for example a quantum register could
+be in the state:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+State[0] = 1 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[0] = 1 + <I>i</I>*0
+</DIV><P></P> 
+<P><!-- MATH
+ \begin{displaymath}
+State[1] = 1 + i * 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>State</I>[1] = 1 + <I>i</I>*0
+</DIV><P></P> 
+
+<P>
+We would expect that when measured 0 and 1 would be equally likely
+outcomes, however we would also like for simplicity to have
+<!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> be the probability of measuring the <I>j</I>'th state. To
+accommodate this desire the qureg class contains a subroutine which
+will normalize the probability amplitudes, such that sum of the
+<!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> over all <I>j</I>'s is one.
+
+<P>
+The qureg class also allows the state of the register to be set to any
+arbitrary state.  This functionality is used in steps 5, 6, 7, and 8
+of Shor's algorithm as described above.  The quantum memory register
+class has two member functions which do things that a real quantum
+memory register could not do.
+
+<P>
+The first such function is the Dump() function which dumps the entire
+state information of the register without collapsing it, and is
+included for debugging.  The reason why a real quantum memory register
+could not do such a thing is that to detect the state information of a
+real quantum memory register without applying some measurement, which
+would collapse the state vector of the quantum memory register into
+one of the base states.
+
+<P>
+The second such function is the GetProb(state) which gets the
+probability amplitude of any given state.  This function suffers from
+the same problems as the Dump function, it is impossible to attain
+information about the state vector without causing it to collapse into
+one of the base states.  The GetProb function is used in the main
+program to calculate the discrete Fourier transform in step 8.  While
+a real quantum computer could not use this information in step 8, a
+real quantum computer would not need to.  In a real quantum computer
+the Fourier transformation would take place in one step, and the
+transform function would take as its argument a state which could in
+general be any superposition of base states.  This function is used to
+simulate this use of a function which takes a superposition of states
+as its argument.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html442"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html438"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html432"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html440"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html443"
+  HREF="node28.html">The Simulation of Shor's</A>
+<B> Up:</B> <A NAME="tex2html439"
+  HREF="node24.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html433"
+  HREF="node26.html">The Complex Number Class</A>
+ &nbsp; <B>  <A NAME="tex2html441"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

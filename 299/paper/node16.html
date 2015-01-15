@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantum Parallelism</TITLE>
+<META NAME="description" CONTENT="Quantum Parallelism">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html304"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html300"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html294"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html302"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html305"
+  HREF="node17.html">The Efficiency of the</A>
+<B> Up:</B> <A NAME="tex2html301"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html295"
+  HREF="node15.html">Probability Interpretation</A>
+ &nbsp; <B>  <A NAME="tex2html303"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00058000000000000000">
+Quantum Parallelism</A>
+</H2>
+
+<P>
+Given that our quantum memory register differs from a classical one in
+that it can store a superposition of the base states of the register,
+one might wonder what this implies as to the efficiency of quantum
+computing.  The study of quantum computing is relatively new, most
+give credit to Richard Feynman for being the first to suggest that
+there were tasks that a quantum computer could perform exponentially
+better than a classical computer.  Feynman observed that a classical
+computer could not simulate a quantum mechanical system without
+suffering from exponential slowdown.  At the same time he hinted that
+perhaps by using a device whose behavior was inherently quantum in
+nature one could simulate such a system without this exponential
+slowdown.  (Feynman)
+
+<P>
+Several quantum algorithms rely on something called quantum
+parallelism.  Quantum parallelism arises from the ability of a quantum
+memory register to exist in a superposition of base states.  A quantum
+memory register can exist in a superposition of states, each component
+of this superposition may be thought of as a single argument to a
+function.  A function performed on the register in a superposition of
+states is thus performed on each of the components of the
+superposition, but this function is only applied one time.  Since the
+number of possible states is 2<SUP>n</SUP> where <I>n</I> is the number of qubits
+in the quantum register, you can perform in one operation on a quantum
+computer what would take an exponential number of operations on a
+classical computer.  This is fantastic, but the more superposed states
+that exist in you register, the smaller the probability that you will
+measure any particular one will become.
+
+<P>
+As an example suppose that you are using a quantum computer to
+calculate the function <!-- MATH
+ $\mathcal{F}(x) = 2*x \bmod 7$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \mathcal {F}$">(<I>x</I>) = 2*<I>x</I> mod 7, for <I>x</I>
+integers between 0 and 7 inclusive. You could prepare a quantum
+register that was in a equally weighted superposition of the states
+0-7. Then you could perform the <!-- MATH
+ $2*x \bmod 7$
+ -->
+2*<I>x</I> mod 7 operation once, and the
+register would contain the equally weighted superposition of
+1,2,4,6,1,3,5,0 states, these being the outputs of the function <!-- MATH
+ $2*x
+\bmod 7$
+ -->
+2*<I>x</I> mod 7 for inputs 0 - 7. When measuring the quantum register you
+would have a 2/8 chance of measuring 1, and a 1/8 chance of
+measuring any of the other outputs. It would seem that this sort of
+parallelism is not useful, as the more we benefit from parallelism the
+less likely we are to measure a value of a function for a particular
+input. Some clever algorithms have been devised, most notably by Peter
+Shor and L. K. Grover which succeed in using quantum parallelism on a
+function where they are interested in some property of all the inputs,
+not just a particular one.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html304"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html300"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html294"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html302"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html305"
+  HREF="node17.html">The Efficiency of the</A>
+<B> Up:</B> <A NAME="tex2html301"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html295"
+  HREF="node15.html">Probability Interpretation</A>
+ &nbsp; <B>  <A NAME="tex2html303"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

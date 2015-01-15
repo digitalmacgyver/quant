@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Steps to Shor's Algorithm</TITLE>
+<META NAME="description" CONTENT="Steps to Shor's Algorithm">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node12.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html278"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html274"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html268"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html276"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html279"
+  HREF="node16.html">Parallelizing Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html275"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html269"
+  HREF="node14.html">Overview of Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html277"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00043000000000000000">
+Steps to Shor's Algorithm</A>
+</H2>
+
+<P>
+Shor's algorithm for factoring a given integer <I>n</I> can be broken into
+some simple steps.
+
+<P>
+<DL>
+<DT><STRONG>Step 1</STRONG></DT>
+<DD>Determine if the number <I>n</I> is a prime, a even number,
+  or an integer power of a prime number.  If it is we will not use
+  Shor's algorithm.  There are efficient classical methods for
+  determining if a integer <I>n</I> belongs to one of the above groups, and
+  providing factors for it if it is.  This step would be performed on
+  a classical computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 2</STRONG></DT>
+<DD>Pick a integer <I>q</I> that is the power of 2 such that
+  <!-- MATH
+ $n^{2} \leq q < 2n^{2}$
+ -->
+<I>n</I><SUP>2</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ \leq$"> <I>q</I> &lt; 2<I>n</I><SUP>2</SUP>.  This step would be done on a classical
+  computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 3</STRONG></DT>
+<DD>Pick a random integer <I>x</I> that is coprime to <I>n</I>.  When
+  two numbers are coprime it means that their greatest common divisor
+  is 1.  There are efficient classical methods for picking such an
+  <I>x</I>.  This step would be done on a classical computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 4</STRONG></DT>
+<DD>Create a quantum register and partition it into two
+  parts, register 1 and register 2.  Thus the state of our quantum
+  computer can be given by: |reg1, reg2<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \rangle$">.  Register 1 must
+  have enough qubits to represent integers as large as <I>q</I> - 1.
+  Register 2 must have enough qubits to represent integers as large as
+  <I>n</I> - 1.  The calculations for how many qubits are needed would be
+  done on a classical computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 5</STRONG></DT>
+<DD>Load register 1 with an equally weighted superposition
+  of all integers from 0 to <I>q</I> - 1.  Load register 2 with all zeros.
+  This operation would be performed by our quantum computer.  The
+  total state of the quantum memory register at this point is:
+	<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{q}}\sum_{a = 0}^{q - 1} |a, 0 \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="29" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{q}}}}$"><IMG
+ WIDTH="27" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle \sum_{{a = 0}}^{{q - 1}}$">| <I>a</I>, 0<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT><STRONG>Step 6</STRONG></DT>
+<DD>Now apply the transformation <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> to for each
+  number stored in register 1 and store the result in register 2.  Due
+  to quantum parallelism this will take only one step, as the quantum
+  computer will only calculate <!-- MATH
+ $x^{|a \rangle } \bmod n$
+ -->
+<I>x</I><SUP>| a<IMG
+ WIDTH="9" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\scriptstyle \rangle$"></SUP> mod <I>n</I>, where <!-- MATH
+ $|a
+  \rangle$
+ -->
+| <I>a</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \rangle$"> is the superposition of states created in step 5.  This
+  step is performed on the quantum computer.  The state of the quantum
+  memory register at this point is:
+	<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{q}}\sum_{a=0}^{q-1}|a,x^{a} \bmod n \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="29" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{q}}}}$"><IMG
+ WIDTH="27" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle \sum_{{a = 0}}^{{q - 1}}$">| <I>a</I>, <I>x</I><SUP>a</SUP> mod<I>n</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+
+<P>
+</DD>
+<DT><STRONG>Step 7</STRONG></DT>
+<DD>Measure the second register, and observe some value <I>k</I>.
+  This has the side effect of collapsing register one into a equal
+  superposition of each value a between 0 and <I>q</I> - 1 such that
+	<P><!-- MATH
+ \begin{displaymath}
+x^{a} \bmod n = k
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>x</I><SUP>a</SUP> mod <I>n</I> = <I>k</I>
+</DIV><P></P>
+This operation is performed by the quantum computer. The state
+of the quantum memory register after this step is:
+	<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{||A||}}\sum_{a'=a'\in A}|a', k \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="54" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{\vert\vert A\vert\vert}}}}$"><IMG
+ WIDTH="54" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle \sum_{{a'=a'\in A}}^{}$">| <I>a'</I>, <I>k</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+Where <I>A</I> is the set of <I>a</I>'s such that <!-- MATH
+ $x^{a} \bmod n = k$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> = <I>k</I>,
+and || <I>A</I>|| is the number of elements in that set.
+
+<P>
+</DD>
+<DT><STRONG>Step 8</STRONG></DT>
+<DD>Now compute the discrete Fourier transform on register
+  one. The discrete Fourier transform when applied to a state <!-- MATH
+ $|a
+  \rangle$
+ -->
+| <I>a</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \rangle$"> changes it in the following manner:
+	<P><!-- MATH
+ \begin{displaymath}
+|a \rangle = \frac{1}{\sqrt{q}}\sum_{c=0}^{q-1}|c \rangle *e^{2\pi iac/q}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>a</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$"> = <IMG
+ WIDTH="29" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{q}}}}$"><IMG
+ WIDTH="27" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \sum_{{c=0}}^{{q-1}}$">| <I>c</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">*<I>e</I><SUP>2<IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\scriptstyle \pi$">iac/q</SUP>
+</DIV><P></P>
+This step is performed by the quantum computer in one step
+through quantum parallelism.  After the discrete Fourier transform our
+register is in the state:
+	<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{||A||}}\sum_{a'\in A}\frac{1}{\sqrt{q}}\sum_{c=0}^{q-1} |c,k \rangle *e^{2\pi ia'c/q}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="54" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{\vert\vert A\vert\vert}}}}$"><IMG
+ WIDTH="34" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \sum_{{a'\in A}}^{}$"><IMG
+ WIDTH="29" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{q}}}}$"><IMG
+ WIDTH="27" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \sum_{{c=0}}^{{q-1}}$">| <I>c</I>, <I>k</I><IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">*<I>e</I><SUP>2<IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\scriptstyle \pi$">ia'c/q</SUP>
+</DIV><P></P>
+
+<P>
+</DD>
+<DT><STRONG>Step 9</STRONG></DT>
+<DD>Measure the state of register one, call this value <I>m</I>,
+  this integer <I>m</I> has a very high probability of being a multiple of
+  <I>q</I>/<I>r</I>, where <I>r</I> is the desired period.  This step is performed by
+  the quantum computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 10</STRONG></DT>
+<DD>Take the value <I>m</I>, and on a classical computer do some
+  post processing which calculates <I>r</I> based on knowledge of <I>m</I> and
+  <I>q</I>.  In particular:
+  
+<UL>
+<LI><I>m</I> has a high probability of being = <!-- MATH
+ $\lambda * (q / r)$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \lambda$">*(<I>q</I>/<I>r</I>) where <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \lambda$"> is an integer
+</LI>
+<LI>If we perform floating point division of <I>m</I>/<I>q</I>, and then calculate the best rational approximation to <I>m</I>/<I>q</I> whose denominator is less than or equal to <I>q</I>
+</LI>
+<LI>We take this denominator to be a candidate for <I>r</I>.
+</LI>
+<LI>If our candidate <I>r</I> is odd we either double it if doing so leads to a value less than <I>q</I>
+</LI>
+</UL>
+  There are efficient ways to do this post processing on a classical
+  computer.
+
+<P>
+</DD>
+<DT><STRONG>Step 11</STRONG></DT>
+<DD>Once you have attained <I>r</I>, a factor of <I>n</I> can be
+  determined by taking <!-- MATH
+ $\gcd(x^{r/2} + 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> + 1, <I>n</I>) and <!-- MATH
+ $\gcd(x^{r/2} - 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> - 1, <I>n</I>).  
+  If you have found a factor of <I>n</I>, then stop, if not go to
+  step 4.  This final step is done on a classical computer.
+
+<P>
+</DD>
+</DL>
+
+<P>
+Step 11 contains a provision for what to do if Shor's algorithm failed
+to produce factors of <I>n</I>.  There are a few reasons why Shor's
+algorithm can fail, for example the discrete Fourier transform could
+be measured to be 0 in step 9, making the post processing in step 10
+impossible.  The algorithm will sometimes find factors of 1 and <I>n</I>,
+which is not useful either.  For these reasons step 11 must be able to
+jump back to step 4 to start over.  (Williams, Clearwater)
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html278"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html274"
+  HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html268"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html276"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html279"
+  HREF="node16.html">Parallelizing Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html275"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html269"
+  HREF="node14.html">Overview of Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html277"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

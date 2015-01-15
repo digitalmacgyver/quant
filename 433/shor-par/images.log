@@ -1,0 +1,365 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.26)  14 JAN 2015 18:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./images.tex
+(./images.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+\sizebox=\box26
+\lthtmlwrite=\write3
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=633.0pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=62.0pt
+
+latex2htmlLength evensidemargin=62.0pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 157.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 157.
+l2hSize :tex2html_wrap_inline1646:7.44444pt::7.44444pt::7.37273pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_indisplay1682:18.51115pt::18.51115pt::15.6795pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_indisplay1688:30.32779pt::30.32779pt::10.45004pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_indisplay1689:30.32779pt::30.32779pt::33.33867pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_indisplay1690:30.32779pt::30.32779pt::10.45004pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_indisplay1707:15.4051pt::15.4051pt::52.92274pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline1713:6.83331pt::0.0pt::8.68056pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline1726:8.94843pt::8.94843pt::10.87228pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_indisplay1744:6.95831pt::6.95831pt::8.27783pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_inline1780:6.95831pt::6.95831pt::8.27783pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline1786:8.0pt::8.0pt::4.38893pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_indisplay1791:13.70952pt::13.70952pt::16.05629pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_indisplay1792:18.98338pt::18.98338pt::14.96272pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_indisplay1793:8.0pt::8.0pt::4.38893pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline1796:6.95831pt::6.95831pt::3.73615pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_indisplay1807:13.70952pt::13.70952pt::31.5112pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_indisplay1808:14.00005pt::14.00005pt::32.12682pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_indisplay1819:18.98338pt::18.98338pt::14.9445pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_indisplay1821:6.95831pt::6.95831pt::5.4275pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_indisplay1824:14.00005pt::14.00005pt::18.94537pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline1839:6.94444pt::0.0pt::6.33339pt.
+[21
+
+
+]
+File: 15.epsi Graphic file (type eps)
+<15.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 314--315
+[][] 
+ []
+
+*** image for figure182 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure182:601.34807pt::0.0pt::349.0pt.
+[22
+
+
+]
+File: 21.epsi Graphic file (type eps)
+<21.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 322--323
+[][] 
+ []
+
+*** image for figure186 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure186:601.34807pt::0.0pt::349.0pt.
+[23
+
+
+]
+File: 33.epsi Graphic file (type eps)
+<33.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 330--331
+[][] 
+ []
+
+*** image for figure190 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure190:601.34807pt::0.0pt::349.0pt.
+[24
+
+
+]
+File: 77.epsi Graphic file (type eps)
+<77.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 338--339
+[][] 
+ []
+
+*** image for figure194 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure194:601.34807pt::0.0pt::349.0pt.
+[25
+
+
+]
+File: 221.epsi Graphic file (type eps)
+<221.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 346--347
+[][] 
+ []
+
+*** image for figure198 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure198:601.34807pt::0.0pt::349.0pt.
+[26
+
+
+]
+File: 391.epsi Graphic file (type eps)
+<391.epsi>
+Overfull \hbox (138.8225pt too wide) in paragraph at lines 354--355
+[][] 
+ []
+
+*** image for figure202 is too tall at 706.64pt, reducing to .95 vsize ***
+l2hSize :figure202:601.34807pt::0.0pt::349.0pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline1972:9.82217pt::9.82217pt::11.55943pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_indisplay2039:45.65558pt::45.65558pt::10.45004pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_indisplay2040:45.65558pt::45.65558pt::15.50005pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_indisplay2041:45.65558pt::45.65558pt::10.45004pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_indisplay2045:21.00017pt::21.00017pt::10.45004pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_indisplay2046:21.0pt::21.0pt::20.27205pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_indisplay2047:21.00017pt::21.00017pt::10.45004pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_indisplay2048:21.00017pt::21.00017pt::10.45004pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_indisplay2049:21.0pt::21.0pt::19.27782pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_indisplay2050:21.00017pt::21.00017pt::10.45004pt.
+[37
+
+
+]
+l2hSize :tex2html_wrap_indisplay2051:21.00017pt::21.00017pt::10.45004pt.
+[38
+
+
+]
+l2hSize :tex2html_wrap_indisplay2052:21.0pt::21.0pt::41.27197pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_indisplay2053:21.00017pt::21.00017pt::10.45004pt.
+[40
+
+
+]
+l2hSize :tex2html_wrap_inline2056:12.19034pt::12.19034pt::58.4753pt.
+[41
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 869 strings out of 495033
+ 11202 string characters out of 6181744
+ 55890 words of memory out of 5000000
+ 4122 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 32i,13n,21p,200b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on images.dvi (41 pages, 10712 bytes).

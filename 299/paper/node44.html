@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>shor.C</TITLE>
+<META NAME="description" CONTENT="shor.C">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node45.html">
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html653"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html649"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html643"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html651"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html654"
+  HREF="node45.html">util.h</A>
+<B> Up:</B> <A NAME="tex2html650"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html644"
+  HREF="node43.html">qureg.C</A>
+ &nbsp; <B>  <A NAME="tex2html652"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000145000000000000000">
+shor.C</A>
+</H2>
+<PRE>
+#include &lt;iostream&gt;
+#include &lt;math.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+#include "complex.h"
+#include "qureg.h"
+#include "util.h"
+
+using namespace std;
+
+int main() {
+  //Establish a random seed.
+  srand(time(NULL));
+
+  //Output standard greeting.
+  cout &lt;&lt; "Welcome to the simulation of Shor's algorithm." &lt;&lt; endl
+       &lt;&lt; "There are four restrictions for Shor's algorithm:" &lt;&lt; endl
+       &lt;&lt; "1) The number to be factored (n) must be &gt;= 15." &lt;&lt; endl
+       &lt;&lt; "2) The number to be factored must be odd." &lt;&lt; endl
+       &lt;&lt; "3) The number must not be prime." &lt;&lt; endl
+       &lt;&lt; "4) The number must not be a prime power." &lt;&lt; endl
+       &lt;&lt; endl &lt;&lt; "There are efficient classical methods of factoring "
+       &lt;&lt; "any of the above numbers, or determining that they are prime."
+       &lt;&lt; endl &lt;&lt; endl &lt;&lt; "Input the number you wish to factor." &lt;&lt; endl
+       &lt;&lt; flush;
+
+  //n is the number we are going to factor, get n.
+  unsigned long long int n;
+  cin &gt;&gt; n;
+
+  cout &lt;&lt; "Step 1 starting." &lt;&lt; endl &lt;&lt; flush;
+  //Test to see if n is factorable by Shor's algorithm.
+  //Exit if the number is even.
+  if (n%2 == 0) {
+    cout &lt;&lt; "\tError, the number must be odd!" &lt;&lt; endl &lt;&lt; flush;
+    exit(0);
+  } 
+  //Exit if the number is prime.
+  if (TestPrime(n)) {
+    cout &lt;&lt; "\tError, the number must not be prime!" &lt;&lt; endl &lt;&lt; flush;
+    exit(0);
+  }
+  //Prime powers are prime numbers raised to integral powers.
+  //Exit if the number is a prime power.
+  if (TestPrimePower(n)) {
+    cout &lt;&lt; "\tError, the number must not be a prime power!" &lt;&lt; endl &lt;&lt; flush;
+    exit(0);
+  }
+  cout &lt;&lt; "Step 1 complete." &lt;&lt; endl &lt;&lt; flush;
+
+  cout &lt;&lt; "Step 2 starting." &lt;&lt; endl &lt;&lt; flush;
+  //Now we must figure out how big a quantum register we need for our
+  //input, n.  We must establish a quantum register big enough to hold
+  //an equal superposition of all integers 0 through q - 1 where q is
+  //the power of two such that n^2 &lt;= q &lt; 2n^2.
+  unsigned long long int q;
+  cout &lt;&lt; "\tSearching for q, the smallest power of 2 greater than or equal to n^2." &lt;&lt; endl &lt;&lt; flush;
+  q = GetQ(n);
+  cout &lt;&lt; "\tFound q to be " &lt;&lt; q &lt;&lt; "." &lt;&lt; endl &lt;&lt; flush;
+  cout &lt;&lt; "Step 2 complete." &lt;&lt; endl &lt;&lt; flush;
+
+  cout &lt;&lt; "Step 3 starting." &lt;&lt; endl &lt;&lt; flush;
+  //Now we must pick a random integer x, coprime to n.  Numbers are
+  //coprime when their greatest common denominator is one.  One is not
+  //a useful number for the algorithm.
+  unsigned long long int x = 0;
+  cout &lt;&lt; "\tSearching for x, a random integer coprime to n." &lt;&lt; endl &lt;&lt; flush;
+  x = 1+ (unsigned long long int)((n-1)*(double)rand()/(double)RAND_MAX);
+  while (GCD(n,x) != 1 || x == 1) {
+      x = 1 + (unsigned long long int)((n-1)*(double)rand()/(double)RAND_MAX);
+  }
+  cout &lt;&lt; "\tFound x to be " &lt;&lt; x &lt;&lt; "." &lt;&lt; endl &lt;&lt; flush;
+  cout &lt;&lt; "Step 3 complete." &lt;&lt; endl &lt;&lt; flush;
+  
+  //Create the register.
+  cout &lt;&lt; "Step 4 starting." &lt;&lt; endl &lt;&lt; flush;
+  QuReg * reg1 = new QuReg(RegSize(q) - 1);
+  cout &lt;&lt; "\tMade register 1 with register size = " &lt;&lt; RegSize(q) &lt;&lt; endl 
+       &lt;&lt; flush;  
+
+  //This array will remember what values of q produced for x^q mod n.
+  //It is necessary to retain these values for use when we collapse
+  //register one after measuring register two.  In a real quantum
+  //computer these registers would be entangled, and thus this extra
+  //bookkeeping would not be needed at all.  The laws of quantum
+  //mechanics dictate that register one would collapse as well, and
+  //into a state consistent with the measured value in resister two.
+  unsigned long long int * modex = new unsigned long long int[q];     
+
+  //This array holds the probability amplitudes of the collapsed state
+  //of register one, after register two has been measured it is used
+  //to put register one in a state consistent with that measured in
+  //register two.
+  Complex * collapse = new Complex[q];
+
+  //This is a temporary value.
+  Complex tmp;
+  
+  //This is a new array of probability amplitudes for our second
+  //quantum register, that populated by the results of x^a mod n.
+  Complex * mdx = new Complex[(unsigned long long int)pow(2,RegSize(n))]; 
+  
+  // This is the second register.  It needs to be big enough to hold
+  // the superposition of numbers ranging from 0 -&gt; n - 1.
+  QuReg *reg2 = new QuReg(RegSize(n)); 
+  cout &lt;&lt; "\tCreated register 2 of size " &lt;&lt; RegSize(n) &lt;&lt; endl &lt;&lt; flush;
+  cout &lt;&lt; "Step 4 complete." &lt;&lt; endl &lt;&lt; flush;
+
+  //This is a temporary value.
+  unsigned long long int tmpval;
+  
+  //This is a temporary value.
+  unsigned long long int value;
+  
+  //c is some multiple lambda of q/r, where q is q in this program,
+  //and r is the period we are trying to find to factor n.  m is the
+  //value we measure from register one after the Fourier
+  //transformation.
+  double c, m; 
+  
+  //This is used to store the denominator of the fraction p / den where
+  //p / den is the best approximation to c with den &lt;= q.
+  unsigned long long int den;
+  
+  //This is used to store the numerator of the fraction p / den where
+  //p / den is the best approximation to c with den &lt;= q.
+  unsigned long long int p;
+  
+  //The integers e, a, and b are used in the end of the program when
+  //we attempts to calculate the factors of n given the period it
+  //measured.
+  //Factor is the factor that we find.
+  unsigned long long int e, a, b, factor;
+
+  //Shor's algorithm can sometimes fail, in which case you do it
+  //again.  The done variable is set to 0 when the algorithm has
+  //failed.  Only try a maximum number of tries.
+  unsigned int done = 0;
+  unsigned int tries = 0;
+  while (!done) {
+    if (tries &gt;= 5) {
+      cout &lt;&lt; "\tThere have been five failures, giving up." &lt;&lt; endl &lt;&lt; flush;
+      exit(0);
+    }
+
+    cout &lt;&lt; "Step 5 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+    //Now populate register one in an even superposition of the
+    //integers 0 -&gt; q - 1.
+    reg1-&gt;SetAverage(q - 1);
+    cout &lt;&lt; "Step 5 complete." &lt;&lt; endl &lt;&lt; flush;
+
+    cout &lt;&lt; "Step 6 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+    //Now we preform a modular exponentiation on the superposed
+    //elements of reg 1.  That is, perform x^a mod n, but exploiting
+    //quantum parallelism a quantum computer could do this in one
+    //step, whereas we must calculate it once for each possible
+    //measurable value in register one.  We store the result in a new
+    //register, reg2, which is entangled with the first register.
+    //This means that when one is measured, and collapses into a base
+    //state, the other register must collapse into a superposition of
+    //states consistent with the measured value in the other..  The
+    //size of the result modular exponentiation will be at most n, so
+    //the number of bits we will need is therefore less than or equal
+    //to log2 of n.  At this point we also maintain a array of what
+    //each state produced when modularly exponised, this is because
+    //these registers would actually be entangled in a real quantum
+    //computer, this information is needed when collapsing the first
+    //register later.
+
+    //This counter variable is used to increase our probability amplitude.
+    tmp.Set(1,0);
+    
+    //This for loop ranges over q, and puts the value of x^a mod n in
+    //modex[a].  It also increases the probability amplitude of the value
+    //of mdx[x^a mod n] in our array of complex probabilities.
+    for (unsigned long long int i = 0 ; i &lt; q ; i++) {
+      //We must use this version of modexp instead of c++ builtins as
+      //they overflow when x^i is large.
+      tmpval = modexp(x,i,n);
+      modex[i] = tmpval;
+      mdx[tmpval] = mdx[tmpval] + tmp;
+    }
+
+    //Set the state of register two to what we calculated it should be.
+    reg2-&gt;SetState(mdx);
+
+    //Normalize register two, so that the probability of measuring a
+    //state is given by summing the squares of its probability
+    //amplitude.
+    reg2-&gt;Norm();
+    cout &lt;&lt; "Step 6 complete." &lt;&lt; endl &lt;&lt; flush;
+
+    cout &lt;&lt; "Step 7 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+    //Now we measure reg2. 
+    value = reg2-&gt;DecMeasure();
+  
+    //Now we must using the information in the array modex collapse
+    //the state of register one into a state consistent with the value
+    //we measured in register two.
+    for (unsigned long long int i = 0 ; i &lt; q ; i++) {
+      if (modex[i] == value) {
+	collapse[i].Set(1,0);
+      } else {
+	collapse[i].Set(0,0);
+      }
+    }
+
+    //Now we set the state of register one to be consistent with what
+    //we measured in state two, and normalize the probability
+    //amplitudes.
+    reg1-&gt;SetState(collapse);
+    reg1-&gt;Norm();
+    cout &lt;&lt; "Step 7 complete." &lt;&lt; endl &lt;&lt; flush;
+
+    //Here we do our Fourier transformation.  
+    cout &lt;&lt; "Step 8 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+    DFT(reg1, q);
+    cout &lt;&lt; "Step 8 complete." &lt;&lt; endl &lt;&lt; flush;
+
+    cout &lt;&lt; "Step 9 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+    //Next we measure register one, due to the Fourier transform the
+    //number we measure, m will be some multiple of lambda/r, where
+    //lambda is an integer and r is the desired period.
+    m = reg1-&gt;DecMeasure();
+    cout &lt;&lt; "\tValue of m measured as: " &lt;&lt; m &lt;&lt; endl &lt;&lt; flush;
+    cout &lt;&lt; "Step 9 complete." &lt;&lt; endl &lt;&lt; flush;
+
+    //If nothing goes wrong from here on out we are done.
+    done = 1;
+
+    //If we measured zero, we have gained no new information about the
+    //period, we must try again.
+    if (m == 0) {
+      cout &lt;&lt; "\tMeasured, 0 this trial a failure!" &lt;&lt; endl &lt;&lt; flush;
+      done = 0;
+    }
+
+    //The DecMeasure subroutine will return -1 as an error code, due
+    //to rounding errors it will occasionally fail to measure a state.
+    if (m == -1) {
+      cout &lt;&lt; "\tWe failed to measure anything, this trial a failure!" &lt;&lt; endl &lt;&lt; flush;
+      done = 0;
+    }
+    
+    //If nothing has gone wrong, try to determine the period of our
+    //function, and get factors of n.
+    if (done) {
+      //Now c =~ lambda / r for some integer lambda.  Borrowed with
+      //modifications from Berhnard Ohpner.
+      c = (double)m  / (double)q;
+
+      cout &lt;&lt; "Steps 10 and 11 starting attempt: " &lt;&lt; tries+1 &lt;&lt; endl &lt;&lt; flush;
+      //Calculate the denominator of the best rational approximation
+      //to c with den &lt; q.  Since c is lambda / r for some integer
+      //lambda, this will provide us with our guess for r, our period.
+      den = denominator(c, q);
+      
+      //Calculate the numerator from the denominator.
+      p = (unsigned long long int)floor(den * c + 0.5);
+
+      //Give user information.
+      cout &lt;&lt; "\tMeasured m: " &lt;&lt; m &lt;&lt; ", rational approximation for m/q=" &lt;&lt; c &lt;&lt; " is: "
+	   &lt;&lt; p &lt;&lt; " / " &lt;&lt; den &lt;&lt; endl &lt;&lt; flush;
+
+      //The denominator is our period, and an odd period is not
+      //useful as a result of Shor's algorithm.  If the denominator
+      //times two is still less than q we can use that.
+      if (den % 2 == 1 &amp;&amp; 2 * den &lt; q ){
+	cout &lt;&lt; "\tOdd candidate for r found, expanding by 2\n";
+	p = 2 * p; 
+	den = 2 * den;
+      }
+
+      //Initialize helper variables.
+      e = a = b = factor = 0;
+
+      // Failed if odd denominator.
+      if (den % 2 == 1)  {          
+	cout &lt;&lt;  "\tOdd period found.  This trial failed." 
+	     &lt;&lt; " \t Trying again." &lt;&lt; endl &lt;&lt; flush;
+	done = 0;
+      } else {
+	//Calculate candidates for possible common factors with n.
+	cout &lt;&lt;  "\tCandidate period is " &lt;&lt; den &lt;&lt; endl &lt;&lt; flush;
+	e = modexp(x, den / 2, n);    
+	a = (e + 1) % n;     
+	b = (e + n - 1) % n;          
+	cout &lt;&lt; "\t" &lt;&lt; x &lt;&lt; "^" &lt;&lt; den / 2 &lt;&lt; " + 1 mod " &lt;&lt; n &lt;&lt; " = " &lt;&lt; a 
+	     &lt;&lt; "," &lt;&lt; endl 
+	     &lt;&lt; "\t" &lt;&lt; x &lt;&lt; "^" &lt;&lt; den / 2 &lt;&lt; " - 1 mod " &lt;&lt; n &lt;&lt; " = " &lt;&lt; b 
+	     &lt;&lt; endl &lt;&lt; flush;
+	factor = max(GCD(n,a),GCD(n,b));
+      }
+    }
+    
+    //GCD will return a -1 if it tried to calculate the GCD of two
+    //numbers where at some point it tries to take the modulus of a
+    //number and 0.
+    if (factor == -1) {
+      cout &lt;&lt; "\tError, tried to calculate n mod 0 for some n.  Trying again."
+	   &lt;&lt; endl &lt;&lt; flush;
+      done = 0;
+    }
+
+    if ((factor == n || factor == 1) &amp;&amp; done == 1) {
+      cout &lt;&lt; "\tFound trivial factors 1 and " &lt;&lt; n 
+	   &lt;&lt; ".  Trying again." &lt;&lt; endl &lt;&lt; flush;
+      done = 0;
+    }
+    
+    //If nothing else has gone wrong, and we got a factor we are
+    //finished.  Otherwise start over.
+    if (factor != 0 &amp;&amp; done == 1) {
+      cout &lt;&lt; "\t" &lt;&lt; n &lt;&lt; " = " &lt;&lt; factor &lt;&lt; " * " &lt;&lt; n / factor &lt;&lt; endl &lt;&lt; flush;
+    } else if (done == 1) {
+      cout &lt;&lt; "\tFound factor to be 0, error.  Trying again." &lt;&lt; endl 
+	   &lt;&lt; flush;
+      done = 0;
+    }
+    cout &lt;&lt; "Steps 10 and 11 complete." &lt;&lt; endl &lt;&lt; flush;
+    tries++;
+  }
+  delete reg1;
+  delete reg2;
+  delete [] modex;
+  delete [] collapse;
+  delete [] mdx;
+  return 1;
+}
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html653"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html649"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html643"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html651"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html654"
+  HREF="node45.html">util.h</A>
+<B> Up:</B> <A NAME="tex2html650"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html644"
+  HREF="node43.html">qureg.C</A>
+ &nbsp; <B>  <A NAME="tex2html652"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

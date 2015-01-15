@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>MAJORITY and PARITY</TITLE>
+<META NAME="description" CONTENT="MAJORITY and PARITY">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node38.html">
+<LINK REL="up" HREF="node37.html">
+<LINK REL="next" HREF="node40.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html586"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html582"
+  HREF="node37.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html578"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html584"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html587"
+  HREF="node40.html">Nonconstant Symmetric Functions</A>
+<B> Up:</B> <A NAME="tex2html583"
+  HREF="node37.html">AND, OR, MAJORITY, and</A>
+<B> Previous:</B> <A NAME="tex2html579"
+  HREF="node38.html">AND and OR</A>
+ &nbsp; <B>  <A NAME="tex2html585"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00760200000000000000">
+MAJORITY and PARITY</A>
+</H3>
+
+<P>
+It is tempting to hope that all Boolean functions, or at least all
+symmetric Boolean functions, realize the quadratic speedup of AND and
+OR.  Unfortunately the functions MAJORITY and PARITY show that for
+some problems the speedup is at best a constant factor.
+
+<P>
+MAJORITY is the <I>N</I>-bit Boolean function that evaluates to 1 if and
+only if more than half of the input bits are 1.  PARITY is the <I>N</I>-bit
+Boolean function that evaluates to 1 if and only if the input has an
+even Hamming weight.
+
+<P>
+<P>
+<DIV><A NAME="th:MAJORITY"><B>Theorem  2.6.2</B></A> &nbsp; 
+<I><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>N</I>) oracle queries are required to compute the MAJORITY or the
+PARITY of <I>N</I> bits in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="262" ALIGN="BOTTOM" BORDER="0"
+ SRC="img92.png"
+ ALT="\begin{proof}
+% latex2html id marker 824Let $a = \left\lfloor N/2 \right\rfloo...
+...{displaymath}oracle queries are required to compute either function.
+\end{proof}">
+<BR>
+
+<P>
+Since both classical and quantum algorithms can compute any function
+of <I>N</I> bits with <I>N</I> oracle queries, this lower bound is
+asymptotically tight.  Beals et al. previously proved these results
+[<A
+ HREF="node57.html#beals98quantum">2</A>]; again, the simplicity that Ambainis' Theorem
+affords is the main point of interest.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html586"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html582"
+  HREF="node37.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html578"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html584"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html587"
+  HREF="node40.html">Nonconstant Symmetric Functions</A>
+<B> Up:</B> <A NAME="tex2html583"
+  HREF="node37.html">AND, OR, MAJORITY, and</A>
+<B> Previous:</B> <A NAME="tex2html579"
+  HREF="node38.html">AND and OR</A>
+ &nbsp; <B>  <A NAME="tex2html585"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

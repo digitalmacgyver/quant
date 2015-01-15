@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Overview of Shor's Algorithm</TITLE>
+<META NAME="description" CONTENT="Overview of Shor's Algorithm">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html367"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html363"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html357"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html365"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html368"
+  HREF="node22.html">Steps to Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html364"
+  HREF="node18.html">Quantum Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html358"
+  HREF="node20.html">Motivation for Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html366"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00063000000000000000">
+Overview of Shor's Algorithm</A>
+</H2>
+
+<P>
+Shor's algorithm hinges on a result from number theory.  This result
+is: 
+    <BLOCKQUOTE>
+The function <!-- MATH
+ $\mathcal{F}(a) = x^{a} \bmod n$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \mathcal {F}$">(<I>a</I>) = <I>x</I><SUP>a</SUP> mod <I>n</I> is a periodic
+      function, where <I>x</I> is an integer coprime to <I>n</I>. In the context
+      of Shor's algorithm <I>n</I> will be the number we wish to
+      factor. When two numbers are coprime it means that their
+      greatest common divisor is 1.
+    
+</BLOCKQUOTE>
+
+<P>
+Calculating this function for an exponential number of <I>a</I>'s would
+take exponential time on a classical computer.  Shor's algorithm
+utilizes quantum parallelism to perform the exponential number of
+operations in one step.
+
+<P>
+The reason why this function is of utility in factoring large numbers
+is this:
+
+<P>
+<BLOCKQUOTE>
+Since <!-- MATH
+ $\mathcal{F}(a)$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \mathcal {F}$">(<I>a</I>) is a periodic function, it has some period
+<I>r</I>. We know that <!-- MATH
+ $x^{0} \bmod n = 1$
+ -->
+<I>x</I><SUP>0</SUP> mod <I>n</I> = 1, so <!-- MATH
+ $x^{r} \bmod n = 1$
+ -->
+<I>x</I><SUP>r</SUP> mod <I>n</I> = 1, and
+<!-- MATH
+ $x^{2r} \bmod n = 1$
+ -->
+<I>x</I><SUP>2r</SUP> mod <I>n</I> = 1 and so on since the function is periodic.
+
+</BLOCKQUOTE>
+
+<P>
+Given this information and through the following algebraic
+manipulation:
+	<P><!-- MATH
+ \begin{displaymath}
+x^{r} \equiv 1 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>x</I><SUP>r</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \equiv$"> 1 mod <I>n</I>
+</DIV><P></P>
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2})^{2} = x^{r} \equiv 1 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP>)<SUP>2</SUP> = <I>x</I><SUP>r</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \equiv$"> 1 mod <I>n</I>
+</DIV><P></P>
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2})^{2} - 1 \equiv 0 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP>)<SUP>2</SUP> -1 <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \equiv$"> 0 mod <I>n</I>
+</DIV><P></P>
+and if <I>r</I> is an even number
+	<P><!-- MATH
+ \begin{displaymath}
+(x^{r/2} - 1)(x^{r/2} + 1) \equiv 0 \bmod n
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+(<I>x</I><SUP>r/2</SUP> -1)(<I>x</I><SUP>r/2</SUP> +1) <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \equiv$"> 0 mod <I>n</I>
+</DIV><P></P>
+
+<P>
+We can see that the product <!-- MATH
+ $(x^{r/2} - 1)(x^{r/2} + 1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> -1)(<I>x</I><SUP>r/2</SUP> + 1) is an integer
+multiple of <I>n</I>, the number to be factored.  So long as <I>x</I><SUP>r/2</SUP> is
+not equal to <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \pm$">1, then at least one of <!-- MATH
+ $(x^{r/2} - 1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> - 1) or <!-- MATH
+ $(x^{r/2} +
+1)$
+ -->
+(<I>x</I><SUP>r/2</SUP> + 1) must have a nontrivial factor in common with <I>n</I>.  So by computing
+<!-- MATH
+ $\gcd(x^{r/2} - 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> - 1, <I>n</I>), and <!-- MATH
+ $\gcd(x^{r/2} + 1, n)$
+ -->
+gcd(<I>x</I><SUP>r/2</SUP> + 1, <I>n</I>), we will obtain a
+factor of <I>n</I>, where gcd is the greatest common denominator
+function.
+
+<P>
+Here is a brief overview of Shor's algorithm, which is explained in
+detail in the next section. Shor's algorithm tries to find <I>r</I>, the
+period of <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I>, where <I>n</I> is the number to be factored and
+<I>x</I> is an integer coprime to <I>n</I>. To do this Shor's algorithm creates
+a quantum memory register with two parts. In the first part the
+algorithm places a superposition of the integers which are to be <I>a</I>'s
+in the <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> function. We will choose our <I>a</I>'s to be the
+integers 0 through <I>q</I> - 1, where <I>q</I> is the power of two such that
+<!-- MATH
+ $n^{2} \leq q < 2n^{2}$
+ -->
+<I>n</I><SUP>2</SUP> <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \leq$"> <I>q</I> &lt; 2<I>n</I><SUP>2</SUP>. Then the algorithm calculates <!-- MATH
+ $x^{a} \bmod
+n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I>, where <I>a</I> is the superposition of the states, and places the
+result in the second part of the quantum memory register.
+
+<P>
+Next the algorithm measures the state of the second register, the one
+that contains the superposition of all possible outcomes for <!-- MATH
+ $x^{a}
+\bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I>. Measuring this register has the effect of collapsing the
+state into some observed value, say <I>k</I>. It also has the side effect
+of projecting the first part of the quantum register into a state
+consistent with the value measured in the second part. Since we have
+partitioned our quantum register into two parts measurement of the
+second part collapses that part into exactly one value, while the
+other partition collapses into a state consistent with the observed
+value in the other portion of the register. It is still possible for
+the non measured part of the register to exist in a superposition of
+base states, as long as each of those base states are consistent with
+the measured value in the other part of the register. What this means
+in this instance is that after this measurement the second part of the
+register contains the value <I>k</I>, and the first part of the register
+contains a superposition of the base states which when plugged into
+<!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> produce <I>k</I>. Since we know <!-- MATH
+ $x^{a} \bmod n$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> is a
+periodic function, we know that the first part of the register will
+contain the values <I>c</I>, <I>c</I> + <I>r</I>, <!-- MATH
+ $c+2r\ldots$
+ -->
+<I>c</I> + 2<I>r</I>... and so on, where <I>c</I> is
+the lowest integer such that <!-- MATH
+ $x^{c} \bmod n = k$
+ -->
+<I>x</I><SUP>c</SUP> mod <I>n</I> = <I>k</I>.
+
+<P>
+The next step is to perform a discrete Fourier transform on the
+contents of first part of the register (the one containing all
+integers such that <!-- MATH
+ $x^{a} \bmod n = k$
+ -->
+<I>x</I><SUP>a</SUP> mod <I>n</I> = <I>k</I>) and to put the result back
+into register one. The application of the discrete Fourier
+transformation has the effect of peaking the probability amplitudes of
+the first part of the register at integer multiples of the quantity <I>q</I>/<I>r</I>.
+
+<P>
+Now measuring the first part of the quantum register will yield an
+integer multiple of the inverse period. Once this number is retrieved
+from the quantum memory register, a classical computer can do some
+analysis of this number, make a guess as to the actual value of <I>r</I>,
+and from that compute the possible factors of <I>n</I>. This post
+processing will be covered in more detail later. (Shor)
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html367"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html363"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html357"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html365"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html368"
+  HREF="node22.html">Steps to Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html364"
+  HREF="node18.html">Quantum Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html358"
+  HREF="node20.html">Motivation for Shor's Algorithm</A>
+ &nbsp; <B>  <A NAME="tex2html366"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

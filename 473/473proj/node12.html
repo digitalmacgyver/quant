@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Operator to Create Equal Superposition of States</TITLE>
+<META NAME="description" CONTENT="Operator to Create Equal Superposition of States">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html208"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html204"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html198"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html206"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html209"
+  HREF="node13.html">Operator to Rotate Phase</A>
+<B> Up:</B> <A NAME="tex2html205"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html199"
+  HREF="node11.html">Outline of Proof of</A>
+ &nbsp; <B>  <A NAME="tex2html207"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00053000000000000000">
+Operator to Create Equal Superposition of States</A>
+</H2>
+
+<P>
+An equal superposition of states is created by the application of the
+well known Walsh-Hadamard operator.  The matrix representing the
+Walsh-Hadamard operator for an <I>n</I> bit quantum register is a <!-- MATH
+ $2^{n}
+\times 2^{n}$
+ -->
+2<SUP>n</SUP> <TT>x</TT> 2<SUP>n</SUP> matrix whose elements are defined to be: <!-- MATH
+ $W_{ij} =
+2^{-n/2}(-1)^{\bar{i} \cdot \bar{j}}$
+ -->
+<I>W</I><SUB>ij</SUB> = 2<SUP>-n/2</SUP>(- 1)<SUP><IMG
+ WIDTH="9" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$\scriptstyle \bar{{i}}$"><SUP> . </SUP><IMG
+ WIDTH="10" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\scriptstyle \bar{{j}}$"></SUP>, where <IMG
+ WIDTH="10" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \bar{{i}}$"> is the binary
+representation of <I>i</I>, and <!-- MATH
+ $\bar{i} \cdot \bar{j}$
+ -->
+<IMG
+ WIDTH="10" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \bar{{i}}$"><SUP> . </SUP><IMG
+ WIDTH="12" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \bar{{j}}$"> is the bitwise dot
+product of the <I>n</I> bit strings <I>i</I> and <I>j</I>, <I>i</I> and <I>j</I> range from 0
+to (<I>N</I> - 1), [Grover96] Put another way, <!-- MATH
+ $W_{ij} = \pm 2^{-n/2}$
+ -->
+<I>W</I><SUB>ij</SUB> = <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \pm$">2<SUP>-n/2</SUP>, where
+the sign is positive if the bitwise AND of <I>i</I> and <I>j</I> has an even
+number of 1's and negative otherwise. [Grover00]
+
+<P>
+The reason the Walsh-Hadamard operator inverts the sign (or rotates
+the phase <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$"> radians) in certain states is to allow it to be
+reversible.  We are asking for an operator which places a quantum
+system in an equal superposition of states.  For a classical
+probabilistic system this would necessarily be a irreversible process,
+as the resultant state would be the same for any input.  Since the
+amplitudes of a quantum state can be complex, the probability of
+measuring the a system in a given state is the absolute square of the
+amplitude in the given state.  Thus the Walsh-Hadamard operation can
+encode information in the phases of the states to make it reversible,
+while still placing the register in a state where if measured any
+basis state will be found with equal probability. [Grover00]
+
+<P>
+We may assume that prior to step 1 of our algorithm that our state is
+prepared to be identically in one of the <I>N</I> = 2<SUP>n</SUP> basis states.
+Assume that we place our register initially in the state where each of
+the bits is zero, then the state vector for our <I>n</I> bit register is:
+<!-- MATH
+ $\Psi = (1, 0, 0, \ldots 0)^{T}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Psi$"> = (1, 0, 0,...0)<SUP>T</SUP>.  As a reminder, the state vector
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Psi$"> has <I>N</I> = 2<SUP>n</SUP> components, representing each of the states our
+<I>n</I> bit quantum register can be measured in.  After application of the
+Walsh-Hadamard transformation the j'th element of the state vector is
+<!-- MATH
+ $W_{0j} = 2^{n/2}(-1)^{\bar{0} \cdot \bar{j}}$
+ -->
+<I>W</I><SUB>0j</SUB> = 2<SUP>n/2</SUP>(- 1)<SUP><IMG
+ WIDTH="11" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\scriptstyle \bar{{0}}$"><SUP> . </SUP><IMG
+ WIDTH="10" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\scriptstyle \bar{{j}}$"></SUP>, note that the bitwise
+dot product of the zero vector and any <I>j</I> vector is 0, thus the sign
+of each amplitude is positive.
+
+<P>
+The result is an equal superposition of each state, all with positive
+amplitude.  This was attained by performing the Walsh-Hadamard
+operator to the register prepared solely in the first state.
+
+<P>
+Note that this can be done for a <I>n</I> bit quantum register in <!-- MATH
+ $O(n) =
+O(\lg N)$
+ -->
+<I>O</I>(<I>n</I>) = <I>O</I>(lg&nbsp;<I>N</I>) time, although to simulate this on a classical computer we
+must perform no less than <I>O</I>(<I>N</I>) operations.  Here we see an example
+of the kind of exponential slowdown in classical simulation of quantum
+systems that Feynman observed.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html208"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html204"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html198"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html206"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html209"
+  HREF="node13.html">Operator to Rotate Phase</A>
+<B> Up:</B> <A NAME="tex2html205"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html199"
+  HREF="node11.html">Outline of Proof of</A>
+ &nbsp; <B>  <A NAME="tex2html207"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

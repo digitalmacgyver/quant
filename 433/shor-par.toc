@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}The Quantum Computer}{4}
+\contentsline {subsection}{\numberline {2.1}The Classical Bit}{4}
+\contentsline {subsection}{\numberline {2.2}The Quantum Bit}{4}
+\contentsline {subsection}{\numberline {2.3}State Vectors and Dirac Notation}{5}
+\contentsline {subsection}{\numberline {2.4}Superposition and Eigenstates}{6}
+\contentsline {subsection}{\numberline {2.5}The Quantum qubit}{6}
+\contentsline {subsection}{\numberline {2.6}The Quantum Memory Register}{7}
+\contentsline {subsection}{\numberline {2.7}Probability Interpretation}{7}
+\contentsline {subsection}{\numberline {2.8}Quantum Parallelism}{8}
+\contentsline {section}{\numberline {3}Shor's Algorithm}{9}
+\contentsline {subsection}{\numberline {3.1}Introduction to Shor's Algorithm}{9}
+\contentsline {subsection}{\numberline {3.2}Overview of Shor's Algorithm}{9}
+\contentsline {subsection}{\numberline {3.3}Steps to Shor's Algorithm}{10}
+\contentsline {subsection}{\numberline {3.4}Parallelizing Shor's Algorithm}{12}
+\contentsline {section}{\numberline {4}A Simulation of Shor's Algorithm on a Classical Computer}{12}
+\contentsline {subsection}{\numberline {4.1}Introduction to the Code for the Simulation}{13}
+\contentsline {subsection}{\numberline {4.2}The Simulation of Shor's Algorithm}{13}
+\contentsline {subsection}{\numberline {4.3}Parallelizing Methodology}{14}
+\contentsline {section}{\numberline {5}Timing Results and speedup}{15}
+\contentsline {section}{\numberline {6}Conclusion}{16}
+\contentsline {section}{\numberline {7}Bibliography}{16}
+\contentsline {section}{\numberline {8}Glossary}{17}
+\contentsline {section}{\numberline {9}Glossary}{17}
+\contentsline {section}{\numberline {A}Mathematics Used in this Paper}{19}
+\contentsline {subsection}{\numberline {A.1}Complex Numbers}{19}
+\contentsline {subsection}{\numberline {A.2}Vector Mathematics}{20}
+\contentsline {section}{\numberline {B}Code for the Simulation of Shor's Algorithm}{20}
+\contentsline {subsection}{\numberline {B.1}complex.h}{20}
+\contentsline {subsection}{\numberline {B.2}complex.C}{21}
+\contentsline {subsection}{\numberline {B.3}qureg.h}{22}
+\contentsline {subsection}{\numberline {B.4}qureg.C}{24}
+\contentsline {subsection}{\numberline {B.5}util.h}{27}
+\contentsline {subsection}{\numberline {B.6}util.C}{28}
+\contentsline {subsection}{\numberline {B.7}timer.C}{32}
+\contentsline {subsection}{\numberline {B.8}barrier.h}{33}
+\contentsline {subsection}{\numberline {B.9}barrier.C}{34}
+\contentsline {subsection}{\numberline {B.10}range.h}{36}
+\contentsline {subsection}{\numberline {B.11}range.C}{36}
+\contentsline {subsection}{\numberline {B.12}shor.C}{37}

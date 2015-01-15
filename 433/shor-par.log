@@ -1,0 +1,1230 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.26)  14 JAN 2015 18:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**shor-par.tex
+(./shor-par.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+) (./shor-par.aux)
+\openout1 = `shor-par.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+ [1
+
+] (./shor-par.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [2])
+\tf@toc=\write3
+\openout3 = `shor-par.toc'.
+
+ [3] [4]
+Overfull \hbox (2.88947pt too wide) in paragraph at lines 117--128
+[]\OT1/cmr/m/n/10 Now we in-tro-duce the stan-dard no-ta-tion for state vec-tor
+s in Quan-tum physics.
+ []
+
+[5] [6] [7] [8] [9] [10]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 433.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 433.
+ [11] [12] [13]
+[14]
+File: 15.epsi Graphic file (type eps)
+ <15.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 660--661
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 662.
+
+File: 21.epsi Graphic file (type eps)
+<21.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 670--671
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 672.
+
+File: 33.epsi Graphic file (type eps)
+<33.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 680--681
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 682.
+
+[15]
+File: 77.epsi Graphic file (type eps)
+ <77.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 692--693
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 694.
+
+File: 221.epsi Graphic file (type eps)
+<221.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 701--702
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 703.
+
+File: 391.epsi Graphic file (type eps)
+<391.epsi>
+Overfull \hbox (142.8225pt too wide) in paragraph at lines 711--712
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.64pt on input line 713.
+
+[16]
+Overfull \hbox (7.55693pt too wide) in paragraph at lines 819--827
+[]\OT1/cmr/m/n/10 : A trans-for-ma-tion con-verts a fi-nite list of equally
+ []
+
+[17] [18] [19] [20]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1017--1017
+[]  \OT1/cmtt/m/n/10 void Set(double new_real, double new_imaginary); //Set dat
+a members.[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1017--1017
+[]  \OT1/cmtt/m/n/10 bool operator==(const Complex&) const;    //Overloaded == 
+operator[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1084--1084
+[]\OT1/cmtt/m/n/10 Complex::Complex( double r, double i ): real( r ), imaginary
+( i ) {}[] 
+ []
+
+[21] [22]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //Default constructor.  Size is the size in bits of our re
+gister.[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //In our implementation of Shor's algorithm we will need s
+ize bits[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //to represent our value for "q" which is a number we have
+ chosen[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //with small prime factors which is between 2n^2 and 3n^2 
+inclusive[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //where n is the number we are trying to factor.  We envis
+ion our[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //numbers, representing the probability of finding the reg
+ister on[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //one of or 2^S base states.  Thus we use an array of size
+ 2^S, of[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //array[7] is the probability amplitude of the state |1,1,
+1>, and[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //array[7] * Complex Conjugate(array[7]) = probability of 
+choosing[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //function would not be possible for an actual quantum reg
+ister, it[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //is only there for debugging.  When verbose != 0 we retur
+n every[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //Sets state of the qubits using the arrays of complex amp
+litudes.[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //Sets the state to an equal superposition of all possible
+ states[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //discrete Fourier transformation.  In a real quantum comp
+uter such[] 
+ []
+
+[23]
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //an operation would not be possible, on the flip side, it
+ would[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1156--1156
+[]  \OT1/cmtt/m/n/10 //also not be necessary as you could simply build a DFT ga
+te, and[] 
+ []
+
+
+Overfull \hbox (74.99634pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 unsigned long long int reg_length = (unsigned long long in
+t) pow(2, reg_size);[] 
+ []
+
+[24]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //Normalize the probability amplitude, this ensures that the
+ sum of[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //the sum of the squares of all the real and imaginary compo
+nents is[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 0; i < pow(2, reg_size) ; 
+i++) {[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 0; i < pow(2, reg_size) ; 
+i++) {[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //Measure a state, and return the decimal value measured.  C
+ollapse[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //the state so that the probability of measuring the measure
+d value in[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //the future is 1, and the probability of measuring any othe
+r state is[] 
+ []
+
+[25]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 0 ; i < pow(2, reg_size)  
+;i++) {[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1289--1289
+[]      \OT1/cmtt/m/n/10 b += pow(State[i].Real(), 2) + pow(State[i].Imaginary(
+), 2);[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1289--1289
+[]      \OT1/cmtt/m/n/10 a += pow(State[i].Real(), 2) + pow(State[i].Imaginary(
+), 2);[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 0 ; i < pow(2, reg_size) ;
+ i++) {[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 //Beware, this function will cause segfaults if new_state 
+is too[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1289--1289
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 0 ; i < pow(2, reg_size) ;
+ i++) {[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1289--1289
+[]\OT1/cmtt/m/n/10 //Set the State to an equal superposition of the integers 0 
+-> number[] 
+ []
+
+[26]
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 1289--1289
+[]    \OT1/cmtt/m/n/10 cout << "Error, initializing past end of array in qureg:
+:SetAverage.\n";[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function takes an integer input and returns 1 if it i
+s a prime[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function takes an integer input and returns 1 if it i
+s equal to[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function computes the greatest common denominator of 
+two integers.[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //Since the modulus of a number mod 0 is not defined, we ret
+urn a -1 as[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //an error code if we ever would try to take the modulus of 
+something and[] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 unsigned long long int GCD(unsigned long long int a, unsigne
+d long long int b);[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function takes and integer argument, and returns the 
+size in bits[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function takes three integers, x, a, and n, and retur
+ns x^a mod[] 
+ []
+
+
+Overfull \hbox (221.99506pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 unsigned long long int modexp(unsigned long long int x, unsi
+gned long long int a, unsigned long long int n);[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 unsigned long long int denominator(double c, unsigned long l
+ong int qmax);[] 
+ []
+
+[27]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function takes two integer arguments and returns the 
+greater of[] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 unsigned long long int max(unsigned long long int a, unsigne
+d long long int b);[] 
+ []
+
+
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 //This function computes the discrete Fourier transformation
+ on a register's[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1337--1337
+[]\OT1/cmtt/m/n/10 void DFT(QuReg * reg, unsigned long long int q, unsigned int
+ thread_id);[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function takes an integer input and returns 1 if it i
+s a prime[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function takes an integer input and returns 1 if it i
+s equal to a[] 
+ []
+
+
+Overfull \hbox (74.99634pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 for (unsigned long long int i = 2 ; i <= (floor(log(n) / l
+og(j)) + 1) ; i++) {[] 
+ []
+
+[28]
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function computes the greatest common denominator of 
+two integers.[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //Since the modulus of a number mod 0 is not defined, we ret
+urn a -1 as[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //an error code if we ever would try to take the modulus of 
+something and[] 
+ []
+
+
+Overfull \hbox (74.99634pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 unsigned long long int GCD(unsigned long long int a, unsigne
+d long long int b) {[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function takes and integer argument, and returns the 
+size in bits[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 unsigned long long int power = 8; //265 is the smallest q 
+ever is.[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function takes three integers, x, a, and n, and retur
+ns x^a mod n.[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This algorithm is known as the "Russian peasant method," I
+ believe.[] 
+ []
+
+
+Overfull \hbox (227.24501pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 unsigned long long int modexp(unsigned long long int x, unsi
+gned long long int a, unsigned long long int n) {[] 
+ []
+
+[29]
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 unsigned long long int denominator(double c, unsigned long l
+ong int qmax) {[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1541--1541
+[]      \OT1/cmtt/m/n/10 //Warning this is broken if q1 == 0, but that should n
+ever happen.[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 //This function takes two integer arguments and returns the 
+greater of[] 
+ []
+
+
+Overfull \hbox (74.99634pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 unsigned long long int max(unsigned long long int a, unsigne
+d long long int b) {[] 
+ []
+
+[30]
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 1541--1541
+[]\OT1/cmtt/m/n/10 void DFT(QuReg * reg, unsigned long long int q, unsigned int
+ thread_id) {[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //functions in the frequency domain.  Frequency is 1/perio
+d, thus[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //this Fourier transform will take our periodic register, 
+and peak it[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //at multiples of the inverse period.  Our Fourier transfo
+rmation on[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //the state a takes it to the state: q^(-.5) * Sum[c = 0 -
+> c = q - 1,[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 barrier(&global_barrier_counter, num_threads, &global_barr
+ier_mutex,[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //Here we do things that a real quantum computer couldn't 
+do, such[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //as look as individual values without collapsing state.  
+The good[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 //news is that in a real quantum computer you could build 
+a gate[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1541--1541
+[]    \OT1/cmtt/m/n/10 //This if statement helps prevent previous round off err
+ors from[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1541--1541
+[]      \OT1/cmtt/m/n/10 // Limit our attention to the potion of the overall ra
+nge our[] 
+ []
+
+
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 1541--1541
+[]      \OT1/cmtt/m/n/10 for (unsigned long long int c = q_range_lower[thread_i
+d] ; c <= q_range_upper[thread_id] ; c++) {[] 
+ []
+
+[31]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 1541--1541
+[]  \OT1/cmtt/m/n/10 barrier(&global_barrier_counter, num_threads, &global_barr
+ier_mutex,[] 
+ []
+
+[32]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 1614--1614
+[]     \OT1/cmtt/m/n/10 pthread_mutex_t* barrier_mutex, pthread_cond_t* barrier
+_cond);[] 
+ []
+
+[33] [34]
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1695--1695
+[]     \OT1/cmtt/m/n/10 pthread_mutex_t* barrier_mutex, pthread_cond_t* barrier
+_cond) {[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1695--1695
+[]     \OT1/cmtt/m/n/10 pthread_mutex_t* barrier_mutex, pthread_cond_t* barrier
+_cond) {[] 
+ []
+
+[35]
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 1719--1719
+[]\OT1/cmtt/m/n/10 //The i'th element of q_range_lower is the lower limit that 
+the i'th[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 1719--1719
+[]\OT1/cmtt/m/n/10 //process element should process, and q_range_upper's i'th e
+lement is[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 1719--1719
+[]\OT1/cmtt/m/n/10 //for(int i = q_range_lower[proc_rank] ; i <= q_range_upper[
+proc_rank] ; i++)[] 
+ []
+
+[36]
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 cout << "Usage: " << argv[0] << " <num to be factored> <
+num threads>\n";[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 //The i'th element of q_range_lower is the lower limit tha
+t the i'th[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 //process element should process, and q_range_upper's i'th
+ element is[] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 //for(int i = q_range_lower[proc_rank] ; i <= q_range_uppe
+r[proc_rank] ; i++)[] 
+ []
+
+[37]
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 thread_array = (pthread_t *) malloc(sizeof(pthread_t) * nu
+m_threads);[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 pthread_create(&thread_array[i], 0, Shor_Sim, (void*)(in
+tptr_t)i);[] 
+ []
+
+
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 final_barrier(&final_barrier_counter, num_threads+1, &fina
+l_barrier_mutex,[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //coprime when their greatest common denominator is one.  On
+e is not[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //Now we must figure out how big a quantum register we need 
+for our[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //input, n.  We must establish a quantum register big enough
+ to hold[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //an equal superposition of all integers 0 through q - 1 whe
+re q is[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //This array will remember what values of q produced for x^q
+ mod n.[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //computer these registers would be entangled, and thus this
+ extra[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //into a state consistent with the measured value in resiste
+r two.[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //This array holds the probability amplitudes of the collaps
+ed state[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //of register one, after register two has been measured it i
+s used[] 
+ []
+
+[38]
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 // This is the second register.  It needs to be big enough t
+o hold[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //and r is the period we are trying to find to factor n.  m 
+is the[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //This is used to store the denominator of the fraction p / 
+den where[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //This is used to store the numerator of the fraction p / de
+n where[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 //The integers e, a, and b are used in the end of the progra
+m when[] 
+ []
+
+[39]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 cout << "Error, the number must not be prime!" << endl
+ << flush;[] 
+ []
+
+
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 cout << "Error, the number must not be a prime power!"
+ << endl << flush;[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //Now we must pick a random integer x, coprime to n.  Nu
+mbers are[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //coprime when their greatest common denominator is one.
+  One is not[] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 x = 1+ (unsigned long long int)((n-1)*(double)rand()/(do
+uble)RAND_MAX);[] 
+ []
+
+
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 x = 1 + (unsigned long long int)((n-1)*(double)rand()/
+(double)RAND_MAX);[] 
+ []
+
+[40]
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //Now we must figure out how big a quantum register we n
+eed for our[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //input, n.  We must establish a quantum register big en
+ough to hold[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //an equal superposition of all integers 0 through q - 1
+ where q is[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 cout << "Made register 1 with register size = " << RegSi
+ze(q) << endl[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //This array will remember what values of q produced for
+ x^q mod n.[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //It is necessary to retain these values for use when we
+ collapse[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //register one after measuring register two.  In a real 
+quantum[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //computer these registers would be entangled, and thus 
+this extra[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //bookkeeping would not be needed at all.  The laws of q
+uantum[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //mechanics dictate that register one would collapse as 
+well, and[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //into a state consistent with the measured value in res
+ister two.[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //This array holds the probability amplitudes of the col
+lapsed state[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //of register one, after register two has been measured 
+it is used[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //to put register one in a state consistent with that me
+asured in[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //This is a new array of probability amplitudes for our 
+second[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //quantum register, that populated by the results of x^a
+ mod n.[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 // This is the second register.  It needs to be big enou
+gh to hold[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 cout << "Created register 2 of size " << RegSize(n) << e
+ndl << flush;[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //Shor's algorithm can sometimes fail, in which case you
+ do it[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //again.  The done variable is set to 0 when the algorit
+hm has[] 
+ []
+
+[41]
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 } //Everything up to this point is pre processing done by 
+thread 0.[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 barrier(&global_barrier_counter1, num_threads, &global_bar
+rier_mutex1,[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 cout << "There have been five failures, giving up." << endl 
+<< flush;[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //elements of reg 1.  That is, perform x^a mod n, but 
+exploiting[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //quantum parallelism a quantum computer could do this
+ in one[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //measurable value in register one.  We store the resu
+lt in a new[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //register, reg2, which is entangled with the first re
+gister.[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //This means that when one is measured, and collapses 
+into a base[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //state, the other register must collapse into a super
+position of[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //states consistent with the measured value in the oth
+er..  The[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //size of the result modular exponentiation will be at
+ most n, so[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //the number of bits we will need is therefore less th
+an or equal[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //to log2 of n.  At this point we also maintain a arra
+y of what[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //each state produced when modularly exponised, this i
+s because[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //these registers would actually be entangled in a rea
+l quantum[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //computer, this information is needed when collapsing
+ the first[] 
+ []
+
+
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //This counter variable is used to increase our probab
+ility amplitude.[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter2, num_threads, &global_b
+arrier_mutex2,[] 
+ []
+
+[42]
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 for (int i = q_range_lower[thread_id] ; i <= q_range_upp
+er[thread_id] ; i++) {[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //We must use this version of modexp instead of c++ bu
+iltins as[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter3, num_threads, &global_b
+arrier_mutex3,[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //Set the state of register two to what we calculated 
+it should be.[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //Normalize register two, so that the probability of m
+easuring a[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter4, num_threads, &global_b
+arrier_mutex4,[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 //This is a parallelized version of this loop, which ass
+umes the[] 
+ []
+
+
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 for (int i = q_range_lower[thread_id] ; i <= q_range_upp
+er[thread_id] ; i++) {[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter5, num_threads, &global_b
+arrier_mutex5,[] 
+ []
+
+[43]
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //Now we set the state of register one to be consisten
+t with what[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 cout << "Begin Discrete Fourier Transformation!" << en
+dl << flush;[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter6, num_threads, &global_b
+arrier_mutex6,[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter7, num_threads, &global_b
+arrier_mutex7,[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //Next we measure register one, due to the Fourier tra
+nsform the[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //number we measure, m will be some multiple of lambda
+/r, where[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //If we measured zero, we have gained no new informati
+on about the[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //The DecMeasure subroutine will return -1 as an error
+ code, due[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //to rounding errors it will occasionally fail to meas
+ure a state.[] 
+ []
+
+[44]
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //If nothing has gone wrong, try to determine the peri
+od of our[] 
+ []
+
+[45]
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //GCD will return a -1 if it tried to calculate the GC
+D of two[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //numbers where at some point it tries to take the mod
+ulus of a[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 cout << "Error, tried to calculate n mod 0 for some n.  Tryi
+ng again."[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 2208--2208
+[]      \OT1/cmtt/m/n/10 //If nothing else has gone wrong, and we got a factor 
+we are[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 2208--2208
+[]\OT1/cmtt/m/n/10 cout << n << " = " << factor << " * " << n / factor << endl 
+<< flush;[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 barrier(&global_barrier_counter8, num_threads, &global_b
+arrier_mutex8,[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 2208--2208
+[]    \OT1/cmtt/m/n/10 cout << "Runtime = " << endTime - startTime << " seconds
+" << endl;[] 
+ []
+
+
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 2208--2208
+[]  \OT1/cmtt/m/n/10 final_barrier(&final_barrier_counter, num_threads+1, &fina
+l_barrier_mutex,[] 
+ []
+
+[46] [47] [48] [49] [50] [51] [52] [53] (./shor-par.aux) ) 
+Here is how much of TeX's memory you used:
+ 610 strings out of 495033
+ 7306 string characters out of 6181744
+ 67128 words of memory out of 5000000
+ 3858 multiletter control sequences out of 15000+600000
+ 8409 words of font info for 30 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 32i,8n,21p,216b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on shor-par.dvi (53 pages, 120828 bytes).

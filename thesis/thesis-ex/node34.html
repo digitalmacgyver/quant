@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Determining the Oracle String</TITLE>
+<META NAME="description" CONTENT="Determining the Oracle String">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html526"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html522"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html516"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html524"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html527"
+  HREF="node35.html">Singleton Functions</A>
+<B> Up:</B> <A NAME="tex2html523"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html517"
+  HREF="node33.html">Application to Generalized XOR</A>
+ &nbsp; <B>  <A NAME="tex2html525"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00730000000000000000"></A>
+<A NAME="sec:dos"></A>
+<BR>
+Determining the Oracle String
+</H1>
+
+<P>
+Consider the problem of determining the oracle string.  We prove two
+lower bounds for this problem, one through Lemma <!-- MATH
+ $\ref{lm:1xky}$
+ -->
+<A HREF="#<I>lm</I> : 1<I>xky</I>"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>, and
+another by using a known lower bound for PARITY.
+
+<P>
+<P>
+<DIV><A NAME="th:dosbad"><B>Theorem  2.3.1</B></A> &nbsp; 
+<I><!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle queries are required to determine an <I>N</I>-bit
+oracle string in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="130" ALIGN="BOTTOM" BORDER="0"
+ SRC="img84.png"
+ ALT="\begin{proof}
+% latex2html id marker 726Let $f$ be the $N$-bit Boolean functi...
+... $f(x) \neq f(y)$. The result then follows from
+Lemma \ref{lm:1xky}.
+\end{proof}">
+<BR>
+
+<P>
+In the classical case <I>N</I> oracle queries are required to determine the
+oracle string.  If the lower bound of <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">) oracle
+queries were asymptotically tight, then there would be quadratic
+improvement over the classical case for this problem.  This seems
+plausible in light of Grover's algorithm.  However, <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>N</I>) lower
+bounds are known for Boolean functions in the quantum oracle model, we
+can thus infer that Theorem <A HREF="#th:dosbad">2.3.1</A> is not asymptotically
+tight.
+
+<P>
+<P>
+<DIV><A NAME="th:dosgood"><B>Theorem  2.3.2</B></A> &nbsp; 
+<I><I>N</I>/2 oracle queries are required to determine an <I>N</I>-bit oracle
+string in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="134" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="\begin{proof}
+Once we compute the oracle string, we can compute its PARITY with ...
+...it oracle string in the
+bounded error setting \cite{beals98quantum}.
+\end{proof}">
+<BR>
+
+<P>
+We now see an apparent limitation of Ambainis' Theorem; the result
+attained was quadratically worse than the asymptotically tight lower
+bound.  We will show in the next section that the weak lower bound in
+Theorem <A HREF="#th:dosbad">2.3.1</A> is indeed the best that can be attained
+through application of Ambainis' Theorem.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html526"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html522"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html516"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html524"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html527"
+  HREF="node35.html">Singleton Functions</A>
+<B> Up:</B> <A NAME="tex2html523"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html517"
+  HREF="node33.html">Application to Generalized XOR</A>
+ &nbsp; <B>  <A NAME="tex2html525"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

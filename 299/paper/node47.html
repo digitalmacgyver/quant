@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>qubit.C</TITLE>
+<META NAME="description" CONTENT="qubit.C">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="previous" HREF="node46.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node48.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html687"
+  HREF="node48.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html683"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html679"
+  HREF="node46.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html685"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html688"
+  HREF="node48.html">Sample Output</A>
+<B> Up:</B> <A NAME="tex2html684"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html680"
+  HREF="node46.html">util.C</A>
+ &nbsp; <B>  <A NAME="tex2html686"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000148000000000000000">
+qubit.C</A>
+</H2>
+
+<P>
+Below is the much simpler code for a single qubit.  You may find it
+entertaining and educational to write a simple driver program for this
+class to toy with a single qubit.
+
+<P>
+<PRE>
+#include &lt;iostream&gt;
+#include &lt;math.h&gt;
+#include &lt;stdlib.h&gt;
+#include "complex.h"
+
+using namespace std;
+
+class Qubit {
+public:
+  Qubit();            //Default constructor.
+  virtual ~Qubit();           //Default destructor.
+  int Measure();      //Returns zero_state = 0 or one_state = 1 in accordance
+                      //with the probabilities of zero_state and one_state.
+  void Dump() const;        //Prints our zero_state, and one_state, without 
+                      //disturbing anything, this operation has no physical
+                      //realization, it is only for information and debugging. 
+                      //It should never be used in an algorithm for 
+                      //information.
+  void SetState(const Complex&amp; zero_prob, const Complex&amp; one_prob);
+                      // Takes two complex numbers and sets the states to 
+                      //those values.
+  void SetAverage();  //Sets the state to 2^(1/2) zero_state, 2^(1/2) 
+                      //one_state.  No imaginary/phase component.
+  double MCC(int state) const;  //Multiply the zero or one state by its complex
+                          //conjugate, and return the value.  This value 
+                          //will always be a real number, with no imaginary 
+                          //component.   
+
+private:
+  Complex zero_state;  
+  //The probability of finding the Qubit in the zero or all imaginary 
+  //state.  I currently use only the real portion.  
+
+  Complex one_state;   
+  //The probability of finding the Qubit in the one or all real state.
+  //I currently use only the real portion.
+
+  //|zero_state|^2 + |one_state|^2 should always be 1.
+  //This notation means z_s * ComplexConjugate(z_s) + o_s * 
+  //ComplexConjugate(o_s) = 1.
+};
+
+//Qubit constructor, initially sets things in the zero state.
+Qubit::Qubit() {
+  zero_state = Complex(1,0); 
+  one_state = Complex(0,0);
+  srand(time(NULL));
+}
+
+//Returns &lt;state&gt;_state * ComplexConjugate(&lt;state&gt;_state).
+double Qubit::MCC(int state) const {
+  if (state == 0) {
+    return (pow(zero_state.Real(), 2) + pow(zero_state.Imaginary(), 2));
+  } else {
+    return (pow(one_state.Real(), 2) + pow(one_state.Imaginary(), 2));
+  }
+}
+
+//Measurement operator.  Destructively collapses superpositions.
+int Qubit::Measure() {
+  double rand1 = rand()/(double)RAND_MAX;
+
+  //This assumes that the sum of the squares of the amplitudes are = 1
+  if (MCC(0) &gt; rand1) {
+    zero_state.Set(1,0);
+    one_state.Set(0,0);
+    return 0;
+  } else {
+    zero_state.Set(0,0);
+    one_state.Set(1,0);
+    return 1;
+  } 
+}
+
+//Outputs state info for our qubit.  For debugging purposes.
+void Qubit::Dump() const{
+  cout &lt;&lt; "Amplitude of the zero state is "
+       &lt;&lt; zero_state.Real() &lt;&lt; " +i" &lt;&lt; zero_state.Imaginary() &lt;&lt; endl 
+       &lt;&lt; flush;
+  cout &lt;&lt; "Amplitude of the one state is "
+       &lt;&lt; one_state.Real() &lt;&lt; " +i" &lt;&lt; one_state.Imaginary() &lt;&lt; endl 
+       &lt;&lt; flush;
+}
+
+//Sets the zero and one states to arbitrary amplitudes.  Outputs
+//an error message if the two values MCC'ed != 1 + 0i.
+void Qubit::SetState(const Complex&amp; zero_prob, const Complex&amp; one_prob) {
+  zero_state = zero_prob;
+  one_state = one_prob;
+  //Determine if |zero_state|^2 + |one_state|^2 == 1, if not we 
+  //are not in a valid state.
+  double probab;
+  probab = MCC(0) + MCC(1);
+  if (fabs(probab - 1) &gt; pow(10, -10)) {  
+    //This funny expression 
+    //allows us some rounding errors.
+    cout &lt;&lt; "Warning, total probability for in SetState is different from 1." &lt;&lt; endl &lt;&lt; flush;
+  }
+}
+
+//Sets the qubit 1/2 way between the 0 state and the 1 state.  No phase.
+void Qubit::SetAverage() {
+  zero_state.Set(pow(2, -.5), 0);
+  one_state.Set(pow(2, -.5), 0);
+}
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html687"
+  HREF="node48.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html683"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html679"
+  HREF="node46.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html685"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html688"
+  HREF="node48.html">Sample Output</A>
+<B> Up:</B> <A NAME="tex2html684"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html680"
+  HREF="node46.html">util.C</A>
+ &nbsp; <B>  <A NAME="tex2html686"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

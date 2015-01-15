@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Timing Results and speedup</TITLE>
+<META NAME="description" CONTENT="Timing Results and speedup">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="shor-par.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html349"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html345"
+  HREF="shor-par.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html339"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html347"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html350"
+  HREF="node22.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html346"
+  HREF="shor-par.html">Quantum Computing, Shor's Algorithm,</A>
+<B> Previous:</B> <A NAME="tex2html340"
+  HREF="node20.html">Parallelizing Methodology</A>
+ &nbsp; <B>  <A NAME="tex2html348"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Timing Results and speedup</A>
+</H1>
+
+<P>
+Even given the small amount of code that was parallelized, we got
+remarkably good speedup results.  
+
+<P>
+As can be seen, there is not a strong correlation between number of
+processors and run time for the trials factoring 15 (4 bits), although
+this can be accounted for by the fact that the run time is so small
+initially, and for all number of threads the run time is less than one
+fifth of a second.  This will change rapidly, as the running time
+grows exponentially with <I>n</I>, the number to be factored.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="184"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 15</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{figure}\epsfig{figure=15.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In this graph for the factoring of 21 (5 bits), we begin to see
+possible speedup due to multiple threads, although it is still
+sporadic, again, this is not surprising due to the very small running
+times of the sequential version.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="188"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 21</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{figure}\epsfig{figure=21.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In this graph for running times and speedups while factoring 33 (6
+bits), we see the beginning of our linear speedup with the number of
+pthreads.  With the exception of the speedup for two threads, we
+follow a roughly liner speedup curve.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="192"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 33</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{figure}\epsfig{figure=33.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the graph for the speedup with thread increase while factoring 77
+(7 bits) we see even better behavior than we did for factoring 33.
+There is initially linear speedup, but once the run time gets
+sufficiently small, the speedup drops off, here we can see the results
+of the sequential time becoming the dominant portion of the running
+time.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="196"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 77</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{figure}\epsfig{figure=77.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the graph for speedup and decrease run time while factoring 221 (8
+bits) we see super linear speedup, which is as good as we can possibly
+hope for.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="200"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 221</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{figure}\epsfig{figure=221.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the graph of speedup while factoring 391 (9 bits), we see that the
+good behavior while factoring 221 continues.  At this point the
+exponential slowdown made it difficult to continue gathering speedup
+data for larger numbers.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="204"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Run Times and Speedups for Simulation of Shor's Algorithm Factoring 391</CAPTION>
+<TR><TD><IMG
+ WIDTH="778" HEIGHT="1127" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{figure}\epsfig{figure=391.epsi}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html349"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html345"
+  HREF="shor-par.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html339"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html347"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html350"
+  HREF="node22.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html346"
+  HREF="shor-par.html">Quantum Computing, Shor's Algorithm,</A>
+<B> Previous:</B> <A NAME="tex2html340"
+  HREF="node20.html">Parallelizing Methodology</A>
+ &nbsp; <B>  <A NAME="tex2html348"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

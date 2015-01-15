@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Nondeterministic Decision Tree Complexity</TITLE>
+<META NAME="description" CONTENT="Nondeterministic Decision Tree Complexity">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node54.html">
+<LINK REL="previous" HREF="node52.html">
+<LINK REL="up" HREF="node51.html">
+<LINK REL="next" HREF="node54.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html765"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html761"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html755"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html763"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html766"
+  HREF="node54.html">Nondeterministically Evasive Functions</A>
+<B> Up:</B> <A NAME="tex2html762"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html756"
+  HREF="node52.html">Tree Functions</A>
+ &nbsp; <B>  <A NAME="tex2html764"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00920000000000000000"></A>
+<A NAME="sec:dndtc"></A>
+<BR>
+Nondeterministic Decision Tree Complexity
+</H1>
+
+<P>
+In the presentation of the most general results of this thesis we
+refer frequently to deterministic and nondeterministic decision tree
+complexity, deterministic decision trees were discussed in Section
+<A HREF="node43.html#subs:ddt">3.1</A>.  Readers familiar with these topics can proceed
+directly to Section <A HREF="node54.html#sec:b4r">4.3</A>.
+
+<P>
+Let <I>f</I> be an <I>N</I>-bit Boolean function.  We will use the following
+definitions of L&#225;szl&#243; Lov&#225;sz and P&#233;ter
+G&#225;cs [<A
+ HREF="node57.html#lovasz94complexity">13</A>].
+
+<P>
+For every input <I>x</I> let <I>D</I>(<I>f</I>, <I>x</I>) denote the minimum number of bits of
+<I>x</I> we could be told to convince us that <I>f</I> (<I>x</I>) takes on a particular
+value.  For example: <I>D</I>(OR<!-- MATH
+ $,0^{N}) = N$
+ -->
+, 0<SUP>N</SUP>) = <I>N</I>.  If we are told fewer than
+<I>N</I> bits of an input are all 0 we can not determine the value of OR
+for that input.  For any other input <!-- MATH
+ $x \neq 0^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> 0<SUP>N</SUP>, <I>D</I>(OR, <I>x</I>) = 1,
+because we only need to be told that one bit of the input is a 1.  We
+are not concerned with how many oracle queries we have to make in the
+worst case to determine <I>f</I> (<I>x</I>), but rather how many bits we could be
+told in the best case to be sure of the value <I>f</I> takes on <I>x</I>.
+
+<P>
+<P>
+<DIV><A NAME="defi:nd0"><B>Definition  4.2.1</B></A> &nbsp; 
+<I><!-- MATH
+ $D_{0}(f) = \max\{D(f,x) | f(x) = 0\}$
+ -->
+<I>D</I><SUB>0</SUB>(<I>f</I> )= max{<I>D</I>(<I>f</I>, <I>x</I>)| <I>f</I> (<I>x</I>) = 0}.  <I>D</I><SUB>0</SUB>(<I>f</I> ) is the
+nondeterministic decision tree complexity of verifying that an input
+takes on 0 when evaluated by <I>f</I>.</I></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="defi:nd1"><B>Definition  4.2.2</B></A> &nbsp; 
+<I><!-- MATH
+ $D_{1}(f) = \max\{D(f,x) | f(x) = 1\}$
+ -->
+<I>D</I><SUB>1</SUB>(<I>f</I> )= max{<I>D</I>(<I>f</I>, <I>x</I>)| <I>f</I> (<I>x</I>) = 1}.  <I>D</I><SUB>1</SUB>(<I>f</I> ) is the
+nondeterministic decision tree complexity of verifying that an input
+takes on 1 when evaluated by <I>f</I>.</I></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="defi:ndc"><B>Definition  4.2.3</B></A> &nbsp; 
+<I><!-- MATH
+ $N(f) = \max\{D_{0}(f),D_{1}(f)\} = \max_{x}\{D(f,x)\}$
+ -->
+<I>N</I>(<I>f</I> )= max{<I>D</I><SUB>0</SUB>(<I>f</I> ), <I>D</I><SUB>1</SUB>(<I>f</I> )} = <IMG
+ WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$ \max_{{x}}^{}$">{<I>D</I>(<I>f</I>, <I>x</I>)}.  The
+nondeterministic decision tree complexity of computing an <I>N</I>-bit
+Boolean function <I>f</I> is the maximum of the nondeterministic decision
+tree complexities of verifying any input of <I>f</I> takes on one of
+{0, 1}.</I></DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html765"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html761"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html755"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html763"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html766"
+  HREF="node54.html">Nondeterministically Evasive Functions</A>
+<B> Up:</B> <A NAME="tex2html762"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html756"
+  HREF="node52.html">Tree Functions</A>
+ &nbsp; <B>  <A NAME="tex2html764"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

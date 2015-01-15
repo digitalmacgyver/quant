@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantum Parallelism</TITLE>
+<META NAME="description" CONTENT="Quantum Parallelism">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html226"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html222"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html218"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html224"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html227"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html223"
+  HREF="node3.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html219"
+  HREF="node10.html">Probability Interpretation</A>
+ &nbsp; <B>  <A NAME="tex2html225"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00038000000000000000">
+Quantum Parallelism</A>
+</H2>
+
+<P>
+Quantum parallelism arises from the ability of a quantum memory
+register to exist in a superposition of base states. Each component
+of this superposition may be thought of as a single argument to a
+function. A function performed once on the register in a
+superposition of states is performed on each of the components of the
+superposition. Since the number of possible states is 2<SUP>n</SUP> where
+<I>n</I> is the number of qubits in the quantum register, you can perform
+in one operation on a quantum computer what would take an exponential
+number of operations on a classical computer. This is fantastic, but
+the more superposed states that exist in you register, the smaller the
+probability that you will measure any particular one will become.
+
+<P>
+As an example suppose that you are using a quantum computer to
+calculate the function <!-- MATH
+ $\mathcal{F}(x) = 2*x \bmod 7$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \mathcal {F}$">(<I>x</I>) = 2*<I>x</I> mod 7, where <I>x</I> is
+the superposition of integers between 0 and 7 inclusive. You could
+prepare a quantum register that was in a equally weighted
+superposition of the states 0-7. Then you could perform the <!-- MATH
+ $2*x
+\bmod 7$
+ -->
+2*<I>x</I> mod 7 operation once, and the register would contain the equally
+weighted superposition of 1,2,4,6,1,3,5,0 states, these being the
+outputs of the function <!-- MATH
+ $2*x \bmod 7$
+ -->
+2*<I>x</I> mod 7 for inputs 0 - 7. When
+measuring the quantum register you would have a 2/8 chance of
+measuring 1, and a 1/8 chance of measuring any of the other
+outputs. It would seem that this sort of parallelism is not useful,
+as the more we benefit from parallelism the less likely we are to
+measure a value of a function for a particular input. Some clever
+algorithms have been devised, most notably by Peter Shor which succeed
+in using quantum parallelism on a function where there is interest in
+some property of all the inputs, not just a particular one.
+
+<P>
+This kind of parallelism is very appealing for simulation on a
+parallel computer.  A <I>n</I> bit quantum register contains a
+superposition of each of its 2<SUP>n</SUP> possible base states, and we
+represent this by an array of 2<SUP>n</SUP> complex numbers which are
+probabilities of measuring the quantum register to be the
+corresponding base state.  To perform an operation on the quantum
+register, we simply modify each of the 2<SUP>n</SUP> array locations.  By
+splitting the calculations of how to change the probability values of
+the array locations into even ranges via process elements, we get
+nearly linear speedup.  
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html226"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html222"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html218"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html224"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html227"
+  HREF="node12.html">Shor's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html223"
+  HREF="node3.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html219"
+  HREF="node10.html">Probability Interpretation</A>
+ &nbsp; <B>  <A NAME="tex2html225"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

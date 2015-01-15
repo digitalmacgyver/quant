@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Parallelizing Methodology</TITLE>
+<META NAME="description" CONTENT="Parallelizing Methodology">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node17.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html337"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html333"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html329"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html335"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html338"
+  HREF="node21.html">Timing Results and speedup</A>
+<B> Up:</B> <A NAME="tex2html334"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html330"
+  HREF="node19.html">The Simulation of Shor's</A>
+ &nbsp; <B>  <A NAME="tex2html336"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00053000000000000000">
+Parallelizing Methodology</A>
+</H2>
+
+<P>
+There is a strong correlation between the portions of Shor's algorithm
+which would be performed on a classical computer, portions which would
+be performed on a quantum computer, and portions of the simulation
+that do not parallelize, and portions that do.  
+
+<P>
+The parts of Shor's algorithm which are pre and post processing which
+take place on a classical computer are not good candidates for
+parallelization.  In contrast, the portions which the quantum computer
+would perform are easily parallelized.  
+
+<P>
+The basis for parallelization in the simulation of Shor's algorithm is
+that at several points in the sequential code there are for loops that
+iterate over large arrays, and modify each element in some uniform
+manner.
+
+<P>
+Given this type of parallelism, each of the Charm++, pthreads, and MPI
+paradigms has some appeals and disadvantages.  Charm++'s object
+paradigm coincides with the sequential codes object oriented approach.
+Charm++'s load balancing features are not of much utility, as the work
+load between even array portions is very even to start with, and it is
+not clear that the overhead imposed by Charm++ would be recovered by
+superior load balancing.  MPI seems reasonable, as each process element
+iterates over its own exclusive region in the parallelized code,
+however, we then must communicate each portion to a manager processor,
+who would perform various operations.  
+
+<P>
+Pthreads seemed the most natural version, since each thread iterates
+over its unique set of array locations, there is no need for locks,
+and no danger of deadlock or data corruption.  If the array locations
+are suitably large, there is very little false sharing due to
+different array portions existing in the same cache lines of different
+threads.  Once deciding on the pthreads paradigm, there are two
+hurdles that must be overcome.  We must decide on a synchronization
+method, and we must decide how to split work.
+
+<P>
+Splitting the work is achieved in range.h, where given the values of
+<I>n</I>, <I>q</I>, and <TT>num pthreads</TT>, assigns values to each of
+<TT>num pthreads</TT> array locations, such that the <I>i</I>'th array location of
+<TT>q range lower</TT>, <TT>q range upper</TT>, <TT>n range lower</TT> and
+<TT>n range upper</TT> contains the array locations where the <I>i</I>'th 
+process element should begin and end processing.
+
+<P>
+Setting barriers is achieved in barrier.h.  We simply implement a
+barrier with pthread locks.  These barriers occur before and after
+each of the parallel sections.  They are necessary because frequently
+we perform an operation that involves some result of the entire array
+just before or after these parallelized sections.
+
+<P>
+In accordance with Amdahl's law our speedup is limited by the speedup
+of the parallelized sections, but the parallelized sections are such a
+large portion of the total running time, that the speedup is nearly
+linear.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html337"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html333"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html329"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html335"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html338"
+  HREF="node21.html">Timing Results and speedup</A>
+<B> Up:</B> <A NAME="tex2html334"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html330"
+  HREF="node19.html">The Simulation of Shor's</A>
+ &nbsp; <B>  <A NAME="tex2html336"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A Special Case</TITLE>
+<META NAME="description" CONTENT="A Special Case">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html316"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html312"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html308"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html314"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html317"
+  HREF="node22.html">Open Questions</A>
+<B> Up:</B> <A NAME="tex2html313"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html309"
+  HREF="node20.html">Theorem 2</A>
+ &nbsp; <B>  <A NAME="tex2html315"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00058000000000000000">
+A Special Case</A>
+</H2>
+
+<P>
+It is instructive to consider the special case of <I>N</I> = 4.  In this
+special case, the precise number of iterations needed to attain the
+correct measurement with unit certainty is one.  Thus it can provide
+some intuition as to the manner in which Grover's algorithm exploits
+interference between the states to raise the probability of the the
+desired state. [Grover00]
+
+<P>
+In the case of <I>N</I> = 4 then, the entire Grover's algorithm is simply:
+
+<OL>
+<LI>Qureg = <!-- MATH
+ $(1,0,0,0)^{T}$
+ -->
+(1, 0, 0, 0)<SUP>T</SUP> (Quantum register in state 00 with probability 1)
+</LI>
+<LI>Apply Walsh-Hadamard transformation to Qureg
+</LI>
+<LI>if (C(Qureg) == 1) Apply Phase Inversion
+</LI>
+<LI>Apply A transformation to Qureg (A is inversion about average)
+</LI>
+<LI>Measure state of Qureg
+
+<P>
+Let us trace the evolution of our quantum register through the
+algorithm.  Let us assume the state we are searching for is the state
+three.  We will denote the state of our quantum register like this:
+<!-- MATH
+ $(a,b,c,d)^{T}$
+ -->
+(<I>a</I>, <I>b</I>, <I>c</I>, <I>d</I> )<SUP>T</SUP>, where the probability of measuring the register to be
+in the state 00 is <I>a</I><SUP>2</SUP>, the probability of measuring state 01 is
+<I>b</I><SUP>2</SUP>, the probability of measuring state 10 is <I>c</I><SUP>2</SUP>, and the
+probability of measuring state 11 is <I>d</I><SUP>2</SUP>.  In general, the
+amplitudes could be complex, but no complex amplitudes are used in
+Grover's algorithm, so <!-- MATH
+ $a^{2} = |a|^{2}$
+ -->
+<I>a</I><SUP>2</SUP> = | <I>a</I>|<SUP>2</SUP>.
+
+<P>
+For a 4 state system, the Walsh-Hadamard transformation is represented
+by the matrix:
+	<P><!-- MATH
+ \begin{displaymath}
+W = \frac{1}{2}\left(\begin{array}{cccc}
+	1 & 1 & 1 & 1 \\
+	1 & -1 & 1 & -1 \\
+	1 & 1 & -1 & -1 \\
+	1 & -1 & -1 & 1
+	\end{array}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>W</I> = <IMG
+ WIDTH="16" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\displaystyle {\frac{{1}}{{2}}}$"><IMG
+ WIDTH="20" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \left(\vphantom{\begin{array}{cccc}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; 1 &amp; -1 &amp; -1 \\
+1 &amp; -1 &amp; -1 &amp; 1
+\end{array}}\right.$"><IMG
+ WIDTH="137" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\displaystyle \begin{array}{cccc}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; 1 &amp; -1 &amp; -1 \\
+1 &amp; -1 &amp; -1 &amp; 1
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\displaystyle \left.\vphantom{\begin{array}{cccc}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; 1 &amp; -1 &amp; -1 \\
+1 &amp; -1 &amp; -1 &amp; 1
+\end{array}}\right)$">
+</DIV><P></P>	
+
+<P>
+The inversion about average transformation is represented by the
+matrix:
+	<P><!-- MATH
+ \begin{displaymath}
+A = \frac{1}{2}\left(\begin{array}{cccc}
+	-1 & 1 & 1 & 1 \\
+	1 & -1 & 1 & 1 \\
+	1 & 1 & -1 & 1 \\
+	1 & 1 & 1 & -1
+	\end{array}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>A</I> = <IMG
+ WIDTH="16" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\displaystyle {\frac{{1}}{{2}}}$"><IMG
+ WIDTH="20" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle \left(\vphantom{\begin{array}{cccc}
+-1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -1 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; -1
+\end{array}}\right.$"><IMG
+ WIDTH="149" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \begin{array}{cccc}
+-1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -1 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; -1
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$\displaystyle \left.\vphantom{\begin{array}{cccc}
+-1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -1 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; -1
+\end{array}}\right)$">
+</DIV><P></P>
+</LI>
+</OL>
+
+<P>
+After step 1 of our algorithm the quantum register is in the state
+<!-- MATH
+ $(1,0,0,0)^{T}$
+ -->
+(1, 0, 0, 0)<SUP>T</SUP>.
+<BR>
+After step 2 of our algorithm the quantum register is in the state
+<!-- MATH
+ $W*(1,0,0,0)^{T} = (.5,.5,.5,.5)^{T}$
+ -->
+<I>W</I>*(1, 0, 0, 0)<SUP>T</SUP> = (.5,.5,.5,.5)<SUP>T</SUP>
+<BR>
+After step 3 of our algorithm the quantum register is in the state
+<!-- MATH
+ $(.5,.5,-.5,.5)^{T}$
+ -->
+(.5,.5, - .5,.5)<SUP>T</SUP>.  Remember, the marked element in this example is
+the third one.
+<BR>
+After step 4 of our algorithm the quantum register is in the state
+<!-- MATH
+ $A*(.5,.5,-.5,.5)^{T} = (0,0,1,0)^{T}$
+ -->
+<I>A</I>*(.5,.5, - .5,.5)<SUP>T</SUP> = (0, 0, 1, 0)<SUP>T</SUP>.
+<BR>
+Now comes step 5, the measurement step, we can see that with unit
+probability we will measure the state 3, which was the marked
+state.
+<BR>
+
+<P>
+Now, this is an exceptional case, in general we will not attain unit
+probability after any number of iterations.  By theorem 2 we can see
+that there is some number of iterations <I>m</I> that is <!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">) such
+that the probability of measuring the marked state is at least 1/2.
+Note that the result for monotonic increasing probability of the
+marked state proved in theorem 2 only applies so long as the amplitude
+of the marked state is less than <!-- MATH
+ $\frac{1}{\sqrt{2}}$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ {\frac{{1}}{{\sqrt{2}}}}$">.  Once the
+amplitude is greater than that further applications of <I>A</I> cause it to
+shrink, it will then oscillate back and fourth as more applications of
+the inner loop are executed. [BBHT96]
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html316"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html312"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html308"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html314"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html317"
+  HREF="node22.html">Open Questions</A>
+<B> Up:</B> <A NAME="tex2html313"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html309"
+  HREF="node20.html">Theorem 2</A>
+ &nbsp; <B>  <A NAME="tex2html315"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

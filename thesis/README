@@ -1,0 +1,23 @@
+README for uiucthesis.sty
+
+This is a package for LaTeX2e to create documents that conform to the
+UIUC thesis requirements.  To install the package, you have to copy
+uiucthesis.sty and setspace.sty to somewhere that latex can find them.
+
+The following files come pregenerated as part of the distribution, but
+you can run 'tex uiucthesis.ins' to recreate them from scratch:
+
+    uiucthesis.sty : The style file.
+    thesis-ex.tex  : An example thesis using uiucthesis.sty
+
+If you get an error running 'tex uiucthesis.ins', it's because
+you have an old version of docstrip.tex.  Please don't tell *me* about it,
+tell the person who maintains your LaTeX installation.  Any version
+of docstrip.tex more recent than December 1995 should work correctly.
+
+The package also includes a style file that uiucthesis.sty depends on:
+
+    setspace.sty : Used by uiucthesis.sty to adjust line spacing.
+
+To produce the documentation for the package, run latex on
+uiucthesis.dtx.

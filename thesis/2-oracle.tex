@@ -1,0 +1,581 @@
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{defi}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\chapter{Lower Oracle Query Bounds}
+\label{ch:oracle}
+
+In this chapter we present the quantum oracle framework.  We first
+define the quantum oracle model and oracle query complexity, then
+present a general theorem due to Ambainis \cite{ambainis00quantum}.
+In Section \ref{sec:lplqb} we derive a key lemma used throughout the
+thesis and apply it to a simple problem.  We then show that for the
+problem of determining the oracle string, Ambainis' Theorem can not
+attain an asymptotically tight lower query bound in Sections
+\ref{sec:dos} and \ref{sec:torf1}.
+
+Our primary purpose is to demonstrate the power and flexibility of
+Ambainis' Theorem in attaining lower bounds on broad classes of
+Boolean functions and simplifying previous proofs.  We investigate
+Boolean functions with partial symmetry in Section \ref{sec:lqbsym}.
+We apply the result of that section to attain asymptotically tight
+lower oracle query bounds of $\Omega(\sqrt{N})$, $\Omega(\sqrt{N})$,
+$\Omega(N)$, and $\Omega(N)$ for the functions AND, OR, MAJORITY, and
+PARITY respectively in Section
+\ref{sec:AOMP}.  Finally we prove $\Omega(\sqrt{N})$ oracle
+queries are required to compute any $N$-bit nonconstant symmetric
+Boolean function in Section \ref{sec:lqbnsf}.
+
+\section{Preliminaries}
+
+\subsubsection{Useful Definitions}
+
+We will prove lower bounds for functions from $\{0,1\}^{N}$ to
+$\{0,1\}$, we will call such functions \emph{$N$-bit Boolean
+functions}, or just \emph{Boolean functions}.  In our proofs we will
+frequently need the notion of the \emph{Hamming weight} of a bit
+string: this is the number of 1's in the string.  We denote the
+Hamming weight of a bit string $x$ as $|x|$.  We also will frequently
+refer to all inputs which differ from a particular input in only one
+bit, we will call inputs which differ in a single bit \emph{Hamming
+neighbors}.
+
+\subsubsection{Quantum Oracle Models}
+\label{sec:qom}
+
+In the quantum oracle model, we have an oracle that holds an $N$-bit
+input string.  Our task is to determine the value of some fixed
+Boolean function of the oracle string, using as few oracle queries as
+possible.  An oracle query is a question of the form: ``What is the
+$i$th bit of the oracle string?''  The quantum oracle model is a
+special case of Ambainis' more general quantum adversary model
+\cite{ambainis00quantum}, which we describe below.
+
+In the quantum adversary model, we run an algorithm against an oracle
+that contains a superposition of inputs.  Let $S$ be a subset of the
+possible inputs $\{0,1\}^{N}$.  Algorithms in the quantum adversary
+model will work in the Hilbert space $H = H_{A} \otimes H_{I}$, where
+$H_{A} = \Complex^{2^{m}}$ is the Hilbert space of our $m$-qubit
+memory register, and $H_{I} = \Complex^{|S|}$ is the Hilbert space
+spanned by basis vectors $|x\rangle$ corresponding to the elements of
+$S$.  We think of $H_{A}$ as our algorithm space, and $H_{I}$ as our
+input space.  The tensor product of two vector spaces $A$ and $B$,
+denoted $A \otimes B$, is a new vector space spanned by all possible
+pairs $(i,j)$ of basis vectors $i$ from the first space and $j$ from
+the second space. Thus $H = \Complex^{|S|2^{m}}$.
+
+We can represent the basis states of our algorithm space as $|i, b,
+z\rangle$, where $i$ consists of $\lceil\log{N}\rceil$ bits, $b$ is a
+single bit, $z$ denotes all other bits our quantum algorithm requires.
+We define the oracle transformation $O$ as the unitary operator that
+takes any eigenstate $|i,b,z\rangle \otimes |x\rangle$ to $|i, b
+\oplus x_{i}, z\rangle \otimes |x\rangle$. The first 
+$\lceil\log{N}\rceil$ bits of the subspace defined by a particular
+input $|x\rangle$ is the index $i$ to the oracle bit $x_{i}$ that we
+are querying. $O$ is a permutation matrix.
+
+A quantum algorithm that performs $T$ queries is just a sequence of
+unitary transformations
+\[U_{0}\rightarrow O\rightarrow U_{1} \rightarrow O \ldots \rightarrow U_{T-1} \rightarrow O \rightarrow U_{T},\]
+where $U_{i}$ is an arbitrary unitary transformation that does not
+depend on the oracle, and $O$ is the oracle transformation.  (Recall
+that unitary transformations are reversible and preserve the
+normalization of the state vector.)
+
+The standard oracle query model is just an instance of the quantum
+adversary model where the input space is spanned by a single
+eigenstate $|x\rangle$.  In this case a quantum algorithm starts with
+the state $|0\rangle \otimes |x\rangle$, applies $U_{0}, O, U_{1},
+\ldots, O, U_{T}$, and then measures the final state.  The rightmost
+bit of the measured state of the algorithm space is the output of the
+algorithm on $x$.  The algorithm computes $f$ in the bounded error
+setting if for every input $x \in \{0,1\}^{N}$, the output is $f(x)$
+with some constant probability.
+
+The measure of complexity in both the quantum oracle model and quantum
+adversary model is the number of oracle queries.  It should be noted
+that querying the oracle is not always the most time consuming portion
+of an algorithm.  For example, to factor an $N$ bit integer that the
+oracle holds, we can determine the integer in $N$ queries.  However,
+we must then do $2^{N^{\Omega(1)}}$ additional steps in the classical
+case, or $N^{2}\log^{O(1)}{N}$ additional steps in the quantum case to
+factor the number using the best known algorithms
+\cite{beals98quantum}. Nonetheless we restrict our attention to the 
+number of oracle queries required, as it is clearly a lower bound on
+the overall running time of the algorithm.  Classical bounds for query
+complexity are well studied, making comparisons between quantum and
+classical oracle query complexity possible.
+
+\subsubsection{A Lower Query Bound Proving Framework due to Ambainis} 
+
+Ambainis \cite{ambainis00quantum} proved the following fundamental
+result:
+
+\begin{theorem}[Ambainis]
+\label{th:amb}
+Let $f$ be an $N$-bit Boolean function and let $X$ and $Y$ be two sets
+of inputs such that $f(x) \neq f(y)$ whenever $x \in X$ and $y \in Y$.
+Let $P \subseteq X \times Y$ be a relation between $X$ and $Y$ with
+the following properties:
+
+\begin{enumerate}
+
+\item
+Every element of $X$ is related to at least $m$ elements of $Y$ by
+$P$.
+
+\item 
+Every element of $Y$ is related to at least $m'$ elements of $X$ by
+$P$.
+
+\item 
+For all $i$, every element $x \in X$ is related to at most $l$
+elements $y \in Y$ such that $x_{i} \neq y_{i}$
+
+\item 
+For all $i$, every element $y \in Y$ is related to at most $l'$
+elements $x \in X$ such that $x_{i} \neq y_{i}$
+
+\end{enumerate}
+
+Then
+\[\Omega\left(\sqrt{\frac{mm^{\prime}}{ll^{\prime}}}\right)\] 
+oracle queries are required by any quantum algorithm to compute $f$ in
+the bounded error setting.
+\end{theorem}
+
+This theorem will be the primary means of proving lower bounds in this
+thesis.  Its appeal is twofold; first, it leads to reasonably simple
+proofs, and second, it unifies many existing lower bounds into a
+single framework.
+
+\paragraph{The Quantum Adversary:}
+
+Lower bounds for both classical and quantum algorithms have been
+attained in the past by analyzing the behavior of the algorithm in the
+face of an adversary.  Ambainis uses a \emph{quantum adversary} as the
+basis for his lower bound theorem; instead of running a quantum
+algorithm against one input, it is run against a superposition of
+inputs.  The formulation of the quantum adversary and the
+justification for why a lower bound in the quantum adversary model is
+also a lower bound in the standard oracle query model below are
+adapted and somewhat simplified from Ambainis' paper
+\cite{ambainis00quantum}.
+
+Ambainis observed that any standard oracle query algorithm $A$ that
+operates only on a single input is also correct in the quantum
+adversary model.  Consider a standard oracle query algorithm $A$ that
+uses $T$ queries and succeeds with probability $p$.  We assume our
+quantum memory register begins in the $\left| 0 \right\rangle$ state.
+For every input $x \in \{0,1\}^{N}$, the algorithm transforms the
+initial state $\left| 0 \right\rangle \otimes \left| x \right\rangle$
+into the final state
+\[
+\left(
+  \alpha_{x}\left|f(x)\right\rangle
+  +
+  \beta_{x}|\overline{f(x)}\rangle
+\right)
+\otimes
+\left|w_{x}\right\rangle
+\otimes
+\left|x\right\rangle
+\]
+where $|\alpha_{x}|^{2} + |\beta_{x}|^{2} = 1$, and $|\alpha_{x}|^{2}
+\ge p$ (so $|\beta_{x}|^{2} \le 1-p$, and finally $|w_{x}\rangle$ is 
+the remaining state of the memory. The same algorithm will take any
+superposed input state
+\[|0\rangle \otimes \sum_{x \in S} \frac{1}{\sqrt{\left|S\right|}} 
+\left| x \right\rangle\]
+to the final state
+\[\frac{1}{\sqrt{|S|}} \sum_{x \in S} 
+\left(
+  \alpha_{x}\left|f(x)\right\rangle
+  +
+  \beta_{x}|\overline{f(x)}\rangle
+\right)
+\otimes
+\left|w_{x}\right\rangle
+\otimes
+\left|x\right\rangle.
+\]
+Note that in this end state, if the oracle is measured to be $x$, a
+measurement of the memory register will yield $f(x)$ with probability
+$|\alpha_{x}|^{2} \ge p$.  Ambainis places a lower bound on the number of
+oracle queries required by any quantum adversary algorithm to produce
+such an end state from such a start state.
+
+This argument gives us a lower bound in the standard oracle query
+model as well.  If $T$ queries are required of a quantum adversary
+algorithm to establish a correct end state with probability $p$, then
+no standard oracle query algorithm $A$ can compute $f$ with bounded
+probability $p$ in $t < T$ queries. 
+
+This quantum adversary method provides a framework for proving a great
+diversity of lower bounds.  Indeed, nearly every lower bound in this
+thesis is proved directly or indirectly using Theorem \ref{th:amb}.
+As useful as the theorem is, it does have limitations, one of which is
+discussed in Section \ref{sec:torf1}.
+
+\section{A Lemma for Proving Lower Query Bounds}
+\label{sec:lplqb}
+
+The sensitivity of an input $x$ of a function $f$ is the number of
+Hamming neighbors $y$ of $x$ such that $f(x) \neq f(y)$.  We will use
+the following lemma to establish lower bounds for functions based
+solely on their sensitivity for a particular input.
+
+\begin{lemma}
+\label{lm:1xky}
+Let $f$ be an $N$-bit Boolean function.  If some input $x$ has $k$
+Hamming neighbors $y$ such that $f(x) \neq f(y)$, then
+$\Omega(\sqrt{k})$ oracle queries are required to compute $f$ in the
+bounded error setting.
+\end{lemma}
+
+\begin{proof}
+To prove Lemma \ref{lm:1xky} we will apply Theorem \ref{th:amb}.  Let
+$X$ contain the single input $x$ from the statement of the lemma.  Let
+$Y$ contain the $k$ Hamming neighbors of $x$ such that $f(x)
+\neq f(y)$ when $y \in Y$.  Let $P$ be the complete relation from $X$
+to $Y$.
+
+Then $m = k$, since $xPy$ for each of the $k$ elements $y \in Y$.
+Since no two Hamming neighbors of $x$ differ from $x$ in the same bit
+position, we have $l = 1$.  Since there is only one element $x$ in $X$
+and $xPy$ for each $y \in Y$, we have $m^{\prime} = l^{\prime} = 1$.
+The result now follows immediately from Theorem \ref{th:amb}.
+\end{proof}
+
+This lemma will not in general provide us with the best lower bound
+that can be attained from Ambainis' Theorem \ref{th:amb}: we are
+maximizing $m/l$, but we make no attempt to maximize
+$m^{\prime}/l^{\prime}$.  The strongest results of Ambainis' Theorem
+frequently arise from maximizing both.  We will maximize both when
+dealing with partially symmetric functions in Theorem \ref{th:ptsym}
+and graph connectivity in Theorem \ref{th:gc}.  The \emph{singleton}
+class of functions described in Sections \ref{sec:dos} and
+\ref{sec:torf1} is a class for which Lemma \ref{lm:1xky} obtains 
+optimal results.
+
+\subsection{Application to Generalized XOR} 
+\label{sec:gXOR}
+
+To see how simple proofs can be with Lemma \ref{lm:1xky} we provide an
+example.  Generalized XOR is the $N$-bit Boolean function that is 0 if
+and only if its input bits are all the same.
+
+\begin{theorem}
+\label{th:gXOR}
+$\Omega(\sqrt{N})$ oracle queries are required to compute
+the generalized XOR of $N$ bits in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+The generalized XOR of $0^{N}$ is $0$, and the generalized XOR of the
+$N$ Hamming neighbors of $0^{N}$ is 1.  The theorem follows from Lemma
+\ref{lm:1xky} with $k = N$.
+\end{proof}
+
+This lower bound is asymptotically tight: Beals et al.\ provide
+$O(\sqrt{N})$ oracle query algorithms for computing the AND or OR of
+$N$ bits in the bounded error setting \cite{beals98quantum}, and the
+generalized XOR of $N$ bits is just $\overline{AND \vee
+\overline{OR}}$.  Unfortunately, Ambainis' Theorem does not always 
+perform this well, as we demonstrate in the next two sections.
+
+\section{Determining the Oracle String}
+\label{sec:dos}
+
+Consider the problem of determining the oracle string.  We prove two
+lower bounds for this problem, one through Lemma $\ref{lm:1xky}$, and
+another by using a known lower bound for PARITY.
+
+\begin{theorem}
+\label{th:dosbad}
+$\Omega(\sqrt{N})$ oracle queries are required to determine an $N$-bit
+oracle string in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+Let $f$ be the $N$-bit Boolean function that is 1 if and only if its
+input is the same as the oracle string $x$.  For each Hamming neighbor
+$y$ of $x$, we have $f(x) \neq f(y)$.  The result then follows from
+Lemma \ref{lm:1xky}.
+\end{proof}
+
+In the classical case $N$ oracle queries are required to determine the
+oracle string.  If the lower bound of $\Omega(\sqrt{N})$ oracle
+queries were asymptotically tight, then there would be quadratic
+improvement over the classical case for this problem.  This seems
+plausible in light of Grover's algorithm.  However, $\Omega(N)$ lower
+bounds are known for Boolean functions in the quantum oracle model, we
+can thus infer that Theorem \ref{th:dosbad} is not asymptotically
+tight.
+
+\begin{theorem}
+\label{th:dosgood}
+$N/2$ oracle queries are required to determine an $N$-bit oracle
+string in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+Once we compute the oracle string, we can compute its PARITY with no
+additional queries.  Beals et al.\ proved that $N/2$ oracle queries
+are required to compute PARITY for an $N$-bit oracle string in the
+bounded error setting \cite{beals98quantum}.
+\end{proof}
+
+We now see an apparent limitation of Ambainis' Theorem; the result
+attained was quadratically worse than the asymptotically tight lower
+bound.  We will show in the next section that the weak lower bound in
+Theorem \ref{th:dosbad} is indeed the best that can be attained
+through application of Ambainis' Theorem.
+
+\section{Singleton Functions}
+\label{sec:torf1}
+
+An $N$-bit Boolean function that evaluates to 1 for exactly one input
+is a singleton function.  We will show that for any $N$-bit singleton
+function Ambainis' Theorem can always attain a lower query bound of
+$\Omega(\sqrt{N})$, but no better.
+
+The proof of the $\Omega(\sqrt{N})$ lower query bound for determining
+the oracle string in Theorem \ref{th:dosbad} can equally well be
+applied to any singleton function.
+
+\begin{corollary}
+\label{th:1sqn}
+$\Omega(\sqrt{N})$ oracle queries are required to compute any $N$-bit
+singleton function in the bounded error setting.
+\end{corollary}
+
+\begin{theorem}
+\label{th:best}
+$\Omega(\sqrt{N})$ is the best lower bound on the number of oracle
+queries required to compute an $N$-bit singleton function that can be
+attained from Theorem \ref{th:amb}.
+\end{theorem}
+
+\begin{proof}
+We will consider every possible choice of $X$, $Y$, and $P$ in Theorem
+\ref{th:amb}.
+
+Without loss of generality, let $X$ contain the single input $x$ such
+that $f(x) = 1$.  Let $Y$ be any subset of the $2^{N} - 1$ bit strings
+for which $f(y) = 0$.  If $P$ is not the complete relation $X \times
+Y$ then some element $y \in Y$ is not related to $x$ by $P$, so the
+$m^{\prime}$ component of Theorem \ref{th:amb} is $0$, giving a
+vacuous lower bound.  Thus $P$ is the complete relation.
+
+Here $m = |Y|$, and $m' = l' = 1$.  The final parameter $l$ is the
+maximum over all $i$ of the number of $y \in Y$ that differ from $x$
+in the $i$th bit position.
+
+From Ambainis' Theorem $\Omega(\sqrt{m/l})$ oracle queries are
+required to compute $f$.  We will prove that $m/l \le N$.  Let $Y_{i}$
+be the number of $y \in Y$ that differ from $x$ in the $i$th bit, so
+that $l = \max_{i}\{Y_{i}\}$.  If we construct $Y$ by adding elements
+to it one at a time, then for each element we increment $m$, and at
+least one $Y_{i}$.  After the first element $m = l = 1$, and by the
+pigeonhole principle $m/\max_{i}\{Y_{i}\} \le N$.
+\end{proof}
+
+This result coupled with the $N/2$ lower bound for the singleton
+function of determining the oracle string leads immediately the the
+following corollary.
+
+\begin{corollary}
+\label{cor:ambbad}
+There exist functions for which Ambainis' Theorem \ref{th:amb} can not
+attain asymptotically tight lower bounds.
+\end{corollary}
+
+Despite this limitation, the theorem can still prove lower bounds for
+many Boolean functions.  From this point forward all our lower bounds
+are directly or indirectly attained through Ambainis' Theorem.
+
+\section{Partially Symmetric Functions} 
+\label{sec:lqbsym}
+
+\begin{defi}
+\label{def:sym}
+A symmetric function is a Boolean function whose value depends only on
+the Hamming weight of the input.
+\end{defi}
+
+Recall that the Hamming weight of a bit string is the number of 1's it
+has.
+
+Consider the special class of $N$-bit Boolean functions $f$ such that
+$f(x) = 1$ for all inputs $x$ of Hamming weight $a$, and $f(x) = 0$
+for all inputs $x$ of Hamming weight $b$.  Without loss of generality
+assume $a < b$.  We will attain a lower bound depending only on the
+parameters $a$ and $b$.
+
+\begin{theorem}
+\label{th:ptsym}
+Let $f$ be an $N$-bit Boolean function such that for some $a < b$,
+$|x| = a$ implies $f(x) = 1$, and $|x| = b$ implies $f(x) = 0$.  Then
+\[
+\Omega\left(\sqrt{\frac{(N-a)b}{(b-a)^{2}}}\right)
+\]
+oracle queries are required to compute $f$ in the bounded error
+setting.
+\end{theorem}
+
+\begin{proof}
+To prove Theorem \ref{th:ptsym} we apply Theorem \ref{th:amb}.
+
+Let $X$ be the strings of Hamming weight $a$, and let $Y$ be the
+strings of Hamming weight $b$.  If we think of the bit strings in $X$
+and $Y$ as defining subsets of $\{1,2,\ldots,N\}$ where a 1 in the
+$i$th position means the set contains $i$, then $P$ is just $\subset$,
+the proper subset relation.
+
+Each set $x \in X$ is a subset of $m = {N-a \choose N-b}$ sets $y \in
+Y$.  For any element $i \in x$, there are $l = {N-a-1 \choose N-b}$
+supersets $y \in Y$ such that $i \in y$ and $x \subset y$.
+
+Each set $y \in Y$ is a superset of $m' = {b \choose a}$ sets $x \in
+X$.  For any element $i \in y$, there are $l' = {b-a \choose a}$
+subsets $x \subset y$ such that $i \not\in x$.
+
+Thus,
+\[\frac{mm'}{ll'} = \frac{{N-a \choose N-a}{b \choose a}}
+	                 {{N-a-1 \choose b-a-1}{b-1 \choose a}} 
+                  = 
+		     \frac{\left(N-a\right)b}{\left(b-a\right)^{2}},
+\]
+so by Theorem \ref{th:amb}
+\[
+\Omega\left(\sqrt{\frac{(N-a)b}{(b-a)^{2}}}\right)
+\]
+oracle queries are required to compute $f$.
+\end{proof}
+
+Like Lemma \ref{lm:1xky}, this result allows us to easily attain lower
+bounds for many functions.  In general, the closer $a$ and $b$ are to
+each other and to $N/2$ the better.  We illustrate the particular
+success of Theorem \ref{th:ptsym} in the case of symmetric functions
+in the following two sections, and with relatively less success in the
+case of non-trivial monotone graph properties in Section
+\ref{sec:lqbnmgp}.
+
+\section{AND, OR, MAJORITY, and PARITY}
+\label{sec:AOMP}
+
+We can use Theorem \ref{th:ptsym} to easily prove lower bounds for the
+well-known symmetric functions AND, OR, MAJORITY, and PARITY.  While
+these results have been previously established by Beals et al.\
+\cite{beals98quantum}, the ease with which they are proved through
+Ambainis' Theorem is noteworthy.
+
+\subsubsection{AND and OR}
+
+AND is the $N$-bit Boolean function that evaluates to 1 if and only if
+its input is $1^{N}$, and OR is the $N$-bit Boolean function that
+evaluates to 0 if and only if its input is $0^{N}$.
+
+\begin{theorem}
+\label{th:AND}
+$\Omega(\sqrt{N})$ oracle queries are required to compute
+the AND or the OR of $N$ bits in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+Let $a = N-1$ and $b = N$.  AND evaluates to 0 for all inputs of
+Hamming weight $a$, and 1 for all inputs of Hamming weight $b$.
+Therefore by Theorem \ref{th:ptsym}
+\[\Omega\left(\sqrt{\frac{(N
+- (N-1))N}{(N-(N-1))^{2}}}\right) =
+\Omega\left(\sqrt{N}\right)\]
+oracle queries are required to compute AND in the bounded error
+setting.  A virtually identical proof with $a = 0$ and $b = 1$ follows
+for OR.
+\end{proof}
+
+Beals et al.\ proved that these lower bounds are asymptotically tight
+in the bounded error setting \cite{beals98quantum}.  Observe that we
+could have just as easily used Theorem \ref{th:1sqn} to attain the
+same lower bounds, as AND and OR are singleton functions.  In the
+classical case exactly $N$ oracle queries are required to compute AND
+or OR.  Thus, quadratic improvement is possible in the quantum bounded
+error setting.  
+
+\subsubsection{MAJORITY and PARITY}
+
+It is tempting to hope that all Boolean functions, or at least all
+symmetric Boolean functions, realize the quadratic speedup of AND and
+OR.  Unfortunately the functions MAJORITY and PARITY show that for
+some problems the speedup is at best a constant factor.
+
+MAJORITY is the $N$-bit Boolean function that evaluates to 1 if and
+only if more than half of the input bits are 1.  PARITY is the $N$-bit
+Boolean function that evaluates to 1 if and only if the input has an
+even Hamming weight.
+
+\begin{theorem}
+\label{th:MAJORITY}
+$\Omega(N)$ oracle queries are required to compute the MAJORITY or the
+PARITY of $N$ bits in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+Let $a = \left\lfloor N/2 \right\rfloor$ and $b = a+1$.  MAJORITY
+takes on a 0 for all inputs of Hamming weight $a$ and a 1 for all
+inputs of Hamming weight $b$.  PARITY takes on one of $\{0,1\}$ for
+all inputs of Hamming weight $a$ and the other for all inputs of
+Hamming weight $b$.  Therefore by Theorem \ref{th:ptsym}
+\[\Omega\left(\sqrt{\frac{\left(N - \left\lfloor\frac{N}{2}\right\rfloor\right)\left(\left\lfloor\frac{N}{2}\right\rfloor+1\right)}{\left(\left\lfloor\frac{N}{2}\right\rfloor+1-\left\lfloor\frac{N}{2}\right\rfloor\right)^{2}}}\right) =
+\Omega\left(N\right) \]
+oracle queries are required to compute either function.
+\end{proof}
+
+Since both classical and quantum algorithms can compute any function
+of $N$ bits with $N$ oracle queries, this lower bound is
+asymptotically tight.  Beals et al.\ previously proved these results
+\cite{beals98quantum}; again, the simplicity that Ambainis' Theorem
+affords is the main point of interest.
+
+\section{Nonconstant Symmetric Functions}
+\label{sec:lqbnsf}
+
+AND, OR, MAJORITY, and PARITY are all symmetric functions, and the
+lower bounds attained in the preceding section are all asymptotically
+tight.  Our success leads us to investigate what we can prove about
+symmetric functions in general.
+
+\begin{theorem}
+\label{th:sym}
+$\Omega(\sqrt{N})$ oracle queries are required to compute any $N$-bit
+nonconstant symmetric Boolean function in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+For any $N$-bit nonconstant symmetric Boolean function, there are
+Hamming weights $a$ and $b = a+1$ with $0 \le a \le N-1$ such that the
+function differs on inputs of Hamming weights $a$ and $b$.  Otherwise
+the function would be constant.
+
+By Theorem \ref{th:ptsym}
+\[\Omega\left(\sqrt{\frac{(N - a)(a+1)}{(a+1-a)^{2}}}\right) =
+\Omega\left(\sqrt{\left(N-a\right)\left(a+1\right)}\right) = 
+\Omega\left(\sqrt{N}\right)\]
+oracle queries are required to compute the function.  
+\end{proof}
+
+Depending on the value of $a$ in Theorem \ref{th:sym} we may be able
+to provide a better lower bound than $\Omega(\sqrt{N})$.  This result
+was previously established by Beals et al.\ through a more complicated
+method of polynomials \cite{beals98quantum}.  No better result can be
+attained for the class of all symmetric Boolean functions as Beals et
+al.\ provide $O(\sqrt{N})$ oracle query algorithms to compute the
+symmetric functions AND and OR \cite{beals98quantum}.  Our success
+here leads us to apply the results of Chapter \ref{ch:oracle} to graph
+properties, which are very well studied in the classical oracle query
+model, in Chapter \ref{ch:graph}.  While graph properties are not
+necessarily ``symmetric'' in the sense of Definition \ref{def:sym},
+they do display a kind of symmetry.
+

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Probability Interpretation</TITLE>
+<META NAME="description" CONTENT="Probability Interpretation">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html292"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html288"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html282"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html290"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html293"
+  HREF="node16.html">Quantum Parallelism</A>
+<B> Up:</B> <A NAME="tex2html289"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html283"
+  HREF="node14.html">The Quantum Memory Register</A>
+ &nbsp; <B>  <A NAME="tex2html291"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00057000000000000000">
+Probability Interpretation</A>
+</H2>
+
+<P>
+Now that we know how to represent our state vector as a superposition
+of states, and we know that we can only measure the state vector to be
+in one of the base states, it would seem that there would be some sort
+of discrepancy.  We must determine what happens when we measure the
+state vector.  We know from quantum physics that given an initial
+condition the state vector will evolve in time in accordance with
+Schr&#246;denger's equation:
+	<P><!-- MATH
+ \begin{displaymath}
+ih\frac{\partial |X(t) \rangle }{\partial t} = H(t)|X(t) \rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>ih</I><IMG
+ WIDTH="60" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle {\frac{{\partial \vert X(t) \rangle }}{{\partial t}}}$"> = <I>H</I>(<I>t</I>)| <I>X</I>(<I>t</I>)<IMG
+ WIDTH="10" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \rangle$">
+</DIV><P></P>
+Where <I>i</I> is the square root of negative one, <I>h</I> is <!-- MATH
+ $1.0545*10^{-34}$
+ -->
+1.0545*10<SUP>-34</SUP>
+Js, and <I>H</I> is the Hamiltonian operator, which is determined by the
+physical characteristics of the system being evolved.
+
+<P>
+In our notation this expression is:
+	<P><!-- MATH
+ \begin{displaymath}
+ih\frac{\partial w_{i}(t)}{\partial t} = \sum_{j}H(t)_{ij} * w_{j}(t)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>ih</I><IMG
+ WIDTH="52" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\displaystyle {\frac{{\partial w_{i}(t)}}{{\partial t}}}$"> = <IMG
+ WIDTH="27" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle \sum_{{j}}^{}$"><I>H</I>(<I>t</I>)<SUB>ij</SUB>*<I>w</I><SUB>j</SUB>(<I>t</I>)
+</DIV><P></P>
+This evolution would appear to be continuous, but these equations only
+apply to a quantum mechanical system evolving in isolation from the
+environment.  The only way to observe the state of the state vector is
+to in some way cause the quantum mechanical system to interact with
+the environment.  When the state vector is observed it makes a sudden
+discontinuous jump to one of the eigenstates, but this is not a
+violation of Schr&#246;denger's equation.  When the quantum mechanical
+system interacts with the outside environment and measured the state
+vector is said to have collapsed.  (Williams, Clearwater)
+
+<P>
+Now understanding that a state vector will collapse when it interacts
+with the external environment, we still need to know in what manner
+this collapse happens. To perform any sort of useful calculation we
+must be able so say something about which base state a quantum
+mechanical system will collapse into. The probability that the state
+vector will collapse into the <I>j</I>'th eigenstate, is given by
+<!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> which is defined to be <!-- MATH
+ $a_{j}^{2} + b_{j}^{2}$
+ -->
+<I>a</I><SUB>j</SUB><SUP>2</SUP> + <I>b</I><SUB>j</SUB><SUP>2</SUP> if <!-- MATH
+ $w_{j}
+= a_{j} + i*b_{j}$
+ -->
+<I>w</I><SUB>j</SUB> = <I>a</I><SUB>j</SUB> + <I>i</I>*<I>b</I><SUB>j</SUB>, where <I>w</I><SUB>j</SUB> is the complex projection of the
+state vector onto the <I>j</I>'th eigenstate. In general the chance of
+choosing any given state is
+<P><!-- MATH
+ \begin{displaymath}
+Prob(j) = \frac{|w_{j}|^{2}}{\sum_{k = 0}^{ n-1} |w_{k}|^{2}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>Prob</I>(<I>j</I>) = <IMG
+ WIDTH="88" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle {\frac{{\vert w_{j}\vert^{2}}}{{\sum_{k = 0}^{ n-1} \vert w_{k}\vert^{2}}}}$">
+</DIV><P></P>
+but
+as mentioned earlier we will insist on having the state vector of
+length one, and in this case the probability expression simplifies to
+<!-- MATH
+ $Prob(j) = |w_{j}|^{2}$
+ -->
+<I>Prob</I>(<I>j</I>) = | <I>w</I><SUB>j</SUB>|<SUP>2</SUP>.
+
+<P>
+So now we know how to construct an <I>n</I> state quantum system, which can
+be placed in an arbitrary superposition of states.  We also know how
+to measure the resultant superposition and get a base state with a
+certain probability.  This is all that we need to understand about our
+quantum memory register to be able to simulate its behavior.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html292"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html288"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html282"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html290"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html293"
+  HREF="node16.html">Quantum Parallelism</A>
+<B> Up:</B> <A NAME="tex2html289"
+  HREF="node8.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html283"
+  HREF="node14.html">The Quantum Memory Register</A>
+ &nbsp; <B>  <A NAME="tex2html291"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Unitary Operators</TITLE>
+<META NAME="description" CONTENT="Unitary Operators">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html362"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html358"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html352"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html360"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html363"
+  HREF="node22.html">Quantum Algorithms</A>
+<B> Up:</B> <A NAME="tex2html359"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html353"
+  HREF="node20.html">Superposition</A>
+ &nbsp; <B>  <A NAME="tex2html361"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00630400000000000000">
+Unitary Operators</A>
+</H3>
+
+<P>
+Not all functions on a quantum memory register preserve the
+superposition of the state vector.  For example, measurement destroys
+the superposition in the register.  Operations that collapse the state
+vector are called <I>measurements</I>, and any complex linear
+transformation of the state vector is called an
+<I>operator</I>.  We can represent any operator on an <I>N</I>-bit 
+quantum memory register in <!-- MATH
+ $\Complex^{2^{N}}$
+ -->
+<IMG
+ WIDTH="37" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$ \Complex^{{2^{N}}}_{}$"> as a matrix
+<P><!-- MATH
+ \begin{displaymath}
+T = \left( \begin{array}{cccc}
+	T_{00} & T_{01} & \ldots & T_{0(2^{N}-1)} \\T_{10} & T_{11} &
+	\ldots & T_{2(2^{N}-1)} \\\vdots & \vdots & & \vdots \\
+	T_{(2^{N}-1)0} & T_{(2^{N}-1)1} & \ldots &
+	T_{(2^{N}-1)(2^{N}-1)}
+\end{array}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>T</I> = <IMG
+ WIDTH="23" HEIGHT="170" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{cccc}
+T_{00} &amp; T_{01} &amp; \ldots &amp; ...
+...N}-1)0} &amp; T_{(2^{N}-1)1} &amp; \ldots &amp;
+T_{(2^{N}-1)(2^{N}-1)}
+\end{array}}\right.$"><IMG
+ WIDTH="322" HEIGHT="170" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$\displaystyle \begin{array}{cccc}
+T_{00} &amp; T_{01} &amp; \ldots &amp; T_{0(2^{N}-1)} \\...
+... T_{(2^{N}-1)0} &amp; T_{(2^{N}-1)1} &amp; \ldots &amp;
+T_{(2^{N}-1)(2^{N}-1)}
+\end{array}$"><IMG
+ WIDTH="23" HEIGHT="170" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{cccc}
+T_{00} &amp; T_{01} &amp; \ldots &amp; ...
+...N}-1)0} &amp; T_{(2^{N}-1)1} &amp; \ldots &amp;
+T_{(2^{N}-1)(2^{N}-1)}
+\end{array}}\right)$">
+</DIV><P></P> 
+[<A
+ HREF="node57.html#griffiths95quantum">9</A>].
+
+<P>
+Quantum mechanics imposes conditions on which linear transformations
+are legal operators.  In particular, the operation must be reversible,
+and it must preserve the length of the state vector
+[<A
+ HREF="node57.html#griffiths95quantum">9</A>].  If we impose the condition that the sum of
+the kinetic and potential energy (called the Hamiltonian) of our
+quantum memory register is constant, then all legal operators have
+<I>unitary</I> matrix representations.  A matrix <I>T</I> is unitary if the
+transpose of its complex conjugate is <I>T</I><SUP>-1</SUP>
+[<A
+ HREF="node57.html#griffiths95quantum">9</A>].  Systems with time-dependent Hamiltonians 
+are not required to perform either Grover's or Shor's algorithm, and
+are not within the scope of this thesis.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html362"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html358"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html352"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html360"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html363"
+  HREF="node22.html">Quantum Algorithms</A>
+<B> Up:</B> <A NAME="tex2html359"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html353"
+  HREF="node20.html">Superposition</A>
+ &nbsp; <B>  <A NAME="tex2html361"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

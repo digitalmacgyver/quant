@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>util.C</TITLE>
+<META NAME="description" CONTENT="util.C">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="next" HREF="node47.html">
+<LINK REL="previous" HREF="node45.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html677"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html673"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html667"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html675"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html678"
+  HREF="node47.html">qubit.C</A>
+<B> Up:</B> <A NAME="tex2html674"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html668"
+  HREF="node45.html">util.h</A>
+ &nbsp; <B>  <A NAME="tex2html676"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000147000000000000000">
+util.C</A>
+</H2>
+<PRE>
+#include &lt;iostream&gt;
+#include &lt;math.h&gt;
+#include "qureg.h"
+
+using namespace std;
+
+//This function takes an integer input and returns 1 if it is a prime
+//number, and 0 otherwise.
+//
+// Not optimized at all.
+unsigned long long int TestPrime(unsigned long long int n) {
+  unsigned long long int i;
+  for (i = 2 ; i &lt;= floor(sqrt(n)) ; i++) {
+    if (n % i == 0) {
+      return(0);
+    }
+  }
+  return(1);
+}
+
+//This function takes an integer input and returns 1 if it is equal to
+//a prime number raised to an integer power, and 0 otherwise.
+unsigned long long int TestPrimePower(unsigned long long int n) {
+  unsigned long long int i,j;
+  j = 0;
+  i = 2;
+  while ((i &lt;= floor(pow(n, .5))) &amp;&amp; (j == 0)) {
+    if((n % i) == 0) {
+      j = i;
+    }
+    i++;
+  }
+  for (unsigned long long int i = 2 ; i &lt;= (floor(log(n) / log(j)) + 1) ; i++) { 
+    if(pow(j , i) == n) {
+      return(1);
+    }
+  }
+  return(0);
+}
+
+//This function computes the greatest common denominator of two integers.
+//Since the modulus of a number mod 0 is not defined, we return a -1 as
+//an error code if we ever would try to take the modulus of something and
+//zero.
+unsigned long long int GCD(unsigned long long int a, unsigned long long int b) {
+  unsigned long long int d;
+  if (b != 0) {
+    while (a % b != 0) {
+      d = a % b;
+      a = b;  
+      b = d;
+    }
+  } else {
+    return -1;
+  }
+  return(b);
+}
+
+//This function takes and integer argument, and returns the size in bits
+//needed to represent that integer.
+unsigned long long int RegSize(unsigned long long int a) {
+  unsigned long long int size = 0;
+  while(a != 0) {
+    a = a&gt;&gt;1;
+    size++;
+  }
+  return(size);
+}
+
+
+//q is the power of two such that n^2 &lt;= q &lt; 2n^2.
+unsigned long long int GetQ(unsigned long long int n) {
+  unsigned long long int power = 8; //256 is the smallest q ever is.
+  while (pow(2,power) &lt; pow(n,2)) {
+    power = power + 1;
+  }
+  return 1 &lt;&lt; power;
+}
+
+//This function takes three integers, x, a, and n, and returns x^a mod
+//n.  This algorithm is known as the "Russian peasant method," I
+//believe, and avoids overflow by never calculating x^a directly.
+unsigned long long int modexp(unsigned long long int x, unsigned long long int a, unsigned long long int n) {
+  unsigned long long int value = 1;
+  unsigned long long int tmp;
+  tmp = x % n;
+  while (a &gt; 0) {
+    if (a &amp; 1) {
+      value = (value * tmp) % n;
+    }
+    tmp = tmp * tmp % n;
+    a = a&gt;&gt;1;
+  }
+  return value;
+}
+
+// This function finds the denominator q of the best rational
+// denominator q for approximating p / q for c with q &lt; qmax.
+unsigned long long int denominator(double c, unsigned long long int qmax) {
+  double y = c;
+  double z;
+  unsigned long long int q0 = 0;
+  unsigned long long int q1 = 1;
+  unsigned long long int q2 = 0;
+  while (1) {
+    z = y - floor(y);
+    if (z &lt; 0.5 / pow(qmax,2)) { 
+      return(q1); 
+    }
+    if (z != 0) {
+      //Can't divide by 0.
+      y = 1 / z;
+    } else {
+      //Warning this is broken if q1 == 0, but that should never happen.
+      return(q1);
+    }
+    q2 = (unsigned long long int)floor(y) * q1 + q0;
+    if (q2 &gt;= qmax) { 
+      return(q1); 
+    }
+    q0 = q1; 
+    q1 = q2;
+  }
+}
+
+//This function takes two integer arguments and returns the greater of
+//the two.
+unsigned long long int max(unsigned long long int a, unsigned long long int b) {
+  if (a &gt; b) {
+    return(a);
+  }
+  return(b);
+}
+
+//This function computes the discrete Fourier transformation on a register's
+//0 -&gt; q - 1 entries. 
+void DFT(QuReg * reg, unsigned long long int q) {
+  //The Fourier transform maps functions in the time domain to
+  //functions in the frequency domain.  Frequency is 1/period, thus
+  //this Fourier transform will take our periodic register, and peak it
+  //at multiples of the inverse period.  Our Fourier transformation on
+  //the state a takes it to the state: q^(-.5) * Sum[c = 0 -&gt; c = q - 1,
+  //c * e^(2*Pi*i*a*c / q)].  Remember, e^ix = cos x + i*sin x.
+
+  Complex * init = new Complex[q];
+  Complex tmpcomp( 0, 0 );
+
+  //Here we do things that a real quantum computer couldn't do, such
+  //as look as individual values without collapsing state.  The good
+  //news is that in a real quantum computer you could build a gate
+  //which would what this out all in one step.
+
+  unsigned long long int count = 0;
+  double tmpreal = 0;
+  double tmpimag = 0;
+  double tmpprob = 0;
+  for (unsigned long long int a = 0 ; a &lt; q ; a++) {
+    //This if statement helps prevent previous round off errors from
+    //propagating further.
+    if ((pow(reg-&gt;GetProb(a).Real(),2) + 
+	 pow(reg-&gt;GetProb(a).Imaginary(),2)) &gt; pow(10,-14)) {
+      for (unsigned long long int c = 0 ; c &lt; q ; c++) {
+	tmpcomp.Set(pow(q,-.5) * cos(2*M_PI*a*c/q),
+		    pow(q,-.5) * sin(2*M_PI*a*c/q));
+	init[c] = init[c] + (reg-&gt;GetProb(a) * tmpcomp);
+      }
+    }
+    count++;
+    if (count == 100) {
+      cout &lt;&lt; "Making progress in Fourier transform, " 
+	   &lt;&lt; 100*((double)a / (double)(q - 1)) &lt;&lt; "% done!" 
+	   &lt;&lt; endl &lt;&lt; flush;
+      count = 0;
+    }
+  }
+  reg-&gt;SetState(init);
+  reg-&gt;Norm();
+  delete [] init;
+}
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html677"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html673"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html667"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html675"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html678"
+  HREF="node47.html">qubit.C</A>
+<B> Up:</B> <A NAME="tex2html674"
+  HREF="node39.html">Code for my Simulation</A>
+<B> Previous:</B> <A NAME="tex2html668"
+  HREF="node45.html">util.h</A>
+ &nbsp; <B>  <A NAME="tex2html676"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Operator to Rotate Phase</TITLE>
+<META NAME="description" CONTENT="Operator to Rotate Phase">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html220"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html216"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html210"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html218"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html221"
+  HREF="node14.html">Inversion About Average Operator</A>
+<B> Up:</B> <A NAME="tex2html217"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html211"
+  HREF="node12.html">Operator to Create Equal</A>
+ &nbsp; <B>  <A NAME="tex2html219"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00054000000000000000">
+Operator to Rotate Phase</A>
+</H2>
+
+<P>
+The matrix representing an arbitrary rotation operator is very simple.
+It takes the form of a diagonal matrix with <!-- MATH
+ $R_{ij} = 0$
+ -->
+<I>R</I><SUB>ij</SUB> = 0 if <!-- MATH
+ $i \not =
+j$
+ -->
+<I>i</I> <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \not=$"><I>j</I>, and <!-- MATH
+ $R_{ii} = e^{\sqrt{-1}\phi_{i}}$
+ -->
+<I>R</I><SUB>ii</SUB> = <I>e</I><SUP><IMG
+ WIDTH="31" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\scriptstyle \sqrt{{-1}}$"><IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\scriptstyle \phi_{{i}}$"></SUP>.  Here <IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \phi_{{i}}^{}$"> is an
+arbitrary real number, and from Euler's formula we know the diagonal
+entries may be equivalently written as <!-- MATH
+ $\cos{\phi_{i}} + \sqrt{-1}\sin{\phi_{i}}$
+ -->
+cos<IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \phi_{{i}}^{}$"> + <IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ \sqrt{{-1}}$">sin<IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \phi_{{i}}^{}$">. [Grover96]
+
+<P>
+For the selective phase rotation we will need such a matrix which
+rotates only the phase of the marked state <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$"> radians.  This will
+be diagonal matrix with all ones on the diagonal, except the k'th
+diagonal element will be -1 when the marked state is the k'th state.
+Obviously we can not construct anything like this operator
+classically, as to do so we would need to know the marked state in
+advance.
+
+<P>
+How such a gate would be implemented in quantum mechanical system is a
+little murky, I will leave it in Grover's own words: 
+
+<P>
+<BLOCKQUOTE>
+``In a practical implementation this would involve one portion of the
+quantum system sensing the state and then deciding whether or not to
+rotate the phase.  It would do it in a way so that no trace of the
+state of the system be left after this operation (so as to ensure that
+paths leading to the same final state were indistinguishable and could
+interfere).  The implementation does <I>not</I> involve a classical
+measurement.'' [Grover96]
+
+</BLOCKQUOTE>
+
+<P>
+We shall take the existence of such a gate as a given for the
+remainder of the paper.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html220"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html216"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html210"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html218"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html221"
+  HREF="node14.html">Inversion About Average Operator</A>
+<B> Up:</B> <A NAME="tex2html217"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html211"
+  HREF="node12.html">Operator to Create Equal</A>
+ &nbsp; <B>  <A NAME="tex2html219"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis-ex.aux
+A level-1 auxiliary file: 1-introduction.aux
+A level-1 auxiliary file: 2-oracle.aux
+A level-1 auxiliary file: 3-graph.aux
+A level-1 auxiliary file: 4-general.aux
+A level-1 auxiliary file: 5-conclusion.aux
+The style file: plain.bst
+Database file #1: thesisbib.bib
+Warning--empty publisher in berthiaume97quantum
+You've used 18 entries,
+            2118 wiz_defined-function locations,
+            595 strings with 6632 characters,
+and the built_in function-call counts, 5841 in all, are:
+= -- 580
+> -- 195
+< -- 10
++ -- 80
+- -- 60
+* -- 292
+:= -- 919
+add.period$ -- 60
+call.type$ -- 18
+change.case$ -- 83
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 286
+empty$ -- 520
+format.name$ -- 60
+if$ -- 1319
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 97
+num.names$ -- 36
+pop$ -- 126
+preamble$ -- 1
+purify$ -- 66
+quote$ -- 0
+skip$ -- 216
+stack$ -- 0
+substring$ -- 314
+swap$ -- 93
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 1
+while$ -- 55
+width$ -- 20
+write$ -- 205
+(There was 1 warning)

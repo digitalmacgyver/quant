@@ -1,0 +1,210 @@
+\newtheorem{cond}{Condition}[section]
+\newtheorem{algoi}{Algorithm}[section]
+
+\chapter{Boolean Functions}
+\label{ch:general}
+
+In this chapter we consider increasingly general classes of functions.
+We first examine lower bounds for tree functions in Section
+\ref{sec:tree} and prove $\Omega(\sqrt[4]{N})$ oracle
+queries are required to compute a tree function of $N$ bits.
+
+We define nondeterministic decision tree complexity in Section
+\ref{sec:dndtc}.  We then prove that $\Omega(\sqrt{N})$ oracle queries
+are required to compute any $N$ bit Boolean function with
+nondeterministic decision tree complexity $N$ in Section
+\ref{sec:b4r}.  Finally in Section \ref{sec:lqbcbf} we present our
+most general result: $\Omega(\sqrt[4]{D(f)})$ oracle queries are
+required to compute a class of Boolean functions that meet a
+sensitivity condition and have deterministic decision tree complexity
+$D(f)$.
+
+\section{Tree Functions}
+\label{sec:tree}
+
+Tree functions are Boolean functions of $N$ bits that can be written
+as a disjunction of conjunctions in which each of the $N$ variables
+occurs exactly once.  Tree functions are evasive in the classical case
+\cite{lovasz94evasive}.
+
+\begin{theorem}
+\label{theo:treelow}
+$\Omega(\sqrt[4]{N})$ oracle queries are required to compute any tree
+function of $N$ bits in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+For any tree function $f$ let $d$ be the number of terms, and let
+$c_{max}$ be the maximum number of variables in any conjunction.
+
+The tree function $f$ has a conjunctive term of size $c_{max}$.  Let
+$x$ be the input that gives every variable in that term the value 1,
+and every other variable 0, so that $f(x) = 1$.  The inputs attained
+by negating one of the $c_{max}$ 1's in $x$ will yield $0$ when
+evaluated by $f$.  Lemma \ref{lm:1xky} implies that
+$\Omega(\sqrt{c_{max}})$ oracle queries are required to compute $f$.
+
+The tree function $f$ also has $d$ terms.  Let $x$ be the input that
+vices the first variable of every term the value 0 and every other
+variable the value 1, so that $f(x) = 0$.  The inputs attained by
+negating one of the $d$ 0's in $x$ yield $1$ when evaluated by $f$.
+Lemma \ref{lm:1xky} now implies that $\Omega(\sqrt{d})$ oracle queries
+are required to compute $f$.
+
+Since $d \ge N/c_{max}$, either $c_{max} > \sqrt{N}$ or $d \ge
+\sqrt{N}$, and the theorem follows.
+\end{proof}
+
+This lower bound is a special case of the $\Omega(\sqrt[4]{D(f)})$
+lower bound for monotone functions proved by Beals et al.\
+\cite{beals98quantum}, as tree functions are monotone functions with
+decision tree complexity $N$.  Here we see for the first time a gap
+that is not quadratic with the classical case.  While this lower bound
+agrees with the result for monotone functions, the author believes it
+is not asymptotically tight.  Whether there is an $\Omega(\sqrt{N})$
+lower bound for computing $N$-bit tree functions is an open question.
+
+\section{Nondeterministic Decision Tree Complexity}
+\label{sec:dndtc}
+
+In the presentation of the most general results of this thesis we
+refer frequently to deterministic and nondeterministic decision tree
+complexity, deterministic decision trees were discussed in Section
+\ref{subs:ddt}.  Readers familiar with these topics can proceed
+directly to Section \ref{sec:b4r}.
+
+Let $f$ be an $N$-bit Boolean function.  We will use the following
+definitions of L{\'{a}}szl{\'{o}} Lov{\'{a}}sz and P{\'{e}}ter
+G{\'{a}}cs \cite{lovasz94complexity}.
+
+For every input $x$ let $D(f,x)$ denote the minimum number of bits of
+$x$ we could be told to convince us that $f(x)$ takes on a particular
+value.  For example: $D($OR$,0^{N}) = N$.  If we are told fewer than
+$N$ bits of an input are all 0 we can not determine the value of OR
+for that input.  For any other input $x \neq 0^{N}$, $D($OR$,x) = 1$,
+because we only need to be told that one bit of the input is a 1.  We
+are not concerned with how many oracle queries we have to make in the
+worst case to determine $f(x)$, but rather how many bits we could be
+told in the best case to be sure of the value $f$ takes on $x$.
+
+\begin{defi}
+\label{defi:nd0}
+$D_{0}(f) = \max\{D(f,x) | f(x) = 0\}$.  $D_{0}(f)$ is the
+nondeterministic decision tree complexity of verifying that an input
+takes on $0$ when evaluated by $f$.
+\end{defi}
+
+\begin{defi}
+\label{defi:nd1}
+$D_{1}(f) = \max\{D(f,x) | f(x) = 1\}$.  $D_{1}(f)$ is the
+nondeterministic decision tree complexity of verifying that an input
+takes on $1$ when evaluated by $f$.
+\end{defi}
+
+\begin{defi}
+\label{defi:ndc}
+$N(f) = \max\{D_{0}(f),D_{1}(f)\} = \max_{x}\{D(f,x)\}$.  The
+nondeterministic decision tree complexity of computing an $N$-bit
+Boolean function $f$ is the maximum of the nondeterministic decision
+tree complexities of verifying any input of $f$ takes on one of
+$\{0,1\}$.
+\end{defi}
+
+\section{Nondeterministically Evasive Functions}
+\label{sec:b4r}
+
+With an understanding of decision tree complexity we can now prove a
+lower bound on a class of evasive functions.  In analogy to evasive
+functions whose deterministic decision tree complexity is $N$ we call
+functions with nondeterministic decision tree complexity $N$
+\emph{Nondeterministically evasive}.  Every nondeterministically evasive
+functions is evasive.
+
+\begin{theorem}
+\label{th:b2r}
+$\Omega(\sqrt{N})$ oracle queries are required to compute any
+nondeterministically evasive $N$-bit Boolean function in the bounded
+error setting.
+\end{theorem}
+
+\begin{proof}
+We will prove that any nondeterministically evasive $N$-bit Boolean
+function $f$ has an input $x$ such that for at least half of the
+Hamming neighbors of $x$ disagree with $x$ when evaluated by $f$.
+Once this is proved the theorem will follow from Lemma \ref{lm:1xky}.
+
+Assume to the contrary that for all inputs $x$ more than half of $x$'s
+Hamming neighbors agree with $x$.  Consider any deterministic decision
+tree that computes $f$.  Since $D(f) \ge N(f) = N$, there is some path
+$P$ of length $N$ in the tree.  Call the variables along this path $a,
+b, \ldots , z$, where each label corresponds to a unique number
+between 1 and N inclusive.  Let $x_{a}, x_{b}, \ldots , x_{z}$ be the
+values of the corresponding bits along the path.  Let us rearrange the
+order of the input bits so that $a$ is the first input bit, $b$ is the
+second input bit, and $z$ is the $N$th input bit.  Then path $P$ tells
+us $f(x_{a}x_{b}\ldots x_{z})$ is either $0$ or $1$, and
+$f(x_{a}x_{b}\ldots\overline{x_{z}})$ is the other.  Without loss of
+generality let $f(x_{a}x_{b}\ldots x_{z}) = 1$ and
+$f(x_{a}x_{b}\ldots\overline{x_{z}}) = 0$.
+
+By the pigeonhole principle, there is some bit $i < N-1$ such that
+\[
+\begin{array}{ll}
+	f(x_{a}x_{b}\ldots x_{i}\ldots x_{z}) = 1 & 	f(x_{a}x_{b}\ldots x_{i} \ldots \overline{x_{z}}) = 0 \\
+	f(x_{a}x_{b}\ldots\overline{x_{i}}\ldots x_{z}) = 1 & 	f(x_{a}x_{b}\ldots\overline{x_{i}}\ldots\overline{x_{z}}) = 0 .
+\end{array}
+\]
+However, if this is the case then we do not need to ask about the
+$i$th bit on path $P$.  This argument follows for any path of length
+$N$ in our deterministic decision tree.  In this case $D_{0}(f)$ and
+$D_{1}(f)$ are at most $N-1$.  $N(f)$ is then $N-1$, a contradiction
+to the condition that $N(f) = N$.  Therefore our assumption was false,
+and there is at least one input $x$ such that at least half of $x$'s
+Hamming neighbors yield a different value than $x$ when evaluated by
+$f$.  By Lemma \ref{lm:1xky} $\Omega(\sqrt{N})$ oracle queries are
+required to compute $f$ in the bounded error setting.
+\end{proof}
+
+This proof establishes that nondeterministically evasive functions
+have inputs that are sensitive to negation on at least half of their
+bits; the result then follows from Lemma \ref{lm:1xky}.  Not all
+evasive functions are nondeterministically evasive.  OR is an example
+of a nondeterministically evasive function; since Beals et al.\
+provide an $O(\sqrt{N})$ algorithm to compute the OR of $N$ bits, this
+lower bound is asymptotically tight.
+
+\section{Sensitive Functions}
+\label{sec:lqbcbf}
+
+Nearly all the functions discussed so far have been evasive (or
+conjectured to be so).  In our final result we consider functions that
+are not necessarily evasive.  We call a Boolean function $f$
+\emph{sensitive} if for some input $x$, there are $\Omega(N(f))$ Hamming
+neighbors $y$ of $x$ such that $f(x) \neq f(y)$.  It is an open
+question whether there are any nonsensitive functions.
+
+\begin{theorem}
+\label{th:b4r}
+$O(\sqrt[4]{D(f)})$ oracle queries are required to compute any
+sensitive function $f$ in the bounded error setting.
+\end{theorem}
+
+\begin{proof}
+By Lemma \ref{lm:1xky}, $\Omega(\sqrt{N(f)})$ oracle queries are
+required to compute any sensitive Boolean function. 
+
+Lov{\'{a}}sz and G{\'{a}}cs \cite{lovasz94complexity} proved that
+$D(f) \le D_{0}(f) \cdot D_{1}(f)$, and by definition, $N(f) =
+\max\{D_{0}(f),D_{1}(f)\}$.  Thus, $N(f) = \Omega(\sqrt{D(f)})$, 
+and the theorem follows.
+\end{proof}
+
+Beals et al.\ proved $\Omega(\sqrt[6]{D(f)})$ oracle
+queries are required to compute any Boolean function in the bounded
+error setting, but they suspect that this lower bound is not tight
+\cite{beals98quantum}.  An open question is whether there are any 
+functions which are not sensitive.  If not, then
+$\Omega(\sqrt[4]{D(f)})$ oracle queries are required to compute any
+Boolean function, which would be an improvement over what is currently
+known.
+

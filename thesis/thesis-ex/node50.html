@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Quantum Extension of the Aanderaa-Karp-Rosenberg Conjecture</TITLE>
+<META NAME="description" CONTENT="No Quantum Extension of the Aanderaa-Karp-Rosenberg Conjecture">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node47.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node51.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html725"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html721"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html717"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html723"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html726"
+  HREF="node51.html">Boolean Functions</A>
+<B> Up:</B> <A NAME="tex2html722"
+  HREF="node41.html">Graph Properties</A>
+<B> Previous:</B> <A NAME="tex2html718"
+  HREF="node49.html">Bipartiteness</A>
+ &nbsp; <B>  <A NAME="tex2html724"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00830000000000000000"></A>
+<A NAME="sec:arkbad"></A>
+<BR>
+No Quantum Extension of the Aanderaa-Karp-Rosenberg Conjecture
+</H1>
+
+<P>
+The Aanderaa-Karp-Rosenberg conjecture states that all non-trivial
+monotone graph properties are evasive in the classical deterministic
+setting.  A natural extension of the Aanderaa-Karp-Rosenberg
+Conjecture to quantum computing would conjecture all non-trivial
+monotone graph properties have the same query complexity, or at least
+the same asymptotic query complexity in the bounded error setting.  To
+see that no such extension can hold, observe that the following
+non-trivial monotone graph properties can be determined by running the
+algorithms for OR, AND, and MAJORITY respectively:
+
+<P>
+
+<OL>
+<LI>Does the graph have at least 1 edge?
+</LI>
+<LI>Is the graph complete?
+</LI>
+<LI>Does the graph have more than half of all possible edges?
+</LI>
+</OL>
+
+<P>
+Beals et al. provide an <I>O</I>(<I>V</I>) oracle query algorithm for computing
+the AND or OR of an <I>O</I>(<I>V</I><SUP>2</SUP>) bit oracle string in the bounded error
+setting [<A
+ HREF="node57.html#beals98quantum">2</A>], and we have a lower bound of
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>V</I>) oracle queries required to compute them from Section
+<A HREF="node37.html#sec:AOMP">2.6</A>.  We have a lower bound of <!-- MATH
+ $\Omega(V^{2})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<I>V</I><SUP>2</SUP>) oracle 
+queries required to compute the MAJORITY of an <I>O</I>(<I>V</I><SUP>2</SUP>) bit oracle
+string from Section <A HREF="node37.html#sec:AOMP">2.6</A>.  Thus some decision problems for
+non-trivial monotone graph properties require <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img104.png"
+ ALT="$ \Theta$">(<I>V</I>) oracle
+queries and others <!-- MATH
+ $\Theta(V^{2})$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img104.png"
+ ALT="$ \Theta$">(<I>V</I><SUP>2</SUP>) in the bounded error setting, and
+there is no extension of the Aanderaa-Karp-Rosenberg conjecture to the
+quantum bounded error setting.  This does not come as a complete
+surprise, as there are quadratic gaps known between the classically
+evasive symmetric functions from Chapter <A HREF="node26.html#ch:oracle">2</A> in the
+quantum bounded error setting.  More disappointing is that there are
+graph properties for which the quantum bounded error setting can
+provide only constant speedup over the classical case.
+  
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html725"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html721"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html717"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html723"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html726"
+  HREF="node51.html">Boolean Functions</A>
+<B> Up:</B> <A NAME="tex2html722"
+  HREF="node41.html">Graph Properties</A>
+<B> Previous:</B> <A NAME="tex2html718"
+  HREF="node49.html">Bipartiteness</A>
+ &nbsp; <B>  <A NAME="tex2html724"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

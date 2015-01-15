@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Theorem 2</TITLE>
+<META NAME="description" CONTENT="Theorem 2">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html306"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html302"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html298"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html304"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html307"
+  HREF="node21.html">A Special Case</A>
+<B> Up:</B> <A NAME="tex2html303"
+  HREF="node16.html">Proof that Algorithm Increases</A>
+<B> Previous:</B> <A NAME="tex2html299"
+  HREF="node19.html">Corollary 1.2</A>
+ &nbsp; <B>  <A NAME="tex2html305"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00057400000000000000">
+Theorem 2</A>
+</H3>
+
+<P>
+Theorem 2: Let the state vector before step 2a of Grover's algorithm
+be as follows:
+
+<UL>
+<LI>For the unique marked state <I>S</I><SUB>m</SUB> which satisfies <!-- MATH
+ $C(S_{m}) = 1$
+ -->
+<I>C</I>(<I>S</I><SUB>m</SUB>) = 1 the amplitude is <I>k</I> such that <!-- MATH
+ $0 < k < 1/\sqrt{2}$
+ -->
+0 &lt; <I>k</I> &lt; 1/<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ \sqrt{{2}}$">
+
+<P>
+</LI>
+<LI>For each of the remaining (<I>N</I> - 1) states the amplitude is <I>l</I> such that <I>l</I> &gt; 0
+</LI>
+</UL>
+In this case we seek to prove both:
+
+<UL>
+<LI>The change in <I>k</I>, <IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \Delta$"><I>k</I> after steps 2a and 2b in Grover's algorithm is bounded below by <!-- MATH
+ $\Delta k > \frac{1}{2\sqrt{N}}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \Delta$"><I>k</I> &gt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ {\frac{{1}}{{2\sqrt{N}}}}$">
+</LI>
+<LI>After steps 2a and 2b in Grover's algorithm <I>l</I> &gt; 0
+</LI>
+</UL>
+
+<P>
+Proof: Let the initial amplitudes be <I>k</I> and <I>l</I>, let the amplitudes
+after the selected phase inversion step 2a be <I>k</I><SUP>'</SUP> and <I>l</I><SUP>'</SUP>, let
+the amplitudes after the inversion about average step 2b be <I>k</I><SUP>''</SUP>
+and <I>l</I><SUP>''</SUP>.
+
+<P>
+By theorem 1 we know <!-- MATH
+ $k^{''} = \left(1-\frac{2}{N} \right)k +
+2\frac{(N-1)}{N}l$
+ -->
+<I>k</I><SUP>''</SUP> = <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ \left(\vphantom{1-\frac{2}{N} }\right.$">1 - <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$ {\frac{{2}}{{N}}}$"><IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ \left.\vphantom{1-\frac{2}{N} }\right)$"><I>k</I> + 2<IMG
+ WIDTH="45" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ {\frac{{(N-1)}}{{N}}}$"><I>l</I> (note the reversal of terms in the coefficient of
+<I>k</I>, this is due to the phase inversion of <I>k</I> in step 2a), therefore
+<!-- MATH
+ $\Delta k = k^{''} - k = -\frac{2k}{N} + 2\left(1-\frac{1}{N}\right)l$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \Delta$"><I>k</I> = <I>k</I><SUP>''</SUP> - <I>k</I> = - <IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ {\frac{{2k}}{{N}}}$"> +2<IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ \left(\vphantom{1-\frac{1}{N}}\right.$">1 - <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$ {\frac{{1}}{{N}}}$"><IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ \left.\vphantom{1-\frac{1}{N}}\right)$"><I>l</I>.  
+By the assumption <!-- MATH
+ $0 < k < 1/\sqrt{2}$
+ -->
+0 &lt; <I>k</I> &lt; 1/<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ \sqrt{{2}}$"> and Corollary 1.2 it follows
+that <!-- MATH
+ $|l| > \frac{1}{\sqrt{2N}}$
+ -->
+| <I>l</I>| &gt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ {\frac{{1}}{{\sqrt{2N}}}}$">.  By assumption <I>l</I> is positive, thus
+<!-- MATH
+ $l > \frac{1}{\sqrt{2N}}$
+ -->
+<I>l</I> &gt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ {\frac{{1}}{{\sqrt{2N}}}}$">.  Combining this with <!-- MATH
+ $\Delta k = k^{''} - k
+= -\frac{2k}{N} + 2\left(1-\frac{1}{N}\right)l$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \Delta$"><I>k</I> = <I>k</I><SUP>''</SUP> - <I>k</I> = - <IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ {\frac{{2k}}{{N}}}$"> +2<IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ \left(\vphantom{1-\frac{1}{N}}\right.$">1 - <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$ {\frac{{1}}{{N}}}$"><IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ \left.\vphantom{1-\frac{1}{N}}\right)$"><I>l</I>. it follows that
+<!-- MATH
+ $\Delta k > \frac{1}{2\sqrt{N}}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \Delta$"><I>k</I> &gt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ {\frac{{1}}{{2\sqrt{N}}}}$">. [Grover96]
+
+<P>
+To show <I>l</I><SUP>''</SUP> positive consider after step 2a of the algorithm,
+after the selective phase inversion, but before the inversion about
+average. At this point <I>k</I><SUP>'</SUP> &lt; 0 and <I>l</I><SUP>'</SUP> &gt; 0, since <!-- MATH
+ $\left(0 < k
+< \frac{1}{2\sqrt{N}} \right)$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ \left(\vphantom{0 &lt; k
+&lt; \frac{1}{2\sqrt{N}} }\right.$">0 &lt; <I>k</I> &lt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ {\frac{{1}}{{2\sqrt{N}}}}$"><IMG
+ WIDTH="16" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$ \left.\vphantom{0 &lt; k
+&lt; \frac{1}{2\sqrt{N}} }\right)$"> and <!-- MATH
+ $|l| > \frac{1}{\sqrt{2N}}$
+ -->
+| <I>l</I>| &gt; <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ {\frac{{1}}{{\sqrt{2N}}}}$"> (from
+previous paragraph) that <!-- MATH
+ $\left|\frac{k^{'}}{l^{'}}\right|< \sqrt{N}$
+ -->
+<IMG
+ WIDTH="11" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ \left\vert\vphantom{\frac{k^{'}}{l^{'}}}\right.$"><IMG
+ WIDTH="20" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$ {\frac{{k^{'}}}{{l^{'}}}}$"><IMG
+ WIDTH="11" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$ \left.\vphantom{\frac{k^{'}}{l^{'}}}\right\vert$"> &lt; <IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">.
+This means that after step 2a our register is in a state covered by
+Corollary 1.1, which states after the inversion about average
+operation <I>l</I><SUP>''</SUP> will be positive.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html306"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html302"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html298"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html304"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html307"
+  HREF="node21.html">A Special Case</A>
+<B> Up:</B> <A NAME="tex2html303"
+  HREF="node16.html">Proof that Algorithm Increases</A>
+<B> Previous:</B> <A NAME="tex2html299"
+  HREF="node19.html">Corollary 1.2</A>
+ &nbsp; <B>  <A NAME="tex2html305"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

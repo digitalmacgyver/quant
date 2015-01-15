@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Grover's Algorithm</TITLE>
+<META NAME="description" CONTENT="Grover's Algorithm">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="473proj.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html160"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html156"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html150"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html158"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html161"
+  HREF="node10.html">An Illustration of Grover's</A>
+<B> Up:</B> <A NAME="tex2html157"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html151"
+  HREF="node8.html">Performing Computations</A>
+ &nbsp; <B>  <A NAME="tex2html159"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000">
+Grover's Algorithm</A>
+</H1>
+
+<P>
+Assume you have a system with <I>N</I> = 2<SUP>n</SUP> states labeled <!-- MATH
+ $S_{1},S_{2},
+\ldots S_{N}$
+ -->
+<I>S</I><SUB>1</SUB>, <I>S</I><SUB>2</SUB>,...<I>S</I><SUB>N</SUB>.  These 2<SUP>n</SUP> states are represented by <I>n</I> bit
+strings.  Assume there is a unique marked element <I>S</I><SUB>m</SUB> that
+satisfies a condition <!-- MATH
+ $C(S_{m}) = 1$
+ -->
+<I>C</I>(<I>S</I><SUB>m</SUB>) = 1, and for all other states <I>C</I>(<I>S</I>) = 0.  We assume that <I>C</I> can be evaluated in unit time.  Our task is to
+devise an algorithm which minimizes the number of evaluations of <I>C</I>.
+
+<P>
+The idea of Grover's algorithm is to place our register in a equal
+superposition of all states, and then selectively invert the phase of
+the marked state, and then perform an inversion about average
+operation a number of times.  The selective inversion of the marked
+state follows by the inversion about average steps have the effect of
+increasing the amplitude of the marked state by <!-- MATH
+ $O(1/\sqrt{N})$
+ -->
+<I>O</I>(1/<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">).
+Therefore after <!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">) operations the probability of measuring
+the marked state approaches 1. [Grover96]
+
+<P>
+Grover's algorithm is as follows: 
+
+<OL>
+<LI>Prepare a quantum register to be normalized and uniquely in the first
+state.  Then place the register in an equal superposition of all
+states <!-- MATH
+ $\left(\frac{1}{\sqrt{N}},
+\frac{1}{\sqrt{N}} \ldots \frac{1}{\sqrt{N}}\right)$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \left(\vphantom{\frac{1}{\sqrt{N}},
+\frac{1}{\sqrt{N}} \ldots \frac{1}{\sqrt{N}}}\right.$"><IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$ {\frac{{1}}{{\sqrt{N}}}}$">,<IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$ {\frac{{1}}{{\sqrt{N}}}}$">...<IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$ {\frac{{1}}{{\sqrt{N}}}}$"><IMG
+ WIDTH="16" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \left.\vphantom{\frac{1}{\sqrt{N}},
+\frac{1}{\sqrt{N}} \ldots \frac{1}{\sqrt{N}}}\right)$"> by applying the Walsh-Hadamard operator <IMG
+ WIDTH="21" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$ \hat{{W}}$">.  This means simply the state vector will be in an equal superposition of each state.
+
+<P>
+</LI>
+<LI>Repeat <!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">) times the following two steps (the precise number
+of iterations is important, and discussed below):
+
+<P>
+
+<OL>
+<LI>Let the system be in any state <I>S</I>.  If <I>C</I>(<I>S</I>) = 1, rotate the phase
+by <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \pi$"> radians, else leave system unaltered.  It is worth noting
+that this operation has no classical analog.  We do not observe the
+state of the quantum register, doing so would collapse the
+superposition.  The selective phase rotation gate would be a quantum
+mechanical operator which would rotate only the amplitude proportional
+to the marked state within the superposition.
+
+<P>
+</LI>
+<LI>Apply the inversion about average operator <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \hat{{A}}$">, whose matrix
+representation is: <!-- MATH
+ $A_{ij} = 2/N$
+ -->
+<I>A</I><SUB>ij</SUB> = 2/<I>N</I> if <!-- MATH
+ $i \not = j$
+ -->
+<I>i</I> <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \not=$"><I>j</I> and <!-- MATH
+ $A_{ii} = -1 + 2/N$
+ -->
+<I>A</I><SUB>ii</SUB> = - 1 + 2/<I>N</I> to the quantum register.
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>Measure the quantum register.  The measurement will yield the <I>n</I> bit
+label of the marked state <!-- MATH
+ $C(S_{M}) = 1$
+ -->
+<I>C</I>(<I>S</I><SUB>M</SUB>) = 1 with probability at least
+1/2.
+
+<P>
+</LI>
+</OL>
+[Grover96]
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html162"
+  HREF="node10.html">An Illustration of Grover's Algorithm</A>
+<LI><A NAME="tex2html163"
+  HREF="node11.html">Outline of Proof of Correctness of Grover's Algorithm</A>
+<LI><A NAME="tex2html164"
+  HREF="node12.html">Operator to Create Equal Superposition of States</A>
+<LI><A NAME="tex2html165"
+  HREF="node13.html">Operator to Rotate Phase</A>
+<LI><A NAME="tex2html166"
+  HREF="node14.html">Inversion About Average Operator</A>
+<LI><A NAME="tex2html167"
+  HREF="node15.html">Proof that Operations are Unitary</A>
+<LI><A NAME="tex2html168"
+  HREF="node16.html">Proof that Algorithm Increases Amplitude of Desired State</A>
+<UL>
+<LI><A NAME="tex2html169"
+  HREF="node17.html">Theorem 1</A>
+<LI><A NAME="tex2html170"
+  HREF="node18.html">Corollary 1.1</A>
+<LI><A NAME="tex2html171"
+  HREF="node19.html">Corollary 1.2</A>
+<LI><A NAME="tex2html172"
+  HREF="node20.html">Theorem 2</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html173"
+  HREF="node21.html">A Special Case</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html160"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html156"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html150"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html158"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html161"
+  HREF="node10.html">An Illustration of Grover's</A>
+<B> Up:</B> <A NAME="tex2html157"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html151"
+  HREF="node8.html">Performing Computations</A>
+ &nbsp; <B>  <A NAME="tex2html159"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

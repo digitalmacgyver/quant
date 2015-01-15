@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Open Questions</TITLE>
+<META NAME="description" CONTENT="Open Questions">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node57.html">
+<LINK REL="previous" HREF="node51.html">
+<LINK REL="up" HREF="thesis-ex.html">
+<LINK REL="next" HREF="node57.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html799"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html795"
+  HREF="thesis-ex.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html789"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html797"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html800"
+  HREF="node57.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html796"
+  HREF="thesis-ex.html">Lower Query Bounds in</A>
+<B> Previous:</B> <A NAME="tex2html790"
+  HREF="node55.html">Sensitive Functions</A>
+ &nbsp; <B>  <A NAME="tex2html798"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001000000000000000000"></A>
+<A NAME="ch:open"></A>
+<BR>
+Open Questions
+</H1>
+
+<P>
+Ambainis' Theorem has shown itself to be remarkably versatile in
+proving lower bounds on Boolean functions; it can frequently be used
+to establish asymptotically tight lower bound with little effort.
+These lower bounds can be contrasted with classical lower bounds to
+see areas where a quantum computer could significantly outperform a
+classical computer.  For all the functions we have examined the
+separation found between the best known quantum and classical lower
+bounds is a polynomial.  Beals et al. proved <!-- MATH
+ $\Omega(\sqrt[6]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$ \sqrt[6]{{D(f)}}$">)
+oracle queries are required to compute an arbitrary Boolean function
+<I>f</I> with decision tree complexity <I>D</I>(<I>f</I> ) in the bounded error setting
+[<A
+ HREF="node57.html#beals98quantum">2</A>].  Therefore there can be no exponential
+separation between the classical and quantum oracle query complexity
+for Boolean functions.  It should be stressed that this result has
+only been proven to hold in the quantum oracle model, only for total
+Boolean functions, and only in the bounded error setting (which
+includes the exact and zero error settings).
+
+<P>
+It is suggested by Beals et al. that the
+<!-- MATH
+ $\Omega(\sqrt[6]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$ \sqrt[6]{{D(f)}}$">) lower bound on the number of
+oracle queries required to compute an arbitrary total Boolean function
+<I>f</I> is not optimal [<A
+ HREF="node57.html#beals98quantum">2</A>].  It remains an important
+open question what the asymptotically tight lower bound is.  In
+Section <A HREF="node55.html#sec:lqbcbf">4.4</A> we proved <!-- MATH
+ $\Omega(\sqrt[4]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sqrt[4]{{D(f)}}$">)
+oracle queries are required to compute sensitive Boolean functions, if
+the need for sensitivity could be eliminated it would give a better
+lower bound than what is currently known.
+
+<P>
+The importance of quantum computation itself will be quantified by the
+speedup allowed by quantum algorithms.  If large classes of useful
+problems are found for which a quantum algorithm can provide
+exponential speedup, it will certainly drive interest in the
+construction of quantum computing devices.  Shor's algorithm currently
+stands alone as a useful task that can be performed exponentially
+faster by a quantum algorithm than with the best published classical
+algorithm.  There are many other problems that show this exponential
+separation, but the are toy problems tailored to display such speedup
+and have no practical application.
+
+<P>
+The current uniqueness of Shor's algorithm is a great enticement to
+further study.  It is hard to believe that there is only one useful
+problem that we can find exponential speedup for; however, results
+such as the ones in this thesis seem to indicate that for many
+reasonable models of computation only polynomial speedup can be
+attained.  In some way this parallels the results of Grover's
+algorithm which provides quadratic speedup over what is classically
+possible for the unordered search problem, but disallows any potential
+exponential speedup by its optimality.
+
+<P>
+Whether a quantum computer of a size great enough to perform useful
+calculations can be built is unclear, but great progress has been
+made.  On December 19, 2001, IBM researchers announced they had
+factored the number 15 on a quantum computer running Shor's algorithm
+[<A
+ HREF="node57.html#ibm01shor">12</A>].  When tempted to prognosticate about the future of
+this nascent technology, it is instructive to examine predictions made
+around the time of the birth of the digital computer.  In 1949
+<I>Popular Mechanics</I> boldly posited:
+<BLOCKQUOTE>
+Where ...the ENIAC is equipped with 18,000 vacuum tubes and
+weights 30 tons, computers in the future may have 1,000 vacuum tubes
+and perhaps weigh just one and a half tons[<A
+ HREF="node57.html#patterson98computer">16</A>].
+
+</BLOCKQUOTE>
+While the future of quantum hardware may be uncertain, a few quantum
+algorithms discovered so far are impressive.  The discovery of
+fundamental tasks that can be performed quadratically faster in the
+bounded error setting than in the classical setting, such as computing
+the AND and OR of <I>N</I> bits, promise surprising results for more
+interesting problems in the future.
+
+<P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html799"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html795"
+  HREF="thesis-ex.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html789"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html797"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html800"
+  HREF="node57.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html796"
+  HREF="thesis-ex.html">Lower Query Bounds in</A>
+<B> Previous:</B> <A NAME="tex2html790"
+  HREF="node55.html">Sensitive Functions</A>
+ &nbsp; <B>  <A NAME="tex2html798"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

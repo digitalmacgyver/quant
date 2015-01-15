@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Deterministic Decision Trees:</TITLE>
+<META NAME="description" CONTENT="Deterministic Decision Trees:">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node44.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html645"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html641"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html635"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html643"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html646"
+  HREF="node44.html">Evasive Functions:</A>
+<B> Up:</B> <A NAME="tex2html642"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html636"
+  HREF="node42.html">Preliminaries</A>
+ &nbsp; <B>  <A NAME="tex2html644"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00810010000000000000"></A>
+<A NAME="subs:ddt"></A>
+<BR>
+Deterministic Decision Trees:
+</H4>
+
+<P>
+A decision tree of <I>N</I> bits is a rooted binary tree.  Each internal
+node of the tree contains an index <!-- MATH
+ $i \in \{1, \ldots, N\}$
+ -->
+<I>i</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {1,..., <I>N</I>} and has
+two children.  Each leaf contains either a 1 or a 0. To determine
+the value of the deterministic decision tree on an input <!-- MATH
+ $x
+\in \{0,1\}^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {0, 1}<SUP>N</SUP> we traverse the tree starting at the root.  At each
+internal node we examine the <I>x</I><SUB>i</SUB>, where <I>i</I> is the index stored at
+that node.  If <I>x</I><SUB>i</SUB> = 1 we follow the path through the left
+subtree; if <I>x</I><SUB>i</SUB> = 0 we follow the path through the right subtree.
+The value stored at the leaf that we eventually reach is the output of
+the algorithm.  Any decision tree computes an <I>N</I>-bit Boolean
+function.  There are many different deterministic decision trees that
+compute any given function.
+
+<P>
+<A NAME="subs:ddtc"></A>
+<P>
+The decision tree complexity of a Boolean function is the minimum
+depth of any decision tree that computes that function.  We denote the
+decision tree complexity of a Boolean function <I>f</I> by <I>D</I>(<I>f</I> ).  The
+decision tree complexity of a function <I>f</I> is just its classical
+oracle query complexity.  Any decision tree of depth <I>D</I>(<I>f</I> ) determines
+a minimal sequence of oracle queries that allow us to compute <I>f</I> (<I>x</I>)
+for any input <I>x</I>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html645"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html641"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html635"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html643"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html646"
+  HREF="node44.html">Evasive Functions:</A>
+<B> Up:</B> <A NAME="tex2html642"
+  HREF="node42.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html636"
+  HREF="node42.html">Preliminaries</A>
+ &nbsp; <B>  <A NAME="tex2html644"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

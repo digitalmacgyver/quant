@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Quantum Adversary:</TITLE>
+<META NAME="description" CONTENT="The Quantum Adversary:">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html491"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html487"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html483"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html489"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html492"
+  HREF="node32.html">A Lemma for Proving</A>
+<B> Up:</B> <A NAME="tex2html488"
+  HREF="node30.html">A Lower Query Bound</A>
+<B> Previous:</B> <A NAME="tex2html484"
+  HREF="node30.html">A Lower Query Bound</A>
+ &nbsp; <B>  <A NAME="tex2html490"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00710310000000000000">
+The Quantum Adversary:</A>
+</H4>
+
+<P>
+Lower bounds for both classical and quantum algorithms have been
+attained in the past by analyzing the behavior of the algorithm in the
+face of an adversary.  Ambainis uses a <I>quantum adversary</I> as the
+basis for his lower bound theorem; instead of running a quantum
+algorithm against one input, it is run against a superposition of
+inputs.  The formulation of the quantum adversary and the
+justification for why a lower bound in the quantum adversary model is
+also a lower bound in the standard oracle query model below are
+adapted and somewhat simplified from Ambainis' paper
+[<A
+ HREF="node57.html#ambainis00quantum">1</A>].
+
+<P>
+Ambainis observed that any standard oracle query algorithm <I>A</I> that
+operates only on a single input is also correct in the quantum
+adversary model.  Consider a standard oracle query algorithm <I>A</I> that
+uses <I>T</I> queries and succeeds with probability <I>p</I>.  We assume our
+quantum memory register begins in the <!-- MATH
+ $\left| 0 \right\rangle$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ \left\vert\vphantom{ 0 }\right.$"> 0<IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ \left.\vphantom{ 0 }\right\rangle$"> state.
+For every input <!-- MATH
+ $x \in \{0,1\}^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {0, 1}<SUP>N</SUP>, the algorithm transforms the
+initial state <!-- MATH
+ $\left| 0 \right\rangle \otimes \left| x \right\rangle$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ \left\vert\vphantom{ 0 }\right.$"> 0<IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ \left.\vphantom{ 0 }\right\rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \otimes$"> <IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$ \left\vert\vphantom{ x }\right.$"><I>x</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ \left.\vphantom{ x }\right\rangle$">
+into the final state
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+  \alpha_{x}\left|f(x)\right\rangle
+  +
+  \beta_{x}|\overline{f(x)}\rangle
+\right)
+\otimes
+\left|w_{x}\right\rangle
+\otimes
+\left|x\right\rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$\displaystyle \left(\vphantom{
+\alpha_{x}\left\vert f(x)\right\rangle
++
+\beta_{x}\vert\overline{f(x)}\rangle
+}\right.$"><IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$\displaystyle \alpha_{{x}}^{}$"><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$\displaystyle \left\vert\vphantom{f(x)}\right.$"><I>f</I> (<I>x</I>)<IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$\displaystyle \left.\vphantom{f(x)}\right\rangle$"> + <IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\displaystyle \beta_{{x}}^{}$">|<IMG
+ WIDTH="41" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$\displaystyle \overline{{f(x)}}$"><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\displaystyle \left.\vphantom{
+\alpha_{x}\left\vert f(x)\right\rangle
++
+\beta_{x}\vert\overline{f(x)}\rangle
+}\right)$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \otimes$"> <IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\displaystyle \left\vert\vphantom{w_{x}}\right.$"><I>w</I><SUB>x</SUB><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\displaystyle \left.\vphantom{w_{x}}\right\rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \otimes$"> <IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle \left\vert\vphantom{x}\right.$"><I>x</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \left.\vphantom{x}\right\rangle$">
+</DIV><P></P>
+where <!-- MATH
+ $|\alpha_{x}|^{2} + |\beta_{x}|^{2} = 1$
+ -->
+|<IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ \alpha_{{x}}^{}$">|<SUP>2</SUP> + |<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ \beta_{{x}}^{}$">|<SUP>2</SUP> = 1, and <!-- MATH
+ $|\alpha_{x}|^{2}
+\ge p$
+ -->
+|<IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ \alpha_{{x}}^{}$">|<SUP>2</SUP><IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \ge$"><I>p</I> (so <!-- MATH
+ $|\beta_{x}|^{2} \le 1-p$
+ -->
+|<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ \beta_{{x}}^{}$">|<SUP>2</SUP><IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$ \le$">1 - <I>p</I>, and finally <!-- MATH
+ $|w_{x}\rangle$
+ -->
+| <I>w</I><SUB>x</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> is 
+the remaining state of the memory. The same algorithm will take any
+superposed input state
+<P><!-- MATH
+ \begin{displaymath}
+|0\rangle \otimes \sum_{x \in S} \frac{1}{\sqrt{\left|S\right|}}
+\left| x \right\rangle
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| 0<IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \otimes$"> <IMG
+ WIDTH="32" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\displaystyle \sum_{{x \in S}}^{}$"><IMG
+ WIDTH="51" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{\left\vert S\right\vert}}}}$"><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle \left\vert\vphantom{x}\right.$"><I>x</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \left.\vphantom{x}\right\rangle$">
+</DIV><P></P>
+to the final state
+<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{|S|}} \sum_{x \in S}
+\left(
+  \alpha_{x}\left|f(x)\right\rangle
+  +
+  \beta_{x}|\overline{f(x)}\rangle
+\right)
+\otimes
+\left|w_{x}\right\rangle
+\otimes
+\left|x\right\rangle.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="51" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$\displaystyle {\frac{{1}}{{\sqrt{\vert S\vert}}}}$"><IMG
+ WIDTH="32" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\displaystyle \sum_{{x \in S}}^{}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$\displaystyle \left(\vphantom{
+\alpha_{x}\left\vert f(x)\right\rangle
++
+\beta_{x}\vert\overline{f(x)}\rangle
+}\right.$"><IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$\displaystyle \alpha_{{x}}^{}$"><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$\displaystyle \left\vert\vphantom{f(x)}\right.$"><I>f</I> (<I>x</I>)<IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$\displaystyle \left.\vphantom{f(x)}\right\rangle$"> + <IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\displaystyle \beta_{{x}}^{}$">|<IMG
+ WIDTH="41" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$\displaystyle \overline{{f(x)}}$"><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\displaystyle \left.\vphantom{
+\alpha_{x}\left\vert f(x)\right\rangle
++
+\beta_{x}\vert\overline{f(x)}\rangle
+}\right)$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \otimes$"> <IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\displaystyle \left\vert\vphantom{w_{x}}\right.$"><I>w</I><SUB>x</SUB><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\displaystyle \left.\vphantom{w_{x}}\right\rangle$"> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle \otimes$"> <IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle \left\vert\vphantom{x}\right.$"><I>x</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \left.\vphantom{x}\right\rangle$">.
+</DIV><P></P>
+Note that in this end state, if the oracle is measured to be <I>x</I>, a
+measurement of the memory register will yield <I>f</I> (<I>x</I>) with probability
+<!-- MATH
+ $|\alpha_{x}|^{2} \ge p$
+ -->
+|<IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ \alpha_{{x}}^{}$">|<SUP>2</SUP><IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \ge$"><I>p</I>.  Ambainis places a lower bound on the number of
+oracle queries required by any quantum adversary algorithm to produce
+such an end state from such a start state.
+
+<P>
+This argument gives us a lower bound in the standard oracle query
+model as well.  If <I>T</I> queries are required of a quantum adversary
+algorithm to establish a correct end state with probability <I>p</I>, then
+no standard oracle query algorithm <I>A</I> can compute <I>f</I> with bounded
+probability <I>p</I> in <I>t</I> &lt; <I>T</I> queries. 
+
+<P>
+This quantum adversary method provides a framework for proving a great
+diversity of lower bounds.  Indeed, nearly every lower bound in this
+thesis is proved directly or indirectly using Theorem <A HREF="node30.html#th:amb">2.1.1</A>.
+As useful as the theorem is, it does have limitations, one of which is
+discussed in Section <A HREF="node35.html#sec:torf1">2.4</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html491"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html487"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html483"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html489"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html492"
+  HREF="node32.html">A Lemma for Proving</A>
+<B> Up:</B> <A NAME="tex2html488"
+  HREF="node30.html">A Lower Query Bound</A>
+<B> Previous:</B> <A NAME="tex2html484"
+  HREF="node30.html">A Lower Query Bound</A>
+ &nbsp; <B>  <A NAME="tex2html490"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

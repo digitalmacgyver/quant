@@ -1,0 +1,1293 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.26)  14 JAN 2015 17:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./images.tex
+(./images.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (./uiucthesis.sty
+Package: uiucthesis 1997/09/15\ v1.0n\ UIUC Thesis (DLH)
+(/home/viblio/quant/web/thesis/setspace.sty
+Package: setspace 1996/09/29 6.0 Contributed and Supported LaTeX2e package
+Package: `setspace' 6.0 <1996/09/29>
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+) (./jeffe.sty (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+\timehh=\count100
+\timemm=\count101
+\mdYY=\count102
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+\sizebox=\box28
+\lthtmlwrite=\write3
+(./images.aux (/home/viblio/quant/web/thesis/1-introduction.aux) (/home/viblio/
+quant/web/thesis/2-oracle.aux) (/home/viblio/quant/web/thesis/3-graph.aux) (/ho
+me/viblio/quant/web/thesis/4-general.aux) (/home/viblio/quant/web/thesis/5-conc
+lusion.aux))
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 159.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 159.
+(/home/viblio/quant/web/thesis/thesis-ex.aux (/home/viblio/quant/web/thesis/1-i
+ntroduction.aux
+
+LaTeX Warning: Label `ch:introduction' multiply defined.
+
+
+LaTeX Warning: Label `sec:mot' multiply defined.
+
+
+LaTeX Warning: Label `sec:early' multiply defined.
+
+
+LaTeX Warning: Label `sec:quant' multiply defined.
+
+
+LaTeX Warning: Label `sec:error' multiply defined.
+
+
+LaTeX Warning: Label `sec:lower' multiply defined.
+
+
+LaTeX Warning: Label `sec:outline' multiply defined.
+
+
+LaTeX Warning: Label `sec:sumofres' multiply defined.
+
+
+LaTeX Warning: Label `tbl:results' multiply defined.
+
+) (/home/viblio/quant/web/thesis/2-oracle.aux
+
+LaTeX Warning: Label `ch:oracle' multiply defined.
+
+
+LaTeX Warning: Label `sec:qom' multiply defined.
+
+
+LaTeX Warning: Label `th:amb' multiply defined.
+
+
+LaTeX Warning: Label `sec:lplqb' multiply defined.
+
+
+LaTeX Warning: Label `lm:1xky' multiply defined.
+
+
+LaTeX Warning: Label `sec:gXOR' multiply defined.
+
+
+LaTeX Warning: Label `th:gXOR' multiply defined.
+
+
+LaTeX Warning: Label `sec:dos' multiply defined.
+
+
+LaTeX Warning: Label `th:dosbad' multiply defined.
+
+
+LaTeX Warning: Label `th:dosgood' multiply defined.
+
+
+LaTeX Warning: Label `sec:torf1' multiply defined.
+
+
+LaTeX Warning: Label `th:1sqn' multiply defined.
+
+
+LaTeX Warning: Label `th:best' multiply defined.
+
+
+LaTeX Warning: Label `cor:ambbad' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbsym' multiply defined.
+
+
+LaTeX Warning: Label `def:sym' multiply defined.
+
+
+LaTeX Warning: Label `th:ptsym' multiply defined.
+
+
+LaTeX Warning: Label `sec:AOMP' multiply defined.
+
+
+LaTeX Warning: Label `th:AND' multiply defined.
+
+
+LaTeX Warning: Label `th:MAJORITY' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbnsf' multiply defined.
+
+
+LaTeX Warning: Label `th:sym' multiply defined.
+
+) (/home/viblio/quant/web/thesis/3-graph.aux
+
+LaTeX Warning: Label `ch:graph' multiply defined.
+
+
+LaTeX Warning: Label `sec:prelim' multiply defined.
+
+
+LaTeX Warning: Label `subs:ddt' multiply defined.
+
+
+LaTeX Warning: Label `subs:ddtc' multiply defined.
+
+
+LaTeX Warning: Label `sec:ef' multiply defined.
+
+
+LaTeX Warning: Label `sec:gp' multiply defined.
+
+
+LaTeX Warning: Label `cj:ark' multiply defined.
+
+
+LaTeX Warning: Label `sec:gbs' multiply defined.
+
+
+LaTeX Warning: Label `fi:graph' multiply defined.
+
+
+LaTeX Warning: Label `tbl:graph' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbnmgp' multiply defined.
+
+
+LaTeX Warning: Label `sec:gc' multiply defined.
+
+
+LaTeX Warning: Label `lm:1erc' multiply defined.
+
+
+LaTeX Warning: Label `lm:1ernc' multiply defined.
+
+
+LaTeX Warning: Label `th:gc' multiply defined.
+
+
+LaTeX Warning: Label `fi:gc' multiply defined.
+
+
+LaTeX Warning: Label `sec:bip' multiply defined.
+
+
+LaTeX Warning: Label `th:nbpt' multiply defined.
+
+
+LaTeX Warning: Label `sec:arkbad' multiply defined.
+
+) (/home/viblio/quant/web/thesis/4-general.aux
+
+LaTeX Warning: Label `ch:general' multiply defined.
+
+
+LaTeX Warning: Label `sec:tree' multiply defined.
+
+
+LaTeX Warning: Label `theo:treelow' multiply defined.
+
+
+LaTeX Warning: Label `sec:dndtc' multiply defined.
+
+
+LaTeX Warning: Label `defi:nd0' multiply defined.
+
+
+LaTeX Warning: Label `defi:nd1' multiply defined.
+
+
+LaTeX Warning: Label `defi:ndc' multiply defined.
+
+
+LaTeX Warning: Label `sec:b4r' multiply defined.
+
+
+LaTeX Warning: Label `th:b2r' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbcbf' multiply defined.
+
+
+LaTeX Warning: Label `th:b4r' multiply defined.
+
+) (/home/viblio/quant/web/thesis/5-conclusion.aux
+
+LaTeX Warning: Label `ch:open' multiply defined.
+
+)
+
+LaTeX Warning: Label `ambainis00quantum' multiply defined.
+
+
+LaTeX Warning: Label `beals98quantum' multiply defined.
+
+
+LaTeX Warning: Label `berthiaume92oracle' multiply defined.
+
+
+LaTeX Warning: Label `berthiaume97quantum' multiply defined.
+
+
+LaTeX Warning: Label `brassard97exact' multiply defined.
+
+
+LaTeX Warning: Label `deutsch85quantum' multiply defined.
+
+
+LaTeX Warning: Label `felsner92complexity' multiply defined.
+
+
+LaTeX Warning: Label `chuang98quantum' multiply defined.
+
+
+LaTeX Warning: Label `griffiths95quantum' multiply defined.
+
+
+LaTeX Warning: Label `grover96fast' multiply defined.
+
+
+LaTeX Warning: Label `grover00search' multiply defined.
+
+
+LaTeX Warning: Label `ibm01shor' multiply defined.
+
+
+LaTeX Warning: Label `lovasz94complexity' multiply defined.
+
+
+LaTeX Warning: Label `lovasz94evasive' multiply defined.
+
+
+LaTeX Warning: Label `papa94complexity' multiply defined.
+
+
+LaTeX Warning: Label `patterson98computer' multiply defined.
+
+
+LaTeX Warning: Label `shor94algorithms' multiply defined.
+
+
+LaTeX Warning: Label `williams98quantum' multiply defined.
+
+) (/home/viblio/quant/web/thesis/1-introduction.aux
+
+LaTeX Warning: Label `ch:introduction' multiply defined.
+
+
+LaTeX Warning: Label `sec:mot' multiply defined.
+
+
+LaTeX Warning: Label `sec:early' multiply defined.
+
+
+LaTeX Warning: Label `sec:quant' multiply defined.
+
+
+LaTeX Warning: Label `sec:error' multiply defined.
+
+
+LaTeX Warning: Label `sec:lower' multiply defined.
+
+
+LaTeX Warning: Label `sec:outline' multiply defined.
+
+
+LaTeX Warning: Label `sec:sumofres' multiply defined.
+
+
+LaTeX Warning: Label `tbl:results' multiply defined.
+
+) (/home/viblio/quant/web/thesis/2-oracle.aux
+
+LaTeX Warning: Label `ch:oracle' multiply defined.
+
+
+LaTeX Warning: Label `sec:qom' multiply defined.
+
+
+LaTeX Warning: Label `th:amb' multiply defined.
+
+
+LaTeX Warning: Label `sec:lplqb' multiply defined.
+
+
+LaTeX Warning: Label `lm:1xky' multiply defined.
+
+
+LaTeX Warning: Label `sec:gXOR' multiply defined.
+
+
+LaTeX Warning: Label `th:gXOR' multiply defined.
+
+
+LaTeX Warning: Label `sec:dos' multiply defined.
+
+
+LaTeX Warning: Label `th:dosbad' multiply defined.
+
+
+LaTeX Warning: Label `th:dosgood' multiply defined.
+
+
+LaTeX Warning: Label `sec:torf1' multiply defined.
+
+
+LaTeX Warning: Label `th:1sqn' multiply defined.
+
+
+LaTeX Warning: Label `th:best' multiply defined.
+
+
+LaTeX Warning: Label `cor:ambbad' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbsym' multiply defined.
+
+
+LaTeX Warning: Label `def:sym' multiply defined.
+
+
+LaTeX Warning: Label `th:ptsym' multiply defined.
+
+
+LaTeX Warning: Label `sec:AOMP' multiply defined.
+
+
+LaTeX Warning: Label `th:AND' multiply defined.
+
+
+LaTeX Warning: Label `th:MAJORITY' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbnsf' multiply defined.
+
+
+LaTeX Warning: Label `th:sym' multiply defined.
+
+) (/home/viblio/quant/web/thesis/3-graph.aux
+
+LaTeX Warning: Label `ch:graph' multiply defined.
+
+
+LaTeX Warning: Label `sec:prelim' multiply defined.
+
+
+LaTeX Warning: Label `subs:ddt' multiply defined.
+
+
+LaTeX Warning: Label `subs:ddtc' multiply defined.
+
+
+LaTeX Warning: Label `sec:ef' multiply defined.
+
+
+LaTeX Warning: Label `sec:gp' multiply defined.
+
+
+LaTeX Warning: Label `cj:ark' multiply defined.
+
+
+LaTeX Warning: Label `sec:gbs' multiply defined.
+
+
+LaTeX Warning: Label `fi:graph' multiply defined.
+
+
+LaTeX Warning: Label `tbl:graph' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbnmgp' multiply defined.
+
+
+LaTeX Warning: Label `sec:gc' multiply defined.
+
+
+LaTeX Warning: Label `lm:1erc' multiply defined.
+
+
+LaTeX Warning: Label `lm:1ernc' multiply defined.
+
+
+LaTeX Warning: Label `th:gc' multiply defined.
+
+
+LaTeX Warning: Label `fi:gc' multiply defined.
+
+
+LaTeX Warning: Label `sec:bip' multiply defined.
+
+
+LaTeX Warning: Label `th:nbpt' multiply defined.
+
+
+LaTeX Warning: Label `sec:arkbad' multiply defined.
+
+) (/home/viblio/quant/web/thesis/4-general.aux
+
+LaTeX Warning: Label `ch:general' multiply defined.
+
+
+LaTeX Warning: Label `sec:tree' multiply defined.
+
+
+LaTeX Warning: Label `theo:treelow' multiply defined.
+
+
+LaTeX Warning: Label `sec:dndtc' multiply defined.
+
+
+LaTeX Warning: Label `defi:nd0' multiply defined.
+
+
+LaTeX Warning: Label `defi:nd1' multiply defined.
+
+
+LaTeX Warning: Label `defi:ndc' multiply defined.
+
+
+LaTeX Warning: Label `sec:b4r' multiply defined.
+
+
+LaTeX Warning: Label `th:b2r' multiply defined.
+
+
+LaTeX Warning: Label `sec:lqbcbf' multiply defined.
+
+
+LaTeX Warning: Label `th:b4r' multiply defined.
+
+) (/home/viblio/quant/web/thesis/5-conclusion.aux
+
+LaTeX Warning: Label `ch:open' multiply defined.
+
+)
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=693.295pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=18.06749pt
+
+latex2htmlLength evensidemargin=18.06749pt
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 192.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 192.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 192.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+l2hSize :tex2html_wrap_inline3776:11.61995pt::11.61995pt::21.25pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_inline3779:8.2pt::0.0pt::9.07355pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline3789:10.99998pt::10.99998pt::16.98344pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline3794:8.2pt::0.0pt::9.72632pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline3795:9.5pt::9.5pt::5.2542pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline3797:10.68889pt::10.68889pt::16.2236pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline3799:11.03372pt::0.0pt::4.59593pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline3800:11.53372pt::11.53372pt::6.1237pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline3801:11.49995pt::0.0pt::7.10136pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_indisplay3803:9.05331pt::9.05331pt::8.69853pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_indisplay3804:11.53372pt::11.53372pt::4.59593pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_indisplay3805:11.53372pt::11.53372pt::6.1237pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_indisplay3806:11.99995pt::11.99995pt::7.10136pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_indisplay3808:9.5pt::9.5pt::5.2542pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline3813:9.5pt::9.5pt::5.2542pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline3828:9.5pt::9.5pt::6.4542pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline3829:9.5pt::9.5pt::6.4542pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_inline3830:11.80006pt::11.80006pt::32.21419pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_indisplay3862:22.16672pt::22.16672pt::19.04749pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline3878:12.45667pt::12.45667pt::20.5848pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_indisplay3880:51.49493pt::51.49493pt::12.28755pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_indisplay3881:51.49493pt::51.49493pt::199.72942pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_indisplay3882:51.49493pt::51.49493pt::12.28755pt.
+[23
+
+
+]
+l2hSize :tex2html_wrap_inline3893:12.45667pt::12.45667pt::23.17358pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline3897:8.25pt::8.25pt::8.58754pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline3907:14.3001pt::14.3001pt::8.95421pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline3909:14.3001pt::14.3001pt::8.95421pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline3918:15.11101pt::15.11101pt::8.95421pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline3919:15.11101pt::15.11101pt::43.9597pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_inline3920:15.11101pt::15.11101pt::8.95421pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline3933:9.5pt::9.5pt::6.35692pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline3934:9.5pt::9.5pt::6.35692pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline3946:9.5pt::9.5pt::6.35692pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline3947:9.5pt::9.5pt::6.35692pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline3954:14.3001pt::14.3001pt::8.95421pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_inline3955:11.61995pt::11.61995pt::21.58333pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_inline3956:14.3001pt::14.3001pt::8.95421pt.
+[37
+
+
+]
+l2hSize :tex2html_wrap_inline3964:14.3001pt::14.3001pt::8.95421pt.
+[38
+
+
+]
+l2hSize :tex2html_wrap_inline3965:11.72003pt::11.72003pt::39.21468pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_inline3966:14.3001pt::14.3001pt::8.95421pt.
+[40
+
+
+]
+\c@theorem=\count103
+\c@lemma=\count104
+\c@defi=\count105
+\c@corollary=\count106
+l2hSize :tex2html_wrap_inline4058:8.25pt::8.25pt::9.92088pt.
+[41
+
+
+]
+l2hSize :tex2html_wrap_inline4060:10.93997pt::10.93997pt::20.69728pt.
+[42
+
+
+]
+l2hSize :tex2html_wrap_inline4063:11.53333pt::11.53333pt::19.72377pt.
+[43
+
+
+]
+l2hSize :tex2html_wrap_inline4077:11.53333pt::11.53333pt::31.0363pt.
+[44
+
+
+]
+l2hSize :tex2html_wrap_inline4082:9.5pt::9.5pt::5.92087pt.
+[45
+
+
+]
+l2hSize :tex2html_wrap_inline4083:9.5pt::9.5pt::5.92087pt.
+[46
+
+
+]
+l2hSize :tex2html_wrap_inline4092:8.25pt::8.25pt::9.92088pt.
+[47
+
+
+]
+l2hSize :tex2html_wrap_indisplay4106:8.25pt::8.25pt::12.58755pt.
+[48
+
+
+]
+l2hSize :tex2html_wrap_inline4129:7.75pt::0.0pt::5.8097pt.
+[49
+
+
+]
+l2hSize :tex2html_wrap_inline4142:8.83333pt::8.83333pt::9.72632pt.
+[50
+
+
+]
+l2hSize :tex2html_wrap_inline4148:8.25pt::8.25pt::9.92088pt.
+[51
+
+
+]
+l2hSize :tex2html_wrap_indisplay4176:8.7pt::8.7pt::9.07355pt.
+[52
+
+
+]
+l2hSize :tex2html_wrap_indisplay4177:21.50017pt::21.50017pt::11.28755pt.
+[53
+
+
+]
+l2hSize :tex2html_wrap_indisplay4178:20.40483pt::20.40483pt::38.34843pt.
+[54
+
+
+]
+l2hSize :tex2html_wrap_indisplay4179:21.50017pt::21.50017pt::11.28755pt.
+[55
+
+
+]
+l2hSize :tex2html_wrap_inline4187:9.5pt::9.5pt::5.12086pt.
+[56
+
+
+]
+l2hSize :tex2html_wrap_inline4188:9.5pt::9.5pt::6.4542pt.
+[57
+
+
+]
+l2hSize :tex2html_wrap_inline4195:9.5pt::9.5pt::5.12086pt.
+[58
+
+
+]
+l2hSize :tex2html_wrap_inline4196:9.5pt::9.5pt::6.4542pt.
+[59
+
+
+]
+l2hSize :tex2html_wrap_indisplay4198:14.3001pt::14.3001pt::8.95421pt.
+[60
+
+
+]
+l2hSize :tex2html_wrap_indisplay4199:8.25pt::8.25pt::13.34583pt.
+[61
+
+
+]
+l2hSize :tex2html_wrap_indisplay4200:9.5pt::9.5pt::5.12086pt.
+[62
+
+
+]
+l2hSize :tex2html_wrap_indisplay4201:9.5pt::9.5pt::6.4542pt.
+[63
+
+
+]
+l2hSize :tex2html_wrap_indisplay4202:8.83331pt::8.83331pt::12.50557pt.
+[64
+
+
+]
+l2hSize :tex2html_wrap_indisplay4203:11.8999pt::11.8999pt::23.47621pt.
+[65
+
+
+]
+l2hSize :tex2html_wrap_indisplay4205:14.3001pt::14.3001pt::8.95421pt.
+[66
+
+
+]
+l2hSize :tex2html_wrap_indisplay4206:8.25pt::8.25pt::9.92088pt.
+[67
+
+
+]
+l2hSize :tex2html_wrap_indisplay4207:9.5pt::9.5pt::5.12086pt.
+[68
+
+
+]
+l2hSize :tex2html_wrap_indisplay4208:9.5pt::9.5pt::6.4542pt.
+[69
+
+
+]
+l2hSize :tex2html_wrap_indisplay4210:9.5pt::9.5pt::5.12086pt.
+[70
+
+
+]
+l2hSize :tex2html_wrap_indisplay4211:9.5pt::9.5pt::6.4542pt.
+[71
+
+
+]
+l2hSize :tex2html_wrap_inline4213:8.25pt::8.25pt::13.34583pt.
+[72
+
+
+]
+l2hSize :tex2html_wrap_inline4214:8.83331pt::8.83331pt::12.50557pt.
+[73
+
+
+]
+l2hSize :tex2html_wrap_inline4217:8.25pt::8.25pt::9.92088pt.
+[74
+
+
+]
+l2hSize :tex2html_wrap_inline4220:8.25pt::8.25pt::9.92088pt.
+[75
+
+
+]
+l2hSize :tex2html_wrap_indisplay4226:16.70006pt::16.70006pt::17.9209pt.
+[76
+
+
+]
+l2hSize :tex2html_wrap_indisplay4227:16.35141pt::16.35141pt::29.57916pt.
+[77
+
+
+]
+l2hSize :tex2html_wrap_indisplay4231:16.35141pt::16.35141pt::29.57916pt.
+[78
+
+
+]
+l2hSize :tex2html_wrap_inline4279:11.68661pt::11.68661pt::17.1014pt.
+[79
+
+
+]
+l2hSize :proof688:226.31317pt::0.0pt::349.0pt.
+[80
+
+
+]
+l2hSize :tex2html_wrap_inline4283:7.75pt::0.0pt::2.89308pt.
+[81
+
+
+]
+l2hSize :proof711:83.81633pt::0.0pt::349.0pt.
+[82
+
+
+]
+l2hSize :tex2html_wrap_inline4301:12.9998pt::0.0pt::61.82193pt.
+[83
+
+
+]
+l2hSize :proof726:106.32576pt::0.0pt::349.0pt.
+[84
+
+
+]
+l2hSize :proof734:109.32576pt::0.0pt::349.0pt.
+[85
+
+
+]
+l2hSize :proof752:421.29303pt::0.0pt::349.0pt.
+[86
+
+
+]
+l2hSize :tex2html_wrap_indisplay4390:23.0493pt::23.0493pt::11.28755pt.
+[87
+
+
+]
+l2hSize :tex2html_wrap_indisplay4391:23.0493pt::23.0493pt::60.61914pt.
+[88
+
+
+]
+l2hSize :tex2html_wrap_indisplay4392:23.0493pt::23.0493pt::11.28755pt.
+[89
+
+
+]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 856.
+
+l2hSize :proof779:396.0315pt::0.0pt::349.0pt.
+[90
+
+
+]
+l2hSize :proof812:180.20334pt::0.0pt::349.0pt.
+[91
+
+
+]
+l2hSize :proof824:189.80164pt::0.0pt::349.0pt.
+[92
+
+
+]
+Overfull \hbox (4.68568pt too wide) in paragraph at lines 923--927
+[]\OT1/cmr/m/n/12 For any $\OML/cmm/m/it/12 N$\OT1/cmr/m/n/12 -bit non-con-stan
+t sym-met-ric Boolean func-tion, there
+ []
+
+l2hSize :proof843:182.53665pt::0.0pt::349.0pt.
+[93
+
+
+]
+\c@conj=\count107
+File: figures/sample_graph.eps Graphic file (type eps)
+<figures/sample_graph.eps>
+l2hSize :tex2html_wrap4501:112.42pt::0.0pt::349.0pt.
+[94
+
+
+]
+l2hSize :table1783:99.99991pt::0.0pt::349.0pt.
+[95
+
+
+]
+l2hSize :tex2html_wrap_indisplay4521:32.91164pt::32.91164pt::12.28755pt.
+[96
+
+
+]
+l2hSize :tex2html_wrap_indisplay4522:32.91164pt::32.91164pt::221.03777pt.
+[97
+
+
+]
+l2hSize :tex2html_wrap_indisplay4523:32.91164pt::32.91164pt::12.28755pt.
+[98
+
+
+]
+l2hSize :proof1812:60.66411pt::0.0pt::349.0pt.
+[99
+
+
+]
+l2hSize :proof1817:36.66663pt::0.0pt::349.0pt.
+[100
+
+
+]
+l2hSize :proof1822:427.35631pt::0.0pt::349.0pt.
+[101
+
+
+]
+File: figures/conn2.eps Graphic file (type eps)
+<figures/conn2.eps>
+Overfull \hbox (121.75874pt too wide) detected at line 1052
+ [] 
+ []
+
+l2hSize :tex2html_wrap4557:231.86624pt::0.0pt::349.0pt.
+[102
+
+
+]
+l2hSize :proof1852:229.31317pt::0.0pt::349.0pt.
+[103
+
+
+]
+l2hSize :tex2html_wrap_inline4575:8.2pt::0.0pt::9.72632pt.
+[104
+
+
+]
+\c@cond=\count108
+\c@algoi=\count109
+l2hSize :proof2249:370.29807pt::0.0pt::349.0pt.
+[105
+
+
+]
+l2hSize :tex2html_wrap_inline4653:8.25pt::8.25pt::27.74013pt.
+[106
+
+
+]
+l2hSize :proof2300:649.27028pt::0.0pt::349.0pt.
+[107
+
+
+]
+l2hSize :proof2350:133.20996pt::0.0pt::349.0pt.
+[108
+
+
+]
+l2hSize :tex2html_wrap_inline4692:11.72003pt::11.72003pt::39.21468pt.
+[109
+
+
+] (./images.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2632 strings out of 495033
+ 32945 string characters out of 6181744
+ 81482 words of memory out of 5000000
+ 5777 multiletter control sequences out of 15000+600000
+ 9470 words of font info for 38 fonts, out of 8000000 for 9000
+ 19 hyphenation exceptions out of 8191
+ 34i,13n,28p,279b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on images.dvi (109 pages, 42492 bytes).

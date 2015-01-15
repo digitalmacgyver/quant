@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tree Functions</TITLE>
+<META NAME="description" CONTENT="Tree Functions">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node53.html">
+<LINK REL="previous" HREF="node51.html">
+<LINK REL="up" HREF="node51.html">
+<LINK REL="next" HREF="node53.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html753"
+  HREF="node53.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html749"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html743"
+  HREF="node51.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html751"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html754"
+  HREF="node53.html">Nondeterministic Decision Tree Complexity</A>
+<B> Up:</B> <A NAME="tex2html750"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html744"
+  HREF="node51.html">Boolean Functions</A>
+ &nbsp; <B>  <A NAME="tex2html752"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00910000000000000000"></A>
+<A NAME="sec:tree"></A>
+<BR>
+Tree Functions
+</H1>
+
+<P>
+Tree functions are Boolean functions of <I>N</I> bits that can be written
+as a disjunction of conjunctions in which each of the <I>N</I> variables
+occurs exactly once.  Tree functions are evasive in the classical case
+[<A
+ HREF="node57.html#lovasz94evasive">14</A>].
+
+<P>
+<P>
+<DIV><A NAME="theo:treelow"><B>Theorem  4.1.1</B></A> &nbsp; 
+<I><!-- MATH
+ $\Omega(\sqrt[4]{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ \sqrt[4]{{N}}$">) oracle queries are required to compute any tree
+function of <I>N</I> bits in the bounded error setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="556" HEIGHT="549" ALIGN="BOTTOM" BORDER="0"
+ SRC="img105.png"
+ ALT="\begin{proof}
+% latex2html id marker 2249For any tree function $f$ let $d$ b...
+... $c_{max} &gt; \sqrt{N}$ or $d \ge
+\sqrt{N}$, and the theorem follows.
+\end{proof}">
+<BR>
+
+<P>
+This lower bound is a special case of the <!-- MATH
+ $\Omega(\sqrt[4]{D(f)})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sqrt[4]{{D(f)}}$">)
+lower bound for monotone functions proved by Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>], as tree functions are monotone functions with
+decision tree complexity <I>N</I>.  Here we see for the first time a gap
+that is not quadratic with the classical case.  While this lower bound
+agrees with the result for monotone functions, the author believes it
+is not asymptotically tight.  Whether there is an <!-- MATH
+ $\Omega(\sqrt{N})$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$">(<IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$">)
+lower bound for computing <I>N</I>-bit tree functions is an open question.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html753"
+  HREF="node53.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html749"
+  HREF="node51.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html743"
+  HREF="node51.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html751"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html754"
+  HREF="node53.html">Nondeterministic Decision Tree Complexity</A>
+<B> Up:</B> <A NAME="tex2html750"
+  HREF="node51.html">Boolean Functions</A>
+<B> Previous:</B> <A NAME="tex2html744"
+  HREF="node51.html">Boolean Functions</A>
+ &nbsp; <B>  <A NAME="tex2html752"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

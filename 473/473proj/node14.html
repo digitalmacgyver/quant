@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Inversion About Average Operator</TITLE>
+<META NAME="description" CONTENT="Inversion About Average Operator">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html232"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html228"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html222"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html230"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html233"
+  HREF="node15.html">Proof that Operations are</A>
+<B> Up:</B> <A NAME="tex2html229"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html223"
+  HREF="node13.html">Operator to Rotate Phase</A>
+ &nbsp; <B>  <A NAME="tex2html231"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00055000000000000000">
+Inversion About Average Operator</A>
+</H2>
+
+<P>
+We define the inversion about average operation on our state vector as
+an operator that takes the amplitude of the i'th state, and increases
+or decreases it so that it is as much above or below the average as it
+was below or above the average before the operation. [Grover96]
+
+<P>
+The matrix representation of the inversion about average operator
+<IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \hat{{A}}$"> is defined: <!-- MATH
+ $A_{ij} = 2/N$
+ -->
+<I>A</I><SUB>ij</SUB> = 2/<I>N</I> if <!-- MATH
+ $i \not = j$
+ -->
+<I>i</I> <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \not=$"><I>j</I> and <!-- MATH
+ $A_{ii} = -1
++ 2/N$
+ -->
+<I>A</I><SUB>ii</SUB> = - 1 + 2/<I>N</I>.  Note that <!-- MATH
+ $A = -I + 2P$
+ -->
+<I>A</I> = - <I>I</I> + 2<I>P</I> where <I>I</I> is the identity matrix, and
+<I>P</I> is the matrix with each element is equal to 1/<I>N</I>.  Observe that
+<I>P</I> has the following two properties, first <I>P</I><SUP>2</SUP> = <I>P</I>, and second
+<I>Pv</I>, for any vector <I>v</I>, results in a vector <I>v</I><SUP>'</SUP> with each
+element being the arithmetic average of the the elements of
+<I>v</I>. [Grover96]
+
+<P>
+Now we can examine the operation of <I>A</I> on an arbitrary vector <I>v</I>.
+<!-- MATH
+ $Av = (-I + 2P)v = -v + 2Pv$
+ -->
+<I>Av</I> = (- <I>I</I> + 2<I>P</I>)<I>v</I> = - <I>v</I> + 2<I>Pv</I>, By the second property of <I>P</I> above,
+note that <I>Pv</I> is a vector with each element equal to <I>a</I> where <I>a</I> is
+the arithmetic average of the elements of <I>v</I>.  Therefore the i'th
+component of the vector is <!-- MATH
+ $(-v_{i} + 2a)$
+ -->
+(- <I>v</I><SUB>i</SUB> + 2<I>a</I>) which can be rewritten
+<!-- MATH
+ $a+(a-v_{i})$
+ -->
+<I>a</I> + (<I>a</I> - <I>v</I><SUB>i</SUB>).  Thus the i'th element is exactly as much above/below
+average as it was below/above average before the operation. [Grover96]
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html232"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html228"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html222"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html230"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html233"
+  HREF="node15.html">Proof that Operations are</A>
+<B> Up:</B> <A NAME="tex2html229"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html223"
+  HREF="node13.html">Operator to Rotate Phase</A>
+ &nbsp; <B>  <A NAME="tex2html231"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

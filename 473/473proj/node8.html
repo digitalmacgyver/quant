@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Performing Computations</TITLE>
+<META NAME="description" CONTENT="Performing Computations">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="473proj.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html148"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html144"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html138"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html146"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html149"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html145"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html139"
+  HREF="node7.html">A Formal Description of</A>
+ &nbsp; <B>  <A NAME="tex2html147"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Performing Computations</A>
+</H1>
+
+<P>
+Given the above constraints, it is not clear how to proceed in order
+to have our quantum register undergo a transformation from an initial
+state to some final state which performs a useful calculation.
+Further, if we wish to make use of quantum parallelism, it is not
+clear if the amplitude of the desired state will be large enough for
+there to be a good chance of finding the register in this state.
+
+<P>
+Since an operation on our <I>n</I> bit quantum register is simply a process
+which transforms our state vector in our <I>N</I> = 2<SUP>n</SUP> dimensional
+Hilbert space from state <!-- MATH
+ $\Psi = (a_{1}, a_{2}, \ldots a_{N})^{T}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Psi$"> = (<I>a</I><SUB>1</SUB>, <I>a</I><SUB>2</SUB>,...<I>a</I><SUB>N</SUB>)<SUP>T</SUP> to
+another state <!-- MATH
+ $\Psi^{'} = (a_{1}^{'}, a_{2}^{'}, \ldots
+a_{N}^{'})^{T}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ \Psi^{{'}}_{}$"> = (<I>a</I><SUB>1</SUB><SUP>'</SUP>, <I>a</I><SUB>2</SUB><SUP>'</SUP>,...<I>a</I><SUB>N</SUB><SUP>'</SUP>)<SUP>T</SUP>, we can represent any possible operator <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \hat{{T}}$"> as a
+matrix:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+T = \left( \begin{array}{cccc}
+	T_{11} & T_{12} & \ldots & T_{1N} \\
+	T_{21} & T_{22} & \ldots & T_{2N} \\
+	\vdots & \vdots &        & \vdots \\
+	T_{N1} & T_{N2} & \ldots & T_{NN}
+	\end{array}
+	\right)
+	
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>T</I> = <IMG
+ WIDTH="20" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{cccc}
+T_{11} &amp; T_{12} &amp; \ldots &amp; ...
+...vdots &amp; &amp; \vdots \\
+T_{N1} &amp; T_{N2} &amp; \ldots &amp; T_{NN}
+\end{array} }\right.$"><IMG
+ WIDTH="174" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \begin{array}{cccc}
+T_{11} &amp; T_{12} &amp; \ldots &amp; T_{1N} \\
+T_{2...
+...vdots &amp; \vdots &amp; &amp; \vdots \\
+T_{N1} &amp; T_{N2} &amp; \ldots &amp; T_{NN}
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="102" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{cccc}
+T_{11} &amp; T_{12} &amp; \ldots &amp; ...
+...vdots &amp; &amp; \vdots \\
+T_{N1} &amp; T_{N2} &amp; \ldots &amp; T_{NN}
+\end{array} }\right)$">
+</DIV><P></P>
+
+<P>
+The matrix element <I>T</I><SUB>ij</SUB> is the projection of the j'th component of
+the input onto the i'th component of the output due to the
+operator. [Griffiths95]
+
+<P>
+While mathematically any transformation can be achieved by assigning
+the appropriate values to the matrix elements, only a very small class
+of operators represent physically realizable operators on a quantum
+system.  For a matrix to represent an operator which acts on a quantum
+mechanical system, its effect on the state vector must agree with
+conditions imposed by the Schr&#246;dinger equation, namely the
+operation must be reversible, and it must preserve normalization of
+the state vector.
+
+<P>
+Physically realizable quantum transformations are reversible, thus we
+are immediately restricted to consideration of operators whose matrix
+representations are invertable, if the matrix representing the
+operation <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \hat{{T}}$"> is singular (the determinant of <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \hat{{T}}$">'s matrix
+representation is 0), it has no inverse, and thus can not be reversed.
+So, invertability is a necessary, but not sufficient condition for a
+matrix representation of a legal operator.
+
+<P>
+If we further require that the sum of the kinetic and potential energy
+(called the Hamiltonian) of our system is not changing with time, then
+the matrix representing any legal transformation will be ``unitary''.
+A matrix <I>T</I> is unitary if the transpose of the complex conjugate of
+<I>T</I> is <I>T</I><SUP>-1</SUP>.  [Griffiths95] So, we restrict our candidates for
+operators to ones whose matrices are unitary, which will be a
+necessary and sufficient condition for being a physically realizable
+transformation on a quantum mechanical system with a time independent
+Hamiltonian.  Systems with time dependent Hamiltonians' are also
+feasible, but are not required to perform either Grover's or Shor's
+algorithm, and are not considered here.
+
+<P>
+Now the specification of a quantum algorithm is simply a specification
+for an initial normalized state vector of the quantum register, and a
+series of unitary matrices representing legal transformations on that
+state vector.  Eventually we will measure our register, and if our
+operators are chosen well we will measure the register to be in a
+desired state with high probability.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html148"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html144"
+  HREF="473proj.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html138"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html146"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html149"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Up:</B> <A NAME="tex2html145"
+  HREF="473proj.html">Quantum Computing and Grover's</A>
+<B> Previous:</B> <A NAME="tex2html139"
+  HREF="node7.html">A Formal Description of</A>
+ &nbsp; <B>  <A NAME="tex2html147"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

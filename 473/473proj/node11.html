@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Outline of Proof of Correctness of Grover's Algorithm</TITLE>
+<META NAME="description" CONTENT="Outline of Proof of Correctness of Grover's Algorithm">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html196"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html192"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html186"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html194"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html197"
+  HREF="node12.html">Operator to Create Equal</A>
+<B> Up:</B> <A NAME="tex2html193"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html187"
+  HREF="node10.html">An Illustration of Grover's</A>
+ &nbsp; <B>  <A NAME="tex2html195"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00052000000000000000">
+Outline of Proof of Correctness of Grover's Algorithm</A>
+</H2>
+
+<P>
+To prove that Grover's algorithm successfully finds the unique marked
+state in <!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">) operations we must show the following:
+
+<P>
+
+<OL>
+<LI>That there is a operator to produce a equal superposition of states
+for part 1 of the algorithm.  This operation is well known and referred
+to as the Walsh-Hadamard operator.
+
+<P>
+</LI>
+<LI>That there is a operator to rotate the phase of a given state.
+
+<P>
+</LI>
+<LI>That the definition of the matrix <I>A</I> : <!-- MATH
+ $A_{ij} = 2/N$
+ -->
+<I>A</I><SUB>ij</SUB> = 2/<I>N</I> if <!-- MATH
+ $i \not = j$
+ -->
+<I>i</I> <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \not=$"><I>j</I>
+and <!-- MATH
+ $A_{ii} = -1 + 2/N$
+ -->
+<I>A</I><SUB>ii</SUB> = - 1 + 2/<I>N</I> is an inversion about average operator.
+
+<P>
+</LI>
+<LI>That the matrix representations of all operators used are unitary.  If
+this is the case then these transformations are physically realizable.
+
+<P>
+</LI>
+<LI>That repeated applications of step 2 of the algorithm increase the
+amplitude of the marked state, such that after <!-- MATH
+ $O(\sqrt{N})$
+ -->
+<I>O</I>(<IMG
+ WIDTH="32" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \sqrt{{N}}$">)
+iterations the probability of measuring the marked state is at least
+1/2.
+
+<P>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html196"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html192"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html186"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html194"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html197"
+  HREF="node12.html">Operator to Create Equal</A>
+<B> Up:</B> <A NAME="tex2html193"
+  HREF="node9.html">Grover's Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html187"
+  HREF="node10.html">An Illustration of Grover's</A>
+ &nbsp; <B>  <A NAME="tex2html195"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

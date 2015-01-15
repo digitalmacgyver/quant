@@ -1,0 +1,446 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+The relatively new field of quantum computing has seen rapid growth in
+the past two decades.  Quantum computing spans the theoretical and
+applied sides of both computer science and quantum physics.  From its
+beginnings as a thought experiment, its growth into formal system, and
+finally its detailed analysis and construction, the development of
+quantum computing has paralleled the early development of classical
+computing.
+
+In Section \ref{sec:mot} we briefly examine some of the reasons for
+interest in quantum computing.  We then turn our attention to early
+results and prominent quantum algorithms in Section \ref{sec:early}.
+We review the theory and notation of quantum computing in Section
+\ref{sec:quant}.  Following that we underline the importance of lower
+bounds in Section \ref{sec:lower}, and summarize our results in
+Section \ref{sec:sumofres}.
+
+\section{Motivation}
+\label{sec:mot}
+
+\subsubsection{Possible Violation of the Polynomial Church-Turing Thesis}
+
+One of the fundamental axioms of computer science is the Church-Turing
+thesis, which states that any function computable by a ``realistic''
+computer can be computed by a Turing machine.  An extension of the
+Church-Turing thesis, the Polynomial Church-Turing thesis states:
+\begin{quote}
+\ldots any reasonable attempt to model mathematically
+computer algorithms and their time performance is bound to end up with
+a model of computation and associated time cost that is equivalent to
+Turing machines within a polynomial \cite{papa94complexity}.
+\end{quote} 
+This says essentially that all physically realizable computing devices
+are, within a polynomial factor, equivalent to one another in their
+time complexity.
+
+In the early 1980's physicist Richard Feynman observed that no
+classical computer can simulate a quantum mechanical system of
+particles without incurring exponential slowdown
+\cite{williams98quantum}.  He also suggested that a computer that
+behaves in a quantum-mechanical way could potentially simulate such
+systems without exponential slowdown \cite{williams98quantum}.  The
+possibility that a quantum computer could violate the polynomial
+Church-Turning thesis made the study of quantum computation appealing,
+and provided a strong incentive for studying quantum time complexity.
+Many of the earliest problems and algorithms for quantum computers
+were explicitly designed to show tasks that a quantum computer
+performs exponentially faster than a classical Turing machine.
+	
+\subsubsection{Hardware Trends Toward Quantum Sizes}
+
+Another strong incentive to study quantum computing is the
+miniaturization of classical computing components.  The size of
+transistors and memory elements has shrunk at an exponential rate.  At
+the current rate, sometime around 2020 the number of atoms used to
+represent a bit will be 1 \cite{williams98quantum}.  At this scale,
+quantum mechanics will dominate the behavior of the memory element.
+Whether or not quantum computing will provide a launch pad for a new
+generation of computing devices is irrelevant to the practical need to
+understand and manipulate systems so small that their behavior is
+dictated by quantum physics.
+
+\section{Early Results}
+\label{sec:early}
+
+\paragraph{Deutsch's Universal Quantum Computer:}
+In 1985 David Deutsch published his seminal paper
+\emph{Quantum theory, the Church-Turing principle and the universal
+quantum computer} \cite{deutsch85quantum}.  In this paper Deutsch
+defined a quantum generalization of the classical Turing machine,
+showed that all Turing computable functions are also computable by his
+universal quantum computer, and exhibited a task that his universal
+quantum computer is more efficient for than any classical restriction
+of it \cite{deutsch85quantum}.
+
+Following this paper, researchers identified several toy problems that
+a quantum computer is exponentially faster for than a classical Turing
+machine \cite{brassard97exact} \cite{berthiaume92oracle}.
+Unfortunately, these were all contrived problems with no practical
+application.  While the potential for exponential speedup fostered
+great curiosity, the study of quantum computing remained primarily
+academic.
+
+\subsubsection{Prominent Quantum Algorithms}
+
+\paragraph{Shor's Algorithm:}
+The status of quantum computing as a matter of academic curiosity
+changed rapidly in 1994 when Peter Shor published his paper
+\emph{Algorithms for Quantum Computation: Discrete Logarithms and
+Factoring}.  The primary result of the paper was a polynomial time
+quantum algorithm for factoring large integers
+\cite{shor94algorithms}. It is not known if there is a classical
+algorithm for factoring large integers efficiently, but the best
+algorithms published thus far are exponential
+\cite{williams98quantum}.  The presumed difficulty of factoring 
+large integers is the basis for most modern cryptography.  The
+importance of cryptography and its potential frailty in the face of
+Shor's algorithm argue for earnestly researching the practicality of
+constructing a quantum computer; this endeavor is currently ongoing in
+multiple corporate, government, and academic research facilities
+\cite{ibm01shor} \cite{chuang98quantum}.
+
+\paragraph{Grover's Algorithm:}
+In 1996 L. K. Grover published his paper \emph{A Fast Quantum
+Mechanical Algorithm for Database Search} providing a $O(\sqrt{N})$
+time algorithm for finding a single marked element in an unsorted
+database of $N$ elements \cite{grover96fast}; the best possible
+classical algorithm requires $\Omega(N)$ time.  This unordered search
+problem was not the first problem for which a quantum algorithm was
+shown to be asymptotically faster than any classical algorithm, but it
+was the first such problem of real utility.  Grover's algorithm is
+optimal to within a constant factor, so the potential speedup of any
+quantum algorithm for the unordered search problem is moderate: a
+quadratic factor.  While Shor's algorithm may be of more immediate
+utility, Grover's algorithm seems more interesting in a theoretical
+sense, as it highlights an area of fundamental superiority in quantum
+computation.
+
+\section{Quantum Computing}
+\label{sec:quant}
+
+The study of quantum computing is frequently opaqued by the demands
+that it places on the investigator's sophistication in quantum
+mechanics.  We try in this section to present the basics of quantum
+computation and some common notation without delving deeply into
+quantum physics.  For more detailed information the author suggests
+\emph{Quantum Computation} by Andr\'{e} Berthiaume
+\cite{berthiaume97quantum}.
+
+\subsubsection{Bits and Qubits}
+
+The most fundamental building block of the classical computer is the
+bit.  A bit is a variable with only two possible values: 0 or 1.  The
+smallest conceivable storage for a bit involves a single elementary
+particle of some sort.  Consider a particle with a spin-1/2
+characteristic that when measured is either $+1/2$ or $-1/2$.  We
+could encode 1 to be $+1/2$ and 0 to be $-1/2$, and if we could
+measure and manipulate the spin of such a particle, then we could
+theoretically use this particle to store one bit of information.  The
+spin-1/2 particle, or any two state system that behaves in a quantum
+manner, could instead be the fundamental building block of a quantum
+computer.  We will call a two state quantum system a \emph{qubit}, to
+denote that it is analogous to a classical bit.  When a classical bit
+is measured, the value observed will always be the value stored.
+Quantum physics states that when we measure a qubit we will find it in
+one of two states, which we can label 0 and 1.  The differences
+between the qubit and the bit arise from the possible state of a qubit
+between measurements.
+
+\subsubsection{State Vectors and Dirac Notation}
+
+To quantify the state of our qubit when it is not being measured, we
+introduce the concept of the \emph{state vector}, which will
+completely describe the state of our qubit, and later the state of a
+quantum register which we construct from multiple qubits.
+
+\paragraph{State Vectors:} 
+We can describe the state of any quantum system by a state vector in a
+Hilbert space.  A Hilbert space is a complex linear vector space
+$\Complex^{N}$ \cite{williams98quantum}.  In the Hilbert space for a
+state vector describing an $N$-state quantum system there will be $N$
+perpendicular axes, which correspond to the measurable states of the
+system.  These are called basis states or \emph{eigenstates}.  In
+general, the total state of a quantum system can be any complex linear
+combination of the basis states.  The Hilbert space for a single qubit
+has two perpendicular axes, one corresponding to the 0 state, and the
+other corresponding to the 1 state.
+
+\paragraph{Dirac Notation:}
+
+The standard notation for a state vector is a \emph{ket vector}
+$|\Psi\rangle$.  For example, a vector in $\Real^{3}$ with basis
+$\hat{i},\hat{j},\hat{k}$ is typically written as
+\[
+\vec{v} =  a\hat{i}  +  b\hat{j}  +  c\hat{k}  =  (a,b,c)^{T} .
+\]
+In Dirac notation, it would be written as
+\[
+|v\rangle  =  a|i\rangle  +  b|j\rangle +  c|k\rangle  = 
+(a,b,c)^{T}. 
+\]
+The term ket and this notation come from the physicist Paul Dirac who
+wanted a concise way of writing formulas involving row and column
+vectors.  He referred to row vectors as \emph{bra vectors} represented
+as $\langle y|$.  The inner product of a \emph{bra} and a \emph{ket}
+vector is written $\langle y|x\rangle$, and is called a \emph{bracket}
+\cite{williams98quantum}.
+
+\subsubsection{Superposition}
+
+The projection of the state vector onto one of the axes of its Hilbert
+space shows the contribution of that axis's eigenstate to the whole
+state.  A classical bit's state vector can only lie along one of the
+two axes.  The state of a qubit can be any vector $|X\rangle$ in the
+Hilbert space with $\langle X|X\rangle = 1$; such a state vector is
+called \emph{normalized}.  The inner product of a vector $|X\rangle =
+(x_{0},x_{1},\ldots, x_{N-1})^{T}$ with itself is $|x_{0}|^{2} +
+|x_{1}|^{2} + \ldots + |x_{N-1}|^{2}$, where $|a+ib|^{2} = a^{2} +
+b^{2}$.  More generally $\left\langle X|Y\right\rangle = \sum_{i =
+0}^{N-1} x_{i}^{*}y_{i}$, where $(a + ib)^{*}$ is $a - ib$.
+
+Let $x_{1}$ be the eigenstate corresponding to the 1 state, and let
+$x_{0}$ be the eigenstate corresponding to the 0 state.  We can write
+any state $|X\rangle$ as $w_{0}|x_{0}\rangle + w_{1}|x_{1}\rangle$,
+where $w_{0}, w_{1}$ are the complex projections of $|X\rangle$ onto
+the eigenstates such that $|w_{0}|^{2} + |w_{1}|^{2} = 1$.  When the
+qubit with state vector $X$ is measured, we are guaranteed to find it
+to be in either the state $1 |x_{0} \rangle + 0 |x_{1} \rangle =
+|x_{0}\rangle$ or the state $0 |x_{0} \rangle + 1 |x_{1} \rangle =
+|x_{1}\rangle$.
+
+More generally, the Hilbert space of an $N$-state quantum system is
+$\Complex^{N}$.  As with the two state system, when we measure our
+$N$-state quantum system we will always find it to be in exactly one
+of the eigenstates.  The system is allowed to exist in any complex
+linear superposition of the $N$ states between measurements.  An
+$N$-state quantum system with eigenstates $x_{0}, x_{1},\ldots,
+x_{N-1}$ can be fully described by the vector
+\[|X \rangle = \sum_{k = 0}^{N-1} w_{k} |x_{k} \rangle, 
+\textrm{ where }
+\sum_{k = 0}^{N-1} |w_{k}|^{2} = 1.
+\]
+
+Our state vector can exist in a linear superposition of eigenstates,
+but we can only measure the state vector to be in one of the
+eigenstates.  When the state vector is observed, it makes a sudden
+discontinuous jump to one of the eigenstates.  When measurement is
+performed the state vector is said to collapse
+\cite{williams98quantum}.  For an $N$-state quantum system with a 
+normalized state vector, the probability that the state vector will
+collapse into the $j$th eigenstate is simply $|w_{j}|^{2}$.  The
+coefficient $w_{j}$ is called the \emph{amplitude} of eigenstate
+$|x_{j}\rangle$.
+
+We can construct a quantum memory register out of the qubits described
+in the previous section.  Just as in a classical computer, a quantum
+computer will perform calculations by manipulating its memory register
+from some start state to some final state.  Note that a quantum
+register composed of $N$ qubits requires $2^{N}$ complex numbers to
+completely describe its state vector, as an $N$-qubit register has
+$2^{N}$ basis states.
+
+\subsubsection{Unitary Operators}
+
+Not all functions on a quantum memory register preserve the
+superposition of the state vector.  For example, measurement destroys
+the superposition in the register.  Operations that collapse the state
+vector are called \emph{measurements}, and any complex linear
+transformation of the state vector is called an
+\emph{operator}.  We can represent any operator on an $N$-bit 
+quantum memory register in $\Complex^{2^{N}}$ as a matrix
+\[T = \left( \begin{array}{cccc}
+	T_{00} & T_{01} & \ldots & T_{0(2^{N}-1)} \\ T_{10} & T_{11} &
+	\ldots & T_{2(2^{N}-1)} \\ \vdots & \vdots & & \vdots \\
+	T_{(2^{N}-1)0} & T_{(2^{N}-1)1} & \ldots &
+	T_{(2^{N}-1)(2^{N}-1)}
+\end{array}\right) \] 
+\cite{griffiths95quantum}.
+
+Quantum mechanics imposes conditions on which linear transformations
+are legal operators.  In particular, the operation must be reversible,
+and it must preserve the length of the state vector
+\cite{griffiths95quantum}.  If we impose the condition that the sum of
+the kinetic and potential energy (called the Hamiltonian) of our
+quantum memory register is constant, then all legal operators have
+\emph{unitary} matrix representations.  A matrix $T$ is unitary if the
+transpose of its complex conjugate is $T^{-1}$
+\cite{griffiths95quantum}.  Systems with time-dependent Hamiltonians 
+are not required to perform either Grover's or Shor's algorithm, and
+are not within the scope of this thesis.
+
+\subsubsection{Quantum Algorithms}
+An operator taking a register in a superposition of states as an input
+performs a ``computation'' on each of the components of the
+superposition simultaneously.  Since the number of possible superposed
+states is $2^{N}$ for an $N$-qubit register, in some sense a quantum
+computer can perform in one operation what would take an exponential
+number of operations on a classical computer.  Unfortunately, the more
+superposed states, the smaller the probability that we will measure
+the value of our function for any particular one.  Some clever
+algorithms, most notably by Peter Shor and L. K. Grover, succeed by
+considering a function for which some property of all the inputs is
+useful.
+
+A quantum memory register is just a state machine whose state
+transitions are defined by the operators we apply.  A reversible
+deterministic state machine with $2^{N}$ states can be modeled by an
+$N$-bit register and operators which are $2^{N} \times 2^{N}$
+permutation matrices.  A classical probabilistic state machine can be
+modeled in a similar manner, as an $N$-bit register with a normalized
+state vector in $\Real^{2^{N}}$ and operators that are doubly
+stochastic matrices.  The difference between the quantum computer and
+the probabilistic computer is that the projection of the quantum state
+vector onto any eigenstate is a complex number: it has both a
+magnitude and a phase.  The classical probabilistic state vector's
+projection onto its eigenstates has only a positive real magnitude.
+The amplitude of the quantum state vector allows for operators which
+cause wave-like interference of the eigenstates, enforcing correct
+solutions and diminishing incorrect ones
+\cite{grover00search}.  
+
+A quantum algorithm is described by an initial normalized state and a
+sequence of unitary matrices representing linear transformations of
+the state vector.  These unitary matrices should increase the
+probability that the state vector collapses into a correct solution
+state when measured.
+
+\subsection{Error Models}
+\label{sec:error}
+
+Quantum computation is probabilistic in nature.  We must therefore
+consider what (if any) error we will accept from our quantum
+algorithms.  Different settings allow different expected running
+times, just as in the classical case, where different running times
+can be found for different types of randomized algorithms.
+
+Three primary settings for quantum algorithms are defined by Beals et
+al.\ \cite{beals98quantum}:
+\begin{enumerate}
+
+\item \textbf{The Exact Setting:} 
+The quantum algorithm is required to return $f(x)$ with certainty for
+every $x \in \{0,1\}^{N}$.
+
+\item \textbf{The Zero Error Setting:}
+The quantum algorithm may be inconclusive with probability at most
+$1/2$, but if it returns an answer, it must be correct.
+
+\item \textbf{The Bounded Error Setting:}
+The quantum algorithm is required to return $f(x)$ with probability at
+least $2/3$ for every $x \in \{0,1\}^{N}$ .
+\end{enumerate}
+
+Clearly any algorithm in the exact setting is also correct in the
+bounded error setting.  Algorithms in the zero error setting can be
+placed in the bounded error setting by performing multiple runs that
+return an arbitrary value whenever they would return ``inconclusive.''
+Thus the bounded error setting is the broadest category, and as such
+offers the best potential speedups.  All the results in this thesis
+refer to computations in the bounded error setting.
+
+\section{Lower Bounds}
+\label{sec:lower}
+
+Given that we can theoretically attain exponential speedup through
+quantum parallelism, it is tempting to hope that quantum computing
+could offer exponential speedup to large classes of problems.  Shor's
+algorithm seems to validate that hope.  The optimality of Grover's
+algorithm, on the other hand, essentially establishes that a quantum
+computer can offer at most quadratic speedup to the brute force
+solution of a problem that exhaustively searches all possible
+solutions.
+
+To answer questions surrounding the power of the quantum computer, we
+study lower bounds for quantum algorithms.  Lower bounds on large
+classes of functions allow us to make quantitative comparisons between
+quantum and classical computers.  It is very difficult to prove a
+lower bound on a particular problem in any general model of
+computation, as one has to argue how quickly any possible algorithm
+can solve the problem.  Throughout this thesis we will consider a
+restricted model of computation, the \emph{oracle query model}, in
+which we consider only algorithms whose input is provided in a black
+box.
+
+We will present a theorem by Andris Ambainis that enables us to easily
+prove lower bounds in the oracle query model
+\cite{ambainis00quantum}.  The main strength of Ambainis' Theorem
+is its ability to prove lower bounds for a variety of Boolean
+functions, and thus allow us to compare the relative power of
+classical and quantum computers.
+
+\section{Summary}
+\label{sec:outline}
+
+In Chapter \ref{ch:oracle}, we define the quantum oracle model, and
+present Ambainis' Theorem for proving lower bounds within this
+framework.  We examine a shortcoming of Ambainis' Theorem, and then
+derive two theorems and use them to prove lower query bounds for
+symmetric functions.
+
+In Chapter \ref{ch:graph}, we apply the results of Chapter
+\ref{ch:oracle} to the interesting and well studied case of
+non-trivial monotone graph properties.  Finding the results wanting we
+appeal directly to Ambainis' Theorem to establish new lower bounds for
+graph connectivity and bipartiteness.  Finally we show there is no
+quantum extension of the Aanderaa-Karp-Rosenberg conjecture in the
+bounded error setting.
+
+In Chapter \ref{ch:general}, we examine classes of functions that do
+not have the inherent symmetries of those in chapters \ref{ch:oracle}
+and \ref{ch:graph}.  We provide lower query bounds for tree functions,
+nondeterministically evasive functions, and sensitive functions.
+
+We conclude in Chapter \ref{ch:open} with a brief examination of some
+open questions for lower oracle query bounds in the bounded error
+setting, and quantum computing in general.
+
+\label{sec:sumofres}
+
+Many of the results in this thesis have been attained previously by
+other authors. We present these results again to illustrate how
+Ambainis' Theorem can provide relatively simpler proofs for a variety
+of problems.  Table \ref{tbl:results} summarizes our results and
+credits previous papers where appropriate.  All results are in the
+quantum bounded error setting.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Function & Lower Query Bound & Section & Reference \\ 
+\hline
+Generalized XOR & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:gXOR} &  \\
+\hline
+Determining the Oracle String & $N/2$ & \ref{sec:dos} &  \\
+\hline
+Singleton functions & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:torf1} & \\
+\hline
+Partially symmetric & $\Omega\left(\sqrt{\frac{(N-a)b}{(b-a)^{2}}}\right)$ & \ref{sec:lqbsym} &  \\
+\hline
+AND & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:AOMP} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+OR & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:AOMP} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+MAJORITY & $\Omega\left(N\right)$ & \ref{sec:AOMP} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+PARITY & $\Omega\left(N\right)$ & \ref{sec:AOMP} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+Nonconstant symmetric & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:lqbnsf} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+Graph connectivity & $\Omega\left(V\right)$ & \ref{sec:gc} & \\
+\hline
+Graph bipartiteness & $\Omega\left(V\right)$ & \ref{sec:bip} & \\
+\hline
+Tree functions & $\Omega\left(\sqrt[4]{N}\right)$ & \ref{sec:tree} & Beals et al.\ \cite{beals98quantum} \\
+\hline
+Nondeterministically evasive & $\Omega\left(\sqrt{N}\right)$ & \ref{sec:b4r} &  \\
+\hline
+Sensitive functions & $\Omega\left(\sqrt[4]{D(f)}\right)$ & \ref{sec:lqbcbf} & \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Summary of Results \label{tbl:results}}
+\end{table}

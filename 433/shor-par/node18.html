@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction to the Code for the Simulation</TITLE>
+<META NAME="description" CONTENT="Introduction to the Code for the Simulation">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node17.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html315"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html311"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html305"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html313"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html316"
+  HREF="node19.html">The Simulation of Shor's</A>
+<B> Up:</B> <A NAME="tex2html312"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html306"
+  HREF="node17.html">A Simulation of Shor's</A>
+ &nbsp; <B>  <A NAME="tex2html314"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00051000000000000000">
+Introduction to the Code for the Simulation</A>
+</H2>
+
+<P>
+The code base for the simulation of Shor's algorithm consists of eight
+files.
+
+<P>
+<DL>
+<DT><STRONG>complex.h/C</STRONG></DT>
+<DD>: These files contain the simple complex number
+  class that we wrote for storing state information about the quantum
+  memory register in the simulation.
+
+<P>
+</DD>
+<DT><STRONG>qureg.h/C</STRONG></DT>
+<DD>: This file contains the quantum register class that
+  simulates the behavior of the quantum memory register in Shor's
+  algorithm.  It is generic enough that it may be made to simulate any
+  quantum memory register, although what happens in the event of a
+  collapse not due to the direct measurement of the register is left
+  to the programmer to perform.  An example of such a collapse that is
+  the collapse of the first partition of Shor's quantum memory
+  register in step 7 of his algorithm.
+
+<P>
+</DD>
+<DT><STRONG>util.h/C</STRONG></DT>
+<DD>: This is a library of functions used by shor.C
+
+<P>
+</DD>
+<DT><STRONG>timer.C</STRONG></DT>
+<DD>: Function for measuring the running time of Shor's
+  algorithm.
+
+<P>
+</DD>
+<DT><STRONG>barrier.h/C</STRONG></DT>
+<DD>: Contains code supporting barriers, where threads
+  must synchronize.
+
+<P>
+</DD>
+<DT><STRONG>range.h/C</STRONG></DT>
+<DD>: Contains code for splitting up work between threads.
+
+<P>
+</DD>
+<DT><STRONG>shor.C</STRONG></DT>
+<DD>: Contains the simulation of the steps of Shor's algorithm.
+
+<P>
+</DD>
+</DL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html315"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html311"
+  HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html305"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html313"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html316"
+  HREF="node19.html">The Simulation of Shor's</A>
+<B> Up:</B> <A NAME="tex2html312"
+  HREF="node17.html">A Simulation of Shor's</A>
+<B> Previous:</B> <A NAME="tex2html306"
+  HREF="node17.html">A Simulation of Shor's</A>
+ &nbsp; <B>  <A NAME="tex2html314"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

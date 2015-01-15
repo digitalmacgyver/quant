@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Error Models</TITLE>
+<META NAME="description" CONTENT="Error Models">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html382"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html378"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html374"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html380"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html383"
+  HREF="node24.html">Lower Bounds</A>
+<B> Up:</B> <A NAME="tex2html379"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html375"
+  HREF="node22.html">Quantum Algorithms</A>
+ &nbsp; <B>  <A NAME="tex2html381"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00631000000000000000"></A>
+<A NAME="sec:error"></A>
+<BR>
+Error Models
+</H2>
+
+<P>
+Quantum computation is probabilistic in nature.  We must therefore
+consider what (if any) error we will accept from our quantum
+algorithms.  Different settings allow different expected running
+times, just as in the classical case, where different running times
+can be found for different types of randomized algorithms.
+
+<P>
+Three primary settings for quantum algorithms are defined by Beals et
+al. [<A
+ HREF="node57.html#beals98quantum">2</A>]:
+
+<OL>
+<LI><B>The Exact Setting:</B> 
+The quantum algorithm is required to return <I>f</I> (<I>x</I>) with certainty for
+every <!-- MATH
+ $x \in \{0,1\}^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {0, 1}<SUP>N</SUP>.
+
+<P>
+</LI>
+<LI><B>The Zero Error Setting:</B>
+The quantum algorithm may be inconclusive with probability at most
+1/2, but if it returns an answer, it must be correct.
+
+<P>
+</LI>
+<LI><B>The Bounded Error Setting:</B>
+The quantum algorithm is required to return <I>f</I> (<I>x</I>) with probability at
+least 2/3 for every <!-- MATH
+ $x \in \{0,1\}^{N}$
+ -->
+<I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> {0, 1}<SUP>N</SUP> .
+</LI>
+</OL>
+
+<P>
+Clearly any algorithm in the exact setting is also correct in the
+bounded error setting.  Algorithms in the zero error setting can be
+placed in the bounded error setting by performing multiple runs that
+return an arbitrary value whenever they would return ``inconclusive.''
+Thus the bounded error setting is the broadest category, and as such
+offers the best potential speedups.  All the results in this thesis
+refer to computations in the bounded error setting.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html382"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html378"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html374"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html380"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html383"
+  HREF="node24.html">Lower Bounds</A>
+<B> Up:</B> <A NAME="tex2html379"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html375"
+  HREF="node22.html">Quantum Algorithms</A>
+ &nbsp; <B>  <A NAME="tex2html381"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

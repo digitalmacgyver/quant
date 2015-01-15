@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A Lower Query Bound Proving Framework due to Ambainis</TITLE>
+<META NAME="description" CONTENT="A Lower Query Bound Proving Framework due to Ambainis">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node29.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html480"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html476"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html472"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html478"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html481"
+  HREF="node31.html">The Quantum Adversary:</A>
+<B> Up:</B> <A NAME="tex2html477"
+  HREF="node27.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html473"
+  HREF="node29.html">Quantum Oracle Models</A>
+ &nbsp; <B>  <A NAME="tex2html479"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00710300000000000000">
+A Lower Query Bound Proving Framework due to Ambainis</A>
+</H3> 
+
+<P>
+Ambainis [<A
+ HREF="node57.html#ambainis00quantum">1</A>] proved the following fundamental
+result:
+
+<P>
+<P>
+<DIV><A NAME="th:amb"><B>Theorem  2.1.1</B></A> (Ambainis)  &nbsp; 
+<I>Let <I>f</I> be an <I>N</I>-bit Boolean function and let <I>X</I> and <I>Y</I> be two sets
+of inputs such that <!-- MATH
+ $f(x) \neq f(y)$
+ -->
+<I>f</I> (<I>x</I>) <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>f</I> (<I>y</I>) whenever <I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>X</I> and <I>y</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>Y</I>.
+Let <!-- MATH
+ $P \subseteq X \times Y$
+ -->
+<I>P</I> <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ \subseteq$"> <I>X</I> <TT>x</TT> <I>Y</I> be a relation between <I>X</I> and <I>Y</I> with
+the following properties:
+</I>
+<P>
+<OL>
+<LI>Every element of <I>X</I> is related to at least <I>m</I> elements of <I>Y</I> by
+<I>P</I>.
+
+<P>
+</LI>
+<LI>Every element of <I>Y</I> is related to at least <I>m'</I> elements of <I>X</I> by
+<I>P</I>.
+
+<P>
+</LI>
+<LI>For all <I>i</I>, every element <I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>X</I> is related to at most <I>l</I>
+elements <I>y</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>Y</I> such that <!-- MATH
+ $x_{i} \neq y_{i}$
+ -->
+<I>x</I><SUB>i</SUB> <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>y</I><SUB>i</SUB>
+
+<P>
+</LI>
+<LI>For all <I>i</I>, every element <I>y</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>Y</I> is related to at most <I>l'</I>
+elements <I>x</I> <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \in$"> <I>X</I> such that <!-- MATH
+ $x_{i} \neq y_{i}$
+ -->
+<I>x</I><SUB>i</SUB> <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \neq$"> <I>y</I><SUB>i</SUB>
+
+<P>
+</LI>
+</OL>
+<P>
+<I>Then
+</I><P><!-- MATH
+ \begin{displaymath}
+\Omega\left(\sqrt{\frac{mm^{\prime}}{ll^{\prime}}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\displaystyle \Omega$"><IMG
+ WIDTH="22" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$\displaystyle \left(\vphantom{\sqrt{\frac{mm^{\prime}}{ll^{\prime}}}}\right.$"><IMG
+ WIDTH="65" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$\displaystyle \sqrt{{\frac{mm^{\prime}}{ll^{\prime}}}}$"><IMG
+ WIDTH="22" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$\displaystyle \left.\vphantom{\sqrt{\frac{mm^{\prime}}{ll^{\prime}}}}\right)$">
+</DIV><P></P><I> 
+oracle queries are required by any quantum algorithm to compute <I>f</I> in
+the bounded error setting.</I></DIV><P></P>
+
+<P>
+This theorem will be the primary means of proving lower bounds in this
+thesis.  Its appeal is twofold; first, it leads to reasonably simple
+proofs, and second, it unifies many existing lower bounds into a
+single framework.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html482"
+  HREF="node31.html">The Quantum Adversary:</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html480"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html476"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html472"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html478"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html481"
+  HREF="node31.html">The Quantum Adversary:</A>
+<B> Up:</B> <A NAME="tex2html477"
+  HREF="node27.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html473"
+  HREF="node29.html">Quantum Oracle Models</A>
+ &nbsp; <B>  <A NAME="tex2html479"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

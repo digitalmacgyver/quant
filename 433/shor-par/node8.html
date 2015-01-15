@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Quantum qubit</TITLE>
+<META NAME="description" CONTENT="The Quantum qubit">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html192"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html188"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html182"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html190"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html193"
+  HREF="node9.html">The Quantum Memory Register</A>
+<B> Up:</B> <A NAME="tex2html189"
+  HREF="node3.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html183"
+  HREF="node7.html">Superposition and Eigenstates</A>
+ &nbsp; <B>  <A NAME="tex2html191"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00035000000000000000">
+The Quantum qubit</A>
+</H2>
+
+<P>
+Back to our qubit, the spin-1/2 particle. We know that while it can
+only be measured to have a spin of +1/2 or -1/2, it may in general
+be in a superposition of these states when we are not measuring it.
+
+<P>
+Let <I>x</I><SUB>1</SUB> be the eigenstate corresponding to the spin +1/2 state,
+and let <I>x</I><SUB>0</SUB> be the eigenstate corresponding to the spin -1/2
+state.  Let <I>X</I> be the total state of the state vector, and let
+<I>w</I><SUB>1</SUB> and <I>w</I><SUB>0</SUB> be the complex numbers that weight the
+contribution of the base states to the total state, then in general:
+<P><!-- MATH
+ \begin{displaymath}
+|X> = w_{0} * |x_{0}> + w_{1} * |x_{1}> == (w_{0},w_{1})
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>X</I> &gt; = <I>w</I><SUB>0</SUB>*| <I>x</I><SUB>0</SUB> &gt; + <I>w</I><SUB>1</SUB>*| <I>x</I><SUB>1</SUB> &gt; = = (<I>w</I><SUB>0</SUB>, <I>w</I><SUB>1</SUB>)
+</DIV><P></P>
+
+<P>
+At this point it should be remembered that <I>w</I><SUB>0</SUB> and <I>w</I><SUB>1</SUB>, the
+weighting factors of the base states are complex numbers, and that
+when the state of <I>X</I> is measured, we are guaranteed to find it to be
+in either the state:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+0 * |x_{0}> + w_{1} * |x_{1}> == (0,w_{1})
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+0*| <I>x</I><SUB>0</SUB> &gt; + <I>w</I><SUB>1</SUB>*| <I>x</I><SUB>1</SUB> &gt; = = (0, <I>w</I><SUB>1</SUB>)
+</DIV><P></P>
+or the state
+	<P><!-- MATH
+ \begin{displaymath}
+w_{0} * |x_{0}> + 0 * |x_{1}> == (w_{0},0)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<I>w</I><SUB>0</SUB>*| <I>x</I><SUB>0</SUB> &gt; +0*| <I>x</I><SUB>1</SUB> &gt; = = (<I>w</I><SUB>0</SUB>, 0)
+</DIV><P></P>
+
+<P>
+The state vector is a unit vector in a Hilbert space, which is similar
+to vector spaces you may be more familiar with, but it differs in that
+the lengths of the vectors are complex numbers. It is not necessary
+from a physics perspective for the state vector to be a unit vector
+(meaning it has a length of 1), but it makes for easier calculations
+further on, so we will assume from here on out that the state vector
+has length 1. This assumption does not invalidate any claims about
+the behavior of the state vector. 
+
+<P>
+Thus we have fully defined the basic building block of a quantum
+computer, the qubit. It is fundamentally different from a classical
+bit in that it can exist in any superposition of the 0 and 1 states
+when it is not being measured. (Barenco, Ekert, Sanpera, Machiavello)
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html192"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html188"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html182"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html190"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html193"
+  HREF="node9.html">The Quantum Memory Register</A>
+<B> Up:</B> <A NAME="tex2html189"
+  HREF="node3.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html183"
+  HREF="node7.html">Superposition and Eigenstates</A>
+ &nbsp; <B>  <A NAME="tex2html191"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

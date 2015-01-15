@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Vector Mathematics</TITLE>
+<META NAME="description" CONTENT="Vector Mathematics">
+<META NAME="keywords" CONTENT="paper">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="paper.css">
+
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node33.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html549"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html545"
+  HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html547"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html550"
+  HREF="node37.html">Actual Quantum Computers and</A>
+<B> Up:</B> <A NAME="tex2html546"
+  HREF="node33.html">Mathematics Used in this</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node35.html">Complex Numbers</A>
+ &nbsp; <B>  <A NAME="tex2html548"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000113000000000000000">
+Vector Mathematics</A>
+</H2>
+
+<P>
+The only operations that are used in Shor's algorithm on vectors are
+addition, length determination, and scaling.  The vector in question
+is that state vector of a quantum mechanical system, it is a vector in
+a Hilbert Space.  Being a vector in a Hilbert space means that the
+vector can be represented by projections of the vector onto each of
+the perpendicular base vectors which define the Hilbert Space.
+
+<P>
+For example, a <I>n</I> state quantum system requires a <I>n</I> dimensional
+Hilbert Space to represent its state vector.  The quantum system can
+be measured in any of the <I>n</I> states, and to represent this we imagine
+each of the <I>n</I> states as mutually perpendicular axes within our
+Hilbert space.  Thus the state vector for a system in the <I>j</I>'th state
+is equal to:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{c}
+	0 \\
+	0 \\
+	\vdots \\
+	1 \\
+	\vdots \\
+	0 
+	\end{array} 
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="20" HEIGHT="151" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{c}
+0 \\
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{array}
+}\right.$"><IMG
+ WIDTH="28" HEIGHT="151" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$\displaystyle \begin{array}{c}
+0 \\
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="151" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{c}
+0 \\
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{array}
+}\right)$">
+</DIV><P></P>
+
+<P>
+For the <I>n</I> states, where the number at the top of the column is the
+length of the state vector projected onto the 1st state, and the 1
+appears in the <I>j</I>'th row.
+
+<P>
+To add two vectors we simply add their components.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{l}
+	a_{1} \\
+	a_{2} \\
+	a_{3} 
+	\end{array} 
+\right) +
+\left( \begin{array}{c} 
+	b_{1} \\b_{2} \\b_{3} \end{array} \right) =
+\left( \begin{array}{r} a_{1}+b_{1} \\a_{2}+b_{2} \\a_{3}+b_{3} \end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{l}
+a_{1} \\
+a_{2} \\
+a_{3}
+\end{array}
+}\right.$"><IMG
+ WIDTH="36" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\displaystyle \begin{array}{l}
+a_{1} \\
+a_{2} \\
+a_{3}
+\end{array}$"><IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{l}
+a_{1} \\
+a_{2} \\
+a_{3}
+\end{array}
+}\right)$"> + <IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{c}
+b_{1} \\  b_{2} \\  b_{3} \end{array} }\right.$"><IMG
+ WIDTH="34" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$\displaystyle \begin{array}{c}
+b_{1} \\  b_{2} \\  b_{3} \end{array}$"><IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{c}
+b_{1} \\  b_{2} \\  b_{3} \end{array} }\right)$"> = <IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$\displaystyle \left(\vphantom{ \begin{array}{r} a_{1}+b_{1} \\  a_{2}+b_{2} \\  a_{3}+b_{3} \end{array} }\right.$"><IMG
+ WIDTH="69" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$\displaystyle \begin{array}{r} a_{1}+b_{1} \\  a_{2}+b_{2} \\  a_{3}+b_{3} \end{array}$"><IMG
+ WIDTH="20" HEIGHT="73" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\displaystyle \left.\vphantom{ \begin{array}{r} a_{1}+b_{1} \\  a_{2}+b_{2} \\  a_{3}+b_{3} \end{array} }\right)$">
+</DIV><P></P>
+
+<P>
+Since this vector lies in a Hilbert Space the projections of the state
+vector onto the coordinate axes are allowed to be complex numbers,
+thus the definition of length is slightly different from what is
+expected.
+
+<P>
+The length of a vector in a Hilbert space with <I>n</I> components
+is defined to be: <!-- MATH
+ $\sqrt{\sum_{j = 1}^{n}|w_{j}|^{2}}$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ \sqrt{{\sum_{j = 1}^{n}\vert w_{j}\vert^{2}}}$"> where <I>w</I><SUB>j</SUB>
+is the value of the <I>j</I>'th component of the vector, and <!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP>
+is defined to be <I>w</I><SUB>j</SUB> times its complex conjugate, or when <!-- MATH
+ $w_{j} = a + i * b$
+ -->
+<I>w</I><SUB>j</SUB> = <I>a</I> + <I>i</I>*<I>b</I>, <!-- MATH
+ $|w_{j}|^{2} = a^{2} + b^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP> = <I>a</I><SUP>2</SUP> + <I>b</I><SUP>2</SUP>
+.
+
+<P>
+To scale a vector by any length <I>l</I> you simply multiply each component
+of the vector by the value <I>l</I>.  In particular to scale a vector to
+length 1 you multiply each component by the inverse length of the
+vector.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html549"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html545"
+  HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html547"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html550"
+  HREF="node37.html">Actual Quantum Computers and</A>
+<B> Up:</B> <A NAME="tex2html546"
+  HREF="node33.html">Mathematics Used in this</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node35.html">Complex Numbers</A>
+ &nbsp; <B>  <A NAME="tex2html548"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/299/">Quantum Computing and Shor's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

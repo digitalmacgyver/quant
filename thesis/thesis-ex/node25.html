@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Summary</TITLE>
+<META NAME="description" CONTENT="Summary">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html404"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html400"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html396"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html402"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html405"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Up:</B> <A NAME="tex2html401"
+  HREF="node6.html">Introduction</A>
+<B> Previous:</B> <A NAME="tex2html397"
+  HREF="node24.html">Lower Bounds</A>
+ &nbsp; <B>  <A NAME="tex2html403"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00650000000000000000"></A>
+<A NAME="sec:outline"></A>
+<BR>
+Summary
+</H1>
+
+<P>
+In Chapter <A HREF="node26.html#ch:oracle">2</A>, we define the quantum oracle model, and
+present Ambainis' Theorem for proving lower bounds within this
+framework.  We examine a shortcoming of Ambainis' Theorem, and then
+derive two theorems and use them to prove lower query bounds for
+symmetric functions.
+
+<P>
+In Chapter <A HREF="node41.html#ch:graph">3</A>, we apply the results of Chapter
+<A HREF="node26.html#ch:oracle">2</A> to the interesting and well studied case of
+non-trivial monotone graph properties.  Finding the results wanting we
+appeal directly to Ambainis' Theorem to establish new lower bounds for
+graph connectivity and bipartiteness.  Finally we show there is no
+quantum extension of the Aanderaa-Karp-Rosenberg conjecture in the
+bounded error setting.
+
+<P>
+In Chapter <A HREF="node51.html#ch:general">4</A>, we examine classes of functions that do
+not have the inherent symmetries of those in chapters <A HREF="node26.html#ch:oracle">2</A>
+and <A HREF="node41.html#ch:graph">3</A>.  We provide lower query bounds for tree functions,
+nondeterministically evasive functions, and sensitive functions.
+
+<P>
+We conclude in Chapter <A HREF="node56.html#ch:open">5</A> with a brief examination of some
+open questions for lower oracle query bounds in the bounded error
+setting, and quantum computing in general.
+
+<P>
+<A NAME="sec:sumofres"></A>
+<P>
+Many of the results in this thesis have been attained previously by
+other authors. We present these results again to illustrate how
+Ambainis' Theorem can provide relatively simpler proofs for a variety
+of problems.  Table <A HREF="#tbl:results">1.1</A> summarizes our results and
+credits previous papers where appropriate.  All results are in the
+quantum bounded error setting.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="302"></A>
+<TABLE>
+<CAPTION><STRONG>Table 1.1:</STRONG>
+Summary of Results </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">Function</TD>
+<TD ALIGN="LEFT">Lower Query Bound</TD>
+<TD ALIGN="LEFT">Section</TD>
+<TD ALIGN="LEFT">Reference</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Generalized XOR</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node33.html#sec:gXOR">2.2.1</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Determining the Oracle String</TD>
+<TD ALIGN="LEFT"><I>N</I>/2</TD>
+<TD ALIGN="LEFT"><A HREF="node34.html#sec:dos">2.3</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Singleton functions</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node35.html#sec:torf1">2.4</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Partially symmetric</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{\frac{(N-a)b}{(b-a)^{2}}}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$ \left(\vphantom{\sqrt{\frac{(N-a)b}{(b-a)^{2}}}}\right.$"><IMG
+ WIDTH="74" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \sqrt{{\frac{(N-a)b}{(b-a)^{2}}}}$"><IMG
+ WIDTH="18" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$ \left.\vphantom{\sqrt{\frac{(N-a)b}{(b-a)^{2}}}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node36.html#sec:lqbsym">2.5</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">AND</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node37.html#sec:AOMP">2.6</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">OR</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node37.html#sec:AOMP">2.6</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">MAJORITY</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(N\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \left(\vphantom{N}\right.$"><I>N</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$ \left.\vphantom{N}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node37.html#sec:AOMP">2.6</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">PARITY</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(N\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \left(\vphantom{N}\right.$"><I>N</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$ \left.\vphantom{N}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node37.html#sec:AOMP">2.6</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Nonconstant symmetric</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node40.html#sec:lqbnsf">2.7</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Graph connectivity</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(V\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$ \left(\vphantom{V}\right.$"><I>V</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ \left.\vphantom{V}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node48.html#sec:gc">3.2.1</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Graph bipartiteness</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(V\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$ \left(\vphantom{V}\right.$"><I>V</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ \left.\vphantom{V}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node49.html#sec:bip">3.2.2</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Tree functions</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt[4]{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \left(\vphantom{\sqrt[4]{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ \sqrt[4]{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ \left.\vphantom{\sqrt[4]{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node52.html#sec:tree">4.1</A></TD>
+<TD ALIGN="LEFT">Beals et al. [<A
+ HREF="node57.html#beals98quantum">2</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Nondeterministically evasive</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt{N}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \left(\vphantom{\sqrt{N}}\right.$"><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \sqrt{{N}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left.\vphantom{\sqrt{N}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node54.html#sec:b4r">4.3</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Sensitive functions</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\Omega\left(\sqrt[4]{D(f)}\right)$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Omega$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ \left(\vphantom{\sqrt[4]{D(f)}}\right.$"><IMG
+ WIDTH="66" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sqrt[4]{{D(f)}}$"><IMG
+ WIDTH="18" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \left.\vphantom{\sqrt[4]{D(f)}}\right)$"></TD>
+<TD ALIGN="LEFT"><A HREF="node55.html#sec:lqbcbf">4.4</A></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+    
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html404"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html400"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html396"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html402"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html405"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Up:</B> <A NAME="tex2html401"
+  HREF="node6.html">Introduction</A>
+<B> Previous:</B> <A NAME="tex2html397"
+  HREF="node24.html">Lower Bounds</A>
+ &nbsp; <B>  <A NAME="tex2html403"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

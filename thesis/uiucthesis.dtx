@@ -1,0 +1,1067 @@
+\def\fileversion{v1.0n} \def\filedate{1997/09/15}
+% \iffalse	% this is a METACOMMENT !
+%% Package "uiucthesis" for use with LaTeX2e.
+%
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\ProvidesPackage{uiucthesis}
+%<package>         [\filedate\ \fileversion\ UIUC Thesis (DLH)]
+%
+%<*driver>
+\documentclass{ltxdoc}
+\begin{document}
+\title{The \textsf{uiucthesis} package
+       \thanks{This file has version number \fileversion,
+       last revised \filedate.}}
+\author{David Hull\\hull@cs.uiuc.edu}
+\date{\filedate}
+\maketitle
+\DocInput{uiucthesis.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{0}
+%
+% \MakeShortVerb{\|}
+%
+% \def\pkg#1{\textsf{#1}}
+% \def\env#1{\textsf{#1}}
+% 
+% \iffalse
+%<*example>
+% \fi
+% \begin{abstract}
+% Load the \pkg{uiucthesis} package with the standard \LaTeX2e book
+% class to produce a document that conforms
+% to the format described in
+% \emph{Instructions for Preparation of Theses}\cite{Instructions94}.
+% \end{abstract}
+%
+% \section{The User Interface}
+%
+% This section describes how to use the \pkg{uiucthesis} package to
+% produce a thesis satisfying the format requirements of the
+% Grad College at UIUC.
+% I assume that you are familiar with \LaTeX, and highly
+% recommend that anyone attempting to use \LaTeX\ to produce a
+% thesis have access to a copy of the \LaTeX\ book\cite{Lamport86}.
+%
+% \subsection{Using \pkg{uiucthesis}}
+% 
+% To write a thesis, you load the UIUC thesis definitions
+% by loading the \pkg{uiucthesis} package at the beginning of
+% your \LaTeX\ document, immediately after the |\documentclass| command.
+% For example,
+% \begin{quote} \hrule \begin{verbatim}
+\documentclass[11pt,oneside]{book}
+\usepackage[draftthesis,fullpage]{uiucthesis}
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% \DescribeMacro{[draftthesis]}
+% \DescribeMacro{[fancy]}
+% \DescribeMacro{[fullpage]}
+% The \pkg{uiucthesis} package provides three options.
+% The |[draftthesis]| option causes each page to have a header
+% proclaiming the document to be a draft copy, along with the
+% current time and date.
+% It also omits the preliminary part of the
+% thesis---currently only the copyright page.  
+% This is marginally useful for saving paper before you
+% produce the final version of the thesis.
+% The |[fancy]| style option produces slightly fancier chapter headings.
+% The |[fullpage]| style option makes the margins as small as the
+% format requirements allow.  Because wide text columns are ugly
+% this is not the default, but is provided as an option because people
+% seem to want it.
+% The |[fancy]| and |[fullpage]| options are incompatible---choose
+% one or the other.
+%
+% \DescribeMacro{\draftheader}
+% If you don't like the header that the the |[draftthesis]| option
+% creates, you can redefine the |\draftheader| command so that it
+% produces whatever text you want.
+%
+% \DescribeMacro{\thesisspacing}
+% The \pkg{uiucthesis} package loads \pkg{setspace} for the
+% line spacing commands.  See the documentation in that package
+% for more information on the commands it provides.
+% By default, \pkg{uiucthesis} uses one and a half line spacing,
+% or double spacing if the |[fullpage]| option is specified.
+% If you're unhappy with that, you can override it by redefining the
+% |\thesisspacing| command.
+%
+% \subsection{The Title Page}
+% 
+% The |\maketitle| command is redefined so that it creates a
+% title page with the correct format for a thesis at UIUC.
+%
+% \DescribeMacro{\phdthesis}
+% \DescribeMacro{\msthesis}
+% \DescribeMacro{\department}
+% \DescribeMacro{\college}
+% Use the |\phdthesis| or |\msthesis| to set the correct thesis type.
+% Set your department with |\department{|\meta{department}|}|.
+% This defines the field your degree will be in, so leave out
+% ``Department of.''
+% The default department is ``Computer Science.''
+% Define your college with |\college{|\meta{college}|}|.
+% The default is college is ``Graduate College;''
+% you shouldn't need to change it.
+%
+% \DescribeMacro{\schools}
+% Use |\schools{|\meta{school list}|}| to list the previous degrees
+% you have received and the schools that you received them from.
+% Separate multiple degrees with |\\|.
+%
+% \DescribeMacro{\degreeyear}
+% Use |\degreeyear{|\meta{year}|}| to define the year in which
+% you will receive your degree.  The default is the current year.
+%
+% Here's how to produce the example on Page~25 of \cite{Instructions94}.
+% \begin{quote} \hrule \begin{verbatim}
+\begin{document}
+
+\title{Coffee Consumption of Graduate Students \\
+       Trying to Finish Dissertations}
+\author{Juan Valdez}
+\department{Food Science}
+\schools{B.A., University of Columbia, 1981\\
+         A.M., University of Illinois, 1986}
+\phdthesis
+\degreeyear{1994}
+\maketitle
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% \subsection{Front Matter}
+%
+% \DescribeMacro{\frontmatter}
+% Typically, a thesis might have an Abstract, a Dedication, some
+% Acknowledgments, and a Preface before the Table of Contents.
+% Use the |\frontmatter| command to start this preliminary section
+% of the thesis.
+% The |\frontmatter| command sets the page number of the next page
+% to roman numeral iii.  (The title page is page i, and the certificate
+% of committee approval, the ``red-bordered form,'' is page ii.)
+%
+% Since none of the sections in the front part of the thesis
+% should appear in the Table of Contents, you should use introduce
+% them with the |\chapter*| command.
+%
+% After this front matter comes the Table of Contents,
+% List of Tables, List of Figures, etc.  Use the standard \LaTeX\ 
+% commands |\tableofcontents|, |\listoftables|, |\listoffigures|, etc.,
+% to generate them.
+% In the \pkg{uiucthesis} format these lists are all single spaced.
+%
+% Here's an example of what the front matter of a typical
+% thesis looks like.  First comes the Dedication, which is optional.
+% The heading on a Dedication is not required, but it must have
+% a page number.  In this example, the dedication is centered vertically
+% on the page.
+% \begin{quote} \hrule \begin{verbatim}
+\frontmatter
+
+%% Create a dedication with no heading, centered vertically
+%% on the page.
+\newpage
+\leavevmode\vfill
+\begin{center}
+To me.
+\end{center}
+\vfill
+
+\chapter*{Acknowledgments}
+
+This thesis would not have been possible without the
+the help of the many graduate students who bravely
+consumed many gallons of coffee, thus providing
+the abundance of raw data for my research.
+
+%% The thesis format requires these lists to come in the following
+%% order:
+%%
+%% Table of Contents
+%% List of Tables
+%% List of Figures or List of Illustrations
+%% List of Symbols and/or Abbreviations
+
+\tableofcontents
+\listoftables
+\listoffigures
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% If you want a List of Symbols or Abbreviations you have to create
+% it yourself, but it isn't difficult.  For example to create a List
+% of Abbreviations you could use:
+% \begin{quote} \hrule \begin{verbatim}
+%% Create a List of Abbreviations.
+
+\chapter*{List of Abbreviations}
+\begin{description}
+\item[CA] Caffeine Addict.
+\item[CD] Coffee Drinker.
+\end{description}
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% \subsection{Main Matter}
+%
+% \DescribeMacro{\mainmatter}
+% Begin the main body of your thesis with the |\mainmatter| command.
+% It resets the page number to arabic numeral 1.
+% You can now use any of the commands defined by the
+% the book document class to write your thesis.  
+%
+% In the following example, each of the chapters
+% has been broken out into separate files that are inserted into
+% this main file with the |\include| command.  This allows the
+% thesis to be proofed quickly while it is being revised with
+% the |\includeonly| command.
+%
+% \begin{quote} \hrule \begin{verbatim}
+\mainmatter
+
+\include{1-introduction}
+\include{2-related}
+\include{3-model}
+\include{4-predictions}
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% \subsection{Reference Matter}
+%
+% \DescribeMacro{\appendix}
+% To switch from the body of your thesis to the reference material
+% at the end, you should use the standard \LaTeX\ |\appendix| command.
+%
+% \begin{quote} \hrule \begin{verbatim}
+\appendix
+
+\include{A-data.tex}
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%<example>
+% \fi
+%
+% \subsection{Back Matter}
+%
+% \DescribeMacro{\backmatter}
+% The last few chapters in your thesis should not have chapter
+% numbers, but should be listed in the Table of Contents.
+% These chapters include the Bibliography, the Index,
+% and the Vita.  \LaTeX's |\backmatter| command provides the correct
+% formatting for these chapters.
+%
+% \DescribeMacro{\bibliography}
+% Use the standard \LaTeX\ bibliography commands to
+% create your bibliography---\pkg{uiucthesis} redefines them so
+% that they produce the correct formatting for a UIUC thesis.
+%
+% \DescribeMacro{\vita}
+% The |\vita| command begins a new chapter for your vita.
+% In fact, it does exactly the same thing as |\chapter{\vitaname}|,
+% where |\vitaname| is ``Vita.''
+%
+% \begin{quote} \hrule \begin{verbatim}
+\backmatter
+
+\bibliography{thesisbib}
+
+\chapter{Vita}
+
+Juan Valdez was born\ldots.
+
+\end{document}
+% \end{verbatim} \hrule \end{quote}
+%
+% \iffalse
+%</example>
+% \fi
+%
+% \StopEventually{%
+%   \begin{thebibliography}{9}
+%     \bibitem{Instructions94}
+%     \emph{Instructions for Preparation of Theses: How to Deposit a Thesis
+%     with the Graduate College and Keep Your Sanity}.
+%     \newblock Graduate College, University of Illinois at
+%     Urbana-Champaign, 1994
+%
+%     \bibitem{Lamport86}
+%     Leslie Lamport.
+%     \newblock \emph{\LaTeX: A Document Preparation System}.
+%     \newblock Addison-Wesley, 1986.
+%   \end{thebibliography}
+% }
+%
+% \section{Implementation}
+%
+% This section shows the implementation of the \pkg{uiucthesis} package.
+% Unless you are interested in the details of how \pkg{uiucthesis} works,
+% you probably don't need to read it.
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+% \iffalse
+%<package>\usepackage{setspace}
+% \fi
+%
+% \subsection{Compatibility}
+%
+% Provide compatibililty with older versions of LaTeX.
+% \begin{macro}{\@ifundefined}
+%    \begin{macrocode}
+\expandafter\ifx\csname @ifundefined\endcsname\relax
+  \def\@ifundefined#1{%
+    \expandafter\ifx\csname#1\endcsname\relax
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+    \fi}
+\fi
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\MakeUppercase}
+%    \begin{macrocode}
+\@ifundefined{MakeUppercase}{\let\MakeUppercase=\uppercase}{}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Option Processing}
+%
+%    \begin{macrocode}
+\newif\if@thesisdraft \@thesisdraftfalse
+\newif\if@thesisfancy \@thesisfancyfalse
+\newif\if@fullpage \@fullpagefalse
+\newif\if@largecaps \@largecapsfalse
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\DeclareOption{draftthesis}{%
+  \@thesisdrafttrue
+  \newcount\timehh\newcount\timemm
+  \timehh=\time \divide\timehh by 60
+  \timemm=\time \count255=\timehh \multiply\count255 by -60
+    \advance\timemm by \count255
+  \def\draftheader{Draft of \today\ at
+  \ifnum\timehh<10 0\fi\number\timehh\,:\,\ifnum\timemm<10 0\fi\number\timemm}%
+}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\DeclareOption{fancy}{\@thesisfancytrue}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\DeclareOption{fullpage}{\@fullpagetrue}
+%    \end{macrocode}
+%
+% The |[largecaps]| option causes the title and author's name to
+% be use a ``large caps'' font on the title page.  Otherwise,
+% \pkg{uiucthesis} just converts them to uppercase and uses the
+% normal fonts.  The difference is that the spacing between the
+% characters in the large caps font is tuned for setting type in all caps.
+%
+% The large caps font is \emph{not a standard font}, and so it will not exist
+% unless you have installed it.
+%
+%    \begin{macrocode}
+\DeclareOption{largecaps}{\@largecapstrue}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\ProcessOptions
+%    \end{macrocode}
+%
+%
+% \subsection{Title Page}
+%
+% \begin{macro}{\title}
+% \begin{macro}{\author}
+% Override the standard definitions of |\title| and |\author| to also
+% define uppercased versions.
+%    \begin{macrocode}
+\def\@mkuptitle#1{\gdef\@Utitle{#1}}
+\def\title#1{\gdef\@title{#1}\MakeUppercase{\protect\@mkuptitle{#1}}}
+\def\@mkupauthor#1{\gdef\@Uauthor{#1}}
+\def\author#1{\gdef\@author{#1}\MakeUppercase{\protect\@mkupauthor{#1}}}
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+%
+% \begin{macro}{\phdthesis}
+% \begin{macro}{\msthesis}
+% \begin{macro}{\department}
+% \begin{macro}{\college}
+% \begin{macro}{\schools}
+% \begin{macro}{\degreeyear}
+% Macros to set title page elements.
+%    \begin{macrocode}
+\def\phdthesis{\def\@degree{Doctor of Philosophy}}
+\def\msthesis{\def\@degree{Master of Science}}
+\def\department#1{\def\@dept{#1}}
+\def\college#1{\def\@college{#1}}
+\def\schools#1{\def\@schools{#1}}
+\def\degreeyear#1{\def\@degreeyear{#1}}
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+%
+% \begin{macro}{\copyrightnotice}
+% Define the copyright notice as a macro so that the user
+% can change it if desired.
+%    \begin{macrocode}
+\def\copyrightnotice{\copyright~Copyright by \@author, \@degreeyear}
+%    \end{macrocode}
+% \end{macro}
+%
+% Set the default title page elements.
+%    \begin{macrocode}
+\phdthesis
+\department{Computer Science}
+\college{Graduate College}
+\def\@schools{}
+\def\@degreeyear{\number\year}
+%    \end{macrocode}
+%
+%
+% \begin{macro}{\maketitle}
+% Redefine \pkg{report}'s |\maketitle| command to produce
+% the titlepage in the correct format.
+%
+%    \begin{macrocode}
+\renewcommand\maketitle{
+%    \end{macrocode}
+% If this is not a draft version, print the copyright page.
+%    \begin{macrocode}
+  \if@thesisdraft\else
+    \newpage
+    \thispagestyle{empty}
+    \setcounter{page}{0}	% Copyright page is page 0
+    \null\vfill
+    \centerline{\copyrightnotice}%
+    \vskip 36pt			% skip to visually center copyright notice
+    \vfill
+  \fi
+%    \end{macrocode}
+% Now start a new page for the title page.  It is single-spaced.
+%    \begin{macrocode}
+  \newpage
+  \thispagestyle{empty}%
+  \begingroup
+  \def\baselinestretch{1}\@normalsize
+%    \end{macrocode}
+% We have to be careful to get the vertical position right.  The
+% easiest way to do this seems to be to just set |\topmargin|,
+% |\headheight|, and |\headsep| for this page.
+%    \begin{macrocode}
+  \topmargin=1.25in \headheight=0pt \headsep=0pt
+%    \end{macrocode}
+% Adjust the horizontal spacing so that the title page
+% is centered on the page even if the rest of the document isn't.  
+% I'm not sure when |\textwidth| changes take place, so instead 
+% we calculate the correct |\oddsidemargin| to center the text column.
+%    \begin{macrocode}
+  \@tempdima=\paperwidth
+  \advance\@tempdima by -\textwidth
+  \divide\@tempdima by 2
+  \advance\@tempdima by -1in
+  \oddsidemargin=\@tempdima
+  \let\evensidemargin=\oddsidemargin
+  \if@largecaps
+    \def\lc@selectfont{\fontshape{lc}\selectfont}%
+  \else
+    \def\lc@selectfont{}%
+  \fi
+  \begin{center}
+  \vbox to 1.75in{%
+    {\large\lc@selectfont\@Utitle}
+    \if@thesisdraft
+      \\[12pt]
+      Draft Version\\
+      \today
+    \fi
+    \vfil}%
+  \vbox to 2.5in{%
+    {\lc@selectfont BY}\\[12pt]
+    {\large\lc@selectfont\@Uauthor}\\[12pt]
+    \begin{tabular}{c}\@schools\end{tabular}\vfil}%
+  \vbox to 2.5in{%
+    {\lc@selectfont THESIS}\\[12pt]
+    Submitted in partial fulfillment of the requirements\\
+    for the degree of \@degree\ in \@dept\\
+    in the \@college\ of the\\
+    University of Illinois at Urbana-Champaign, \@degreeyear\vfil}
+  Urbana, Illinois
+  \end{center}
+  \newpage
+  \endgroup
+%    \end{macrocode}
+% Skip Page ii for Certificate of Committee Approval.
+%    \begin{macrocode}
+%  \newpage
+%  \setcounter{page}{3}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \section{Front Matter}
+%
+% \begin{macro}{\frontmatter}
+% Redefine |\frontmatter| so that it sets the page number to 3.
+%    \begin{macrocode}
+\let\thesis@frontmatter=\frontmatter
+\def\frontmatter{%
+  \thesis@frontmatter
+  \setcounter{page}{3}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Table of Contents}
+%
+% \begin{macro}{\contentsname}
+% Use ``Table of Contents'' instead of ``Contents.''
+% (Is this actually a format requirement?)
+%    \begin{macrocode}
+\renewcommand\contentsname{Table of Contents}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\l@chapter}
+%    This code is a modified version of the code in the 1996/05/26 release
+%    of classes.dtx that produces leader dots between the chapter
+%    name and the page number.
+%
+%    This macro formats the entries in the table of contents for
+%    chapters. It is very similar to |\l@part|
+%
+%    First we make sure that if a pagebreak should occur, it occurs
+%    \emph{before} this entry. Also a little whitespace is added and a
+%    group begun to keep changes local.
+% \changes{v1.2i}{1994/04/28}{Don't print a toc line when the tocdepth
+%    counter is less then 0}
+% \changes{v1.3b}{1955/05/23}{Added missing braces around argument
+%           to \cs{addpenalty}.}
+%    \begin{macrocode}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+%    \end{macrocode}
+%
+%    The macro |\numberline| requires that the width of the box that
+%    holds the part number is stored in \LaTeX's scratch register
+%    |\@tempdima|. Therefore we put it there. We begin a group, and
+%    change some of the paragraph parameters.  These are different
+%    from the defaults for the standard report or book class.
+%    \begin{macrocode}
+    \setlength\@tempdima{1.5em}
+    \begingroup
+      \leftskip \z@ \rightskip \@tocrmarg \parfillskip -\rightskip
+      \parindent \z@
+%    \end{macrocode}
+%    Then we leave vertical mode and switch to a bold font.
+%    \begin{macrocode}
+      \leavevmode \bfseries
+%    \end{macrocode}
+%    Because we do not use |\numberline| here, we have do some fine
+%    tuning `by hand', before we can set the entry. We discourage but
+%    not disallow a pagebreak immediately after a chapter entry.
+%    We use leaders between the chapter title and the page number,
+%    unlike the standard report or book class.
+%    \begin{macrocode}
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak
+      \leaders\hbox{$\m@th\mkern\@dotsep mu\hbox{.}\mkern\@dotsep mu$}
+      \hfil \nobreak\hbox to\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\tableofcontents}
+% We want the Table of Contents to be single-spaced, so
+% we save the original definition, and then arrange it so
+% that the new |\tableofcontents| calls |\singlespacing| before calling
+% the original definition.
+%    \begin{macrocode}
+\let\thesis@tableofcontents=\tableofcontents
+\def\tableofcontents{{\singlespacing\thesis@tableofcontents}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\listoftables}
+% \begin{macro}{\listoffigures}
+% Similarly, redefine |\listoftables| and |\listoffigures| so
+% that they use single spacing.  Why bother, you ask?
+% Well, it {\em is} possible that some user might
+% call |\listoffigures| without calling |\tableofcontents|.  Right?
+%    \begin{macrocode}
+\let\thesis@listoftables=\listoftables
+\def\listoftables{{\singlespacing\thesis@listoftables\thesisspacing}}
+\let\thesis@listoffigures=\listoffigures
+\def\listoffigures{{\singlespacing\thesis@listoffigures}}
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+%
+%
+% \subsection{Chapter Headings}
+%
+% Text of chapter title must match exactly with text in Table of Contents.
+% We support both plain chapter headings and ``fancy'' chapter headings.
+%
+% \begin{macro}{\chapternumberfont}
+%    Define the font used for chapter numbers in fancy chapter headings.
+%    If you're using scalable PostScript fonts, you might want to
+%    override it, for example:
+%    \begin{verbatim}
+%    \renewcommand\chapternumberfont{
+%       \fontseries{bx}\fontsize{72}{72}\selectfont}
+%    \end{verbatim}
+% \begin{macrocode}
+\if@thesisfancy
+  \font\cminch=cminch at 60pt
+  \newcommand\chapternumberfont{\cminch}
+\else
+  \newcommand\chapternumberfont{\huge\bfseries}
+\fi
+% \end{macrocode}
+%    
+% \begin{macro}{\chaptertitlefont}
+%    Define the font used for chapter titles.
+% \begin{macrocode}
+\newcommand\chaptertitlefont{\Huge\bfseries}
+% \end{macrocode}
+%    
+% \begin{macro}{\@chapter}
+%    This macro is called when we have a numbered chapter. When
+%    |secnumdepth| is larger than $-1$ and, in the book
+%    class, |\@mainmatter| is true, we display the chapter
+%    number. We also inform the user that a new chapter is about to be
+%    typeset by writing a message to the terminal.
+%    \begin{macrocode}
+\def\@chapter[#1]#2{%
+  \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter
+      \refstepcounter{chapter}%
+      \typeout{\@chapapp\space\thechapter.}%
+      \if@thesisfancy
+        \addcontentsline{toc}{chapter}%
+          {\protect\numberline{\thechapter}#1}%
+      \else
+        \addcontentsline{toc}{chapter}%
+          {\@chapapp\ \thechapter\quad #1}%
+      \fi
+    \else
+      \addcontentsline{toc}{chapter}{#1}%
+    \fi
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+%    \end{macrocode}
+%    After having written an entry to the table of contents we store
+%    the (alternative) title of this chapter with |\chaptermark| and
+%    add some white space to the lists of figures and tables.
+%    \begin{macrocode}
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+%    \end{macrocode}
+%    Then we call upon |\@makechapterhead| to format the actual
+%    chapter title. We have to do this in a special way when we are in
+%    twocolumn mode in order to have the chapter title use the entire
+%    |\textwidth|. In one column mode we call |\@afterheading|, which
+%    takes care of suppressing the indentation.
+%    \begin{macrocode}
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]%
+  \else
+    \@makechapterhead{#2}%
+    \@afterheading
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+% 
+% For fancy chapter headings, compute the correct height to use for the
+% chapter number.  I want the chapter number to be centered on the first line
+% of the chapter title.  If $a$ is the height of the chapter number and $b$ is
+% the height of the chapter title, then if we set the chapter number in a
+% box of height $b + (a-b)/2\quad=\quad(a+b)/2$ then it aligns correctly.
+%
+% We arrange for this value to be computed at the beginning of the document
+% in case the user loads a style file that changed the default fonts.
+%    \begin{macrocode}
+\if@thesisfancy
+  \AtBeginDocument{%
+    \newdimen\chapternumberheight
+    {\setbox255=\hbox{\chapternumberfont A}
+     \dimen255=\ht255
+     \setbox255=\hbox{\Huge\bfseries A}
+     \advance\dimen255 by \ht255
+     \divide\dimen255 by 2
+     \global\chapternumberheight=\dimen255}
+  }
+\fi
+%    \end{macrocode}
+%
+% \begin{macro}{\@makechapterhead}
+%    The macro |\@chapter| uses |\@makechapterhead|\meta{text} to format the
+%    heading of the chapter.  This is a modified version of the standard
+%    |\@makechapterhead|.  It sets the chapter heading in single spacing,
+%    and it handles the fancy heading style, 
+%
+%    We begin by leaving some white space. The we open a group in
+%    which we have a paragraph indent of 0pt, and in which we have the
+%    text set ragged right. We also reset the font.
+%    \begin{macrocode}
+\def\@makechapterhead#1{%
+  \if@thesisfancy\vspace*{10\p@}\else\vspace*{50\p@}\fi
+  {\def\baselinestretch{1}\@normalsize
+    \parindent \z@ \raggedright \normalfont
+%    \end{macrocode}
+%    Then we check whether the number of the chapter has to be printed.
+%    If so we leave some whitespace between the chapternumber and its
+%    title.
+%    \begin{macrocode}
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \if@thesisfancy
+          \leavevmode\llap{\vbox to \chapternumberheight{\hbox{%
+            \chapternumberfont\thechapter\ }\vss}}%
+        \else
+          \chapternumberfont \@chapapp\space \thechapter
+          \par\nobreak
+          \vskip 20\p@
+        \fi
+      \fi
+    \fi
+%    \end{macrocode}
+%    Now we set the title in a large bold font. We prevent a pagebreak
+%    from occuring in the middle of or after the title. Finally we
+%    leave some whitespace before the text begins.
+%    \begin{macrocode}
+    \interlinepenalty\@M
+    \chaptertitlefont #1\par\nobreak
+    \vskip 40\p@
+  }}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\@makeschapterhead}
+%    The macro |\@schapter| uses |\@makeschapterhead|\meta{text}to format
+%    the heading of the chapter. It is similar to |\@makechapterhead|
+%    except that it never has to print a chapter number.
+%
+%    \begin{macrocode}
+\def\@makeschapterhead#1{%
+  \if@thesisfancy\vspace*{10\p@}\else\vspace*{50\p@}\fi
+  %\vspace*{50\p@}%
+  {\def\baselinestretch{1}\@normalsize
+    \parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Lower Level Headings}
+%
+% We redefine the lower level headings to set their titles
+% ragged right.  These are modified from \pkg{classes.dtx}.
+% We don't have to change sectioning commands below
+% \cs{subsubsection} because they produce run-in headings.
+%
+% \begin{macro}{\section}
+%    \begin{macrocode}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\raggedright\normalfont\Large\bfseries}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\subsection}
+%    \begin{macrocode}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\raggedright\normalfont\large\bfseries}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\subsubsection}
+%    \begin{macrocode}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\raggedright\normalfont\normalsize\bfseries}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Appendix}
+%
+% ``Instructions for the Preparation of Theses,'' 1994, says,
+% ``Do not number appendices as chapters[.]''  However, I checked
+% with the Thesis Office (16 July 1996) and was told that the
+% LaTeX style of lettering appendices (A, B, C, etc.) was OK.
+% However, neither the Bibliography nor Vita are considered
+% appendices, so they should appear in the Table of Contents,
+% but they should not be given chapter numbers or appendix letters.
+% So: no changes to the standard \LaTeX\ style are necessary.
+%
+%
+% \subsection{Bibliography}
+%
+% \begin{macro}{\bibname}
+% UIUC Thesis format says that if references are cited as ``[1]'' then
+% one of the terms ``References,'' ``List of References,'' or 
+% ``Literature Cited'' should be used instead of ``Bibliography.''
+%    \begin{macrocode}
+\renewcommand\bibname{References}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{environment}{thebibliography}
+%    This |thebibliography| environment is the same as the standard
+%    Except it calls |\chapter| instead of |\chapter*|.
+%
+%    The `thebibliography' environment executes the following
+%    commands:
+%
+%    |\renewcommand{\newblock}{\hskip.11em \@plus.33em \@minus.07em}|\\
+%      --- Defines the ``closed'' format, where the blocks (major units
+%      of information) of an entry run together.
+%
+%    |\sloppy|  --- Used because it's rather hard to do line breaks in
+%      bibliographies,
+%
+%    |\sfcode`\.=1000\relax| ---
+%      Causes a `.' (period) not to produce an end-of-sentence space.
+%
+%    The implementation of this environment is based on the generic
+%    list environment. It uses the |enumiv| counter internally
+%    to generate the labels of the list.
+%
+%    When an empty `thebibliography' environment is found, a warning
+%    is issued.
+%
+%    \begin{macrocode}
+\renewenvironment{thebibliography}[1]
+     {\chapter{\bibname
+        \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+	    \@ifundefined{@openbib@code}{}{\@openbib@code}
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy\clubpenalty4000\widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+%    \end{macrocode}
+% \end{environment}
+%
+% \subsection{Index}
+%
+% \begin{environment}{theindex}
+% The index is single spaced.
+%    \begin{macrocode}
+\let\thesis@theindex=\theindex
+\def\theindex{\begingroup\singlespacing\thesis@theindex}
+\let\thesis@endtheindex=\endtheindex
+\def\endtheindex{\thesis@endtheindex\endgroup}
+%    \end{macrocode}
+% \end{environment}
+%
+%
+% \subsection{Page Layout}
+%
+% First we set the vertical layout.
+% Adjust the height of the text column so that it takes up the full
+% height of an 8.5 by 11 inch page.
+%    \begin{macrocode}
+\topmargin=.5in
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+%    \end{macrocode}
+% Next, set the horizontal layout.
+%
+% The standard for bad typography in technical papers seems to be to use
+% extremely wide columns of text, and then to increase the spacing between
+% lines to compensate for the long lines.
+% Unfortunately, because so many papers are typeset this way,
+% the format has become self-propagating.
+%
+% I concede defeat.  The |[fullpage]| option sets one-inch margins.
+%    \begin{macrocode}
+\if@fullpage
+  \oddsidemargin 0pt
+  \evensidemargin \oddsidemargin
+  \marginparwidth 0.5in
+  \textwidth\paperwidth
+  \advance\textwidth by -2in
+\fi
+%    \end{macrocode}
+% The ``fancy'' thesis style uses an asymmetrical page layout,
+% shifting the text column slightly over to the right to leave
+% room for the chapter number to the left of the chapter title.
+%    \begin{macrocode}
+\if@thesisfancy
+  \advance\oddsidemargin by 24pt
+  \let\evensidemargin=\oddsidemargin
+%    \end{macrocode}
+% Set |\marginparwidth|, leaving 36pt for the right margin.
+% Note that you're not allowed to actually use a marginal paragraph 
+% this close to the edge in the final version of a thesis, but it is still
+% handy for leaving notes to yourself in the draft.
+%    \begin{macrocode}
+  \marginparwidth=\oddsidemargin
+  \advance\marginparwidth by 1in
+  \advance\marginparwidth by -\marginparsep
+  \advance\marginparwidth by -36pt
+%    \end{macrocode}
+% Put the marginal paragraphs on the left side, where there's more room.
+%    \begin{macrocode}
+  \reversemarginpar
+\fi
+%    \end{macrocode}
+%    
+% \subsection{Page Numbering}
+%
+% Page numbers must be in one of three places, and must appear in the
+% same place on \textit{every page}, including chapter openings.
+%
+% To accomodate the draft heading, we redefine the plain page style.
+% \begin{macro}{\ps@plain}
+%    \begin{macrocode}
+\def\ps@plain{%
+  \let\@mkboth\@gobbletwo
+  \if@thesisdraft
+    \def\@oddhead{\draftheader\hfil}
+  \else
+    \let\@oddhead\@empty
+  \fi
+  \let\@evenhead\@oddhead
+  \def\@oddfoot{\reset@font\hfil\thepage\hfil}%
+  \let\@evenfoot\@oddfoot
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% Then we set the default page style to (our new definition of) plain.
+%    \begin{macrocode}
+\pagestyle{plain}
+%    \end{macrocode}
+%
+% \begin{macro}{\chapter}
+% Redefine |\chapter| to not do |\thispagestyle{empty}| because
+% even chapter openings should have page numbers in UIUC Thesis style.
+%    \begin{macrocode}
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+  \global\@topnum\z@
+  \@afterindentfalse
+  \secdef\@chapter\@schapter}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \subsection{Vita}
+%
+% The support for |\vita| is pretty minimal.
+%
+% \begin{macro}{\vitaname}
+% Define |\vitaname| so the user can change it if he wants.
+%    \begin{macrocode}
+\newcommand\vitaname{Vita}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\vita}
+% Vita should appear in Table of Contents, but should not be numbered.
+%    \begin{macrocode}
+\newcommand\vita{
+  \chapter{\vitaname}%
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Body Formatting}
+%
+% \begin{macro}{\thesisspacing}
+% The |\thesisspacing| command is called to switch to the default
+% line spacing for the thesis.  The thesis format requirements
+% require at least line and a half spacing.  
+% The \pkg{uiucthesis} package by default uses |\onehalfspacing|,
+% or |\doublespacing| if the |[fullpage]| option is in effect.
+%    \begin{macrocode}
+\def\thesisspacing{\if@fullpage\doublespacing\else\onehalfspacing\fi}
+%    \end{macrocode}
+% \end{macro}
+%
+% At this point, we're ready to set up the actual formatting for the
+% front matter of the thesis.  We use roman page numbers.
+% Also, arrange so that |\thesisspacing| gets called when the document
+% begins.  We don't just call it here because that wouldn't give the
+% user a chance to override it.
+%    \begin{macrocode}
+\pagenumbering{roman}
+\AtBeginDocument{\thesisspacing}
+%    \end{macrocode}
+%
+% \subsection{Compatibility}
+%
+% \begin{macro}{preliminary}
+% The old \pkg{uiucthesis} style defined a \env{preliminary}
+% environment for the front matter.  This isn't needed with this
+% style, so we redefine it to call |\frontmatter| for compatibility's sake.
+%    \begin{macrocode}
+\def\preliminary{\frontmatter}
+\let\endpreliminary=\relax
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{thesis}
+% Similarly, the old \pkg{uiucthesis} style defined a \env{thesis}
+% environment that has been superceded by the |\mainmatter| command.
+% We define it here for backward compatibility.
+%    \begin{macrocode}
+\def\thesis{\mainmatter}
+\let\endthesis=\relax
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+% \Finale
+\endinput

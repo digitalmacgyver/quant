@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Partially Symmetric Functions</TITLE>
+<META NAME="description" CONTENT="Partially Symmetric Functions">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node37.html">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html550"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html546"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html540"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html548"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html551"
+  HREF="node37.html">AND, OR, MAJORITY, and</A>
+<B> Up:</B> <A NAME="tex2html547"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html541"
+  HREF="node35.html">Singleton Functions</A>
+ &nbsp; <B>  <A NAME="tex2html549"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00750000000000000000"></A> 
+<A NAME="sec:lqbsym"></A>
+<BR>
+Partially Symmetric Functions
+</H1>
+
+<P>
+<P>
+<DIV><A NAME="def:sym"><B>Definition  2.5.1</B></A> &nbsp; 
+<I>A symmetric function is a Boolean function whose value depends only on
+the Hamming weight of the input.</I></DIV><P></P>
+
+<P>
+Recall that the Hamming weight of a bit string is the number of 1's it
+has.
+
+<P>
+Consider the special class of <I>N</I>-bit Boolean functions <I>f</I> such that
+<I>f</I> (<I>x</I>) = 1 for all inputs <I>x</I> of Hamming weight <I>a</I>, and <I>f</I> (<I>x</I>) = 0
+for all inputs <I>x</I> of Hamming weight <I>b</I>.  Without loss of generality
+assume <I>a</I> &lt; <I>b</I>.  We will attain a lower bound depending only on the
+parameters <I>a</I> and <I>b</I>.
+
+<P>
+<P>
+<DIV><A NAME="th:ptsym"><B>Theorem  2.5.1</B></A> &nbsp; 
+<I>Let <I>f</I> be an <I>N</I>-bit Boolean function such that for some <I>a</I> &lt; <I>b</I>,
+| <I>x</I>| = <I>a</I> implies <I>f</I> (<I>x</I>) = 1, and | <I>x</I>| = <I>b</I> implies <I>f</I> (<I>x</I>) = 0.  Then
+</I><P><!-- MATH
+ \begin{displaymath}
+\Omega\left(\sqrt{\frac{(N-a)b}{(b-a)^{2}}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\displaystyle \Omega$"><IMG
+ WIDTH="22" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$\displaystyle \left(\vphantom{\sqrt{\frac{(N-a)b}{(b-a)^{2}}}}\right.$"><IMG
+ WIDTH="100" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$\displaystyle \sqrt{{\frac{(N-a)b}{(b-a)^{2}}}}$"><IMG
+ WIDTH="22" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$\displaystyle \left.\vphantom{\sqrt{\frac{(N-a)b}{(b-a)^{2}}}}\right)$">
+</DIV><P></P><I>
+oracle queries are required to compute <I>f</I> in the bounded error
+setting.</I></DIV><P></P>
+
+<P>
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="590" ALIGN="BOTTOM" BORDER="0"
+ SRC="img90.png"
+ ALT="\begin{proof}
+% latex2html id marker 779To prove Theorem \ref{th:ptsym} we app...
+...\right)
+\end{displaymath}oracle queries are required to compute $f$.
+\end{proof}">
+<BR>
+
+<P>
+Like Lemma <A HREF="node32.html#lm:1xky">2.2.1</A>, this result allows us to easily attain lower
+bounds for many functions.  In general, the closer <I>a</I> and <I>b</I> are to
+each other and to <I>N</I>/2 the better.  We illustrate the particular
+success of Theorem <A HREF="#th:ptsym">2.5.1</A> in the case of symmetric functions
+in the following two sections, and with relatively less success in the
+case of non-trivial monotone graph properties in Section
+<A HREF="node47.html#sec:lqbnmgp">3.2</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html550"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html546"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html540"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html548"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html551"
+  HREF="node37.html">AND, OR, MAJORITY, and</A>
+<B> Up:</B> <A NAME="tex2html547"
+  HREF="node26.html">Lower Oracle Query Bounds</A>
+<B> Previous:</B> <A NAME="tex2html541"
+  HREF="node35.html">Singleton Functions</A>
+ &nbsp; <B>  <A NAME="tex2html549"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

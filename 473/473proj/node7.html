@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A Formal Description of a Quantum Register</TITLE>
+<META NAME="description" CONTENT="A Formal Description of a Quantum Register">
+<META NAME="keywords" CONTENT="473proj">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="473proj.css">
+
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html132"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html128"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node8.html">Performing Computations</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="node4.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html129"
+  HREF="node6.html">The Quantum Register</A>
+ &nbsp; <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00033000000000000000">
+A Formal Description of a Quantum Register</A>
+</H2>
+
+<P>
+The state of any quantum mechanical system is described by a state
+vector in an appropriate Hilbert space.  A Hilbert space is a complex
+linear vector space. [Greenwood00] This is similar to more familiar
+vector spaces with the exception that vectors may have complex
+lengths.  A linear vector space is one in which the sum or constant
+multiple of a vector within the space is within the space as
+well. [Griffiths95]
+
+<P>
+In the case of our <I>n</I> bit quantum register, our Hilbert space will be
+of dimension 2<SUP>n</SUP>.  The orthogonal basis for the Hilbert space can be
+conveniently chosen to be the 2<SUP>n</SUP> possible basis states that the
+quantum register can be found in when measured.
+
+<P>
+With the chosen basis, the projection of the state vector on the i'th
+basis vector will be the amplitude of the portion of the wave function
+corresponding to the register being solely in the i'th state.
+
+<P>
+The state vector can be written <!-- MATH
+ $\Psi = (a_{1}, a_{2}, \ldots
+a_{N})^{T}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Psi$"> = (<I>a</I><SUB>1</SUB>, <I>a</I><SUB>2</SUB>,...<I>a</I><SUB>N</SUB>)<SUP>T</SUP>, where <I>N</I> = 2<SUP>n</SUP>.  <I>a</I><SUB>i</SUB> is the amplitude of the wave
+function in the i'th state, or equivalently the projection of the
+state vector onto the i'th basis state.  The probability of measuring
+the register in the i'th state is then: <P><!-- MATH
+ \begin{displaymath}
+\frac{|a_{i}|^{2}}{\sum_{j = 1}^{N}|a_{j}|^{2}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="81" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$\displaystyle {\frac{{\vert a_{i}\vert^{2}}}{{\sum_{j = 1}^{N}\vert a_{j}\vert^{2}}}}$">
+</DIV><P></P>
+where <!-- MATH
+ $|c|^{2} = c^{*}c$
+ -->
+| <I>c</I>|<SUP>2</SUP> = <I>c</I><SUP>*</SUP><I>c</I>, here * is the
+complex conjugate operator, so if <!-- MATH
+ $c = a+b\sqrt{-1}$
+ -->
+<I>c</I> = <I>a</I> + <I>b</I><IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ \sqrt{{-1}}$">, <!-- MATH
+ $|c|^{2} = a^{2}+ b^{2}$
+ -->
+| <I>c</I>|<SUP>2</SUP> = <I>a</I><SUP>2</SUP> + <I>b</I><SUP>2</SUP>. [WC98] In general the amplitude of any component of the wave
+function may be complex, but Grover's algorithm itself does not use
+any complex amplitudes.
+
+<P>
+If we we insist that <P><!-- MATH
+ \begin{displaymath}
+\sum_{j = 1}^{N} |a_{j}|^{2} = 1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="27" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \sum_{{j = 1}}^{{N}}$">| <I>a</I><SUB>j</SUB>|<SUP>2</SUP> = 1
+</DIV><P></P>
+then the
+probability of measuring the register to be in the i'th state becomes
+simply | <I>a</I><SUB>i</SUB>|<SUP>2</SUP>, where <I>a</I><SUB>i</SUB> is the i'th component of the state
+vector.  In this case we say the vector is normalized.
+
+<P>
+In the absence of measurement the state vector of any quantum system,
+including our quantum register, will evolve according to the
+Schr&#246;dinger wave equation.  The Schr&#246;dinger equation has the
+property that if the solution is normalized at any time, it is
+normalized at all times. [Griffiths95] Therefore if we initialize our
+quantum register to be normalized, we can be sure that at all future
+times the probability of measuring the quantum register in the i'th
+state will be given simply by <!-- MATH
+ $|a_{i}|^{2}$
+ -->
+| <I>a</I><SUB>i</SUB>|<SUP>2</SUP>.
+
+<P>
+A consequence of the Schr&#246;dinger equation is that the evolution of
+the system must be reversible.  At any point in time, if we know the
+solution to Schr&#246;dinger's equation, we can derive its solution at
+all past and future times.  Thus any transformation we wish to perform
+on our system should be reversible.  For our quantum register this
+means that for any operation we use, we must be able to say what the
+state of the register was before the operation, given the operation
+and the resulting state. [Grover00] These remarks apply only to
+quantum systems evolving in isolation of their environment.  Any
+measurement of the register will irreversibly alter the system,
+collapsing its wave function into one of its base states.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html132"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html128"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node8.html">Performing Computations</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="node4.html">The Quantum Computer</A>
+<B> Previous:</B> <A NAME="tex2html129"
+  HREF="node6.html">The Quantum Register</A>
+ &nbsp; <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/473/">Quantum Computing and Grover's Algorithm GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

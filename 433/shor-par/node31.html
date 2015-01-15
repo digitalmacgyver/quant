@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>complex.C</TITLE>
+<META NAME="description" CONTENT="complex.C">
+<META NAME="keywords" CONTENT="shor-par">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shor-par.css">
+
+<LINK REL="next" HREF="node32.html">
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html479"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html475"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html469"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html477"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html480"
+  HREF="node32.html">qureg.h</A>
+<B> Up:</B> <A NAME="tex2html476"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html470"
+  HREF="node30.html">complex.h</A>
+ &nbsp; <B>  <A NAME="tex2html478"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION000122000000000000000">
+complex.C</A>
+</H2>
+<PRE>
+#include &lt;math.h&gt;
+#include "complex.h"
+
+//Complex constructor, initializes to 0 + i0.
+Complex::Complex(): real( 0 ), imaginary( 0 ) {}
+
+//Argument constructor.
+Complex::Complex( double r, double i ): real( r ), imaginary( i ) {}
+
+//Complex destructor.
+Complex::~Complex() {}
+
+//Overloaded = operator.
+Complex &amp; Complex::operator=(const Complex &amp;c) {
+  if (&amp;c != this) {
+    real = c.Real();
+    imaginary = c.Imaginary();
+    return *this;
+  }
+}
+
+//Overloaded + operator.
+Complex &amp; Complex::operator+(const Complex &amp;c) { 
+  real += c.Real();
+  imaginary += c.Imaginary(); 
+  return *this;
+}
+
+//Overloaded * operator.
+Complex &amp; Complex::operator*(const Complex &amp;c) { 
+  real = real * c.Real() - imaginary * c.Imaginary();
+  imaginary = real * c.Imaginary() + imaginary * c.Real();
+  return *this;
+}
+
+//Overloaded == operator.  Small error tolerances.
+bool Complex::operator==(const Complex &amp;c) const {
+  //This is to take care of round off errors.
+  if (fabs(c.Real() - real) &gt; pow(10,-14)) {
+    return false;
+  }
+  if (fabs(c.Imaginary()- imaginary) &gt; pow(10,-14)) {
+    return false;
+  }
+  return true;
+}
+
+//Sets private data members.
+void Complex::Set(double new_real, double new_imaginary) {
+  real = new_real;
+  imaginary = new_imaginary;
+  return;
+}
+
+//Returns the real part of the complex number.
+double Complex::Real() const {
+  return real;
+}
+
+//Returns the imaginary part of the complex number.
+double Complex::Imaginary() const {
+  return imaginary;
+}
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html479"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html475"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html469"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html477"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html480"
+  HREF="node32.html">qureg.h</A>
+<B> Up:</B> <A NAME="tex2html476"
+  HREF="node29.html">Code for the Simulation</A>
+<B> Previous:</B> <A NAME="tex2html470"
+  HREF="node30.html">complex.h</A>
+ &nbsp; <B>  <A NAME="tex2html478"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward - <a href="http://github.com/digitalmacgyver/quant/433/">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>

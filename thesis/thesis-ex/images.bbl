@@ -1,0 +1,112 @@
+\begin{thebibliography}{10}
+
+\bibitem{ambainis00quantum}
+Andris Ambainis.
+\newblock Quantum lower bounds by quantum arguments.
+\newblock In {\em {ACM} Symposium on Theory of Computing}, pages 636--643,
+  2000.
+
+\bibitem{beals98quantum}
+Robert Beals, Harry Buhrman, Richard Cleve, Michele Mosca, and Ronald de~Wolf.
+\newblock Quantum lower bounds by polynomials.
+\newblock In {\em {IEEE} Symposium on Foundations of Computer Science}, pages
+  352--361, 1998.
+
+\bibitem{berthiaume92oracle}
+A.~Berthiaume and Gilles Brassard.
+\newblock Oracle quantum computing.
+\newblock In {\em Proceedings of the Workshop on Physics of Computation:
+  PhysComp '92}, pages 195--199, Los Alamitos, CA, 1992. Institute of
+  Electrical and Electronic Engineers Computer Society Press.
+
+\bibitem{berthiaume97quantum}
+Andr\'{e} Berthiaume.
+\newblock Quantum computation.
+\newblock In {\em Alan L. Selman, Editor, Complexity Theory Retrospective, In
+  Honor of Juris Hartmanis on the Occasion of His Sixtieth Birthday, July 5,
+  1988}, volume~2. 1997.
+\newblock http://citeseer.nj.nec.com/berthiaume97quantum.html.
+
+\bibitem{brassard97exact}
+Gilles Brassard and Peter Hoyer.
+\newblock An exact quantum polynomial-time algorithm for simon's problem.
+\newblock In {\em Israel Symposium on Theory of Computing Systems}, pages
+  12--23, 1997.
+
+\bibitem{deutsch85quantum}
+David Deutsch.
+\newblock Quantum theory, the {C}hurch-{T}uring principle and the universal
+  quantum computer.
+\newblock {\em Proceedings of the Royal Society of London Ser.~A},
+  A400:97--117, 1985.
+
+\bibitem{felsner92complexity}
+Stefan Felsner and Dorothea Wagner.
+\newblock On the complexity of partial order properties.
+\newblock In {\em Workshop on Graph-Theoretic Concepts in Computer Science},
+  pages 225--235, 1992.
+
+\bibitem{chuang98quantum}
+Neil Gershenfeld and Isaac~L. Chuang.
+\newblock Quantum computing with molecules.
+\newblock {\em Scientific American}, June 1998.
+
+\bibitem{griffiths95quantum}
+D.~Griffiths.
+\newblock {\em Introduction to Quantum Mechanics}.
+\newblock Prentice Hall, 1995.
+
+\bibitem{grover96fast}
+Lov~K. Grover.
+\newblock A fast quantum mechanical algorithm for database search.
+\newblock In {\em {ACM} Symposium on Theory of Computing}, pages 212--219,
+  1996.
+
+\bibitem{grover00search}
+Lov~K. Grover.
+\newblock Searching with quantum computers.
+\newblock Technical report, Bell Labs, 700 Mountain Avenue, Murray Hill NJ
+  07974, 2000.
+
+\bibitem{ibm01shor}
+George Johnson.
+\newblock Efforts to transform computers reach milestone.
+\newblock New York Times Newspaper.
+\newblock December 20, 2001.
+
+\bibitem{lovasz94complexity}
+L{\'{a}}szl{\'{o}} Lov{\'{a}}sz and P{\'{e}}ter G{\'{a}}cs.
+\newblock Computational complexity.
+\newblock Technical report, Princeton University, 1994.
+\newblock
+  http://www.uni-paderborn.de/fachbereich/AG/agmadh/Scripts/GENERAL/Evasivness.ps.gz.
+
+\bibitem{lovasz94evasive}
+L{\'{a}}szl{\'{o}} Lov{\'{a}}sz and Neal Young.
+\newblock Lecture notes on evasiveness of graph properties.
+\newblock Technical report, Princeton University, 1994.
+\newblock http://ncstrl.cs.princeton.edu/expand.php?id=TR-317-91.
+
+\bibitem{papa94complexity}
+C.~Papadimitriou.
+\newblock {\em Computational Complexity}, page~36.
+\newblock Addison-Welsey, 1994.
+
+\bibitem{patterson98computer}
+David~A. Patterson and John~L. Hennessy.
+\newblock {\em Computer Organization and Design}, page~30.
+\newblock Morgan Kaufmann Publishers, Inc., 1998.
+
+\bibitem{shor94algorithms}
+Peter~W. Shor.
+\newblock Algorithms for quantum computation: Discrete logarithms and
+  factoring.
+\newblock In {\em {IEEE} Symposium on Foundations of Computer Science}, pages
+  124--134, 1994.
+
+\bibitem{williams98quantum}
+Colin~P. Williams and Scott~H. Clearwater.
+\newblock {\em Explorations in Quantum Computing}.
+\newblock Springer-Verlag, 1998.
+
+\end{thebibliography}

@@ -1,0 +1,306 @@
+%%
+%% This is file `uiucthesis.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% uiucthesis.dtx  (with options: `package')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from uiucthesis.sty.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file uiucthesis.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+\def\fileversion{v1.0n} \def\filedate{1997/09/15}
+%% Package "uiucthesis" for use with LaTeX2e.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{uiucthesis}
+         [\filedate\ \fileversion\ UIUC Thesis (DLH)]
+\usepackage{setspace}
+\expandafter\ifx\csname @ifundefined\endcsname\relax
+  \def\@ifundefined#1{%
+    \expandafter\ifx\csname#1\endcsname\relax
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+    \fi}
+\fi
+\@ifundefined{MakeUppercase}{\let\MakeUppercase=\uppercase}{}
+\newif\if@thesisdraft \@thesisdraftfalse
+\newif\if@thesisfancy \@thesisfancyfalse
+\newif\if@fullpage \@fullpagefalse
+\newif\if@largecaps \@largecapsfalse
+\DeclareOption{draftthesis}{%
+  \@thesisdrafttrue
+  \newcount\timehh\newcount\timemm
+  \timehh=\time \divide\timehh by 60
+  \timemm=\time \count255=\timehh \multiply\count255 by -60
+    \advance\timemm by \count255
+  \def\draftheader{Draft of \today\ at
+  \ifnum\timehh<10 0\fi\number\timehh\,:\,\ifnum\timemm<10 0\fi\number\timemm}%
+}
+\DeclareOption{fancy}{\@thesisfancytrue}
+\DeclareOption{fullpage}{\@fullpagetrue}
+\DeclareOption{largecaps}{\@largecapstrue}
+\ProcessOptions
+\def\@mkuptitle#1{\gdef\@Utitle{#1}}
+\def\title#1{\gdef\@title{#1}\MakeUppercase{\protect\@mkuptitle{#1}}}
+\def\@mkupauthor#1{\gdef\@Uauthor{#1}}
+\def\author#1{\gdef\@author{#1}\MakeUppercase{\protect\@mkupauthor{#1}}}
+\def\phdthesis{\def\@degree{Doctor of Philosophy}}
+\def\msthesis{\def\@degree{Master of Science}}
+\def\department#1{\def\@dept{#1}}
+\def\college#1{\def\@college{#1}}
+\def\schools#1{\def\@schools{#1}}
+\def\degreeyear#1{\def\@degreeyear{#1}}
+\def\copyrightnotice{\copyright~Copyright by \@author, \@degreeyear}
+\phdthesis
+\department{Computer Science}
+\college{Graduate College}
+\def\@schools{}
+\def\@degreeyear{\number\year}
+\renewcommand\maketitle{
+  \if@thesisdraft\else
+    \newpage
+    \thispagestyle{empty}
+    \setcounter{page}{0} % Copyright page is page 0
+    \null\vfill
+    \centerline{\copyrightnotice}%
+    \vskip -14pt % skip to visually center copyright notice
+    \vfill
+  \fi
+  \newpage
+  \thispagestyle{empty}%
+  \begingroup
+  \def\baselinestretch{1}\@normalsize
+  \topmargin=1.3in \headheight=0pt \headsep=0pt
+  \@tempdima=\paperwidth
+  \advance\@tempdima by -\textwidth
+  \divide\@tempdima by 2
+  \advance\@tempdima by -1in
+  \oddsidemargin=\@tempdima
+  \let\evensidemargin=\oddsidemargin
+  \if@largecaps
+    \def\lc@selectfont{\fontshape{lc}\selectfont}%
+  \else
+    \def\lc@selectfont{}%
+  \fi
+  \begin{center}
+  \vbox to 1.75in{%
+    {\@Utitle}\\[12pt]
+    \if@thesisdraft
+      \\[12pt]
+      Draft Version\\
+      \today
+    \fi
+    \vfil}%
+  \vbox to 2.5in{%
+    {BY}\\[12pt]
+    {\@Uauthor}\\[12pt]
+    \begin{tabular}{c}\@schools\end{tabular}\\[12pt]\vfil}%
+  \vbox to 2.5in{%
+    {THESIS}\\[12pt]
+    Submitted in partial fulfillment of the requirements\\
+    for the degree of \@degree\ in \@dept\\
+    in the \@college\ of the\\
+    University of Illinois at Urbana-Champaign, \@degreeyear\\[12pt]\vfil}
+  Urbana, Illinois\\[12pt]
+  \end{center}
+  \newpage
+  \endgroup
+}
+\let\thesis@frontmatter=\frontmatter
+\def\frontmatter{%
+  \thesis@frontmatter
+  \setcounter{page}{3}}
+\renewcommand\contentsname{Table of Contents}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}
+    \begingroup
+      \leftskip \z@ \rightskip \@tocrmarg \parfillskip -\rightskip
+      \parindent \z@
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak
+      \leaders\hbox{$\m@th\mkern\@dotsep mu\hbox{.}\mkern\@dotsep mu$}
+      \hfil \nobreak\hbox to\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\let\thesis@tableofcontents=\tableofcontents
+\def\tableofcontents{{\singlespacing\thesis@tableofcontents}}
+\let\thesis@listoftables=\listoftables
+\def\listoftables{{\singlespacing\thesis@listoftables\thesisspacing}}
+\let\thesis@listoffigures=\listoffigures
+\def\listoffigures{{\singlespacing\thesis@listoffigures}}
+\if@thesisfancy
+  \font\cminch=cminch at 60pt
+  \newcommand\chapternumberfont{\cminch}
+\else
+  \newcommand\chapternumberfont{\huge\bfseries}
+\fi
+\newcommand\chaptertitlefont{\Huge\bfseries}
+\def\@chapter[#1]#2{%
+  \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter
+      \refstepcounter{chapter}%
+      \typeout{\@chapapp\space\thechapter.}%
+      \if@thesisfancy
+        \addcontentsline{toc}{chapter}%
+          {\protect\numberline{\thechapter}#1}%
+      \else
+        \addcontentsline{toc}{chapter}%
+          {\@chapapp\ \thechapter\quad #1}%
+      \fi
+    \else
+      \addcontentsline{toc}{chapter}{#1}%
+    \fi
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]%
+  \else
+    \@makechapterhead{#2}%
+    \@afterheading
+  \fi}
+\if@thesisfancy
+  \AtBeginDocument{%
+    \newdimen\chapternumberheight
+    {\setbox255=\hbox{\chapternumberfont A}
+     \dimen255=\ht255
+     \setbox255=\hbox{\Huge\bfseries A}
+     \advance\dimen255 by \ht255
+     \divide\dimen255 by 2
+     \global\chapternumberheight=\dimen255}
+  }
+\fi
+\def\@makechapterhead#1{%
+  \if@thesisfancy\vspace*{10\p@}\else\vspace*{50\p@}\fi
+  {\def\baselinestretch{1}\@normalsize
+    \parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \if@thesisfancy
+          \leavevmode\llap{\vbox to \chapternumberheight{\hbox{%
+            \chapternumberfont\thechapter\ }\vss}}%
+        \else
+          \chapternumberfont \@chapapp\space \thechapter
+          \par\nobreak
+          \vskip 20\p@
+        \fi
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \chaptertitlefont #1\par\nobreak
+    \vskip 40\p@
+  }}
+\def\@makeschapterhead#1{%
+  \if@thesisfancy\vspace*{10\p@}\else\vspace*{50\p@}\fi
+  %\vspace*{50\p@}%
+  {\def\baselinestretch{1}\@normalsize
+    \parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\raggedright\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\raggedright\normalfont\large\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\raggedright\normalfont\normalsize\bfseries}}
+\renewcommand\bibname{References}
+\renewenvironment{thebibliography}[1]
+     {\chapter{\bibname
+        \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+    \@ifundefined{@openbib@code}{}{\@openbib@code}
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy\clubpenalty4000\widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\let\thesis@theindex=\theindex
+\def\theindex{\begingroup\singlespacing\thesis@theindex}
+\let\thesis@endtheindex=\endtheindex
+\def\endtheindex{\thesis@endtheindex\endgroup}
+\topmargin=0in
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.5in
+\if@fullpage
+  \oddsidemargin .25in
+  \evensidemargin .25in
+  \marginparwidth 0.5in
+  \textwidth\paperwidth
+  \advance\textwidth by -2in
+\fi
+\if@thesisfancy
+  \advance\oddsidemargin by 24pt
+  \let\evensidemargin=\oddsidemargin
+  \marginparwidth=\oddsidemargin
+  \advance\marginparwidth by 1in
+  \advance\marginparwidth by -\marginparsep
+  \advance\marginparwidth by -36pt
+  \reversemarginpar
+\fi
+\def\ps@plain{%
+  \let\@mkboth\@gobbletwo
+  \if@thesisdraft
+    \def\@oddhead{\draftheader\hfil}
+  \else
+    \let\@oddhead\@empty
+  \fi
+  \let\@evenhead\@oddhead
+  \def\@oddfoot{\reset@font\hfil\thepage\hfil}%
+  \let\@evenfoot\@oddfoot
+}
+\pagestyle{plain}
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+  \global\@topnum\z@
+  \@afterindentfalse
+  \secdef\@chapter\@schapter}
+\newcommand\vitaname{Vita}
+\newcommand\vita{
+  \chapter{\vitaname}%
+}
+\def\thesisspacing{\if@fullpage\doublespacing\else\onehalfspacing\fi}
+\pagenumbering{roman}
+\AtBeginDocument{\thesisspacing}
+\def\preliminary{\frontmatter}
+\let\endpreliminary=\relax
+\def\thesis{\mainmatter}
+\let\endthesis=\relax
+\endinput
+%%
+%% End of file `uiucthesis.sty'.

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Superposition</TITLE>
+<META NAME="description" CONTENT="Superposition">
+<META NAME="keywords" CONTENT="thesis-ex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="thesis-ex.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html350"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html346"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html340"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html348"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html351"
+  HREF="node21.html">Unitary Operators</A>
+<B> Up:</B> <A NAME="tex2html347"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html341"
+  HREF="node19.html">Dirac Notation:</A>
+ &nbsp; <B>  <A NAME="tex2html349"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00630300000000000000">
+Superposition</A>
+</H3>
+
+<P>
+The projection of the state vector onto one of the axes of its Hilbert
+space shows the contribution of that axis's eigenstate to the whole
+state.  A classical bit's state vector can only lie along one of the
+two axes.  The state of a qubit can be any vector | <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> in the
+Hilbert space with <!-- MATH
+ $\langle X|X\rangle = 1$
+ -->
+<IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ \langle$"><I>X</I>| <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> = 1; such a state vector is
+called <I>normalized</I>.  The inner product of a vector <!-- MATH
+ $|X\rangle =
+(x_{0},x_{1},\ldots, x_{N-1})^{T}$
+ -->
+| <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> = (<I>x</I><SUB>0</SUB>, <I>x</I><SUB>1</SUB>,..., <I>x</I><SUB>N-1</SUB>)<SUP>T</SUP> with itself is <!-- MATH
+ $|x_{0}|^{2} +
+|x_{1}|^{2} + \ldots + |x_{N-1}|^{2}$
+ -->
+| <I>x</I><SUB>0</SUB>|<SUP>2</SUP> + | <I>x</I><SUB>1</SUB>|<SUP>2</SUP> +...+ | <I>x</I><SUB>N-1</SUB>|<SUP>2</SUP>, where <!-- MATH
+ $|a+ib|^{2} = a^{2} +
+b^{2}$
+ -->
+| <I>a</I> + <I>ib</I>|<SUP>2</SUP> = <I>a</I><SUP>2</SUP> + <I>b</I><SUP>2</SUP>.  More generally <!-- MATH
+ $\left\langle X|Y\right\rangle = \sum_{i =
+0}^{N-1} x_{i}^{*}y_{i}$
+ -->
+<IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \left\langle\vphantom{ X\vert Y}\right.$"><I>X</I>| <I>Y</I><IMG
+ WIDTH="14" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \left.\vphantom{ X\vert Y}\right\rangle$"> = <IMG
+ WIDTH="55" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \sum_{{i =
+0}}^{{N-1}}$"><I>x</I><SUB>i</SUB><SUP>*</SUP><I>y</I><SUB>i</SUB>, where <!-- MATH
+ $(a + ib)^{*}$
+ -->
+(<I>a</I> + <I>ib</I>)<SUP>*</SUP> is <I>a</I> - <I>ib</I>.
+
+<P>
+Let <I>x</I><SUB>1</SUB> be the eigenstate corresponding to the 1 state, and let
+<I>x</I><SUB>0</SUB> be the eigenstate corresponding to the 0 state.  We can write
+any state | <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> as <!-- MATH
+ $w_{0}|x_{0}\rangle + w_{1}|x_{1}\rangle$
+ -->
+<I>w</I><SUB>0</SUB>| <I>x</I><SUB>0</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> + <I>w</I><SUB>1</SUB>| <I>x</I><SUB>1</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">,
+where <!-- MATH
+ $w_{0}, w_{1}$
+ -->
+<I>w</I><SUB>0</SUB>, <I>w</I><SUB>1</SUB> are the complex projections of | <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> onto
+the eigenstates such that <!-- MATH
+ $|w_{0}|^{2} + |w_{1}|^{2} = 1$
+ -->
+| <I>w</I><SUB>0</SUB>|<SUP>2</SUP> + | <I>w</I><SUB>1</SUB>|<SUP>2</SUP> = 1.  When the
+qubit with state vector <I>X</I> is measured, we are guaranteed to find it
+to be in either the state <!-- MATH
+ $1 |x_{0} \rangle + 0 |x_{1} \rangle =
+|x_{0}\rangle$
+ -->
+1| <I>x</I><SUB>0</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> +0| <I>x</I><SUB>1</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> = | <I>x</I><SUB>0</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> or the state <!-- MATH
+ $0 |x_{0} \rangle + 1 |x_{1} \rangle =
+|x_{1}\rangle$
+ -->
+0| <I>x</I><SUB>0</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> +1| <I>x</I><SUB>1</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$"> = | <I>x</I><SUB>1</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">.
+
+<P>
+More generally, the Hilbert space of an <I>N</I>-state quantum system is
+<!-- MATH
+ $\Complex^{N}$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \Complex^{{N}}_{}$">.  As with the two state system, when we measure our
+<I>N</I>-state quantum system we will always find it to be in exactly one
+of the eigenstates.  The system is allowed to exist in any complex
+linear superposition of the <I>N</I> states between measurements.  An
+<I>N</I>-state quantum system with eigenstates <!-- MATH
+ $x_{0}, x_{1},\ldots,
+x_{N-1}$
+ -->
+<I>x</I><SUB>0</SUB>, <I>x</I><SUB>1</SUB>,..., <I>x</I><SUB>N-1</SUB> can be fully described by the vector
+<P><!-- MATH
+ \begin{displaymath}
+|X \rangle = \sum_{k = 0}^{N-1} w_{k} |x_{k} \rangle,
+\textrm{ where }
+\sum_{k = 0}^{N-1} |w_{k}|^{2} = 1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+| <I>X</I><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$"> = <IMG
+ WIDTH="34" HEIGHT="77" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \sum_{{k = 0}}^{{N-1}}$"><I>w</I><SUB>k</SUB>| <I>x</I><SUB>k</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \rangle$">, where<IMG
+ WIDTH="34" HEIGHT="77" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \sum_{{k = 0}}^{{N-1}}$">| <I>w</I><SUB>k</SUB>|<SUP>2</SUP> = 1.
+</DIV><P></P>
+
+<P>
+Our state vector can exist in a linear superposition of eigenstates,
+but we can only measure the state vector to be in one of the
+eigenstates.  When the state vector is observed, it makes a sudden
+discontinuous jump to one of the eigenstates.  When measurement is
+performed the state vector is said to collapse
+[<A
+ HREF="node57.html#williams98quantum">18</A>].  For an <I>N</I>-state quantum system with a 
+normalized state vector, the probability that the state vector will
+collapse into the <I>j</I>th eigenstate is simply <!-- MATH
+ $|w_{j}|^{2}$
+ -->
+| <I>w</I><SUB>j</SUB>|<SUP>2</SUP>.  The
+coefficient <I>w</I><SUB>j</SUB> is called the <I>amplitude</I> of eigenstate
+<!-- MATH
+ $|x_{j}\rangle$
+ -->
+| <I>x</I><SUB>j</SUB><IMG
+ WIDTH="12" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \rangle$">.
+
+<P>
+We can construct a quantum memory register out of the qubits described
+in the previous section.  Just as in a classical computer, a quantum
+computer will perform calculations by manipulating its memory register
+from some start state to some final state.  Note that a quantum
+register composed of <I>N</I> qubits requires 2<SUP>N</SUP> complex numbers to
+completely describe its state vector, as an <I>N</I>-qubit register has
+2<SUP>N</SUP> basis states.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html350"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html346"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html340"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html348"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html351"
+  HREF="node21.html">Unitary Operators</A>
+<B> Up:</B> <A NAME="tex2html347"
+  HREF="node15.html">Quantum Computing</A>
+<B> Previous:</B> <A NAME="tex2html341"
+  HREF="node19.html">Dirac Notation:</A>
+ &nbsp; <B>  <A NAME="tex2html349"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">GitHub Repository</a>
+</ADDRESS>
+</BODY>
+</HTML>
