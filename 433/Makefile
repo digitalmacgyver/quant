@@ -12,7 +12,7 @@ pdf:
 
 html:
 	mkdir -p shor-par
-	latex2html -dir shor-par -local_icons -html_version 3.2,math -info 0 -bottom_navigation -address "Matthew Hayward - <a href=\"http://github.com/digitalmacgyver/quant/433/\">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>" shor-par.tex
+	latex2html -dir shor-par -local_icons -html_version 3.2,math -info 0 -bottom_navigation -address "Matthew Hayward - <a href=\"http://github.com/digitalmacgyver/quant/tree/master/433/\">Quantum Computing, Shor's Algorithm, and Parallelism GitHub Repository</a>" shor-par.tex
 
 clean:
 	rm -rf shor-par/

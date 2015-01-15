@@ -12,7 +12,7 @@ pdf:
 
 html:
 	mkdir -p 473proj
-	latex2html -dir 473proj -local_icons -html_version 3.2,math -info 0 -address "Matthew Hayward - <a href=\"http://github.com/digitalmacgyver/quant/473/\">Quantum Computing and Grover's Algorithm GitHub Repository</a>" -bottom_navigation 473proj.tex
+	latex2html -dir 473proj -local_icons -html_version 3.2,math -info 0 -address "Matthew Hayward - <a href=\"http://github.com/digitalmacgyver/quant/tree/master/473/\">Quantum Computing and Grover's Algorithm GitHub Repository</a>" -bottom_navigation 473proj.tex
 
 clean:
 	rm -rf 473proj/

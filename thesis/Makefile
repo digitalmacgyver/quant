@@ -16,7 +16,7 @@ html:
 	mkdir -p thesis-ex
 	cp uiucthesis.sty thesis-ex
 	cp jeffe.sty thesis-ex
-	latex2html -dir thesis-ex -local_icons -html_version 3.2,math -info 0 -address 'Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/thesis/">Lower Query Bounds in the Quantum Oracle Model GitHub Repository</a>' -bottom_navigation thesis-ex.tex
+	latex2html -dir thesis-ex -local_icons -html_version 3.2,math -info 0 -address 'Matthew Hayward <a href="http://github.com/digitalmacgyver/quant/tree/master/thesis/">Lower Query Bounds in the Quantum Oracle Model GitHub Repository</a>' -bottom_navigation thesis-ex.tex
 
 clean:
 	rm -rf thesis-ex/
